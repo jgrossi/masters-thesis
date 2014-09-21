@@ -494,6 +494,14 @@ Para isso, a utilização de técnicas de extração de metadados deve ser utili
 
 Basicamente estes campos já permitem que uma pesquisa mais detalhada fosse feita e então o artigo localizado. Já as referências são necessárias para se fazer referências inversas de autores que publicam e são citados posteriormente, facilitando ainda mais aos pesquisadores poder, por exemplo, encontrar artigos semelhantes de uma mesma área do conhecimento.
 
+\begin{figure}
+\centering
+\caption{Processo de Extração de Metadados}
+\label{fig:introducao}
+\includegraphics[width=0.7\linewidth]{./assets/introducao}
+\end{figure}
+
+
 \section{Delimitação do Problema}
 
 De modo geral, as técnicas livre existentes para que essa extração de metadados seja feita são focadas em layouts pré-definidos, geralmente de conferências e/ou congressos internacionais, que possuem um padrão visual parecido, como é o caso do IEEE por exemplo, que segue de referência para diversos outros eventos tomando seu layout como base.
@@ -522,7 +530,11 @@ Assim sendo, espera-se que certos artigos científicos não tenham seus metadado
 
 Este trabalho limita-se aos artigos científicos difundidos na comunidade científica em formato PDF, excluindo aqueles em que seu conteúdo é disponibilizados através de imagens escaneadas de documentos físicos, o que impede, em um primeiro momento, de ter os textos analisados em sua forma original, sem necessidade de processamento extra a fim de obter todo o material textual contido em tais imagens.
 
-Além disso o trabalho pressupões que a língua inglesa seja utilizada como padrão no meio, de maneira a permitir que através de um único idioma o conhecimento seja difundido e aplicado em diversas culturas, independente de especificidades e diferenças culturais, permitindo uma difusão do conhecimento em sua mais pura forma de apresentação.
+Além disso o trabalho pressupõe que a língua inglesa seja utilizada como padrão no meio, de maneira a permitir que através de um único idioma o conhecimento seja difundido e aplicado em diversas culturas, independente de especificidades e diferenças culturais, permitindo uma difusão do conhecimento em sua mais pura forma de apresentação.
+
+% Sobre os servidores com Windows
+
+Já na questão de testes de cada técnica de extração de metadados, as técnicas que serão selecionadas deverão ser livres, ou seja, ter seu uso liberado sem a necessidade de pagamento de licenças. Deste modo excluímos todas as técnicas que rodam exclusivamente em plataforma Windows, por exigir licenças de software e fugirem das previsões de teste deste projeto. Assim, os projetos deverão necessariamente utilizar de linguagens de programação livres (ou de código aberto) e que rodem em sistemas operacionais derivados do Unix, como o Linux, por exemplo.
 
 \section{Justificativa}
 
@@ -544,6 +556,116 @@ No sexto capítulo temos a conclusão, trabalhos futuros e considerações finai
 
 \chapter{Metodologia}
 
+Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de coleta de informações e comparação de resultados de técnicas de extração de metadados em artigos científicos.
+
+Desta maneira, a pesquisa de modo padrão não traz alteração nos ambientes pesquisados, apenas os analisa e os compara com base em padrões estabelecidos como sendo de resultado adequado. Assim, o projeto em si trata muito mais de pré-seleção de documentos e técnicas a serem testadas como também dos resultados já analisados e que são necessários para uma técnica ser considerada produtiva.
+
+% Explicar o passo-a-passo que será utilizado
+
+Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmente as que são necessárias dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados. Os elementos se relacionam entre si e estão identificados na figura \ref{fig:metodology}. 
+
+% Colocar diagrama demonstrando a relação entre todos os objetos, como artigos, técnicas, o processamento, a planilha de resultados e as conclusões
+
+\begin{figure}
+\centering
+\caption{Processo de Metodologia}
+\label{fig:metodology}
+\includegraphics[width=0.7\linewidth]{./assets/metodology}
+\end{figure}
+
+
+\section{Seleção das Técnicas}
+
+As técnicas que foram selecionadas dentro do capítulo de Revisão de Literatura compreendem um universo atuante e de caráter livre, independente da linguagem de programação que foi utilizada, exceto pelos detalhes explicados nas limitações do trabalho.
+
+Assim sendo, todas as técnicas catalogadas e definidas como sendo importantes serão testadas de maneira completa e independente, ou seja, sem interferência de nenhuma outra técnica em seus resultados finais.
+
+% Colocar uma tabela com as técnicas que serão comparadas
+
+\section{Seleção de Artigos}
+
+Visando provar a eficiência destas técnicas, desejamos ter informações de saída consideradas corretas para que seus resultados possam ser comparados e verificados com exatidão. Assim, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são possível de ser analisados e coletados.
+
+% Áreas dos Artigos e Eventos
+
+Desde modo a lista destes artigos compreende um total de 100 artigos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de terem o resultado da aplicação das técnicas comparado com os resultados desejados. As áreas do conhecimento, seus respectivos eventos e o número de artigos de cada um estão identificados na Tabela \ref{tab:papers-list}.
+
+Os artigos foram selecionados tomando como base a principal forma de análise das técnicas selecionadas para testes: o layout, ou seja, a disposição dos elementos nos artigos científicos. Esta seleção foi feite com base a abranger um maior número de representações, com disposições diferentes, tipografias diferentes e inclusive ordem diferentes nas exibições. Desta forma as técnicas poderão ser confrontadas e os resultados comparados com os resultados esperados.
+
+% Artigos em Inglês, somente
+
+Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de além de ser a língua inglesa universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, de maneira a ter um universo muito maior de artigos escrito em inglês do que outras línguas.
+
+Além disso a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês, tenham análises diferenciadas em função de suas diferenças na forma de representação.
+
+\begin{table}
+    \caption{Seleção de artigos científicos para testes}
+    \begin{center}
+        \begin{tabular}{l|l|l}
+            Área de Conhecimento & Evento ou Conferência & Total de Artigos \\ 
+            \hline
+            Arquitetura e Urbanismo & Nome do Evento I & 4 \\ 
+			Arquitetura e Urbanismo & Nome do Evento II & 3 \\ 
+			Artes e Música & Nome do Evento I & 3 \\ 
+			Artes e Música & Nome do Evento II & 2 \\ 
+            Ciência da Computação & Nome do Evento I & 2 \\
+			Ciência da Computação & Nome do Evento II & 4 \\
+            Ciência da Informação & ENANCIB 2013 & 4 \\
+            Ciência da Informação & Nome do Evento & 3 \\
+            Ciências Biológicas & Nome do Evento I & 4 \\
+            Direito & Nome do Evento I & 3 \\
+            Engenharia Civil & Nome do Evento I & 2 \\
+            Medicina & Nome do Evento I & 2 \\ 
+            Medicina & Nome do Evento II & 3 \\ 
+            Psicologia & Nome do Evento I & 3 \\
+            ... & ... & ... \\
+            \hline
+             & & \textbf{100}
+        \end{tabular}
+    \end{center}
+    \label{tab:papers-list}
+\end{table}
+
+\section{Infraestrutura Computacional}
+
+Para que os testes sejam feitos de maneira adequada e independente, sem interferência de outras técnicas nos resultados, serão utilizados N servidores, sendo N o número total de técnicas a serem avaliadas.
+
+Deste modo, para cada técnica avaliada será configurado um servidor com as linguagens de programação necessárias e todos os pré-requisitos que a técnica necessita para funcionar. Estes servidores serão definidos utilizando infraestrutura em \textbf{nuvem} (\textit{Cloud Computing}), o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica.
+
+ % Falar sobre qual provedor de VPS iremos utilizar
+ 
+Todos os servidores criados para os testes devem necessariamente rodar alguma versão do Linux e serão hospedados nos \textit{data centers} da \textbf{Digital Ocean}\footnote{Acesse o site em \url{http://digitalocean.com}}, empresa de infraestrutura tecnológica de conhecimento mundial e referência em \textit{Cloud Computing} no mercado computacional.
+
+\subsection{Testes In Loco}
+
+% Falar de técnicas que já possuem algum site para testes, demonstrando a ferramente funcionando
+
+Algumas técnicas de extração de metadados disponibilizam acesso online a uma ferramenta gratuita para testes. Deste modo, para estes casos específicos não será necessária a criação de servidores e instalação dos pacotes, visto que o ambiente de testes poderá ser feito dentro da ferramente fornecida pelas desenvolvedoras das técnicas.
+
+% Vantagem de ser feito o teste online
+
+Este fato garante uma maior precisão nos resultados, inclusive pelo fato de o ambiente de testes estar 100\% funcionando e ter sido disponibilizado pela mesma equipe de desenvolvedores do projeto, garantindo a eficácia nos resultados que essa técnicas fornece.
+
+\section{Quadro Comparativo}
+
+Visando uma comparação dos resultados eficaz todos os resultados serão inseridos em um documento formato planilha para serem comparados manualmente e as conclusões então obtidas. Para tal esta planilha de resultados a chamaremos de "Quadro Comparativo" e será exclusiva para comparação dos resultados das técnicas analisadas.
+
+% Formato online para consulta futura
+
+Visando facilitar o acesso às informações este documento é disponibilizado como anexo deste projeto e ainda tem seu acesso liberado em formato online. Desta forma qualquer pessoa poderá ter acesso aos resultados obtidos pelos testes e comparar elas mesmas os dados contidos na planilha.
+
+\subsection{Metadados e Pesos}
+
+% Importância de se ter pesos em função dos metadados
+
+
+
+% Quais metadados são mais importantes para uma pesquisa de artigos
+
+% Tabela de metadados e pesos
+
+% Fórmula final para a nota final de cada técnica
+
 \chapter{Testes}
 
 \section{Ambiente de Testes}
@@ -557,7 +679,6 @@ No sexto capítulo temos a conclusão, trabalhos futuros e considerações finai
 \section{Trabalhos Futuros}
 
 \section{Considerações Finais}
-
 
 
 % ---
