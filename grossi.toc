@@ -23,18 +23,19 @@
 \contentsline {section}{\numberline {3.3}Infraestrutura Computacional}{28}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Testes In Loco}{29}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}Quadro Comparativo}{30}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Metadados e Pesos}{30}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Metadados, Pesos e Resultados}{30}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}\IeC {\'I}ndice de Confiabilidade}{31}{subsection.3.5.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Testes}}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ambiente de Testes}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Servidores de Teste}{31}{subsection.4.1.1}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Testes}}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ambiente de Testes}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Servidores de Teste}{33}{subsection.4.1.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados}}{33}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados}}{35}{chapter.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Trabalhos Futuros}{35}{section.6.1}
-\contentsline {section}{\numberline {6.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{35}{section.6.2}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Trabalhos Futuros}{37}{section.6.1}
+\contentsline {section}{\numberline {6.2}Considera\IeC {\c c}\IeC {\~o}es Finais}{37}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{37}{section*.12}
+\contentsline {chapter}{Refer\^encias}{39}{section*.12}
 \vspace {\cftbeforechapterskip }

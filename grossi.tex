@@ -92,6 +92,10 @@
 	\fi}%
 % ---
 
+% Criando um novo tipo de coluna centralizado e com largura fixa
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
@@ -538,7 +542,7 @@ Já na questão de testes de cada técnica de extração de metadados, as técni
 
 \section{Justificativa}
 
-De maneira geral, a necessidade de centralizar estes artigos científicos existe, e a contribuição seria uma forma de aumentar cada vez mais o acesso aos materiais de pesquisa. Sendo assim, esta forma de análise e extração de matadados traria benefícios para que este repositório fosse criado, tendo então milhões e milhões de documentos em suas bases de dados.
+De maneira geral, a necessidade de centralizar estes artigos científicos existe, e a contribuição seria uma forma de aumentar cada vez mais o acesso aos materiais de pesquisa. Sendo assim, esta forma de análise e extração de metadados traria benefícios para que este repositório fosse criado, tendo então milhões e milhões de documentos em suas bases de dados.
 
 Este trabalho é feito justamente para prover esta visão do que ainda precisa ser melhorado e pensado para que estas técnicas abranjam diversos padrões encontrados no mercado, permitindo além que usuários possam contribuir com seus próprios padrões.
 
@@ -553,6 +557,12 @@ No terceiro capítulo temos a metodologia para o desenvolvimento do trabalho, as
 No sexto capítulo temos a conclusão, trabalhos futuros e considerações finais sobre o trabalho apresentado.
 
 \chapter{Revisão de Literatura}
+
+% Falar sobre RSL
+
+% Falar sobre os eventos encontrados
+
+% Tabela com eventos encontrados relevantes para a área
 
 \chapter{Metodologia}
 
@@ -599,7 +609,7 @@ Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão f
 Além disso a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês, tenham análises diferenciadas em função de suas diferenças na forma de representação.
 
 \begin{table}
-    \caption{Seleção de artigos científicos para testes}
+    \caption{Seleção de artigos científicos para testes (ainda em desenvolvimento)}
     \begin{center}
         \begin{tabular}{l|l|l}
             Área de Conhecimento & Evento ou Conferência & Total de Artigos \\ 
@@ -652,19 +662,84 @@ Visando uma comparação dos resultados eficaz todos os resultados serão inseri
 
 % Formato online para consulta futura
 
-Visando facilitar o acesso às informações este documento é disponibilizado como anexo deste projeto e ainda tem seu acesso liberado em formato online. Desta forma qualquer pessoa poderá ter acesso aos resultados obtidos pelos testes e comparar elas mesmas os dados contidos na planilha.
+Com o objetivo de facilitar o acesso às informações este documento é disponibilizado como anexo deste projeto e ainda tem seu acesso liberado em formato online. Desta forma qualquer pessoa poderá ter acesso aos resultados obtidos pelos testes e comparar elas mesmas os dados contidos na planilha.
 
-\subsection{Metadados e Pesos}
+\section{Metadados, Pesos e Resultados}
 
 % Importância de se ter pesos em função dos metadados
 
+A extração de metadados de artigos científicos engloba um processo onde os resultados obtidos, mais especificamente os metadados propriamente ditos, possuem características diferenciadas que podem influenciar em uma busca por artigos, feita por um pesquisador.
 
+Desde modo atribuímos pesos para cada um dos metadados analisados, de maneira a identificar os mais importantes e que podem contribuir com um número maior de resultados de busca. 
 
 % Quais metadados são mais importantes para uma pesquisa de artigos
 
+Alguns metadados são mais importantes que outros no que diz respeito à funcionalidade de pesquisa. Geralmente quando vamos buscar artigos, seja na Internet, ou em algum outro local, geralmente buscamos primeiro pelo título do artigo (quando procuramos por um artigo em específico) ou então pelo nome do autor (quanto procuramos artigos de um determinado autor).
+
+Além disso, utilizamos também o título, juntamente com o resumo, para buscar de palavras chaves ou palavras que podem ser relevantes na pesquisa pelos documentos. Assim sendo alguns metadados devem ser mais considerados no resultado destas extrações, por serem mais importantes no ponto de vista da busca.
+
+Assim sendo apresentamos a tabela \ref{tab:pesos}, que demonstra como cada metadado teve sua importância interpretada e qual o peso que lhe foi atribuído, sendo utilizado o inteiro 1 para o peso mais baixo e o 5 para peso mais alto, sendo consequentemente o mais importantes.
+
 % Tabela de metadados e pesos
 
+\begin{table}
+    \caption{Os metadados e seus pesos atribuídos}
+    \begin{center}
+    	\begin{tabular}{|p{3cm}|p{8cm}|C{1cm}|}
+			\hline \textbf{Metadado} & \textbf{Relevância} & \textbf{Peso} \\ 
+			\hline Título & Um dos termos mais buscados quando se pesquisa um artigo & 5 \\
+	    	\hline Autor(es) & O segundo termo mais pesquisado & 4 \\
+	    	\hline E-mail(s) & Pouco relevante no quesito pesquisa de artigos & 1 \\
+	    	\hline Resumo & Importante por conter palavras chaves e o resumo propriamente dito & 3 \\
+	    	\hline Referências & Muito importante e necessário, pois será utilizada na referência inversa de autores & 5 \\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:pesos}
+\end{table}
+
+% Falar sobre a porcentagem de acertos em cada metadado, por exemplo, se o resultado extraiu 90\% do resultado (não a totalidade), deve ser considerado um valor para este resultado, não somente sim ou não.
+
+Outro detalhe importante é a precisão de cada resultado para cada metadado analisado. Em alguns casos o título, por exemplo, não é extraído em 100\% mas alguma variação dele. 
+
+Deste modo consideramos 3 (três) resultados possíveis para um resultado analisado:
+
+\begin{enumerate}
+\item \textbf{Preciso:} Quando um resultado atinge acima de 95\% de precisão, ou seja, o campo foi extraído em 95\% ou mais de sua totalidade.
+\item \textbf{Satisfatório:} Quando um resultado atinge entre 90 e 94\%, o que pode ser considerado satisfatório e a maioria do conteúdo consegue ser analisada sem maiores problemas.
+\item \textbf{Inaceitável:} Quando o resultado atinge abaixo de 90\%, ou seja, entre 0\% e 89\%. Este resultado no âmbito do presente projeto é considerado inaceitável.
+\end{enumerate}
+
+Assim, temos o valor de cada resultado possível, que será também utilizado no processo de análise, conforme consta na tabela \ref{tab:precisao}.
+
+% Tabela de precisão e os valores
+
+\begin{table}
+    \caption{Resultados obtidos em cada metadado e sua precisão}
+    \begin{center}
+    	\begin{tabular}{|C{3cm}|C{3cm}|}
+			\hline \textbf{Resultado} & \textbf{Precisão} \\ 
+			\hline Preciso & 1\\
+	    	\hline Satisfatório & 0.60 \\
+	    	\hline Inaceitável & 0 \\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:precisao}
+\end{table}
+
+\subsection{Índice de Confiabilidade}
+
 % Fórmula final para a nota final de cada técnica
+
+Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada técnica aplicada. Assim sendo chegamos em uma fórmula matemática à qual chamamos "Índice de Confiabilidade", que calcula o resultado obtido através dos pesos que foram atribuídos.
+
+Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em um único resultado para cada técnica aplicada.
+
+\begin{center}
+	$ Fórmula a ser definida ainda $
+\end{center}
+
 
 \chapter{Testes}
 
