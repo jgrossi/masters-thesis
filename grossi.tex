@@ -444,7 +444,7 @@ A escrever.
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\include{siglas}
+\include{acronyms}
 % ---
 
 % ---
@@ -483,6 +483,8 @@ A escrever.
 A necessidade de contribuição acontece de forma natural no ser humano. Os desejos em ajudar ao próximo e inclusive contribuir com alguma parte de sua formação é algo que desperta um desejo cada vez mais amplo do ponto de vista social.
 
 Somos seres realizados pela satisfação do outro, e seu sucesso de uma forma ou outra acarreta em nosso sucesso, nossa satisfação pessoal e de certa forma profissional. Sentimos atraídos por contribuir e por compartilhar conhecimento, sendo ele umas das principais formas de realização como pessoa.
+
+Com o crescimento da pesquisa em todo o mundo um grande número de publicações foram inseridas no meio, fazendo com que uma infinidade de material esteja disponível em poucos segundos. Deste modo, a necessidade de centralização automatizada dos dados e a contribuição dentre os pesquisadores é inerente ao desenvolvimento desta área. 
 
 No âmbito acadêmico sempre contribuímos de uma forma ou outra com a formação de nossos colegas e parceiros de pesquisa. Esta contribuição pode ser feita com base em uma conversa informal ou até mesmo com uma ajuda em documentação ou sugestão de um texto para leitura. Esta sugestão de leitura geralmente possui um caráter muito técnico, e envolve na maioria dos casos a utilização de artigos acadêmicos.
 
@@ -558,15 +560,13 @@ No sexto capítulo temos a conclusão, trabalhos futuros e considerações finai
 
 Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no Relatório Técnico de \cite{rsl-manual}. Desde modo o projeto se torna mas abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa em si.
 
-\section{Detalhes da Revisão}
-
 % Bases pesquisadas
 
 Basicamente, como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases de natureza mais genérica também foram pesquisadas, geralmente através do site da CAPES, mas com caráter mais de apoio teórico realmente.
 
 Embora a amplitude desta área, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco no trabalho. Basicamente a pesquisa necessitava ser focada em técnicas de extração de dados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia do processo.
 
-Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados. Com base em uma técnica potencialmente eficaz, sua implantação deve ser realizada, independente da linguagem de programação, e então testada juntamente com um grupo de artigos previamente selecionados como teste base. Estes artigos já possuirão seus dados mapeados de maneira a poder comparar os resultados obtidos com cada uma das técnicas e os resultados então esperados. Portanto os critérios utilizados serão de natureza explícitamente prática, com foco em resultados concretos.
+Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados. Com base em uma técnica potencialmente eficaz, sua implantação deve ser realizada, independente da linguagem de programação, e então testada juntamente com um grupo de artigos previamente selecionados como teste base. Estes artigos já possuirão seus dados mapeados de maneira a poder comparar os resultados obtidos com cada uma das técnicas e os resultados então esperados. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos.
 
 % Falar sobre os eventos encontrados na área
 
@@ -579,6 +579,117 @@ Seguindo as orientações propostas em \cite{rsl-manual} foram mapeados alguns e
 \item IAPR (International Workshop on Document Analysis Systems)
 \item ACM Conference on Digital Libraries
 \end{itemize}
+
+As necessidades de tornar artigos mais conectados é cíclica, e permite que novas técnicas sejam descobertas ou criadas por meio de necessidades de grupos de pesquisadores desejando obter informações precisas cada vez mais rápido.
+
+\section{Técnicas Frequentes}
+
+Algumas técnicas de extração de dados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
+
+Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento.
+
+\subsection{Support Vector Machines (SVM)}
+
+Vários algoritmos de extração possuem referências na técnica de SVM descrita por  \cite{svm}. Esta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, do qual se deseja obter os metadados.
+
+Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo cada linha do cabeçalho do documento é classificada em uma ou mais classes.
+
+Estas classes seguem o padrão \cite{dublin-core} estabelecido pelo Dublin Core\footnote{Iniciativa existente a fim de padronizar metadados para descrever um objeto digital. \url{http://dublincore.org}}, que define por padrão 15 elementos para descrever um recurso de maneira digital.
+
+Seymore et al \cite{seymore} definiu também 15 tags para esta definição do cabeçalho de um documento. Porém destas 15 tags definidas somente 4 correspondem ao padrão da Dublin Core e estão ilustradas na Tabela \ref{tab:svm-classes}.
+
+\begin{table}
+    \caption{Relação de classes utilizadas e comparação com o padrão Dublin Core.}
+    \begin{center}
+        \begin{tabular}{|C{3cm}|C{3cm}|p{7cm}|}
+            \hline \textbf{Classe (Tag)} & \textbf{Referência Dublin Core} & \textbf{Descrição}\\ 
+            \hline Title & Title & Título do artigo\\
+            \hline Author & Creator & Nome do autor do documento\\
+            \hline Affiliation & & Afiliação do autor\\
+            \hline Address & & Endereço do autor\\
+            \hline Note & & Frases de reconhecimentos, \textit{copyright}\\
+            \hline Email & & Endereço de e-mail do autor\\
+            \hline Date & & Data da publicação\\
+            \hline Abstract Introdution & Description & A parte de introdução do artigo\\
+            \hline Phone & & Telefone do autor\\
+            \hline Keyword & Subject & As palavras-chave do documento\\
+            \hline Web & & Endereço na Internet do autor\\
+            \hline Degree & & Associação com o grau acadêmico\\
+            \hline Pubnum & & Número da publicação do documento\\
+            \hline Page & & O final da página\\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:svm-classes}
+\end{table}
+
+Para o caso de extração de metadados em artigos científicos utilizando \textit{Support Vector Machines} \cite{svm} as tags de Seymore et al \cite{seymore} são utilizadas para representação destas classes.
+
+Deste modo, com base nestas classes são definidas características de suas classes vizinhas, como por exemplo, elementos que ficam perto de outros elementos, que possuem uma sequência lógica geral de exibição. Com base nestas informações, que são feita classe por classe, estes padrões vão sendo encaixados a cada linha do cabeçalho analisado, permitindo que os metadados sejam extraídos com uma grande precisão.
+
+Além da análise linha por linha são utilizadas análises de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilitam na identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
+
+\begin{itemize}
+\item Dicionário online padrão em sistemas Linux;
+\item 8441 nomes e 19613 sobrenomes;
+\item Sobrenomes chineses;
+\item Nome dos estados do Estados Unidos e das províncias canadenses;
+\item Nomes das cidades dos Estados Unidos;
+\item Nome dos países do mundo, de acordo com World Fact Book\footnote{Disponível em \url{https://www.cia.gov/library/publications/the-world-factbook/index.html}};
+\item Nome dos meses e suas respectivas abreviações.
+\end{itemize}
+
+Para cada uma das classes analisadas são feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, sejam extraídos com base em expressões regulares utilizadas em linguagens de programação.
+
+\subsection{Rule-based}
+
+
+
+
+
+
+\section{Projetos baseados em layouts}
+
+Alguns projetos baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
+
+Estes projetos geralmente permitem uma variedade muito grande de layouts, embora nem todos já estejam previamente definidos. Geralmente novos layouts são inseridos em novas versões ou até mesmo por contribuições das mais diversas, como é o caso dos projetos de código livre, os chamados projetos \textit{open source}.
+
+% CERMINE
+
+Um destes projetos é o recente CERMINE \cite{cermine}, uma biblioteca \textit{open source} desenvolvida na linguagem de programação Java que permite que sejam extraídos os metadados de artigos científicos em formato digital PDF, oferecendo ainda a possibilidade de cruzamento de dados por meio de referências e títulos, permitindo assim identificar citações bem como a relevância de um determinado documento.
+
+O CERMINE ainda possui um mecanismo de aprendizagem da própria máquina, permitindo que na medida que dados forem sendo alterados ele consiga absorver os detalhes e permitir assim uma mudança de sua maneira de extrair os dados. Deste modo ele permite que seja adaptado para novos padrões de layouts, o que permite de maneira geral que uma grande gama de modelos seja então abrangida. 
+
+Seu grande diferencial em comparação com as demais técnicas é que ele não somente extrai os metadados de um artigo, mas sim analisa todo o seu conteúdo, incluindo citações a outros artigos, que podem ser facilmente cruzados por meio de informações como título e autor(es).
+
+Seu mecanismo considera somente arquivos PDF com texto gerado de maneira pura, sem a utilização de imagens. Basicamente ele considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. Com base nisso ele condensa um layout onde as informações geralmente estão dispostas, permitindo assim que em um determinado local do arquivo esteja, provavelmente, o título e o nome dos autores. 
+
+Com estas regiões definidas o CERMINE extrai as informações com base em padrões preestabelecidos, de maneira a gerar então sua saída para os metadados e sua saída para as referências encontradas. A saída trabalhada pelo projeto é no formato XML, permitindo assim que possa ser compartilhado com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de máquinas. A figura \ref{fig:cermine-workflow} demonstra como o processo de extração do CERMINE funciona.
+
+\begin{figure}
+\centering
+\caption{CERMINE Extraction Workflow}
+\label{fig:cermine-workflow}
+\includegraphics[width=0.7\linewidth]{./assets/cermine}
+\end{figure}
+
+Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, as quais ele chama de \textit{zones}. Esta regiões são determinadas a fim de extrair as informações relevantes para cada uma, de maneira a separar, por exemplo, a área destina aos metadados do arquivo. O CERMINE divide estas \textit{zones} da seguinte maneira:
+
+\begin{itemize}
+\item \textbf{Metadata:} É a região mais ao alto do documento, onde obtém os metadados, que seriam o resumo, \textit{bib\_info}, tipo, título, afiliação, autores, datas, editores e palavras-chaves.
+\item \textbf{References:} Região responsável por identificas detalhes de referências que foram utilizadas no artigo, como título e autores, por exemplo
+\item \textbf{Body:} O texto geral do artigo, incluindo equações, imagens e tabelas.
+\item \textbf{Other:} Outros detalhes menos significantes semanticamente, como número das páginas, dentro outros.
+\end{itemize}
+
+A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do artigo o \textit{parser} do CERMINE analisa linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do journal, volume, \textit{issue}, páginas, \textit{publisher}, localização e o ano.
+
+% TeamBeam
+
+Outros projeto de destaque é o TeamBean \cite{teambeam}, cuja base ideológica possui objetivos bem sociais, de contribuir com o compartilhamento de conhecimento. Basicamente o objetivo do projeto é extrair metadados de artigos científicos, porém focado apenas nestes, de maneira a extrair título, nome do \textit{journal}, resumo e informações sobre os autores, como nome, endereço de email e afiliações.
+
+
+
 
 % Falar de cada trabalho encontrado com base nos eventos
 

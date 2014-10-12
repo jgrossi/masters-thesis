@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: grossi.aux
+A level-1 auxiliary file: acronyms.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -14,52 +15,101 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: references.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2162 of file abntex2-alf.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+while executing---line 2217 of file abntex2-alf.bst
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.2           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 2 entries,
+You've used 7 entries,
             6711 wiz_defined-function locations,
-            1203 strings with 9482 characters,
-and the built_in function-call counts, 1411 in all, are:
-= -- 227
-> -- 15
-< -- 0
-+ -- 51
-- -- 5
-* -- 69
-:= -- 257
-add.period$ -- 3
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 1
-duplicate$ -- 28
-empty$ -- 88
-format.name$ -- 23
-if$ -- 325
+            1229 strings with 10253 characters,
+and the built_in function-call counts, 5927 in all, are:
+= -- 616
+> -- 159
+< -- 54
++ -- 154
+- -- 50
+* -- 370
+:= -- 849
+add.period$ -- 19
+call.type$ -- 7
+change.case$ -- 60
+chr.to.int$ -- 10
+cite$ -- 6
+duplicate$ -- 355
+empty$ -- 345
+format.name$ -- 234
+if$ -- 1299
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 13
-num.names$ -- 5
-pop$ -- 41
+missing$ -- 110
+newline$ -- 39
+num.names$ -- 30
+pop$ -- 170
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 25
 quote$ -- 0
-skip$ -- 110
+skip$ -- 447
 stack$ -- 1
-substring$ -- 66
-swap$ -- 9
-text.length$ -- 0
+substring$ -- 250
+swap$ -- 127
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 8
+while$ -- 43
 width$ -- 0
-write$ -- 22
+write$ -- 92
+(There were 24 error messages)

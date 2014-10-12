@@ -5,9 +5,41 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.2 }
 
+\bibitem[Han C. Lee~Giles e Fox 2003]{svm}
+\abntrefinfo{Han C. Lee~Giles e Fox}{HAN C. LEE~GILES; FOX}{2003}
+{HAN C. LEE~GILES, E. M. H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata
+  extraction using support vector machines.
+2003.}
+
+\bibitem[Kern Kris~Jack e Granitzer 2012]{teambeam}
+\abntrefinfo{Kern Kris~Jack e Granitzer}{KERN KRIS~JACK; GRANITZER}{2012}
+{KERN KRIS~JACK, M.~H. R.; GRANITZER, M. Teambeam — meta-data extraction from
+  scientific literature.
+v.~18, n.~7/8, 2012.
+Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
+
 \bibitem[Kitchenham 2004]{rsl-manual}
 \abntrefinfo{Kitchenham}{KITCHENHAM}{2004}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
+
+\bibitem[Seymore e Rosenfield 1999]{seymore}
+\abntrefinfo{Seymore e Rosenfield}{SEYMORE; ROSENFIELD}{1999}
+{SEYMORE, K.; ROSENFIELD, R. Learning hidden markov model structure for
+  information extraction.
+p. 37--42, 1999.}
+
+\bibitem[Tkaczyk Paweł~Szostek e Bolikowski 2014]{cermine}
+\abntrefinfo{Tkaczyk Paweł~Szostek e Bolikowski}{TKACZYK PAWEł~SZOSTEK;
+  BOLIKOWSKI}{2014}
+{TKACZYK PAWEł~SZOSTEK, P. J. D. M.~F. D.; BOLIKOWSKI Łukasz. Cermine —
+  automatic extraction of metadata and references from scientific literature.
+2014.}
+
+\bibitem[Weibel 1999]{dublin-core}
+\abntrefinfo{Weibel}{WEIBEL}{1999}
+{WEIBEL, S. The dublin core: a simple content description format for electronic
+  resources.
+p. 117--119, 1999.}
 
 \end{thebibliography}
