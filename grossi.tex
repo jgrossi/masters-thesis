@@ -102,7 +102,7 @@
 \titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos sob o Ponto de Vista do Resultado Comparativo Final}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
-\data{2014, v-0.1.1}
+\data{2014, v-0.3.2}
 \orientador{Marcello Peixoto Bax}
 \instituicao{%
 	Universidade Federal de Minas Gerais -- UFMG
@@ -326,23 +326,12 @@
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-A escrever.
-% Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-% Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-% Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-% projeto abn\TeX\ foram extraídos de
-% \url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-% contribuíram para que a produção de trabalhos acadêmicos conforme
-% as normas ABNT com \LaTeX\ fosse possível.
 
-% Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-% da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-% Brasília (CPAI), ao grupo de usuários
-% \emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-% novos voluntários do grupo
-% \emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-% \url{http://abntex2.googlecode.com/}}~que contribuíram e que ainda
-% contribuirão para a evolução do \abnTeX.
+Os agradecimentos principais são direcionados a meu orientador Prof. Marcello Peixoto Bax, que me concedeu a oportunidade de realizar este trabalho com muita liberdade e com extrema confiança em meu trabalho.
+
+Agradecimentos especiais são direcionados aos meus pais por acreditarem em meu potencial e sempre aceitarem as escolhas feitas por mim, sempre me incentivando de um modo ou outro a procurar sempre novos conhecimentos e experiências.
+
+Agradeço também de modo geral todas as pessoas da ECI, tanto pelas amizades feitas quanto também por me apoiarem, me ouvirem e me incentivarem a acreditar no meu trabalho e a fazer um estudo de qualidade.
 
 \end{agradecimentos}
 % ---
@@ -641,14 +630,42 @@ Além da análise linha por linha são utilizadas análises de palavras dentro d
 
 Para cada uma das classes analisadas são feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, sejam extraídos com base em expressões regulares utilizadas em linguagens de programação.
 
-\subsection{Rule-based}
+\subsection{Hidden Markov Models (HMM)}
 
+% Escrever sobre isso ainda
 
+\textit{Escrever sobre HMM, que muitas outras técnicas a utiliza para extração de referências em documentos.}
 
+\subsection{Word Clustering}
 
+Utilizando de trabalhos tradicionais, como \cite{svm}, Han et al \cite{rule-based} apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de documentos, indo de maneira relativamente contrária às propostas tradicionais, baseando apenas na ocorrência e estatísticas de palavras isoladas.
 
+Técnicas baseada em \textit{cluster} de palavras geralmente apresentam performance maiores do que as técnicas tradicionais \cite{rule-based}. Este grupo de palavras demonstra relação entre palavras semelhantes dentro de um contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais eficaz.
 
-\section{Projetos baseados em layouts}
+Han et al agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, que possuem conhecimento prévio de classes específicas, como autor, título, etc. Deste modo palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar por grupos características de metadados, como por exemplo, a palavra "Mary" faz parte do contexto de "nomes", portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor fazerem parte da classe "autor" por exemplo. Esta lógica é apresentada para outras classes, como "e-mail" por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere "@".
+
+\begin{figure}
+\centering
+\caption{Workflow da extração de metadados usando \textit{cluster} de palavras}
+\label{fig:workflow-rule-based}
+\includegraphics[width=0.7\linewidth]{./assets/workflow-rule-based}
+\end{figure}
+
+Han et al ainda utiliza da técnica  de SVM (Support Vector Machines) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com o \textit{cluster}, identificando mais facilmente os metadados.
+
+Além disso é utilizada também a técnica de HMM \cite{hvv} para a extração das referências, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
+
+Basicamente a \textit{Rule-based Word Clustering} se resume em 3 (três) etapas. A primeira etapa se resume na construção das bases de dados, assim como \cite{svm}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} de maneira a unir não somente estas bases externas mas também bases construídas dentro de um domínio específico, como palavras que fazem parte de um conjunto finito, não genérico.
+
+A segunda etapa é chamada de \textit{Cluster Design}. Esta etapa é onde os \textit{clusters} são arquitetados, de maneira a contemplar também propriedades ortográficas das palavras, como se funcionasse de maneira geral como uma expressão regular de palavras, formando então um \textit{cluster} com base nas características apresentadas.
+
+A terceira etapa é chamada de \textit{Rule Design}, que resume-se basicamente na representação de cada palavras dentro de seu contexto de apresentação. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como do grupo de "nomes".
+
+Como resultado este \textit{cluster} permite um ganho considerável de performance, além de permitir uma precisão maior dos resultados, visto que eles são apresentados com base nestas bases focadas em um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos ao se comparar por exemplo com técnicas de \textit{cluster} distribuídos.
+
+Por outro lado a utilização desta técnica possui uma falha em semântica dos dados, visto que quando um dígito ou conjunto deles é substituído por ":number" ele se torna apenas um número, sem um contexto específico, ou seja, pode ser tanto uma referência a alguma página ou até mesmo um mês de um ano.
+
+\section{Projetos Baseados em Layouts}
 
 Alguns projetos baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
 
@@ -682,12 +699,13 @@ Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, a
 \item \textbf{Other:} Outros detalhes menos significantes semanticamente, como número das páginas, dentro outros.
 \end{itemize}
 
-A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do artigo o \textit{parser} do CERMINE analisa linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do journal, volume, \textit{issue}, páginas, \textit{publisher}, localização e o ano.
+A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do artigo o \textit{parser} do CERMINE analisa linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do \textit{journal}, volume, \textit{issue}, páginas, \textit{publisher}, localização e o ano.
 
 % TeamBeam
 
-Outros projeto de destaque é o TeamBean \cite{teambeam}, cuja base ideológica possui objetivos bem sociais, de contribuir com o compartilhamento de conhecimento. Basicamente o objetivo do projeto é extrair metadados de artigos científicos, porém focado apenas nestes, de maneira a extrair título, nome do \textit{journal}, resumo e informações sobre os autores, como nome, endereço de email e afiliações.
+Outros projeto de destaque é o TeamBeam \cite{teambeam}, cuja base ideológica possui objetivos bem sociais, de contribuir com o compartilhamento de conhecimento. Basicamente o objetivo do projeto é extrair metadados de artigos científicos, porém focado apenas nestes, de maneira a extrair título, nome do \textit{journal}, resumo e informações sobre os autores, como nome, endereço de e-mail e afiliações.
 
+\textit{Continuar a escrever sobre o TeamBeam.}
 
 
 
@@ -706,7 +724,7 @@ Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e 
 
 Desta maneira, a pesquisa de modo padrão não traz alteração nos ambientes pesquisados, apenas os analisa e os compara com base em padrões estabelecidos como sendo de resultado adequado. Assim, o projeto em si trata muito mais de pré-seleção de documentos e técnicas a serem testadas como também dos resultados já analisados e que são necessários para uma técnica ser considerada produtiva.
 
-% Explicar o passo-a-passo que será utilizado
+% Explicar o passo a passo que será utilizado
 
 Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmente as que são necessárias dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados. Os elementos se relacionam entre si e estão identificados na figura \ref{fig:metodology}. 
 

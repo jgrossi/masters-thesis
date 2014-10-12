@@ -11,6 +11,12 @@
   extraction using support vector machines.
 2003.}
 
+\bibitem[Han Eren~Manavoglu e Zhang 2005]{rule-based}
+\abntrefinfo{Han Eren~Manavoglu e Zhang}{HAN EREN~MANAVOGLU; ZHANG}{2005}
+{HAN EREN~MANAVOGLU, H. Z. K. T. C. L.~G. H.; ZHANG, X. Rule-based word
+  clustering for document metadata extraction.
+p. 1049--1053, 2005.}
+
 \bibitem[Kern Kris~Jack e Granitzer 2012]{teambeam}
 \abntrefinfo{Kern Kris~Jack e Granitzer}{KERN KRIS~JACK; GRANITZER}{2012}
 {KERN KRIS~JACK, M.~H. R.; GRANITZER, M. Teambeam — meta-data extraction from
@@ -22,6 +28,12 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 \abntrefinfo{Kitchenham}{KITCHENHAM}{2004}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
+
+\bibitem[Rabiner 1989]{hvv}
+\abntrefinfo{Rabiner}{RABINER}{1989}
+{RABINER, L.~R. A tutorial on hidden markov models and selected applications in
+  speech recognition.
+v.~77, n.~2, 1989.}
 
 \bibitem[Seymore e Rosenfield 1999]{seymore}
 \abntrefinfo{Seymore e Rosenfield}{SEYMORE; ROSENFIELD}{1999}

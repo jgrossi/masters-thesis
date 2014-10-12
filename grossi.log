@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  11 OCT 2014 19:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  12 OCT 2014 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,10 +1112,7 @@ l.277
 
 ] [18
 
-]) (./grossi.toc
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
-)
+]) (./grossi.toc)
 [19
 
 ] [20
@@ -1126,11 +1123,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [21
 
 ]
-<./assets/introducao.png, id=200, 414.54875pt x 307.1475pt>
+<./assets/introducao.png, id=203, 414.54875pt x 307.1475pt>
 File: ./assets/introducao.png Graphic file (type png)
 
 <use ./assets/introducao.png>
-Package pdftex.def Info: ./assets/introducao.png used on input line 503.
+Package pdftex.def Info: ./assets/introducao.png used on input line 492.
 (pdftex.def)             Requested size: 318.49861pt x 235.98875pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1142,55 +1139,57 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [24] [25] [26
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 576.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 565.
 
  (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 576.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 565.
 
-[27] [28]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 644.
- [29] <./assets/cermine.png, id=273, 1027.84pt x 579.16376pt>
+[27] [28] [29]
+<./assets/workflow-rule-based.png, id=279, 880.28876pt x 650.43pt>
+File: ./assets/workflow-rule-based.png Graphic file (type png)
+
+<use ./assets/workflow-rule-based.png>
+Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 65
+1.
+(pdftex.def)             Requested size: 318.49861pt x 235.32573pt.
+ [30] [31 <./assets/workflow-rule-based.png (PNG copy)>] <./assets/cermine.png,
+ id=298, 1027.84pt x 579.16376pt>
 File: ./assets/cermine.png Graphic file (type png)
 
 <use ./assets/cermine.png>
-Package pdftex.def Info: ./assets/cermine.png used on input line 669.
+Package pdftex.def Info: ./assets/cermine.png used on input line 690.
 (pdftex.def)             Requested size: 318.49861pt x 179.4682pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-[31 <./assets/cermine.png (PNG copy)>] [32
+ [32] [33 <./assets/cermine.png (PNG copy)>] [34
 
 ]
-<./assets/metodology.png, id=293, 545.03625pt x 457.71pt>
+<./assets/metodology.png, id=317, 545.03625pt x 457.71pt>
 File: ./assets/metodology.png Graphic file (type png)
 
 <use ./assets/metodology.png>
-Package pdftex.def Info: ./assets/metodology.png used on input line 715.
+Package pdftex.def Info: ./assets/metodology.png used on input line 737.
 (pdftex.def)             Requested size: 318.49861pt x 267.46944pt.
- [33 <./assets/metodology.png>] [34]
+ [35 <./assets/metodology.png>] [36]
 Underfull \vbox (badness 3049) has occurred while \output is active []
 
- [35]
-[36]
+ [37]
+[38]
 
-LaTeX Warning: Command \' invalid in math mode on input line 872.
+LaTeX Warning: Command \' invalid in math mode on input line 894.
 
-[37] [38
-
-] [39] [40
+[39] [40
 
 ] [41] [42
+
+] [43] [44
 
 ] (./grossi.bbl (./grossi.brf)
 \tf@brf=\write5
 \openout5 = `grossi.brf'.
 
- [43] [44
+ [45] [46
 
 ]
 bibitemlist
@@ -1198,7 +1197,7 @@ bibitemlist
 No file grossi.ind.
 
 AED: lastpage setting LastPage
-[45]
+[47]
 \tf@lof=\write6
 \openout6 = `grossi.lof'.
 
@@ -1208,27 +1207,28 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `grossi.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 979.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 979.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1001.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1001.
  (./grossi.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 979.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 979.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1001.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1001.
+
 Package rerunfilecheck Info: File `grossi.brf' has not changed.
-(rerunfilecheck)             Checksum: 0D8EF4764A72CCEF1D48DB8884667933;458.
+(rerunfilecheck)             Checksum: F3D442F8F9276BDEAAEDE5C86ABD9217;695.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 979.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1001.
  ) 
 Here is how much of TeX's memory you used:
- 13092 strings out of 493315
- 194405 string characters out of 6137904
- 443424 words of memory out of 5000000
- 16089 multiletter control sequences out of 15000+600000
- 87768 words of font info for 120 fonts, out of 8000000 for 9000
+ 13125 strings out of 493315
+ 194882 string characters out of 6137904
+ 443918 words of memory out of 5000000
+ 16116 multiletter control sequences out of 15000+600000
+ 82034 words of font info for 118 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 40i,13n,35p,693b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,13n,35p,772b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 13/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/texmf-dist/
@@ -1242,12 +1242,11 @@ st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/public/lm/lmri12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmss1
 7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on grossi.pdf (47 pages, 440405 bytes).
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on grossi.pdf (49 pages, 465052 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 494 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 29512 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 25429 words of extra memory for PDF output out of 29859 (max. 10000000)
 
