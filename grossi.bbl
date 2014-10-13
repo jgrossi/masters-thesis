@@ -29,11 +29,10 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
 
-\bibitem[Rabiner 1989]{hvv}
-\abntrefinfo{Rabiner}{RABINER}{1989}
-{RABINER, L.~R. A tutorial on hidden markov models and selected applications in
-  speech recognition.
-v.~77, n.~2, 1989.}
+\bibitem[Rabiner e Juang 1986]{hmm}
+\abntrefinfo{Rabiner e Juang}{RABINER; JUANG}{1986}
+{RABINER, L.~R.; JUANG, B.~H. An introduction to hidden markov models.
+1986.}
 
 \bibitem[Seymore e Rosenfield 1999]{seymore}
 \abntrefinfo{Seymore e Rosenfield}{SEYMORE; ROSENFIELD}{1999}

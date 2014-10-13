@@ -14,6 +14,11 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: references.bib
+I was expecting a `,' or a `}'---line 80 of file references.bib
+ :  
+ :  editor = {IEE}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
 while executing---line 2162 of file abntex2-alf.bst
@@ -105,43 +110,43 @@ while executing---line 2217 of file abntex2-alf.bst
 +---------------------------------------------------------+
 You've used 9 entries,
             6711 wiz_defined-function locations,
-            1239 strings with 10540 characters,
-and the built_in function-call counts, 7362 in all, are:
-= -- 712
-> -- 207
-< -- 58
-+ -- 172
-- -- 65
-* -- 467
-:= -- 1042
+            1238 strings with 10505 characters,
+and the built_in function-call counts, 7496 in all, are:
+= -- 728
+> -- 223
+< -- 55
++ -- 179
+- -- 70
+* -- 480
+:= -- 1057
 add.period$ -- 25
 call.type$ -- 9
-change.case$ -- 78
-chr.to.int$ -- 15
+change.case$ -- 82
+chr.to.int$ -- 12
 cite$ -- 8
 duplicate$ -- 433
-empty$ -- 454
-format.name$ -- 304
-if$ -- 1632
+empty$ -- 455
+format.name$ -- 328
+if$ -- 1663
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 144
+missing$ -- 145
 newline$ -- 49
 num.names$ -- 40
-pop$ -- 217
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 33
 quote$ -- 0
-skip$ -- 527
+skip$ -- 534
 stack$ -- 1
-substring$ -- 322
-swap$ -- 162
-text.length$ -- 8
+substring$ -- 321
+swap$ -- 159
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 57
 width$ -- 0
-write$ -- 121
-(There were 40 error messages)
+write$ -- 119
+(There were 41 error messages)

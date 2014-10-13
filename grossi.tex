@@ -632,9 +632,19 @@ Para cada uma das classes analisadas são feitas correlações com o tipo de dad
 
 \subsection{Hidden Markov Models (HMM)}
 
-% Escrever sobre isso ainda
+A teoria básica de Markov foi conhecida próximo dos anos 80 por engenheiros e matemáticos com grande aplicação inicialmente em processamento da fala mas com vasta amplitude em outras áreas onde descoberta de padrões pode ser aplicada \cite{hmm}.
 
-\textit{Escrever sobre HMM, que muitas outras técnicas a utiliza para extração de referências em documentos.}
+O processo é baseado na identificação de modelos observáveis que representem e caracterizem a ocorrências de símbolos observáveis, ou seja, padrões. Se um sinal foi observado ele pode ser utilizado para futuras referências, de acordo com o padrão observado.
+
+Um exemplo prático citado por Rabiner e Juang \cite{hmm} é o caso de uso do jogo  \textit{Cara e Coroa}. Toma-se um observador em um quarto fechado com uma cortina totalmente fechada para outro cômodo. Este observador não consegue ver nada que acontece no outro cômodo, onde está uma outra pessoa jogando uma moeda pra cima, relatando sempre o resultado obtido (cara ou coroa). Neste caso o problema é construir um Hidden Markov Model (HMM) para explicar ao observador a sequência dos resultados obtidos. 
+
+Este exemplo é baseado tanto no estado de cada resultado (cara ou coroa) e em probabilidades matemáticas de ocorrência destes estados, neste caso 50\%. Assim desenha-se modelos onde os estados são representados com base nas inúmeras possibilidades existentes, levando inclusive em consideração a sequência dos fatos, ou estados.
+
+No âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al \cite{seymore}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com um estado por campo. 
+
+Um dos pontos positivos deste modelo é que por serem baseados em estatística eles são muito bem empregados em domínios de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem deste método podemos citar o fato de, por ser baseado em estatística, uma grande quantidade de dados deve ser utilizada a título de treino para obter os número significativos para então ser aplicados de maneira final.
+
+Deste modo, para extração dos metadados o HMM pode ser utilizado aplicando um marcador (\textit{label}) em cada palavras do cabeçalho de um documento (artigo científico), relacionando cada uma a uma classe, como título, autor, etc.
 
 \subsection{Word Clustering}
 
@@ -653,7 +663,7 @@ Han et al agrupou bases de dados de domínios diversos incluindo também proprie
 
 Han et al ainda utiliza da técnica  de SVM (Support Vector Machines) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com o \textit{cluster}, identificando mais facilmente os metadados.
 
-Além disso é utilizada também a técnica de HMM \cite{hvv} para a extração das referências, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
+Além disso é utilizada também a técnica de HMM \cite{hmm2} para a extração das referências, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
 
 Basicamente a \textit{Rule-based Word Clustering} se resume em 3 (três) etapas. A primeira etapa se resume na construção das bases de dados, assim como \cite{svm}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} de maneira a unir não somente estas bases externas mas também bases construídas dentro de um domínio específico, como palavras que fazem parte de um conjunto finito, não genérico.
 
