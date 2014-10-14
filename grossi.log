@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  13 OCT 2014 20:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  13 OCT 2014 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,7 +1123,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [21
 
 ]
-<./assets/introducao.png, id=203, 414.54875pt x 307.1475pt>
+<./assets/introducao.png, id=207, 414.54875pt x 307.1475pt>
 File: ./assets/introducao.png Graphic file (type png)
 
 <use ./assets/introducao.png>
@@ -1147,59 +1147,65 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 565.
 
-[27] [28] [29] [30]
-<./assets/workflow-rule-based.png, id=293, 880.28876pt x 650.43pt>
+[27] [28] [29] <./assets/hmm-states.png, id=283, 612.2875pt x 514.92375pt>
+File: ./assets/hmm-states.png Graphic file (type png)
+
+<use ./assets/hmm-states.png>
+Package pdftex.def Info: ./assets/hmm-states.png used on input line 649.
+(pdftex.def)             Requested size: 318.49861pt x 267.84831pt.
+ [30]
+<./assets/workflow-rule-based.png, id=298, 880.28876pt x 650.43pt>
 File: ./assets/workflow-rule-based.png Graphic file (type png)
 
 <use ./assets/workflow-rule-based.png>
 Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 66
-1.
+8.
 (pdftex.def)             Requested size: 318.49861pt x 235.32573pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `hmm2' on page 31 undefined on input line 666.
+ [31 <./assets/hmm-states.png>]
+
+LaTeX Warning: Citation `hmm2' on page 32 undefined on input line 673.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./assets/workflow-rule-based.png (PNG copy)>] [32]
-<./assets/cermine.png, id=309, 1027.84pt x 579.16376pt>
+ [32 <./assets/workflow-rule-based.png (PNG copy)>] [33]
+<./assets/cermine.png, id=318, 1027.84pt x 579.16376pt>
 File: ./assets/cermine.png Graphic file (type png)
 
 <use ./assets/cermine.png>
-Package pdftex.def Info: ./assets/cermine.png used on input line 700.
+Package pdftex.def Info: ./assets/cermine.png used on input line 707.
 (pdftex.def)             Requested size: 318.49861pt x 179.4682pt.
+ [34 <./assets/cermine.png (PNG copy)>] [35] [36
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33 <./assets/cermine.png (PNG copy)>] [34]
-<./assets/metodology.png, id=322, 545.03625pt x 457.71pt>
+]
+<./assets/metodology.png, id=336, 545.03625pt x 457.71pt>
 File: ./assets/metodology.png Graphic file (type png)
 
 <use ./assets/metodology.png>
-Package pdftex.def Info: ./assets/metodology.png used on input line 747.
+Package pdftex.def Info: ./assets/metodology.png used on input line 754.
 (pdftex.def)             Requested size: 318.49861pt x 267.46944pt.
- [35
-
- <./assets/metodology.png>] [36]
+ [37 <./assets/metodology.png>] [38]
 Underfull \vbox (badness 3049) has occurred while \output is active []
 
- [37]
-[38]
+ [39]
+[40]
 
-LaTeX Warning: Command \' invalid in math mode on input line 904.
+LaTeX Warning: Command \' invalid in math mode on input line 911.
 
-[39] [40
-
-] [41] [42
+[41] [42
 
 ] [43] [44
+
+] [45] [46
 
 ] (./grossi.bbl (./grossi.brf)
 \tf@brf=\write5
 \openout5 = `grossi.brf'.
 
- [45] [46
+ [47] [48
 
 ]
 bibitemlist
@@ -1207,7 +1213,7 @@ bibitemlist
 No file grossi.ind.
 
 AED: lastpage setting LastPage
-[47]
+[49]
 \tf@lof=\write6
 \openout6 = `grossi.lof'.
 
@@ -1217,14 +1223,14 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `grossi.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1011.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1011.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1018.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1018.
  (./grossi.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1011.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1011.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1018.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1018.
 
 Package rerunfilecheck Info: File `grossi.brf' has not changed.
-(rerunfilecheck)             Checksum: 9A0CC7AEEF8EAE1A0DF8DAFD0AD44284;841.
+(rerunfilecheck)             Checksum: 75E761D871F615E1AC81D9C793F7D046;841.
 
 
 LaTeX Warning: There were undefined references.
@@ -1232,13 +1238,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1011.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1018.
  ) 
 Here is how much of TeX's memory you used:
- 13134 strings out of 493315
- 194969 string characters out of 6137904
- 443941 words of memory out of 5000000
- 16123 multiletter control sequences out of 15000+600000
+ 13143 strings out of 493315
+ 195134 string characters out of 6137904
+ 445296 words of memory out of 5000000
+ 16128 multiletter control sequences out of 15000+600000
  82163 words of font info for 119 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  40i,13n,35p,772b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1256,10 +1262,10 @@ ype1/public/lm/lmri12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/lm/lmss12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmss1
 7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></
 usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on grossi.pdf (49 pages, 467085 bytes).
+Output written on grossi.pdf (51 pages, 521483 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 529 compressed objects within 6 object streams
- 122 named destinations out of 1000 (max. 500000)
- 25429 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 25434 words of extra memory for PDF output out of 29859 (max. 10000000)
 
