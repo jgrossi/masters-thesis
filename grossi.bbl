@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.2 }
 
+\bibitem[Berger e Pietra 1996]{maximum-entropy}
+\abntrefinfo{Berger e Pietra}{BERGER; PIETRA}{1996}
+{BERGER, S. A. D.~P. A.~L.; PIETRA, V. J.~D. A maximum entropy approach to
+  natural language processing.
+1996.}
+
 \bibitem[Han C. Lee~Giles e Fox 2003]{svm}
 \abntrefinfo{Han C. Lee~Giles e Fox}{HAN C. LEE~GILES; FOX}{2003}
 {HAN C. LEE~GILES, E. M. H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata
@@ -28,6 +34,12 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 \abntrefinfo{Kitchenham}{KITCHENHAM}{2004}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
+
+\bibitem[Rabiner 1989]{hmm2}
+\abntrefinfo{Rabiner}{RABINER}{1989}
+{RABINER, L.~R. A tutorial on hidden markov models and selected applications in
+  speech recognition.
+v.~77, n.~2, 1989.}
 
 \bibitem[Rabiner e Juang 1986]{hmm}
 \abntrefinfo{Rabiner e Juang}{RABINER; JUANG}{1986}

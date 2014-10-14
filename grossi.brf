@@ -14,5 +14,6 @@
 \backcite {rule-based}{{31}{2.1.3}{subsection.2.1.3}}
 \backcite {hmm2}{{32}{2.1.3}{figure.2.3}}
 \backcite {svm}{{32}{2.1.3}{figure.2.3}}
-\backcite {cermine}{{33}{2.2}{section.2.2}}
-\backcite {teambeam}{{34}{2.2}{figure.2.4}}
+\backcite {cermine}{{33}{2.2.1}{subsection.2.2.1}}
+\backcite {teambeam}{{35}{2.2.2}{subsection.2.2.2}}
+\backcite {maximum-entropy}{{35}{2.2.2}{subsection.2.2.2}}
