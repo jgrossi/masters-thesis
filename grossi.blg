@@ -108,45 +108,45 @@ while executing---line 2217 of file abntex2-alf.bst
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 11 entries,
+You've used 13 entries,
             6711 wiz_defined-function locations,
-            1247 strings with 10759 characters,
-and the built_in function-call counts, 8714 in all, are:
-= -- 798
-> -- 271
-< -- 58
-+ -- 198
-- -- 85
-* -- 565
-:= -- 1232
-add.period$ -- 31
-call.type$ -- 11
-change.case$ -- 100
-chr.to.int$ -- 17
-cite$ -- 10
-duplicate$ -- 497
-empty$ -- 546
-format.name$ -- 398
-if$ -- 1936
+            1259 strings with 11145 characters,
+and the built_in function-call counts, 10699 in all, are:
+= -- 963
+> -- 338
+< -- 60
++ -- 223
+- -- 106
+* -- 708
+:= -- 1481
+add.period$ -- 42
+call.type$ -- 13
+change.case$ -- 123
+chr.to.int$ -- 19
+cite$ -- 12
+duplicate$ -- 595
+empty$ -- 713
+format.name$ -- 499
+if$ -- 2429
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 178
-newline$ -- 59
-num.names$ -- 50
-pop$ -- 271
+missing$ -- 215
+newline$ -- 67
+num.names$ -- 61
+pop$ -- 320
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 48
 quote$ -- 0
-skip$ -- 599
+skip$ -- 702
 stack$ -- 1
-substring$ -- 358
-swap$ -- 180
-text.length$ -- 8
+substring$ -- 448
+swap$ -- 234
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 2
 warning$ -- 0
-while$ -- 69
+while$ -- 86
 width$ -- 0
-write$ -- 147
+write$ -- 180
 (There were 41 error messages)

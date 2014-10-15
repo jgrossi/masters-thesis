@@ -35,6 +35,19 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
 
+\bibitem[Lafferty e Pereira 2001]{crf}
+\abntrefinfo{Lafferty e Pereira}{LAFFERTY; PEREIRA}{2001}
+{LAFFERTY, A.~M. J.; PEREIRA, F.~C. Conditional random fields: Probabilistic
+  models for segmenting and labeling sequence data. In:  ACM (Ed.).
+  \emph{Proceedings of the 18th International Conference on Machine Learning
+  2001 (ICML 2001)}. [S.l.]: ACM, 2001. p. 282--289.}
+
+\bibitem[Peng e McCallum 2004]{crf-ie}
+\abntrefinfo{Peng e McCallum}{PENG; MCCALLUM}{2004}
+{PENG, F.; MCCALLUM, A. Accurate information extraction from research papers
+  using conditional random fields. In:  \emph{HLT-NAACL04}. [S.l.: s.n.], 2004.
+  p. 329--336.}
+
 \bibitem[Rabiner 1989]{hmm2}
 \abntrefinfo{Rabiner}{RABINER}{1989}
 {RABINER, L.~R. A tutorial on hidden markov models and selected applications in

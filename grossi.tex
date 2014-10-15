@@ -102,7 +102,7 @@
 \titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos sob o Ponto de Vista do Resultado Comparativo Final}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
-\data{2014, v-0.3.2}
+\data{2014, v-0.3.6}
 \orientador{Marcello Peixoto Bax}
 \instituicao{%
 	Universidade Federal de Minas Gerais -- UFMG
@@ -585,7 +585,7 @@ Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada c
 
 Estas classes seguem o padrão \cite{dublin-core} estabelecido pelo Dublin Core\footnote{Iniciativa existente a fim de padronizar metadados para descrever um objeto digital. \url{http://dublincore.org}}, que define por padrão 15 elementos para descrever um recurso de maneira digital.
 
-Seymore et al \cite{seymore} definiu também 15 tags para esta definição do cabeçalho de um documento. Porém destas 15 tags definidas somente 4 correspondem ao padrão da Dublin Core e estão ilustradas na Tabela \ref{tab:svm-classes}.
+Seymore et al. \cite{seymore} definiu também 15 tags para esta definição do cabeçalho de um documento. Porém destas 15 tags definidas somente 4 correspondem ao padrão da Dublin Core e estão ilustradas na Tabela \ref{tab:svm-classes}.
 
 \begin{table}
     \caption{Relação de classes utilizadas e comparação com o padrão Dublin Core.}
@@ -612,7 +612,7 @@ Seymore et al \cite{seymore} definiu também 15 tags para esta definição do ca
     \label{tab:svm-classes}
 \end{table}
 
-Para o caso de extração de metadados em artigos científicos utilizando \textit{Support Vector Machines} \cite{svm} as tags de Seymore et al \cite{seymore} são utilizadas para representação destas classes.
+Para o caso de extração de metadados em artigos científicos utilizando \textit{Support Vector Machines} \cite{svm} as tags de Seymore et al. \cite{seymore} são utilizadas para representação destas classes.
 
 Deste modo, com base nestas classes são definidas características de suas classes vizinhas, como por exemplo, elementos que ficam perto de outros elementos, que possuem uma sequência lógica geral de exibição. Com base nestas informações, que são feita classe por classe, estes padrões vão sendo encaixados a cada linha do cabeçalho analisado, permitindo que os metadados sejam extraídos com uma grande precisão.
 
@@ -640,7 +640,7 @@ Um exemplo prático citado por Rabiner e Juang \cite{hmm} é o caso de uso do jo
 
 Este exemplo é baseado tanto no estado de cada resultado (cara ou coroa) e em probabilidades matemáticas de ocorrência destes estados, neste caso 50\%. Assim desenha-se modelos onde os estados são representados com base nas inúmeras possibilidades existentes, levando inclusive em consideração a sequência dos fatos, ou estados.
 
-No âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al \cite{seymore}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com um estado por campo. 
+No âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al. \cite{seymore}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com um estado por campo. 
 
 \begin{figure}
 \centering
@@ -655,11 +655,11 @@ Deste modo, para extração dos metadados o HMM pode ser utilizado aplicando um 
 
 \subsection{Word Clustering}
 
-Utilizando de trabalhos tradicionais, como \cite{svm}, Han et al \cite{rule-based} apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de documentos, indo de maneira relativamente contrária às propostas tradicionais, baseando apenas na ocorrência e estatísticas de palavras isoladas.
+Utilizando de trabalhos tradicionais, como \cite{svm}, Han et al. \cite{rule-based} apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de documentos, indo de maneira relativamente contrária às propostas tradicionais, baseando apenas na ocorrência e estatísticas de palavras isoladas.
 
 Técnicas baseada em \textit{cluster} de palavras geralmente apresentam performance maiores do que as técnicas tradicionais \cite{rule-based}. Este grupo de palavras demonstra relação entre palavras semelhantes dentro de um contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais eficaz.
 
-Han et al agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, que possuem conhecimento prévio de classes específicas, como autor, título, etc. Deste modo palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar por grupos características de metadados, como por exemplo, a palavra "Mary" faz parte do contexto de "nomes", portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor fazerem parte da classe "autor" por exemplo. Esta lógica é apresentada para outras classes, como "e-mail" por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere "@".
+Han et al. agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, que possuem conhecimento prévio de classes específicas, como autor, título, etc. Deste modo palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar por grupos características de metadados, como por exemplo, a palavra "Mary" faz parte do contexto de "nomes", portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor fazerem parte da classe "autor" por exemplo. Esta lógica é apresentada para outras classes, como "e-mail" por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere "@".
 
 \begin{figure}
 \centering
@@ -668,7 +668,7 @@ Han et al agrupou bases de dados de domínios diversos incluindo também proprie
 \includegraphics[width=0.7\linewidth]{./assets/workflow-rule-based}
 \end{figure}
 
-Han et al ainda utiliza da técnica  de SVM (Support Vector Machines) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com o \textit{cluster}, identificando mais facilmente os metadados.
+Han et al. ainda utiliza da técnica  de SVM (Support Vector Machines) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com o \textit{cluster}, identificando mais facilmente os metadados.
 
 Além disso é utilizada também a técnica de HMM \cite{hmm2} para a extração das referências, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
 
@@ -684,7 +684,21 @@ Por outro lado a utilização desta técnica possui uma falha em semântica dos 
 
 \subsection{Conditional Random Fields (CRFs)}
 
-\textit{Falar sobre CRFs.}
+% Falar sobre CRFs 
+
+Conditional Random Fields é um framework proposto por Lafferty et al. \cite{crf} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquinas (\textit{machine learning}).
+
+Sua representação é puramente matemática com modelos gráficos a fim de maximizar as probabilidades condicionais que se desejam aplicar.
+
+Esta técnica é comparada e quase sempre utilizada juntamente com a HMM (Hidden Markov Models), de maneira a possuir algumas vantagens sobre esta última, como a habilidade de relacionar pressupostos independentes nos modelos, ou seja, relacionar observações e/ou interpretações.
+
+Além disso, CRFs são utilizadas também em marcação e parseamento de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
+
+% Falar sobre o uso de CRFs na extração de informação
+
+Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{crf-ie}, como uma maneira eficaz de extrair padrões em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
+
+A utilização de CRFs na extração de metadados mostra-se muito eficaz por reduzir bastante os erros em algumas métricas, aumentando o sucesso da aplicação desta técnica nesta área.
 
 \section{Projetos de Destaque}
 
@@ -704,7 +718,7 @@ O CERMINE ainda possui um mecanismo de aprendizagem da própria máquina, permit
 
 Seu grande diferencial em comparação com as demais técnicas é que ele não somente extrai os metadados de um artigo, mas sim analisa todo o seu conteúdo, incluindo citações a outros artigos, que podem ser facilmente cruzados por meio de informações como título e autor(es).
 
-Seu mecanismo considera somente arquivos PDF com texto gerado de maneira pura, sem a utilização de imagens. Basicamente ele considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. Com base nisso ele condensa um layout onde as informações geralmente estão dispostas, permitindo assim que em um determinado local do arquivo esteja, provavelmente, o título e o nome dos autores. 
+Seu mecanismo considera somente arquivos PDF com texto gerado de maneira pura, sem a utilização de imagens. Basicamente ele considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{svm}. Com base nisso ele condensa um layout onde as informações geralmente estão dispostas, permitindo assim que em um determinado local do arquivo esteja, provavelmente, o título e o nome dos autores. 
 
 Com estas regiões definidas o CERMINE extrai as informações com base em padrões preestabelecidos, de maneira a gerar então sua saída para os metadados e sua saída para as referências encontradas. A saída trabalhada pelo projeto é no formato XML, permitindo assim que possa ser compartilhado com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de máquinas. A figura \ref{fig:cermine-workflow} demonstra como o processo de extração do CERMINE funciona.
 
@@ -732,24 +746,29 @@ Outros projeto de destaque é o TeamBeam \cite{teambeam}, cuja base ideológica 
 
 O projeto também é de código livre (\textit{open source}) e é baseado na extração de pequenos blocos de texto. A manipulação dos arquivos PDF são feitas pela biblioteca PDFBox \footnote{Biblioteca de manipulação de arquivos PDF mantida pela Fundação Apache. Disponível em \url{https://pdfbox.apache.org/}}, que fornece meios eficazes de extrair textos com base nas regiões desejadas.
 
-O algoritmo do TeamBeam utiliza o algoritmo de \textit{Maximum Entropy} \cite{maximum-entropy}, que utiliza basicamente de tarefas de classificação sequencial como ferramenta principal para obtenção de padrões.
+O algoritmo do TeamBeam utiliza o algoritmo de \textit{Maximum Entropy} \cite{maximum-entropy}, que utiliza basicamente de tarefas de classificação sequencial como ferramenta principal para obtenção de padrões. A base deste algoritmo está na utilização de CRFs \cite{crf}, principalmente no que diz respeito à extração dos metadados \cite{crf-ie}.
 
 O processo de extração é feito basicamente em duas etapas. A primeira é a etapa de classificação de blocos de texto (\textit{text block classification}), onde geralmente já é possível obter algum dado concreto de resultado. Neste etapa o objetivo é associar certos blocos de texto a um dos seguintes marcadores: \textit{Title Block}; \textit{Sub-Title Block}; \textit{Journal Block}; \textit{Abstract Block}; \textit{Author Block}; \textit{E-Mail Block}; \textit{Affiliation Block}; \textit{Author-Mixed Block}; e \textit{Other Block}.
 
 Dependendo do layout do artigo alguns metadados podem vir divididos em blocos de texto diferentes, necessitando de um processamento posterior, como é o caso, geralmente, dos blocos com informações sobre os autores. Neste caso também é realizada a etapa de classificação de token (\textit{token classification}), que se resume na classificação de palavras individualmente de acordo com um dos seguintes marcadores: \textit{Given Name}; \textit{Middle Name}; \textit{Surname}; \textit{Index}; \textit{Separator}; \textit{E-Mail}; \textit{Affiliation-Start}; \textit{Affiliation}; e \textit{Other}.
 
-Kern et al defendem a ideia dos excelentes resultados do TeamBeam ao ser comparado com outros projetos. Este fato é dado em virtude das características que são levadas em consideração no processamento do algoritmo, utilizando de dicionários, informações de layout e modelo de linguagem.
+Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser comparado com outros projetos. Este fato é dado em virtude das características que são levadas em consideração no processamento do algoritmo, utilizando de dicionários, informações de layout e modelo de linguagem.
 
 \subsection{ParsCit}
 
-
+\textit{Escrever sobre.}
 
 \subsection{Layout-CRFs}
 
-
+\textit{Escrever sobre.}
 
 \subsection{Mendeley Desktop}
 
+\textit{Escrever sobre.}
+
+\subsection{CiteSeer}
+
+\textit{Escrever sobre.}
 
 
 % Falar de cada trabalho encontrado com base nos eventos
