@@ -24,10 +24,10 @@
 \contentsline {section}{\numberline {2.2}Projetos de Destaque}{33}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Cermine}{34}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}TeamBeam}{35}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}ParsCit}{36}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Layout-CRFs}{36}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Mendeley Desktop}{36}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}CiteSeer}{37}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.3}Layout-CRFs}{36}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Mendeley Desktop}{36}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}CiteSeer}{36}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}ParsCit}{38}{subsection.2.2.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{39}{chapter.3}
 \contentsline {section}{\numberline {3.1}Sele\IeC {\c c}\IeC {\~a}o das T\IeC {\'e}cnicas}{39}{section.3.1}

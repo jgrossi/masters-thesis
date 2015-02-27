@@ -11,6 +11,23 @@
   natural language processing.
 1996.}
 
+\bibitem[Cameron 1997]{cameron}
+\abntrefinfo{Cameron}{CAMERON}{1997}
+{CAMERON, R.~D. A universal citation database as a catalyst for reform in
+  scholarly communication.
+v.~2, n.~4, 1997.}
+
+\bibitem[CiteSeerX 2015]{site-citeseer}
+\abntrefinfo{CiteSeerX}{CITESEERX}{2015}
+{CITESEERX. 2015.
+Dispon{\'\i}vel em: \url{http://citeseerx.ist.psu.edu}.}
+
+\bibitem[Giles e Lawrence 1998]{citeseer}
+\abntrefinfo{Giles e Lawrence}{GILES; LAWRENCE}{1998}
+{GILES, K. D.~B. C.~L.; LAWRENCE, S. Citeseer: An automatic citation indexing
+  system.
+p. 89--98, 1998.}
+
 \bibitem[Han C. Lee~Giles e Fox 2003]{svm}
 \abntrefinfo{Han C. Lee~Giles e Fox}{HAN C. LEE~GILES; FOX}{2003}
 {HAN C. LEE~GILES, E. M. H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata

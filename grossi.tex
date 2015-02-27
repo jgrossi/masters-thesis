@@ -99,11 +99,12 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos sob o Ponto de Vista do Resultado Comparativo Final}
+\titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
-\data{2014, v-0.3.6}
+\data{2015, v-0.4.1}
 \orientador{Marcello Peixoto Bax}
+\coorientador{Renato Souza Rocha}
 \instituicao{%
 	Universidade Federal de Minas Gerais -- UFMG
 	\par
@@ -291,12 +292,12 @@
 	\vspace*{\fill}
    \end{center}
 		
-   Trabalho aprovado. \imprimirlocal, 20 de setembro de 2014:
+   Trabalho aprovado. \imprimirlocal, 26 de fevereiro de 2015:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{\imprimircoorientador} \\ Coorientador} 
    \assinatura{\textbf{Professor} \\ Professor Convidado 1}
    \assinatura{\textbf{Professor} \\ Professor Convidado 2}
-   \assinatura{\textbf{Professor} \\ Professor Convidado 3}
    %\assinatura{\textbf{Professor} \\ Convidado 4}
 	  
    \begin{center}
@@ -495,37 +496,37 @@ Basicamente estes campos já permitem que uma pesquisa mais detalhada fosse feit
 
 \section{Delimitação do Problema}
 
-De modo geral, as técnicas livre existentes para que essa extração de metadados seja feita são focadas em layouts pré-definidos, geralmente de conferências e/ou congressos internacionais, que possuem um padrão visual parecido, como é o caso do IEEE por exemplo, que segue de referência para diversos outros eventos tomando seu layout como base.
+De modo geral, as técnicas livres existentes para que essa extração de metadados seja feita são focadas em layouts pré-definidos, geralmente de conferências e/ou congressos internacionais, que possuem um padrão visual parecido, como é o caso do IEEE por exemplo, que segue de referência para diversos outros eventos tomando seu layout como base.
 
 Porém, existem diversos outros eventos que possuem layouts de artigos considerados fora do padrão e, portanto, necessitam de adaptações destas técnicas para que seus trabalhos possam ser analisados e catalogados de maneira eficaz. Esta customização promoveria uma série de tentativas para verificar o melhor layout para ser utilizado em cada caso, automaticamente.
 
 \section{Objetivo Geral}
 
-Este trabalho possui como objetivo geral provar que as técnicas livres de extração automática de metadados em artigos científicos ainda necessitam ajustes e principalmente flexibilidade para abranger um maior números de documentos e prover então uma contribuição maior perante a comunidade acadêmica.
+Este trabalho possui como objetivo geral identificar quais são as melhores técnicas de extração de metadados em artigos científicos de acordo com diversos padrões existentes, tanto de formatação quanto de disposição das informações.
 
-A necessidade de customização é uma tendência natural de qualquer ramo de atividade, de maneira a promover possibilidades de ferramentas auto-suficientes capazes de suprir as necessidades de grupos específicos de pesquisas, de eventos ou conferências, que possui padrões de apresentação de artigos personalizados e que demandam de uma análise diferenciada para que possa ser indexada e então analisada por sistemas de informação.
+A necessidade de adequação é uma tendência natural de qualquer ramo de atividade, de maneira a promover possibilidades de ferramentas auto-suficientes capazes de suprir as necessidades de grupos específicos de pesquisas, de eventos ou conferências, que possui padrões de apresentação de artigos personalizados e que demandam de uma análise diferenciada para que possa ser indexada e então analisada por sistemas de informação.
 
 \subsection{Objetivos Específicos}
 
-Com base na diferenciação de formas de apresentação de artigos científicos este trabalho tem como Objetivos Específicos identificar pontos em que técnicas de extração de metadados necessitam de adaptações flexíveis por parte da comunidade em geral, permitindo que artigos sejam analisados de maneira diferente em virtude de especificações distintas e necessidades diferenciadas de grupos de pesquisa.
+Com base na diferenciação de formas de apresentação de artigos científicos este trabalho tem como Objetivos Específicos identificar pontos em que técnicas de extração de metadados existentes permitem adaptações por parte de seus usuários, permitindo que artigos sejam analisados de maneira diferente em virtude de especificações distintas e necessidades diferenciadas de grupos de pesquisa.
 
-Os padrões existentes no mercado são de maneira geral insuficientes para suprir as necessidades dos mais diversos eventos e/ou conferências existentes, afunilando a apenas uma pequena parcela de artigos, o que acaba gerando um desconforto e uma ineficácia das técnicas de extração de metadados existentes atualmente.
+Os padrões de extração existentes no mercado são, de maneira geral, insuficientes para suprir grande parte das necessidades de eventos e/ou conferências, limitando a apenas uma pequena parcela de artigos, o que acaba gerando uma desconforto e uma ineficácia das técnicas de extração de metadados existentes atualmente.
 
 \section{Resultados Esperados}
 
-As formas de extração de dados em artigos científicos são geralmente baseadas em layouts, ou seja, em pequenos pedaços onde certas informações devem ser informadas. Porém em virtude da grande diversidade de materiais produzidos e em função das adaptações realizadas por grupos e/ou eventos de pesquisa, este layout padrão não se mostra eficiente na abrangência total das necessidades do meio. 
+As formas de extração de dados em artigos científicos são geralmente baseadas em \textit{layouts}, ou seja, em pequenos pedaços onde certos dados devem ser extraídos. Porém em virtude da grande diversidade de materiais produzidos, dos mais diversos padrões visuais existentes, este layout padrão geralmente utilizado em artigos científicos não se mostra eficiente na abrangência total das necessidades. 
 
-Assim sendo, espera-se que certos artigos científicos não tenham seus metadados analisados de maneira eficaz por todas as técnicas livres existentes de extração de dados, uma vez que adaptações são necessárias a fim de contribuir para uma globalização destas análises, permitindo a customização então de técnicas de extração com base em mercados ou culturas diferentes.
+Assim sendo, espera-se que certos artigos científicos não tenham seus metadados analisados de maneira eficaz por todas as técnicas existentes de extração de dados, uma vez que adaptações no código seriam necessárias a fim de permitir que outros padrões visuais de artigos sejam também analisados.
+
+Deste modo espera-se que, com esta análise aprofundada das técnicas existentes, as mais eficazes na extração de metadados sejam identificadas, tendo como base de pesquisa um conjunto diversificado de artigos, de diversos grupos de pesquisa diferentes.
 
 \section{Limitações do Trabalho}
 
-Este trabalho limita-se aos artigos científicos difundidos na comunidade científica em formato PDF, excluindo aqueles em que seu conteúdo é disponibilizados através de imagens escaneadas de documentos físicos, o que impede, em um primeiro momento, de ter os textos analisados em sua forma original, sem necessidade de processamento extra a fim de obter todo o material textual contido em tais imagens.
-
-Além disso o trabalho pressupõe que a língua inglesa seja utilizada como padrão no meio, de maneira a permitir que através de um único idioma o conhecimento seja difundido e aplicado em diversas culturas, independente de especificidades e diferenças culturais, permitindo uma difusão do conhecimento em sua mais pura forma de apresentação.
+Este trabalho limita-se aos artigos científicos difundidos na comunidade científica em formato PDF, excluindo aqueles em que seu conteúdo é disponibilizados através de imagens escaneadas de documentos físicos, o que impede, em um primeiro momento, de ter os textos analisados em sua forma original, sem necessidade de processamento extra a fim de obter todo o material textual contido em tais imagens. Além disso o trabalho pressupõe que a língua inglesa seja utilizada como padrão
 
 % Sobre os servidores com Windows
 
-Já na questão de testes de cada técnica de extração de metadados, as técnicas que serão selecionadas deverão ser livres, ou seja, ter seu uso liberado sem a necessidade de pagamento de licenças. Deste modo excluímos todas as técnicas que rodam exclusivamente em plataforma Windows, por exigir licenças de software e fugirem das previsões de teste deste projeto. Assim, os projetos deverão necessariamente utilizar de linguagens de programação livres (ou de código aberto) e que rodem em sistemas operacionais derivados do Unix, como o Linux, por exemplo.
+Já na questão de testes de cada técnica de extração de metadados, as técnicas que serão selecionadas deverão ser de código livre/aberto, ou seja, ter seu uso liberado sem a necessidade de pagamento de licenças. Deste modo excluímos todas as técnicas que necessitam de \textit{softwares} proprietários para funcionar, por exigir licenças e fugirem das previsões de teste deste projeto. Assim, os projetos deverão necessariamente utilizar de linguagens de programação livres (ou de código aberto) e que rodem em sistemas operacionais derivados do Unix, como o Linux, por exemplo.
 
 \section{Justificativa}
 
@@ -547,13 +548,13 @@ No sexto capítulo temos a conclusão, trabalhos futuros e considerações finai
 
 % Falar sobre RSL
 
-Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no Relatório Técnico de \cite{rsl-manual}. Desde modo o projeto se torna mas abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa em si.
+Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no Relatório Técnico de \cite{rsl-manual}. Desde modo o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa em si.
 
 % Bases pesquisadas
 
-Basicamente, como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases de natureza mais genérica também foram pesquisadas, geralmente através do site da CAPES, mas com caráter mais de apoio teórico realmente.
+Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases de natureza mais genérica também foram pesquisadas, geralmente através do site da CAPES, mas com caráter mais de apoio teórico realmente.
 
-Embora a amplitude desta área, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco no trabalho. Basicamente a pesquisa necessitava ser focada em técnicas de extração de dados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia do processo.
+Embora a amplitude desta área, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco no trabalho. A pesquisa necessitava ser focada em técnicas de extração de dados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia do processo.
 
 Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados. Com base em uma técnica potencialmente eficaz, sua implantação deve ser realizada, independente da linguagem de programação, e então testada juntamente com um grupo de artigos previamente selecionados como teste base. Estes artigos já possuirão seus dados mapeados de maneira a poder comparar os resultados obtidos com cada uma das técnicas e os resultados então esperados. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos.
 
@@ -564,7 +565,7 @@ Seguindo as orientações propostas em \cite{rsl-manual} foram mapeados alguns e
 \begin{itemize}
 \item KDIR (International Conference of Knowledge Discovery and Information Retrieval)
 \item ICDAR (International Conference on Document Analysis and Recognition)
-\item PDCAT (nternational Conference on Parallel and Distributed Computing, Applications and Technologies)
+\item PDCAT (International Conference on Parallel and Distributed Computing, Applications and Technologies)
 \item IAPR (International Workshop on Document Analysis Systems)
 \item ACM Conference on Digital Libraries
 \end{itemize}
@@ -754,9 +755,7 @@ Dependendo do layout do artigo alguns metadados podem vir divididos em blocos de
 
 Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser comparado com outros projetos. Este fato é dado em virtude das características que são levadas em consideração no processamento do algoritmo, utilizando de dicionários, informações de layout e modelo de linguagem.
 
-\subsection{ParsCit}
 
-\textit{Escrever sobre.}
 
 \subsection{Layout-CRFs}
 
@@ -768,7 +767,43 @@ Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser compar
 
 \subsection{CiteSeer}
 
-\textit{Escrever sobre.}
+Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural.
+
+Desta forma, com estas informações identificadas, ele consegue criar um \textit{ranking} dos documentos citados, incluindo seus autores e \textit{journals}, criando a partir de um documento fonte todo um conjunto de relações com outros documentos de uma maneira estatística bem eficaz.
+
+Os indexes de citações (\textit{citation indexes}), que são utilizados no projeto, foram originalmente criados para a recuperação de informação, porém sua utilidade é tamanha que permite que citações sejam indexadas de maneira eficaz, permitindo inclusive que referências de documentos em idiomas diferentes sejam identificadas. Desta maneira, essa técnica pode ser utilizadas de diversas formas, não somente na identificação de citações propriamente ditas, mas envolvendo um conjunto de informações eficazes, como inclusive identificar a reputação de um determinado artigo científico no meio em que se encontra, simplesmente analisando onde é referência em relação ao número de vezes em que é citado.
+
+Uma proposta interessante em que se baseia o CiteSeer é a de Cameron \cite{cameron}. Seu objetivo é de formar uma Base de Citações Universal, onde todos os artigos estariam ligados entre si, independente de qualquer fator externo como idioma, por exemplo. A diferença entre esta proposta e o trabalho realizado com o CiteSeer é que este último permite que os documentos sejam analisados sem nenhum esforço extra, ou seja, sem a intervenção dos autores dos documentos, como é proposto por Cameron. Neste caso, os documentos seriam analisados de maneira automática, diminuindo o tempo necessário para o relacionamento de todos eles e aumentando a eficácia e eficiência do processo.
+
+O funcionamento do CiteSeer é relativamente simples, porém o trabalho realizado por detrás do processo envolve muito estudo e dedicação. Basicamente ele é capaz de fazer o \textit{download} de \textit{papers} utilizando a Internet, convertê-los em texto e realizar a análise de todas as suas citações. Este resultado é armazenado em um banco de dados para consultas e relacionamentos futuros. Um dos pontos interessantes desta análise é que como ela é feita com base em referência textual, identificado origem e destino, ela pode ser facilmente aplicada tanto no sentido natural de leitura (um artigo cita outros) quanto no sentido inverso (um artigo é citado por outros). 
+
+O projeto também possui suas desvantagens, como por exemplo, a não cobertura de alguns \textit{journals} importantes, indexando todos seus documentos online e de maneira automática. Além disso o projeto original não é capaz de identificar mais de um autor nos documentos, sendo a identificação apenas pelo campo autor, tendo ele apenas um ou mais de um pesquisador envolvido.
+
+Basicamente o projeto analisa o documento em partes:
+
+\begin{itemize}
+\item \textbf{URL:} a URL onde o documento foi obtido;
+\item \textbf{Cabeçalho:} o bloco de título e autor do documento;
+\item \textbf{Resumo:} o bloco de resumo do documento;
+\item \textbf{Introdução:} a introdução do texto do documento;
+\item \textbf{Citações:} a lista de referências a outros documentos citadas no decorrer do texto;
+\item \textbf{Contexto de citação:} o contexto no qual um documento cita outro;
+\item \textbf{Texto completo:} o texto completo do documento e suas respectivas citações como um todo.
+\end{itemize}
+
+Um dos detalhes importantes do projeto é a identificação das \textit{tags} de citações, que são basicamente as representações visuais quando um outro documento é referenciado, como por exemplo: [4], [Giles997] e "Marr 1982". Estes pequenos pedaços de textos que permitem ao CiteSeer identificar a relação (e em que momento do texto) entre documentos, permitindo assim que suas análises sejam realizadas de maneira eficaz.
+
+Uma das dificuldades relatadas durante o desenvolvimento do projeto é a identificação de artigos iguais com formas de escrita e informações divergentes. Alguns artigos podem vir com autores com sobrenomes utilizando abreviação, ou até mesmo em ordem diferente. A fim de aumentar esta identificação alguns passos a mais são realizados, como a conversão para caixa baixa todas as letras, remoção de hifens e das próprias \textit{tags} de citação, expansão de abreviaturas e remoção de algumas palavras externas como "\textit{volume}", "\textit{pages}" e "\textit{number}" por exemplo.
+
+O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) anos desde sua criação ele ainda se encontra ativo na Internet, abrangendo cada vez mais documentos e aprimorando cada vez mais suas técnicas de identificação de documentos.
+
+\subsection{ParsCit}
+
+Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências. 
+
+O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário.
+
+\textit{Terminar de escrever sobre o ParsCit.}
 
 
 % Falar de cada trabalho encontrado com base nos eventos

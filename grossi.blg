@@ -19,6 +19,8 @@ I was expecting a `,' or a `}'---line 80 of file references.bib
  :  editor = {IEE}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "site-citeseer" isn't style-file defined
+--line 143 of file references.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
 while executing---line 2162 of file abntex2-alf.bst
@@ -108,45 +110,45 @@ while executing---line 2217 of file abntex2-alf.bst
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 13 entries,
+You've used 16 entries,
             6711 wiz_defined-function locations,
-            1259 strings with 11145 characters,
-and the built_in function-call counts, 10699 in all, are:
-= -- 963
-> -- 338
-< -- 60
-+ -- 223
-- -- 106
-* -- 708
-:= -- 1481
-add.period$ -- 42
-call.type$ -- 13
-change.case$ -- 123
-chr.to.int$ -- 19
-cite$ -- 12
-duplicate$ -- 595
-empty$ -- 713
-format.name$ -- 499
-if$ -- 2429
+            1273 strings with 11431 characters,
+and the built_in function-call counts, 13519 in all, are:
+= -- 1276
+> -- 386
+< -- 93
++ -- 290
+- -- 121
+* -- 871
+:= -- 1839
+add.period$ -- 51
+call.type$ -- 16
+change.case$ -- 146
+chr.to.int$ -- 25
+cite$ -- 15
+duplicate$ -- 776
+empty$ -- 882
+format.name$ -- 569
+if$ -- 3089
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 215
-newline$ -- 67
-num.names$ -- 61
-pop$ -- 320
+missing$ -- 264
+newline$ -- 82
+num.names$ -- 71
+pop$ -- 390
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 58
 quote$ -- 0
-skip$ -- 702
+skip$ -- 984
 stack$ -- 1
-substring$ -- 448
-swap$ -- 234
-text.length$ -- 10
+substring$ -- 571
+swap$ -- 300
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
+type$ -- 12
 warning$ -- 0
-while$ -- 86
+while$ -- 104
 width$ -- 0
-write$ -- 180
+write$ -- 222
 (There were 41 error messages)
