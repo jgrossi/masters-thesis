@@ -17,10 +17,11 @@
   scholarly communication.
 v.~2, n.~4, 1997.}
 
-\bibitem[CiteSeerX 2015]{site-citeseer}
-\abntrefinfo{CiteSeerX}{CITESEERX}{2015}
-{CITESEERX. 2015.
-Dispon{\'\i}vel em: \url{http://citeseerx.ist.psu.edu}.}
+\bibitem[Emamy e Cameron 2007]{citeulike}
+\abntrefinfo{Emamy e Cameron}{EMAMY; CAMERON}{2007}
+{EMAMY, K.; CAMERON, R. Citeulike: A researcher's social bookmarking service.
+2007.
+Dispon{\'\i}vel em: \url{http://www.ariadne.ac.uk/issue51/emamy-cameron/}.}
 
 \bibitem[Giles e Lawrence 1998]{citeseer}
 \abntrefinfo{Giles e Lawrence}{GILES; LAWRENCE}{1998}
@@ -28,9 +29,22 @@ Dispon{\'\i}vel em: \url{http://citeseerx.ist.psu.edu}.}
   system.
 p. 89--98, 1998.}
 
+\bibitem[Granitzer 2011]{Granitzer2011a}
+\abntrefinfo{Granitzer}{GRANITZER}{2011}
+{GRANITZER, M. \emph{Results and Raw Experimental Data on the E-Prints Data Set
+  for A Comparison of Metadata Extraction Techniques for Crowed-source
+  Bibliographic Metadata Management}. London: Mendeley, 2011.}
+
+\bibitem[Granitzer Maya~Hristakeva e Kern 2012]{granitzer-layout-based}
+\abntrefinfo{Granitzer Maya~Hristakeva e Kern}{GRANITZER MAYA~HRISTAKEVA;
+  KERN}{2012}
+{GRANITZER MAYA~HRISTAKEVA, R. K.~K.~J. M.; KERN, R. A comparison of layout
+  based bibliographic metadata extraction techniques. In:  . [S.l.]: ACM,
+  2012.}
+
 \bibitem[Han C. Lee~Giles e Fox 2003]{svm}
 \abntrefinfo{Han C. Lee~Giles e Fox}{HAN C. LEE~GILES; FOX}{2003}
-{HAN C. LEE~GILES, E. M. H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata
+{HAN C. LEE~GILES, E. M.~H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata
   extraction using support vector machines.
 2003.}
 
@@ -47,7 +61,7 @@ p. 1049--1053, 2005.}
 v.~18, n.~7/8, 2012.
 Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 
-\bibitem[Kitchenham 2004]{rsl-manual}
+\bibitem[Kitchenham 2004]{Kitchenham}
 \abntrefinfo{Kitchenham}{KITCHENHAM}{2004}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}

@@ -55,6 +55,7 @@
 \usepackage{lastpage}           % Usado pela Ficha catalográfica
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}              % Controle das cores
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{graphicx}           % Inclusão de gráficos
 \usepackage{microtype}          % para melhorias de justificação
 % ---
@@ -95,6 +96,16 @@
 % Criando um novo tipo de coluna centralizado e com largura fixa
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+% Criando um comando para mostrar um box colorido para servir de "dúvidas" para os orientadores analisar
+\newcommand{\duvida}[1]{
+	\begin{center}
+		\colorbox{Lavender}{
+			\begin{minipage}{15cm}
+				#1
+			\end{minipage}
+		}
+	\end{center}
+}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -104,7 +115,7 @@
 \local{Belo Horizonte/MG, Brasil}
 \data{2015, v-0.4.1}
 \orientador{Marcello Peixoto Bax}
-\coorientador{Renato Souza Rocha}
+\coorientador{Renato Rocha Souza}
 \instituicao{%
 	Universidade Federal de Minas Gerais -- UFMG
 	\par
@@ -212,7 +223,10 @@
 	
 	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
 	
-	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	\hspace{0.5cm} 
+	
+	\imprimirorientadorRotulo~\imprimirorientador\\
+	\imprimircoorientadorRotulo~\imprimircoorientador\\
 	
 	\hspace{0.5cm}
 	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
@@ -502,15 +516,15 @@ Porém, existem diversos outros eventos que possuem layouts de artigos considera
 
 \section{Objetivo Geral}
 
-Este trabalho possui como objetivo geral identificar quais são as melhores técnicas de extração de metadados em artigos científicos de acordo com diversos padrões existentes, tanto de formatação quanto de disposição das informações.
+Este trabalho possui como objetivo geral identificar quais são as melhores técnicas de extração de metadados em artigos científicos com base em um conjunto de documentos para testes, dos mais diversos padrões e de diversas áreas do conhecimento.
 
 A necessidade de adequação é uma tendência natural de qualquer ramo de atividade, de maneira a promover possibilidades de ferramentas auto-suficientes capazes de suprir as necessidades de grupos específicos de pesquisas, de eventos ou conferências, que possui padrões de apresentação de artigos personalizados e que demandam de uma análise diferenciada para que possa ser indexada e então analisada por sistemas de informação.
 
 \subsection{Objetivos Específicos}
 
-Com base na diferenciação de formas de apresentação de artigos científicos este trabalho tem como Objetivos Específicos identificar pontos em que técnicas de extração de metadados existentes permitem adaptações por parte de seus usuários, permitindo que artigos sejam analisados de maneira diferente em virtude de especificações distintas e necessidades diferenciadas de grupos de pesquisa.
+Com base na diferenciação de formas de apresentação de artigos científicos este trabalho tem como Objetivos Específicos identificar pontos em que técnicas de extração de metadados existentes necessitam de adaptações por parte de seus usuários e desenvolvedores, permitindo que artigos sejam analisados de maneira diferente em virtude de especificações distintas e necessidades diferenciadas de grupos de pesquisa.
 
-Os padrões de extração existentes no mercado são, de maneira geral, insuficientes para suprir grande parte das necessidades de eventos e/ou conferências, limitando a apenas uma pequena parcela de artigos, o que acaba gerando uma desconforto e uma ineficácia das técnicas de extração de metadados existentes atualmente.
+Os padrões de extração existentes no mercado são, de maneira geral, insuficientes para suprir grande parte das necessidades de eventos e/ou conferências, limitando a apenas uma pequena parcela de artigos, dentro de um \textit{layout} específico, o que acaba gerando uma desconforto e uma perda de confiabilidade das técnicas de extração de metadados existentes atualmente.
 
 \section{Resultados Esperados}
 
@@ -538,9 +552,9 @@ Este trabalho é feito justamente para prover esta visão do que ainda precisa s
 
 Esta pesquisa é estruturada iniciando com uma introdução sobre o tema, a definição do problema, os objetivos gerais e específicos e sua justificativa.
 
-O segundo capítulo tem como base o referencial teórico feito através de uma RSL (Revisão Sistemática de Literatura), tendo como base \cite{rsl-manual}, que propõe um passo-a-passo para um revisão de literatura eficaz e atingindo os resultados desejáveis pela pesquisa.
+O segundo capítulo tem como base o referencial teórico feito através de uma RSL (Revisão Sistemática de Literatura), tendo como base \cite{Kitchenham}, que propõe um passo-a-passo para um revisão de literatura eficaz e atingindo os resultados desejáveis pela pesquisa.
 
-No terceiro capítulo temos a metodologia para o desenvolvimento do trabalho, as técnicas que serão aplicadas e principalmente como serão feitas. Posteriormente, no capítulo quarto temos os testes propriamente ditos, como eles foram realizados, os ambientes de teste, a seleção de artigos para testes e no quinto capítulo os resultados obtidos.
+No terceiro capítulo temos a metodologia para o desenvolvimento do trabalho, as técnicas que serão aplicadas e principalmente como serão feitas. Posteriormente, no capítulo quarto temos o desenvolvimento propriamente dito, como os testes foram realizados, os ambientes de teste, a seleção de artigos para testes e os resultados obtidos.
 
 No sexto capítulo temos a conclusão, trabalhos futuros e considerações finais sobre o trabalho apresentado.
 
@@ -548,7 +562,7 @@ No sexto capítulo temos a conclusão, trabalhos futuros e considerações finai
 
 % Falar sobre RSL
 
-Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no Relatório Técnico de \cite{rsl-manual}. Desde modo o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa em si.
+Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no Relatório Técnico de \cite{}. Desde modo o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa em si.
 
 % Bases pesquisadas
 
@@ -560,7 +574,7 @@ Como a pesquisa necessita de um resultado prático eficaz os critérios que ser�
 
 % Falar sobre os eventos encontrados na área
 
-Seguindo as orientações propostas em \cite{rsl-manual} foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+Seguindo as orientações propostas em \cite{Kitchenham} foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
 
 \begin{itemize}
 \item KDIR (International Conference of Knowledge Discovery and Information Retrieval)
@@ -701,7 +715,11 @@ Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite
 
 A utilização de CRFs na extração de metadados mostra-se muito eficaz por reduzir bastante os erros em algumas métricas, aumentando o sucesso da aplicação desta técnica nesta área.
 
-\section{Projetos de Destaque}
+\section{Trabalhos Comparativos}
+
+\duvida{Falar sobre as comparações realizadas por Granitzer, tanto no que diz respeito a layouts \cite{granitzer-layout-based}, quanto no que diz respeito a dicionários \cite{Granitzer2011a}.}
+
+\section{Ferramentas e Projetos de Destaque}
 
 Alguns projetos baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
 
@@ -755,15 +773,30 @@ Dependendo do layout do artigo alguns metadados podem vir divididos em blocos de
 
 Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser comparado com outros projetos. Este fato é dado em virtude das características que são levadas em consideração no processamento do algoritmo, utilizando de dicionários, informações de layout e modelo de linguagem.
 
+\subsubsection{Resultados Comparativos}
 
+A fim de analisar os resultados obtidos com a aplicação das técnicas descritas no TeamBeam, os autores comparam as técnicas utilizadas com outras técnicas de outras ferramentas, que utilizam processos diferentes de análises.
 
-\subsection{Layout-CRFs}
+Para fins de comparação de resultados, os autores citam as técnicas ParsCit (\ref{tec-parscit}), Layout-CRFs (\ref{tec-layout-crfs}) e Mendeley Desktop (\ref{tec-mendeley}). Como conclusão ele compara estas três técnicas separadamente, por não abrangerem todos os detalhes que o TeamBeam possui, o que tornaria a comparação desleal.
 
-\textit{Escrever sobre.}
+Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\ref{tec-layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
+
+\duvida{Devo explicar aqui o que seriam esses Data-Sets? Exemplo: E-Prints, Mendeley e PubMed.}
+
+\subsection{Layout-CRF's}
+\label{tec-layout-crfs}
+
+\duvida{Escrever sobre.}
 
 \subsection{Mendeley Desktop}
+\label{tec-mendeley}
 
-\textit{Escrever sobre.}
+\duvida{Escrever sobre.}
+
+\subsection{CiteULike}
+\label{tec-citeulike}
+
+\duvida{Escrever sobre CiteULike, com base no artigo de seus autores \cite{citeulike}.}
 
 \subsection{CiteSeer}
 
@@ -798,13 +831,29 @@ Uma das dificuldades relatadas durante o desenvolvimento do projeto é a identif
 O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) anos desde sua criação ele ainda se encontra ativo na Internet, abrangendo cada vez mais documentos e aprimorando cada vez mais suas técnicas de identificação de documentos.
 
 \subsection{ParsCit}
+\label{tec-parscit}
 
 Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências. 
 
-O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário.
+O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro do servidor.
 
-\textit{Terminar de escrever sobre o ParsCit.}
+Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do documento, que o autor chama de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
 
+Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.}.
+
+Desta forma a fase de pré-processamento se inicia com esta analise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências à artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
+
+Com este modelo CRF definido algumas etapas são aplicadas a fim de normalizar os dados encontrados. Nomes de autores podem estar escritos de maneira diferente, com abreviações em nomes de maneira diferente, dependendo do modo como as referências foram escritas no artigo analisado.
+
+Esta análise posterior dos nomes dos autores é feita com base na inspeção de cada palavra individualmente, respeitando então um padrão de normalização definido, sempre com as iniciais dos nomes seguidas do sobrenome escrito normalmente.
+
+A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilitam os testes e a extração de dados. Os resultados obtidos desta análise é então exibido (ou gravado em arquivo) em formato XML, que permite utilização posterior em qualquer tecnologia. Como informado anteriormente os resultados também podem ser coletados em formato de \textit{Web Service}, mas para os fins desta pesquisa apenas sua execução em linha de comando é suficiente.
+
+\subsubsection{Resultados Comparativos}
+
+Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{crf-ie}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto.
+
+Visando também analisar outros projetos a mesma comparação de resultados foi feita com o projeto CiteSeer \cite{citeseer}, onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como no ParsCit.
 
 % Falar de cada trabalho encontrado com base nos eventos
 
@@ -812,9 +861,9 @@ O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolved
 	% Diferencial do projeto
 	% Se está ativo ou não
 	
+\duvida{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
-	 
-
+	
 \chapter{Metodologia}
 
 Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de coleta de informações e comparação de resultados de técnicas de extração de metadados em artigos científicos.
@@ -835,13 +884,32 @@ Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmen
 \end{figure}
 
 
-\section{Seleção das Técnicas}
+\section{Seleção das Técnicas/Ferramentas}
 
-As técnicas que foram selecionadas dentro do capítulo de Revisão de Literatura compreendem um universo atuante e de caráter livre, independente da linguagem de programação que foi utilizada, exceto pelos detalhes explicados nas limitações do trabalho.
+As técnicas que foram analisadas dentro do capítulo de \textbf{Revisão de Literatura} compreendem um universo atuante e de caráter livre, independente da linguagem de programação que foi utilizada no desenvolvimento, exceto pelos detalhes explicados nas limitações do trabalho.
 
-Assim sendo, todas as técnicas catalogadas e definidas como sendo importantes serão testadas de maneira completa e independente, ou seja, sem interferência de nenhuma outra técnica em seus resultados finais.
+Em função do grande número de ferramentas disponíveis como resultado desta pesquisa, algumas foram selecionadas a fim de se obter ao máximo os testes e os resultados esperados.
+
+Conforme mencionado anteriormente, ferramentas pagas ou que não disponibilizam o código para instalação não foram testadas, visto que a necessidade do atual trabalho visa identificar os resultados obtidos dentro de um conjunto de infra estrutura única, de maneira justa com cada projeto.
+
+Assim sendo, a tabela \ref{tab:ferramentas} lista as seguintes ferramentas que foram selecionadas para teste dentro do escopo proposto neste trabalho.
 
 % Colocar uma tabela com as técnicas que serão comparadas
+
+\begin{table}
+    \caption{Ferramentas selecionadas para testes}
+    \begin{center}
+    	\begin{tabular}{|p{6cm}|p{5cm}|}
+			\hline \textbf{Ferramenta} & \textbf{Linguagem} \\ 
+			\hline Ferramenta 1 & Java\\
+			\hline Ferramenta 2 & Perl\\
+			\hline Ferramenta 3 & Python\\
+			\hline Ferramenta 4 & Java\\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:ferramentas}
+\end{table}
 
 \section{Seleção de Artigos}
 
@@ -849,7 +917,7 @@ Visando provar a eficiência destas técnicas, desejamos ter informações de sa
 
 % Áreas dos Artigos e Eventos
 
-Desde modo a lista destes artigos compreende um total de 100 artigos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de terem o resultado da aplicação das técnicas comparado com os resultados desejados. As áreas do conhecimento, seus respectivos eventos e o número de artigos de cada um estão identificados na Tabela \ref{tab:papers-list}.
+Desde modo a lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de ter o resultado da aplicação das técnicas comparado com os resultados obtidos manualmente. Na Tabela \ref{tab:papers-list} pode-se ver o número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no Anexo I deste documento.
 
 Os artigos foram selecionados tomando como base a principal forma de análise das técnicas selecionadas para testes: o layout, ou seja, a disposição dos elementos nos artigos científicos. Esta seleção foi feite com base a abranger um maior número de representações, com disposições diferentes, tipografias diferentes e inclusive ordem diferentes nas exibições. Desta forma as técnicas poderão ser confrontadas e os resultados comparados com os resultados esperados.
 
@@ -863,23 +931,21 @@ Além disso a abrangência de outros idiomas entraria em um aspecto que não é 
     \caption{Seleção de artigos científicos para testes (ainda em desenvolvimento)}
     \begin{center}
         \begin{tabular}{l|l|l}
-            Área de Conhecimento & Evento ou Conferência & Total de Artigos \\ 
+            Área de Conhecimento & Total de Artigos \\ 
             \hline
-            Arquitetura e Urbanismo & Nome do Evento I & 4 \\ 
-			Arquitetura e Urbanismo & Nome do Evento II & 3 \\ 
-			Artes e Música & Nome do Evento I & 3 \\ 
-			Artes e Música & Nome do Evento II & 2 \\ 
-            Ciência da Computação & Nome do Evento I & 2 \\
-			Ciência da Computação & Nome do Evento II & 4 \\
-            Ciência da Informação & ENANCIB 2013 & 4 \\
-            Ciência da Informação & Nome do Evento & 3 \\
-            Ciências Biológicas & Nome do Evento I & 4 \\
-            Direito & Nome do Evento I & 3 \\
-            Engenharia Civil & Nome do Evento I & 2 \\
-            Medicina & Nome do Evento I & 2 \\ 
-            Medicina & Nome do Evento II & 3 \\ 
-            Psicologia & Nome do Evento I & 3 \\
-            ... & ... & ... \\
+            Arquitetura e Urbanismo & 7 \\ 
+			Música & 7 \\ 
+			Ciência da Computação & 8 \\
+			Ciência da Informação & 9 \\
+            Ciências Biológicas & 7 \\
+            Direito & 7 \\
+            Engenharia Civil & 8 \\
+            Letras & 7 \\
+            Matemática Computacional & 7 \\
+            Medicina & 9 \\ 
+            Odontologia & 8 \\ 
+            Psicologia & 9 \\
+            Sociologia & 7 \\	
             \hline
              & & \textbf{100}
         \end{tabular}
@@ -891,11 +957,7 @@ Além disso a abrangência de outros idiomas entraria em um aspecto que não é 
 
 Para que os testes sejam feitos de maneira adequada e independente, sem interferência de outras técnicas nos resultados, serão utilizados N servidores, sendo N o número total de técnicas a serem avaliadas.
 
-Deste modo, para cada técnica avaliada será configurado um servidor com as linguagens de programação necessárias e todos os pré-requisitos que a técnica necessita para funcionar. Estes servidores serão definidos utilizando infraestrutura em \textbf{nuvem} (\textit{Cloud Computing}), o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica.
-
- % Falar sobre qual provedor de VPS iremos utilizar
- 
-Todos os servidores criados para os testes devem necessariamente rodar alguma versão do Linux e serão hospedados nos \textit{data centers} da \textbf{Digital Ocean}\footnote{Acesse o site em \url{http://digitalocean.com}}, empresa de infraestrutura tecnológica de conhecimento mundial e referência em \textit{Cloud Computing} no mercado computacional.
+Deste modo, para cada técnica avaliada será configurado um servidor com as linguagens de programação necessárias e todos os pré-requisitos que a técnica necessita para funcionar. Estes servidores serão definidos através de máquinas virtuais, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica.
 
 \subsection{Testes In Loco}
 
@@ -961,7 +1023,7 @@ Deste modo consideramos 3 (três) resultados possíveis para um resultado analis
 \item \textbf{Inaceitável:} Quando o resultado atinge abaixo de 90\%, ou seja, entre 0\% e 89\%. Este resultado no âmbito do presente projeto é considerado inaceitável.
 \end{enumerate}
 
-Assim, temos o valor de cada resultado possível, que será também utilizado no processo de análise, conforme consta na tabela \ref{tab:precisao}.
+Assim, temos o valor de cada resultado possível, que será também utilizado no processo de análise, conforme consta na tabela \ref{tab:precisao}. Cada valor, independente de sua classificação será utilizado para o cálculo final da nota de cada ferramenta.
 
 % Tabela de precisão e os valores
 
@@ -983,26 +1045,101 @@ Assim, temos o valor de cada resultado possível, que será também utilizado no
 
 % Fórmula final para a nota final de cada técnica
 
-Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada técnica aplicada. Assim sendo chegamos em uma fórmula matemática à qual chamamos "Índice de Confiabilidade", que calcula o resultado obtido através dos pesos que foram atribuídos.
+Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada técnica aplicada. Assim sendo chegamos em uma fórmula matemática à qual chamamos "Índice de Confiabilidade", que calcula o resultado obtido através dos pesos que foram atribuídos a cada campo.
 
-Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em um único resultado para cada técnica aplicada.
+Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em uma única nota final para cada técnica aplicada.
+
+Basicamente a fórmula atua como uma média ponderada dos resultados alcançados na extração de cada campo do artigo, seguindo os pesos apresentados em \ref{tab:pesos}. Cada peso é atribuído ao resultado encontrado em cada ferramenta testada. 
+
+A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos dos artigos com sucesso, sua precisão com relação ao título será 87, que será multiplicado pelo peso correspondendo ao seu campo, neste caso, o inteiro 5. Isso ocorre para todos os campos apresentados, seguindo seus respectivos pesos.
+
+A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a tabela \ref{tab:indice-confidencialidade}, onde temos as variáveis que fazem parte da fórmula descrita.
 
 \begin{center}
-	$ Fórmula a ser definida ainda $
+	$ IC=\frac{5(PT)+4(PA)+PE+3(PR)+5(PRF)}{18} $
 \end{center}
 
+\begin{table}
+    \caption{Descrição de cada variável no Índice de Confiabilidade}
+    \begin{center}
+    	\begin{tabular}{|p{3cm}|p{8cm}|}
+			\hline \textbf{Variável} & \textbf{Descrição}\\ 
+			\hline PT & Precisão na obtenção do título \\
+			\hline PA & Precisão na obtenção do(s) autor(es)\\
+			\hline PE & Precisão na obtenção dos e-mails dos autores \\
+			\hline PR & Precisão na obtenção do resumo \\
+			\hline PRF & Precisão na obtenção das referências \\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:indice-confidencialidade}
+\end{table}
 
-\chapter{Testes}
+\chapter{Desenvolvimento}
+
+% Construção da teoria
+
+Com base no objetivo de identificar como as ferramentas atuais se comportam nos mais diversos tipos de padrões visuais foram realizados vários experimentos práticos a fim de obter os resultados numéricos desejados para que o objetivo fosse alcançado.
+
+Desta maneira, foram separadas algumas ferramentas/técnicas implementáveis tecnicamente para que os artigos selecionados (citados no capítulo anterior) pudessem ser analisados e seus dados extraídos segundo os propósitos de cada uma.
+
+% Conceitos criados pelo autor
+
+Para que os resultados pudessem ser medidos e comparados foi utilizado o "Índice de Confiabilidade" detalhado no capítulo de \textbf{Metodologia}, a fim de obter um valor numérico para cada resultado apresentado com a utilização das ferramentas, permitindo que os valores obtidos fossem comparados e então confrontados para se obter o comportamento de cada ferramenta.
+
+% Trabalhar as evidências de que sua hipótese é verdadeira
+
+% Apresentar dados, testes, provas, estudos de caso, etc
 
 \section{Ambiente de Testes}
 
+Para que esta análise pudesse ser feita com exatidão e garantir assim os resultados esperados, foi-se criado um ambiente de testes abrangendo um conjunto de tecnologias para que as ferramentas pudessem ser instaladas e testas seguindo o propósito de cada uma.
+
 \subsection{Servidores de Teste}
 
-\chapter{Resultados}
+Para cada teste de ferramenta foi criada uma Máquina Virtual dentro do Ambiente de Testes, com o objetivo de ter plataformas operando independentemente, com apenas as tecnologias necessárias para seu correto funcionamento, sem influência de códigos terceiro e/ou programas desnecessários.
+
+Por restringir apenas os testes utilizando ferramentas de código livre, todos os testes realizados ocorreram em máquinas Linux\footnote{Sistema operacional de código livre com ampla utilização em servidores de todo o mundo.}, de acordo com a Tabela \ref{tab:lista-servidores}, respeitando os requisitos necessários para cada ferramenta.
+
+\begin{table}
+    \caption{Ferramentas e Ambientes de Testes}
+    \begin{center}
+    	\begin{tabular}{|p{3cm}|p{8cm}|}
+			\hline \textbf{Ferramenta} & \textbf{Ambiente}\\ 
+			\hline Ferramenta 1 & Linux Ubuntu 12.04, Java 7, Sqlite, Tomcat 6 \\
+			\hline Ferramenta 2 & Linux Ubuntu 12.04, Perl, MySQL, Nginx \\
+			\hline Ferramenta 3 & Linux Ubuntu 12.04, Perl, PostgreSQL, Apache \\
+			\hline Ferramenta 4 & Linux Ubuntu 12.04, Java 6, MySQL, Tomcat 6 \\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:lista-servidores}
+\end{table}
 
 \chapter{Conclusão}
 
+% Analisar os objetivos gerais e específicos e explicar como o desenvolvimento ajudou a chegar em cada um destes objetivos
+% Apresentar os pontos positivos e negativos do trabalho também
+% Lições aprendidas
+
+% "... o problema descrico na seção X foi resolvido como demonstrado nas sessões y a z, em que foi desenvolvido um algoritmo/método/abordagem etc para tratar as situações mencionadas.
+
+
+
+\section{Contribuições}
+
+
 \section{Trabalhos Futuros}
+
+% Futuras contribuições ao conhecimento com mais ênfase do que futuras contribuições às ferramentas, protótipos, etc, que eventualmente possa, ser desenvolvidas
+
+% Falar sobre oportunidades de pesquisa nesta área, que o autor não conseguiu averiguar, mas serve de dicas para os próximos interessados
+
+% Exemplo, falar quais situações ainda não foram feitos os testes, que podem ser feitos no futuro para compreender alguma coisa por exemplo
+
+
+
+% 
 
 \section{Considerações Finais}
 

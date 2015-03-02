@@ -19,8 +19,6 @@ I was expecting a `,' or a `}'---line 80 of file references.bib
  :  editor = {IEE}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--entry type for "site-citeseer" isn't style-file defined
---line 143 of file references.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
 while executing---line 2162 of file abntex2-alf.bst
@@ -62,6 +60,16 @@ Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsio
 while executing---line 2162 of file abntex2-alf.bst
 Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
 while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2162 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2162 of file abntex2-alf.bst
 Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
 while executing---line 2162 of file abntex2-alf.bst
 Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
@@ -75,6 +83,12 @@ while executing---line 2162 of file abntex2-alf.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2217 of file abntex2-alf.bst
+Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+while executing---line 2217 of file abntex2-alf.bst
 Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
 while executing---line 2217 of file abntex2-alf.bst
 Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
@@ -110,45 +124,45 @@ while executing---line 2217 of file abntex2-alf.bst
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 16 entries,
+You've used 18 entries,
             6711 wiz_defined-function locations,
-            1273 strings with 11431 characters,
-and the built_in function-call counts, 13519 in all, are:
-= -- 1276
-> -- 386
-< -- 93
-+ -- 290
-- -- 121
-* -- 871
-:= -- 1839
-add.period$ -- 51
-call.type$ -- 16
-change.case$ -- 146
-chr.to.int$ -- 25
-cite$ -- 15
-duplicate$ -- 776
-empty$ -- 882
-format.name$ -- 569
-if$ -- 3089
+            1285 strings with 11917 characters,
+and the built_in function-call counts, 15005 in all, are:
+= -- 1336
+> -- 465
+< -- 112
++ -- 319
+- -- 146
+* -- 991
+:= -- 2051
+add.period$ -- 59
+call.type$ -- 18
+change.case$ -- 169
+chr.to.int$ -- 27
+cite$ -- 17
+duplicate$ -- 902
+empty$ -- 988
+format.name$ -- 686
+if$ -- 3371
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 264
-newline$ -- 82
-num.names$ -- 71
-pop$ -- 390
+missing$ -- 299
+newline$ -- 91
+num.names$ -- 86
+pop$ -- 441
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 66
 quote$ -- 0
-skip$ -- 984
+skip$ -- 1027
 stack$ -- 1
-substring$ -- 571
-swap$ -- 300
+substring$ -- 604
+swap$ -- 344
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 3
 warning$ -- 0
-while$ -- 104
+while$ -- 119
 width$ -- 0
-write$ -- 222
-(There were 41 error messages)
+write$ -- 252
+(There were 49 error messages)
