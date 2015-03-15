@@ -1,0 +1,40 @@
+\chapter{Análise e Apresentação de Resultados}
+
+% Construção da teoria
+
+Com base no objetivo de identificar como as ferramentas atuais se comportam nos mais diversos tipos de padrões visuais foram realizados vários experimentos práticos a fim de obter os resultados numéricos desejados para que o objetivo fosse alcançado.
+
+Desta maneira, foram separadas algumas ferramentas/técnicas implementáveis tecnicamente para que os artigos selecionados (citados no capítulo anterior) pudessem ser analisados e seus dados extraídos segundo os propósitos de cada uma.
+
+% Conceitos criados pelo autor
+
+Para que os resultados pudessem ser medidos e comparados foi utilizado o "Índice de Confiabilidade" detalhado no capítulo de \textbf{Metodologia}, a fim de obter um valor numérico para cada resultado apresentado com a utilização das ferramentas, permitindo que os valores obtidos fossem comparados e então confrontados para se obter o comportamento de cada ferramenta.
+
+% Trabalhar as evidências de que sua hipótese é verdadeira
+
+% Apresentar dados, testes, provas, estudos de caso, etc
+
+\section{Ambiente de Testes}
+
+Para que esta análise pudesse ser feita com exatidão e garantir assim os resultados esperados, foi-se criado um ambiente de testes abrangendo um conjunto de tecnologias para que as ferramentas pudessem ser instaladas e testas seguindo o propósito de cada uma.
+
+\subsection{Servidores de Teste}
+
+Para cada teste de ferramenta foi criada uma Máquina Virtual dentro do Ambiente de Testes, com o objetivo de ter plataformas operando independentemente, com apenas as tecnologias necessárias para seu correto funcionamento, sem influência de códigos terceiro e/ou programas desnecessários.
+
+Por restringir apenas os testes utilizando ferramentas de código livre, todos os testes realizados ocorreram em máquinas Linux\footnote{Sistema operacional de código livre com ampla utilização em servidores de todo o mundo.}, de acordo com a Tabela \ref{tab:lista-servidores}, respeitando os requisitos necessários para cada ferramenta.
+
+\begin{table}
+    \caption{Ferramentas e Ambientes de Testes}
+    \begin{center}
+    	\begin{tabular}{|p{3cm}|p{8cm}|}
+			\hline \textbf{Ferramenta} & \textbf{Ambiente}\\ 
+			\hline Ferramenta 1 & Linux Ubuntu 12.04, Java 7, Sqlite, Tomcat 6 \\
+			\hline Ferramenta 2 & Linux Ubuntu 12.04, Perl, MySQL, Nginx \\
+			\hline Ferramenta 3 & Linux Ubuntu 12.04, Perl, PostgreSQL, Apache \\
+			\hline Ferramenta 4 & Linux Ubuntu 12.04, Java 6, MySQL, Tomcat 6 \\
+	    	\hline 
+    	\end{tabular} 
+    \end{center}
+  	\label{tab:lista-servidores}
+\end{table}

@@ -1,7 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: grossi.aux
-A level-1 auxiliary file: acronyms.aux
+A level-1 auxiliary file: includes/siglas.aux
+A level-1 auxiliary file: capitulos/introducao.aux
+A level-1 auxiliary file: capitulos/referencial.aux
+A level-1 auxiliary file: capitulos/metodologia.aux
+A level-1 auxiliary file: capitulos/resultados.aux
+A level-1 auxiliary file: capitulos/conclusao.aux
+A level-1 auxiliary file: anexos/artigos.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -13,156 +19,75 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
-Database file #2: references.bib
-I was expecting a `,' or a `}'---line 80 of file references.bib
- :  
- :  editor = {IEE}
-(Error may have been on previous line)
+Database file #2: includes/referencias.bib
+Repeated entry---line 205 of file includes/referencias.bib
+ : @manual{dublin-core
+ :                    ,
 I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2162 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Michael Granitzer, Maya Hristakeva, Robert Knight, Kris Jack and Roman Kern" for entry granitzer-layout-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, C. Lee Giles, Eren Manavoglu, Hongyuan Zha, Zhenyue Zhang and Edward A. Fox" for entry svm
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Hui Han, Eren Manavoglu, Hongyuan Zha, Kostas Tsioutsiouliklis, C. Lee Giles and Xiangmin Zhang" for entry rule-based
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
-while executing---line 2217 of file abntex2-alf.bst
-Too many commas in name 1 of "Dominika Tkaczyk, Paweł Szostek, Piotr Jan Dendek, Mateusz Fedoryszak and Łukasz Bolikowski" for entry cermine
+Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2217 of file abntex2-alf.bst
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.2           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 18 entries,
+You've used 21 entries,
             6711 wiz_defined-function locations,
-            1285 strings with 11917 characters,
-and the built_in function-call counts, 15005 in all, are:
-= -- 1336
-> -- 465
-< -- 112
-+ -- 319
-- -- 146
-* -- 991
-:= -- 2051
-add.period$ -- 59
-call.type$ -- 18
-change.case$ -- 169
-chr.to.int$ -- 27
-cite$ -- 17
-duplicate$ -- 902
-empty$ -- 988
-format.name$ -- 686
-if$ -- 3371
+            1306 strings with 12507 characters,
+and the built_in function-call counts, 19983 in all, are:
+= -- 1831
+> -- 648
+< -- 224
++ -- 502
+- -- 196
+* -- 1356
+:= -- 2695
+add.period$ -- 71
+call.type$ -- 21
+change.case$ -- 224
+chr.to.int$ -- 30
+cite$ -- 20
+duplicate$ -- 1339
+empty$ -- 1143
+format.name$ -- 941
+if$ -- 4369
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 299
-newline$ -- 91
-num.names$ -- 86
-pop$ -- 441
+missing$ -- 355
+newline$ -- 108
+num.names$ -- 101
+pop$ -- 525
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 85
 quote$ -- 0
-skip$ -- 1027
+skip$ -- 1483
 stack$ -- 1
-substring$ -- 604
-swap$ -- 344
-text.length$ -- 14
+substring$ -- 768
+swap$ -- 493
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 3
 warning$ -- 0
-while$ -- 119
+while$ -- 139
 width$ -- 0
-write$ -- 252
-(There were 49 error messages)
+write$ -- 295
+(There were 9 error messages)

@@ -4,53 +4,76 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{21}{chapter.1}
-\contentsline {section}{\numberline {1.1}Delimita\IeC {\c c}\IeC {\~a}o do Problema}{22}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivo Geral}{23}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Objetivos Espec\IeC {\'\i }ficos}{23}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Resultados Esperados}{23}{section.1.3}
-\contentsline {section}{\numberline {1.4}Limita\IeC {\c c}\IeC {\~o}es do Trabalho}{24}{section.1.4}
-\contentsline {section}{\numberline {1.5}Justificativa}{24}{section.1.5}
-\contentsline {section}{\numberline {1.6}Estrutura}{24}{section.1.6}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{19}{chapter.1}
+\contentsline {section}{\numberline {1.1}Contexto}{20}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problema}{21}{section.1.2}
+\contentsline {section}{\numberline {1.3}Justificativa}{22}{section.1.3}
+\contentsline {section}{\numberline {1.4}Hist\IeC {\'o}rico}{22}{section.1.4}
+\contentsline {section}{\numberline {1.5}Objetivos}{23}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Objetivo Geral}{23}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Objetivos Espec\IeC {\'\i }ficos}{24}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Resultados Esperados}{24}{section.1.6}
+\contentsline {section}{\numberline {1.7}Estrutura}{24}{section.1.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\IeC {\~a}o de Literatura}}{27}{chapter.2}
-\contentsline {section}{\numberline {2.1}T\IeC {\'e}cnicas e Algoritmos}{28}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Support Vector Machines (SVM)}{28}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Hidden Markov Models (HMM)}{30}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Word Clustering}{30}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Conditional Random Fields (CRFs)}{33}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Trabalhos Comparativos}{33}{section.2.2}
-\contentsline {section}{\numberline {2.3}Ferramentas e Projetos de Destaque}{34}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Cermine}{34}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}TeamBeam}{36}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Resultados Comparativos}{36}{subsubsection.2.3.2.1}
-\contentsline {subsection}{\numberline {2.3.3}Layout-CRF's}{37}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Mendeley Desktop}{37}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}CiteULike}{37}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}CiteSeer}{37}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}ParsCit}{39}{subsection.2.3.7}
-\contentsline {subsubsection}{\numberline {2.3.7.1}Resultados Comparativos}{40}{subsubsection.2.3.7.1}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{27}{chapter.2}
+\contentsline {section}{\numberline {2.1}Metadados}{28}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Conceito de Metadado}{28}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Padr\IeC {\~o}es de Metadado}{29}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}T\IeC {\'e}cnicas de Extra\IeC {\c c}\IeC {\~a}o de Metadado}{30}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Revis\IeC {\~a}o de Estado da Arte na Extra\IeC {\c c}\IeC {\~a}o de Metadados}{30}{section.2.2}
+\contentsline {section}{\numberline {2.3}T\IeC {\'e}cnicas de Algoritmos}{30}{section.2.3}
+\contentsline {section}{\numberline {2.4}Ambientes de Extra\IeC {\c c}\IeC {\~a}o de Metadados}{30}{section.2.4}
+\contentsline {section}{\numberline {2.5}T\IeC {\'e}cnicas e Algoritmos}{30}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Support Vector Machines (SVM)}{30}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Hidden Markov Models (HMM)}{32}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Word Clustering}{33}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Conditional Random Fields (CRFs)}{35}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}Trabalhos Comparativos}{35}{section.2.6}
+\contentsline {section}{\numberline {2.7}Ferramentas e Projetos de Destaque}{36}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Cermine}{36}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}TeamBeam}{38}{subsection.2.7.2}
+\contentsline {subsubsection}{\numberline {2.7.2.1}Resultados Comparativos}{38}{subsubsection.2.7.2.1}
+\contentsline {subsection}{\numberline {2.7.3}Layout-CRF's}{39}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Mendeley Desktop}{39}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}CiteULike}{39}{subsection.2.7.5}
+\contentsline {subsection}{\numberline {2.7.6}CiteSeer}{39}{subsection.2.7.6}
+\contentsline {subsection}{\numberline {2.7.7}ParsCit}{41}{subsection.2.7.7}
+\contentsline {subsubsection}{\numberline {2.7.7.1}Resultados Comparativos}{42}{subsubsection.2.7.7.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sele\IeC {\c c}\IeC {\~a}o das T\IeC {\'e}cnicas/Ferramentas}{41}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sele\IeC {\c c}\IeC {\~a}o de Artigos}{42}{section.3.2}
-\contentsline {section}{\numberline {3.3}Infraestrutura Computacional}{43}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Testes In Loco}{44}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Quadro Comparativo}{44}{section.3.4}
-\contentsline {section}{\numberline {3.5}Metadados, Pesos e Resultados}{44}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}\IeC {\'I}ndice de Confiabilidade}{45}{subsection.3.5.1}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Escolha do Corpus}{43}{section.3.1}
+\contentsline {section}{\numberline {3.2}Desenho do Experimento}{43}{section.3.2}
+\contentsline {section}{\numberline {3.3}Ambiente Tecnol\IeC {\'o}gico}{43}{section.3.3}
+\contentsline {section}{\numberline {3.4}Sele\IeC {\c c}\IeC {\~a}o das T\IeC {\'e}cnicas/Ferramentas}{43}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sele\IeC {\c c}\IeC {\~a}o de Artigos}{44}{section.3.5}
+\contentsline {section}{\numberline {3.6}Infraestrutura Computacional}{45}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Testes In Loco}{46}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Quadro Comparativo}{46}{section.3.7}
+\contentsline {section}{\numberline {3.8}Metadados, Pesos e Resultados}{46}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}\IeC {\'I}ndice de Confiabilidade}{48}{subsection.3.8.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Desenvolvimento}}{47}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ambiente de Testes}{47}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Servidores de Teste}{47}{subsection.4.1.1}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lise e Apresenta\IeC {\c c}\IeC {\~a}o de Resultados}}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ambiente de Testes}{49}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Servidores de Teste}{49}{subsection.4.1.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Contribui\IeC {\c c}\IeC {\~o}es}{49}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{49}{section.5.2}
-\contentsline {section}{\numberline {5.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{49}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Discuss\IeC {\~a}o / Trabalhos Futuros}}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contribui\IeC {\c c}\IeC {\~o}es}{51}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{51}{section.5.2}
+\contentsline {section}{\numberline {5.3}Considera\IeC {\c c}\IeC {\~o}es Finais}{51}{section.5.3}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{51}{section*.12}
-\vspace {\cftbeforechapterskip }
+\contentsline {chapter}{Refer\^encias}{53}{section*.10}
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
+\cftinsert {A}
+\contentsline {part}{\uppercase {Anexos}}{55}{section*.11}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Elementos do padr\IeC {\~a}o Dublin Core, vers\IeC {\~a}o 1.1}}{57}{appendix.anexochapback.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Listagem de artigos analisados para realiza\IeC {\c c}\IeC {\~a}o do experimento}}{61}{appendix.anexochapback.2}

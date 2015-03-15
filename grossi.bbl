@@ -5,10 +5,10 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.2 }
 
-\bibitem[Berger e Pietra 1996]{maximum-entropy}
-\abntrefinfo{Berger e Pietra}{BERGER; PIETRA}{1996}
-{BERGER, S. A. D.~P. A.~L.; PIETRA, V. J.~D. A maximum entropy approach to
-  natural language processing.
+\bibitem[Berger, Pietra e Pietra 1996]{maximum-entropy}
+\abntrefinfo{Berger, Pietra e Pietra}{BERGER; PIETRA; PIETRA}{1996}
+{BERGER, A.~L.; PIETRA, S. A.~D.; PIETRA, V. J.~D. A maximum entropy approach
+  to natural language processing.
 1996.}
 
 \bibitem[Cameron 1997]{cameron}
@@ -17,16 +17,23 @@
   scholarly communication.
 v.~2, n.~4, 1997.}
 
+\bibitem[Cathro 1997]{meta-dados}
+\abntrefinfo{Cathro}{CATHRO}{1997}
+{CATHRO, W. Metadata: an overview.
+1997.
+Dispon{\'\i}vel em:
+  \url{http://www.nla.gov.au/openpublish/index.php/nlasp/article/view/1019/1289}.}
+
 \bibitem[Emamy e Cameron 2007]{citeulike}
 \abntrefinfo{Emamy e Cameron}{EMAMY; CAMERON}{2007}
 {EMAMY, K.; CAMERON, R. Citeulike: A researcher's social bookmarking service.
 2007.
 Dispon{\'\i}vel em: \url{http://www.ariadne.ac.uk/issue51/emamy-cameron/}.}
 
-\bibitem[Giles e Lawrence 1998]{citeseer}
-\abntrefinfo{Giles e Lawrence}{GILES; LAWRENCE}{1998}
-{GILES, K. D.~B. C.~L.; LAWRENCE, S. Citeseer: An automatic citation indexing
-  system.
+\bibitem[Giles, Bollacker e Lawrence 1998]{citeseer}
+\abntrefinfo{Giles, Bollacker e Lawrence}{GILES; BOLLACKER; LAWRENCE}{1998}
+{GILES, C.~L.; BOLLACKER, K.~D.; LAWRENCE, S. Citeseer: An automatic citation
+  indexing system.
 p. 89--98, 1998.}
 
 \bibitem[Granitzer 2011]{Granitzer2011a}
@@ -35,29 +42,25 @@ p. 89--98, 1998.}
   for A Comparison of Metadata Extraction Techniques for Crowed-source
   Bibliographic Metadata Management}. London: Mendeley, 2011.}
 
-\bibitem[Granitzer Maya~Hristakeva e Kern 2012]{granitzer-layout-based}
-\abntrefinfo{Granitzer Maya~Hristakeva e Kern}{GRANITZER MAYA~HRISTAKEVA;
-  KERN}{2012}
-{GRANITZER MAYA~HRISTAKEVA, R. K.~K.~J. M.; KERN, R. A comparison of layout
-  based bibliographic metadata extraction techniques. In:  . [S.l.]: ACM,
-  2012.}
+\bibitem[Granitzer et al. 2012]{granitzer-layout-based}
+\abntrefinfo{Granitzer et al.}{GRANITZER et al.}{2012}
+{GRANITZER, M. et al. A comparison of layout based bibliographic metadata
+  extraction techniques. In:  . [S.l.]: ACM, 2012.}
 
-\bibitem[Han C. Lee~Giles e Fox 2003]{svm}
-\abntrefinfo{Han C. Lee~Giles e Fox}{HAN C. LEE~GILES; FOX}{2003}
-{HAN C. LEE~GILES, E. M.~H. Z. Z.~Z. H.; FOX, E.~A. Automatic document metadata
-  extraction using support vector machines.
+\bibitem[Han et al. 2003]{svm}
+\abntrefinfo{Han et al.}{HAN et al.}{2003}
+{HAN, H. et al. Automatic document metadata extraction using support vector
+  machines.
 2003.}
 
-\bibitem[Han Eren~Manavoglu e Zhang 2005]{rule-based}
-\abntrefinfo{Han Eren~Manavoglu e Zhang}{HAN EREN~MANAVOGLU; ZHANG}{2005}
-{HAN EREN~MANAVOGLU, H. Z. K. T. C. L.~G. H.; ZHANG, X. Rule-based word
-  clustering for document metadata extraction.
+\bibitem[Han et al. 2005]{rule-based}
+\abntrefinfo{Han et al.}{HAN et al.}{2005}
+{HAN, H. et al. Rule-based word clustering for document metadata extraction.
 p. 1049--1053, 2005.}
 
-\bibitem[Kern Kris~Jack e Granitzer 2012]{teambeam}
-\abntrefinfo{Kern Kris~Jack e Granitzer}{KERN KRIS~JACK; GRANITZER}{2012}
-{KERN KRIS~JACK, M.~H. R.; GRANITZER, M. Teambeam — meta-data extraction from
-  scientific literature.
+\bibitem[Kern et al. 2012]{teambeam}
+\abntrefinfo{Kern et al.}{KERN et al.}{2012}
+{KERN, R. et al. Teambeam — meta-data extraction from scientific literature.
 v.~18, n.~7/8, 2012.
 Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 
@@ -66,12 +69,19 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
 
-\bibitem[Lafferty e Pereira 2001]{crf}
-\abntrefinfo{Lafferty e Pereira}{LAFFERTY; PEREIRA}{2001}
-{LAFFERTY, A.~M. J.; PEREIRA, F.~C. Conditional random fields: Probabilistic
-  models for segmenting and labeling sequence data. In:  ACM (Ed.).
-  \emph{Proceedings of the 18th International Conference on Machine Learning
-  2001 (ICML 2001)}. [S.l.]: ACM, 2001. p. 282--289.}
+\bibitem[Lafferty, McCallum e Pereira 2001]{crf}
+\abntrefinfo{Lafferty, McCallum e Pereira}{LAFFERTY; MCCALLUM; PEREIRA}{2001}
+{LAFFERTY, J.; MCCALLUM, A.; PEREIRA, F.~C. Conditional random fields:
+  Probabilistic models for segmenting and labeling sequence data. In:  ACM
+  (Ed.). \emph{Proceedings of the 18th International Conference on Machine
+  Learning 2001 (ICML 2001)}. [S.l.]: ACM, 2001. p. 282--289.}
+
+\bibitem[Mohri, Rostamizadeh e Talwalkar 2012]{foundations-machine-learning}
+\abntrefinfo{Mohri, Rostamizadeh e Talwalkar}{MOHRI; ROSTAMIZADEH;
+  TALWALKAR}{2012}
+{MOHRI, M.; ROSTAMIZADEH, A.; TALWALKAR, A. \emph{Foundations of Machine
+  Learning}. [S.l.: s.n.], 2012.
+ISBN 978-0-262-01825-8.}
 
 \bibitem[Peng e McCallum 2004]{crf-ie}
 \abntrefinfo{Peng e McCallum}{PENG; MCCALLUM}{2004}
@@ -96,11 +106,16 @@ v.~77, n.~2, 1989.}
   information extraction.
 p. 37--42, 1999.}
 
-\bibitem[Tkaczyk Paweł~Szostek e Bolikowski 2014]{cermine}
-\abntrefinfo{Tkaczyk Paweł~Szostek e Bolikowski}{TKACZYK PAWEł~SZOSTEK;
-  BOLIKOWSKI}{2014}
-{TKACZYK PAWEł~SZOSTEK, P. J. D. M.~F. D.; BOLIKOWSKI Łukasz. Cermine —
-  automatic extraction of metadata and references from scientific literature.
+\bibitem[Solomonoff 1956]{machine-learning}
+\abntrefinfo{Solomonoff}{SOLOMONOFF}{1956}
+{SOLOMONOFF, R. An inductive inference machine.
+1956.
+Dispon{\'\i}vel em: \url{http://world.std.com/~rjs/indinf56.pdf}.}
+
+\bibitem[Tkaczyk et al. 2014]{cermine}
+\abntrefinfo{Tkaczyk et al.}{TKACZYK et al.}{2014}
+{TKACZYK, D. et al. Cermine — automatic extraction of metadata and references
+  from scientific literature.
 2014.}
 
 \bibitem[Weibel 1999]{dublin-core}
