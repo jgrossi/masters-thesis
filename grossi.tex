@@ -1,4 +1,4 @@
-%% abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
+	%% abtex2-modelo-trabalho-academico.tex, v-1.9.2 laurocesar
 %% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
 %%
 %% This work may be distributed and/or modified under the
@@ -32,7 +32,7 @@
 	% -- opções da classe memoir --
 	12pt,               % tamanho da fonte
 	openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,            % para impressão em verso e anverso. Oposto a oneside
+	oneside,            % para impressão em verso e anverso. Oposto a oneside
 	a4paper,            % tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
@@ -81,6 +81,8 @@
 \lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
 %\lstset{framextopmargin=20pt,frame=bottomline}
 
+% Para a citação de um anexo sair correta
+\newcommand{\refanexo}[1]{\hyperref[#1]{Anexo~\ref{#1}}}
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
@@ -90,8 +92,9 @@
 \definecolor{azulclaro}{HTML}{A2D8F8}
 \definecolor{verdeclaro}{HTML}{AADCA5}
 \definecolor{amareloclaro}{HTML}{F7DFA1}
-\definecolor{shadecolor}{HTML}{EEEEFF}
-\definecolor{framecolor}{HTML}{000000}
+
+\definecolor{shadecolor}{HTML}{FFFFCC}
+\definecolor{framecolor}{HTML}{FF0000}
 
 % ---
 % Configurações do pacote backref
@@ -136,22 +139,25 @@
 {\endMakeFramed}
 
 \newcommand{\comentario}[1]{
-	\begin{framed}
+	\begin{frshaded}
 		\noindent
 		\textbf{Comentário:} #1
-	\end{framed}
+	\end{frshaded}
 }
 
 % Comando para texto inserido, novo
-\newcommand{\textonovo}[1]{
-	\sethlcolor{verdeclaro}
-	\hl{#1}
-}
+%\newcommand{\textonovo}[1]{
+%	\sethlcolor{verdeclaro}
+%	\hl{#1}
+%}
 
-\newcommand{\textoalterado}[1]{
-	\sethlcolor{amareloclaro}
-	\hl{#1}
-}
+%\newcommand{\textoalterado}[1]{
+%	\sethlcolor{amareloclaro}
+%	\hl{#1}
+%}
+
+\newenvironment{textonovo}{\color{Plum}}{}
+\newenvironment{textoalterado}{\color{red}}{}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -159,7 +165,7 @@
 \titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
-\data{Mar 2015, v-0.5.1}
+\data{Mar 2015, v-0.5.2}
 \orientador{Marcello Peixoto Bax}
 \coorientador{Renato Rocha Souza}
 \instituicao{%
@@ -171,7 +177,7 @@
 \tipotrabalho{Dissertação (Mestrado)}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Dissertação de mestrado apresentada à coordenação do PPGCI/UFMG com o objetivo de obtenção de título de Mestre em Ciência da Informação}
+\preambulo{Dissertação de Mestrado apresentada à coordenação do PPGCI/UFMG com o objetivo de obtenção de título de Mestre em Ciência da Informação.}
 % ---
 
 
@@ -189,7 +195,7 @@
 	pdfauthor={\@author},
 	pdfsubject={\imprimirpreambulo},
 	pdfcreator={LaTeX with abnTeX2},
-	pdfkeywords={extracao}{metadados}{artigos cientificos}{tecnicas de extracao}, 
+	pdfkeywords={extracao}{metadados}{artigos cientificos}{tecnicas de extracao}{machine learning}, 
 	colorlinks=true,            % false: boxed links; true: colored links
 	linkcolor=blue,             % color of internal links
 	citecolor=blue,             % color of links to bibliography
@@ -567,24 +573,14 @@
 % ---
 % Inicia os apêndices
 % ---
-% \begin{apendicesenv}
+\begin{apendicesenv}
 
 % % Imprime uma página indicando o início dos apêndices
-% \partapendices
+\partapendices
 
-% % ----------------------------------------------------------
-% \chapter{Quisque libero justo}
-% % ----------------------------------------------------------
+\include{anexos/artigos}
 
-% \lipsum[50]
-
-% % ----------------------------------------------------------
-% \chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-% ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% % ----------------------------------------------------------
-% \lipsum[55-57]
-
-% \end{apendicesenv}
+\end{apendicesenv}
 % ---
 
 
@@ -601,15 +597,6 @@
 \partanexos
 
 \include{anexos/dublin-core}
-\include{anexos/artigos}
-
-%\begin{table}
-%	\caption{Teste}
-%    \begin{center}
-%        
-%    \end{center}
-%    \label{tab:papers-list-total}
-%\end{table}
 
 \end{anexosenv}
 

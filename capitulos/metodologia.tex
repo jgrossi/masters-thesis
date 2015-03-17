@@ -12,7 +12,7 @@ Desta maneira, a pesquisa de modo padrão não traz alteração nos ambientes pe
 
 % Explicar o passo a passo que será utilizado
 
-Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmente as que são necessárias dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados. Os elementos se relacionam entre si e estão identificados na figura \ref{fig:metodology}. 
+Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmente as que são necessárias dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados. Os elementos se relacionam entre si e estão identificados na \autoref{fig:metodology}. 
 
 % Colocar diagrama demonstrando a relação entre todos os objetos, como artigos, técnicas, o processamento, a planilha de resultados e as conclusões
 
@@ -32,7 +32,7 @@ Em função do grande número de ferramentas disponíveis como resultado desta p
 
 Conforme mencionado anteriormente, ferramentas pagas ou que não disponibilizam o código para instalação não foram testadas, visto que a necessidade do atual trabalho visa identificar os resultados obtidos dentro de um conjunto de infra estrutura única, de maneira justa com cada projeto.
 
-Assim sendo, a tabela \ref{tab:ferramentas} lista as seguintes ferramentas que foram selecionadas para teste dentro do escopo proposto neste trabalho.
+Assim sendo, a \autoref{tab:ferramentas} lista as seguintes ferramentas que foram selecionadas para teste dentro do escopo proposto neste trabalho.
 
 % Colocar uma tabela com as técnicas que serão comparadas
 
@@ -57,7 +57,7 @@ Visando provar a eficiência destas técnicas, desejamos ter informações de sa
 
 % Áreas dos Artigos e Eventos
 
-Desde modo a lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de ter o resultado da aplicação das técnicas comparado com os resultados obtidos manualmente. Na Tabela \ref{tab:papers-list} pode-se ver o número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no Anexo \ref{anexo-artigos} deste documento.
+Desde modo a lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de ter o resultado da aplicação das técnicas comparado com os resultados obtidos manualmente. Na \autoref{tab:papers-list} pode-se ver o número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no \autoref{apendice-artigos} deste documento.
 
 Os artigos foram selecionados tomando como base a principal forma de análise das técnicas selecionadas para testes: o layout, ou seja, a disposição dos elementos nos artigos científicos. Esta seleção foi feite com base a abranger um maior número de representações, com disposições diferentes, tipografias diferentes e inclusive ordem diferentes nas exibições. Desta forma as técnicas poderão ser confrontadas e os resultados comparados com os resultados esperados.
 
@@ -133,7 +133,7 @@ Alguns metadados são mais importantes que outros no que diz respeito à funcion
 
 Além disso, utilizamos também o título, juntamente com o resumo, para buscar de palavras chaves ou palavras que podem ser relevantes na pesquisa pelos documentos. Assim sendo alguns metadados devem ser mais considerados no resultado destas extrações, por serem mais importantes no ponto de vista da busca.
 
-Assim sendo apresentamos a tabela \ref{tab:pesos}, que demonstra como cada metadado teve sua importância interpretada e qual o peso que lhe foi atribuído, sendo utilizado o inteiro 1 para o peso mais baixo e o 5 para peso mais alto, sendo consequentemente o mais importantes.
+Assim sendo apresentamos a \autoref{tab:pesos}, que demonstra como cada metadado teve sua importância interpretada e qual o peso que lhe foi atribuído, sendo utilizado o inteiro 1 para o peso mais baixo e o 5 para peso mais alto, sendo consequentemente o mais importantes.
 
 % Tabela de metadados e pesos
 
@@ -165,7 +165,7 @@ Deste modo consideramos 3 (três) resultados possíveis para um resultado analis
 \item \textbf{Inaceitável:} Quando o resultado atinge abaixo de 90\%, ou seja, entre 0\% e 89\%. Este resultado no âmbito do presente projeto é considerado inaceitável.
 \end{enumerate}
 
-Assim, temos o valor de cada resultado possível, que será também utilizado no processo de análise, conforme consta na tabela \ref{tab:precisao}. Cada valor, independente de sua classificação será utilizado para o cálculo final da nota de cada ferramenta.
+Assim, temos o valor de cada resultado possível, que será também utilizado no processo de análise, conforme consta na \autoref{tab:precisao}. Cada valor, independente de sua classificação será utilizado para o cálculo final da nota de cada ferramenta.
 
 % Tabela de precisão e os valores
 
@@ -191,11 +191,11 @@ Considerando que cada metadado possui um peso diferente necessitamos calcular o 
 
 Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em uma única nota final para cada técnica aplicada.
 
-Basicamente a fórmula atua como uma média ponderada dos resultados alcançados na extração de cada campo do artigo, seguindo os pesos apresentados em \ref{tab:pesos}. Cada peso é atribuído ao resultado encontrado em cada ferramenta testada. 
+Basicamente a fórmula atua como uma média ponderada dos resultados alcançados na extração de cada campo do artigo, seguindo os pesos apresentados em \autoref{tab:pesos}. Cada peso é atribuído ao resultado encontrado em cada ferramenta testada. 
 
 A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos dos artigos com sucesso, sua precisão com relação ao título será 87, que será multiplicado pelo peso correspondendo ao seu campo, neste caso, o inteiro 5. Isso ocorre para todos os campos apresentados, seguindo seus respectivos pesos.
 
-A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a tabela \ref{tab:indice-confidencialidade}, onde temos as variáveis que fazem parte da fórmula descrita.
+A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:indice-confidencialidade}, onde temos as variáveis que fazem parte da fórmula descrita.
 
 \begin{center}
 	$ IC=\frac{5(PT)+4(PA)+PE+3(PR)+5(PRF)}{18} $

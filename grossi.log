@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  15 MAR 2015 19:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  16 MAR 2015 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,11 +530,11 @@ Headheight and headsep: 14.5pt and 19.8738pt
 Footskip: 30pt
 Columnsep and columnseprule: 10pt and 0pt
 Marginparsep and marginparwidth: 7pt and 42.9055pt
-Sidecapsep and sidecapwidth: 7pt and 92pt
-Sidebarhsep and sidebarwidth: 7pt and 92pt
+Sidecapsep and sidecapwidth: 7pt and 42pt
+Sidebarhsep and sidebarwidth: 7pt and 42pt
 Sidebarvsep and sidebartopsep: 14.5pt and 0pt
 Sidebarheight: 590.14995pt
-Sidefoothsep and sidefootwidth: 7pt and 92pt
+Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
@@ -983,7 +983,7 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 \c@magicrownumbers=\count183
-Package hyperref Info: Option `colorlinks' set `true' on input line 199.
+Package hyperref Info: Option `colorlinks' set `true' on input line 205.
 \grossi@idxfile=\write4
 \openout4 = `grossi.idx'.
 
@@ -991,31 +991,31 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 199.
 Writing index file grossi.idx 
 (./grossi.aux (./includes/siglas.aux) (./capitulos/introducao.aux)
 (./capitulos/referencial.aux) (./capitulos/metodologia.aux)
-(./capitulos/resultados.aux) (./capitulos/conclusao.aux)
-(./anexos/dublin-core.aux) (./anexos/artigos.aux))
+(./capitulos/resultados.aux) (./capitulos/conclusao.aux) (./anexos/artigos.aux)
+(./anexos/dublin-core.aux))
 \openout1 = `grossi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 222.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 228.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring ON on input line 222.
+Package hyperref Info: Link coloring ON on input line 228.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1027,10 +1027,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 222.
-LaTeX Info: Redefining \ref on input line 222.
-LaTeX Info: Redefining \pageref on input line 222.
-LaTeX Info: Redefining \nameref on input line 222.
+LaTeX Info: Redefining \nameref on input line 228.
+LaTeX Info: Redefining \ref on input line 228.
+LaTeX Info: Redefining \pageref on input line 228.
+LaTeX Info: Redefining \nameref on input line 228.
 \myptabbox=\box37
 \myptabboxwidth=\skip206
 Package lastpage Info: Please have a look at the pageslts package at
@@ -1039,7 +1039,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 222.
+(lastpage)             ! on input line 228.
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count185
@@ -1068,7 +1068,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 222.
+LaTeX Info: Redefining \microtypecontext on input line 228.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1084,7 +1084,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \c@lstlisting=\count191
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 235.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 241.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -1096,149 +1096,128 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 244.
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 250.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 244.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 250.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 244
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 250
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 244
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 250
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 244.
+(Font)              <12> on input line 250.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 244.
+(Font)              <8> on input line 250.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 244.
+(Font)              <6> on input line 250.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 
+l.250 
        [1
 
 
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
 
-Overfull \hbox (16.44858pt too wide) in paragraph at lines 277--280
+Overfull \hbox (16.44858pt too wide) in paragraph at lines 283--286
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--288
+Underfull \hbox (badness 10000) in paragraph at lines 287--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 291.
+(Font)              <10> on input line 297.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 291.
+(Font)              <7> on input line 297.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 291.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 
-       [2] [3
+(Font)              <5> on input line 297.
+[2] [3
 
 ] [4
 
-] [5] [6
+] [5
 
-] [7] [8
+] [6
 
-] [9] [10
+] (./grossi.lof) [7
 
-] (./grossi.lof) [11] [12
-
-]
-(./grossi.lot) [13] [14
+] (./grossi.lot) [8
 
 ]
 \openout2 = `includes/siglas.aux'.
 
- (./includes/siglas.tex [15
+
+(./includes/siglas.tex [9
 
 
-] [16
 
-]) (./grossi.toc
-Underfull \vbox (badness 1325) has occurred while \output is active []
+]) (./grossi.toc [10
 
- [17
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 71.
-)
-[18]
+(Font)              <14.4> on input line 70.
+) [11]
 \openout2 = `capitulos/introducao.aux'.
 
- (./capitulos/introducao.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19
+(./capitulos/introducao.tex [12
 
 
 
 ]
-<./assets/introducao.png, id=257, 414.54875pt x 307.1475pt>
+<./assets/introducao.png, id=229, 414.54875pt x 307.1475pt>
 File: ./assets/introducao.png Graphic file (type png)
 
 <use ./assets/introducao.png>
-Package pdftex.def Info: ./assets/introducao.png used on input line 28.
+Package pdftex.def Info: ./assets/introducao.png used on input line 32.
 (pdftex.def)             Requested size: 318.49861pt x 235.98875pt.
- [20 <./assets/introducao.png>]
-Underfull \vbox (badness 1867) has occurred while \output is active []
-
- [21]
-[22] [23] [24]) [25]
+ [13 <./assets/introducao.png>] [14] [15] [16]
+[17] [18]) [19]
 \openout2 = `capitulos/referencial.aux'.
 
- (./capitulos/referencial.tex [26
-
-
-
-]
+ (./capitulos/referencial.tex
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 20.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omslmr.fd
@@ -1246,14 +1225,18 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 20.
- [27] [28]
+ [20
+
+
+
+] [21]
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 64.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 80.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1263,66 +1246,65 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 65.
- [29] [30]
-[31] <./assets/hmm-states.png, id=367, 612.2875pt x 514.92375pt>
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 81.
+ [22] [23]
+<./assets/svm-grafico.png, id=326, 736.7525pt x 549.05125pt>
+File: ./assets/svm-grafico.png Graphic file (type png)
+
+<use ./assets/svm-grafico.png>
+Package pdftex.def Info: ./assets/svm-grafico.png used on input line 118.
+(pdftex.def)             Requested size: 273.00278pt x 203.44739pt.
+ [24 <./assets/svm-grafico.png>] [25]
+<./assets/hmm-states.png, id=354, 612.2875pt x 514.92375pt>
 File: ./assets/hmm-states.png Graphic file (type png)
 
 <use ./assets/hmm-states.png>
-Package pdftex.def Info: ./assets/hmm-states.png used on input line 158.
+Package pdftex.def Info: ./assets/hmm-states.png used on input line 209.
 (pdftex.def)             Requested size: 318.49861pt x 267.84831pt.
-
-Underfull \vbox (badness 3965) has occurred while \output is active []
-
- [32]
-<./assets/workflow-rule-based.png, id=380, 880.28876pt x 650.43pt>
+ [26]
+<./assets/workflow-rule-based.png, id=367, 880.28876pt x 650.43pt>
 File: ./assets/workflow-rule-based.png Graphic file (type png)
 
 <use ./assets/workflow-rule-based.png>
-Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 17
-7.
+Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 22
+8.
 (pdftex.def)             Requested size: 318.49861pt x 235.32573pt.
- [33 <./assets/hmm-states.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./assets/workflow-rule-based.png (PNG copy)>] [35] [36]
-<./assets/cermine.png, id=426, 1027.84pt x 579.16376pt>
+ [27 <./assets/hmm-states.png>] [28 <./assets/workflow-rule-based.png (PNG copy
+)>] [29] [30]
+<./assets/cermine.png, id=412, 1027.84pt x 579.16376pt>
 File: ./assets/cermine.png Graphic file (type png)
 
 <use ./assets/cermine.png>
-Package pdftex.def Info: ./assets/cermine.png used on input line 242.
+Package pdftex.def Info: ./assets/cermine.png used on input line 293.
 (pdftex.def)             Requested size: 318.49861pt x 179.4682pt.
- [37 <./assets/cermine.png (PNG copy)>]
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
- [38]
-[39] [40] [41]) [42]
+ [31 <./assets/cermine.png (PNG copy)>] [32] [33]
+[34] [35] [36]) [37]
 \openout2 = `capitulos/metodologia.aux'.
 
  (./capitulos/metodologia.tex
-<./assets/metodology.png, id=493, 545.03625pt x 457.71pt>
+<./assets/metodology.png, id=484, 545.03625pt x 457.71pt>
 File: ./assets/metodology.png Graphic file (type png)
 
 <use ./assets/metodology.png>
 Package pdftex.def Info: ./assets/metodology.png used on input line 23.
 (pdftex.def)             Requested size: 318.49861pt x 267.46944pt.
- [43
+ [38
 
 
 
-] [44 <./assets/metodology.png>] [45] [46]
-[47]) [48]
+] [39 <./assets/metodology.png>] [40] [41]
+[42]) [43]
 \openout2 = `capitulos/resultados.aux'.
 
- (./capitulos/resultados.tex) [49
+ (./capitulos/resultados.tex) [44
 
 
 
-] [50]
+] [45]
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.tex)
-[51
+[46
 
 
 
@@ -1330,20 +1312,44 @@ Package pdftex.def Info: ./assets/metodology.png used on input line 23.
 \tf@brf=\write5
 \openout5 = `grossi.brf'.
 
- [52
+
+bibitemlist
+[47
+
+
+]) [48]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 580.
+
+[49
 
 
 ]
-bibitemlist
-[53]) [54]
+\openout2 = `anexos/artigos.aux'.
+
+ (./anexos/artigos.tex
+Overfull \hbox (0.85582pt too wide) in alignment at lines 7--71
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 71
+ []
+
+[50
+
+
+] [51]) [52]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 602.
+(hyperref)                removing `\uppercase' on input line 598.
 
-[55
+[53
 
 
-] [56]
+
+]
 \openout2 = `anexos/dublin-core.aux'.
 
  (./anexos/dublin-core.tex
@@ -1390,26 +1396,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 Underfull \vbox (badness 10000) detected at line 26
  []
 
-[57
+[54
 
 
-] [58]) [59]
-\openout2 = `anexos/artigos.aux'.
-
- (./anexos/artigos.tex [60
-
-
-
-]
-Overfull \hbox (0.85582pt too wide) in alignment at lines 7--71
- [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 71
- []
-
-[61] [62]) [63] (./grossi.ind) 
+] [55]) [56] (./grossi.ind) 
 AED: lastpage setting LastPage
 \tf@lof=\write6
 \openout6 = `grossi.lof'.
@@ -1420,30 +1410,30 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `grossi.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 625.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 625.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 612.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
 (./grossi.aux (./includes/siglas.aux) (./capitulos/introducao.aux)
 (./capitulos/referencial.aux) (./capitulos/metodologia.aux)
-(./capitulos/resultados.aux) (./capitulos/conclusao.aux)
-(./anexos/dublin-core.aux) (./anexos/artigos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 625.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 625.
+(./capitulos/resultados.aux) (./capitulos/conclusao.aux) (./anexos/artigos.aux)
+(./anexos/dublin-core.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
 Package rerunfilecheck Info: File `grossi.brf' has not changed.
-(rerunfilecheck)             Checksum: A55FF974EA773167D3FE81E010E6F93A;1874.
+(rerunfilecheck)             Checksum: 10A401E60B31DE43D682F14D920D9FA0;1956.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 625.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
  ) 
 Here is how much of TeX's memory you used:
- 16182 strings out of 493315
- 235931 string characters out of 6137904
- 550929 words of memory out of 5000000
- 18959 multiletter control sequences out of 15000+600000
+ 16209 strings out of 493315
+ 236482 string characters out of 6137904
+ 551701 words of memory out of 5000000
+ 18988 multiletter control sequences out of 15000+600000
  96937 words of font info for 150 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,13n,51p,848b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,51p,848b,2119s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 13/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2013/texmf-dist/
@@ -1464,10 +1454,10 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/couri
 er/ucrb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8
 a.pfb>
-Output written on grossi.pdf (65 pages, 643897 bytes).
+Output written on grossi.pdf (57 pages, 690168 bytes).
 PDF statistics:
- 941 PDF objects out of 1000 (max. 8388607)
- 841 compressed objects within 9 object streams
- 185 named destinations out of 1000 (max. 500000)
- 31266 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 931 PDF objects out of 1000 (max. 8388607)
+ 837 compressed objects within 9 object streams
+ 182 named destinations out of 1000 (max. 500000)
+ 31279 words of extra memory for PDF output out of 35830 (max. 10000000)
 

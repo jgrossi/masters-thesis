@@ -8,6 +8,7 @@ A level-1 auxiliary file: capitulos/metodologia.aux
 A level-1 auxiliary file: capitulos/resultados.aux
 A level-1 auxiliary file: capitulos/conclusao.aux
 A level-1 auxiliary file: anexos/artigos.aux
+A level-1 auxiliary file: anexos/dublin-core.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -20,10 +21,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: includes/referencias.bib
-Repeated entry---line 205 of file includes/referencias.bib
- : @manual{dublin-core
- :                    ,
-I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Name 2 in "Mehryar Mohri and Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry foundations-machine-learning
 while executing---line 2162 of file abntex2-alf.bst
@@ -49,45 +46,45 @@ while executing---line 2217 of file abntex2-alf.bst
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 21 entries,
+You've used 23 entries,
             6711 wiz_defined-function locations,
-            1306 strings with 12507 characters,
-and the built_in function-call counts, 19983 in all, are:
-= -- 1831
-> -- 648
-< -- 224
-+ -- 502
-- -- 196
-* -- 1356
-:= -- 2695
-add.period$ -- 71
-call.type$ -- 21
-change.case$ -- 224
-chr.to.int$ -- 30
-cite$ -- 20
-duplicate$ -- 1339
-empty$ -- 1143
-format.name$ -- 941
-if$ -- 4369
+            1320 strings with 12845 characters,
+and the built_in function-call counts, 22499 in all, are:
+= -- 2093
+> -- 719
+< -- 263
++ -- 565
+- -- 218
+* -- 1534
+:= -- 3019
+add.period$ -- 83
+call.type$ -- 23
+change.case$ -- 247
+chr.to.int$ -- 35
+cite$ -- 22
+duplicate$ -- 1525
+empty$ -- 1293
+format.name$ -- 1049
+if$ -- 4929
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 355
-newline$ -- 108
-num.names$ -- 101
-pop$ -- 525
+missing$ -- 388
+newline$ -- 116
+num.names$ -- 113
+pop$ -- 567
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 93
 quote$ -- 0
-skip$ -- 1483
+skip$ -- 1670
 stack$ -- 1
-substring$ -- 768
-swap$ -- 493
-text.length$ -- 16
+substring$ -- 855
+swap$ -- 568
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3
+type$ -- 5
 warning$ -- 0
-while$ -- 139
+while$ -- 156
 width$ -- 0
-write$ -- 295
-(There were 9 error messages)
+write$ -- 330
+(There were 8 error messages)

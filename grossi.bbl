@@ -69,6 +69,11 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 {KITCHENHAM, B. \emph{Procedures for Performing Systematic Reviews}.
 [S.l.], 2004.}
 
+\bibitem[Kunze e Baker 2007]{dublin-core-1-1}
+\abntrefinfo{Kunze e Baker}{KUNZE; BAKER}{2007}
+{KUNZE, J.; BAKER, T. \emph{The Dublin Core Metadata Element Set}.
+[S.l.], 2007. Dispon{\'\i}vel em: \url{http://www.ietf.org/rfc/rfc5013.txt}.}
+
 \bibitem[Lafferty, McCallum e Pereira 2001]{crf}
 \abntrefinfo{Lafferty, McCallum e Pereira}{LAFFERTY; MCCALLUM; PEREIRA}{2001}
 {LAFFERTY, J.; MCCALLUM, A.; PEREIRA, F.~C. Conditional random fields:
@@ -118,10 +123,16 @@ Dispon{\'\i}vel em: \url{http://world.std.com/~rjs/indinf56.pdf}.}
   from scientific literature.
 2014.}
 
-\bibitem[Weibel 1999]{dublin-core}
-\abntrefinfo{Weibel}{WEIBEL}{1999}
-{WEIBEL, S. The dublin core: a simple content description format for electronic
-  resources.
-p. 117--119, 1999.}
+\bibitem[Vapnik e Cortes 1995]{vapnik-svm}
+\abntrefinfo{Vapnik e Cortes}{VAPNIK; CORTES}{1995}
+{VAPNIK, V.; CORTES, C. Support-vector networks. In:  PUBLISHERS, B. K.~A.
+  (Ed.). \emph{Machine Learning}. [S.l.]: Kluwer Academic Publishers, Boston,
+  1995. v.~20, p. 273--297.}
+
+\bibitem[Weibel 1997]{dublin-core}
+\abntrefinfo{Weibel}{WEIBEL}{1997}
+{WEIBEL, S. The dublin core: A simple content descrip- tion format for
+  electronic resources. In:  SCIENCE, B. of~the American Society~for I. (Ed.).
+  [S.l.: s.n.], 1997. p. 9--11.}
 
 \end{thebibliography}

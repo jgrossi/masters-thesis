@@ -24,41 +24,57 @@ Seguindo as orientações propostas em \cite{Kitchenham} foram mapeados alguns e
 \item ACM Conference on Digital Libraries
 \end{itemize}
 
+\begin{textoalterado}
 Estes eventos foram analisados, observando todas as citações e referências utilizadas, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
+\end{textoalterado}
 
 \section{Metadados}
 
+\comentario{Esta nova seção foi incluída para definir alguns conceitos que são apresentados mais a frente com a apresentação das técnicas.}
+
 \subsection{Conceito de Metadado}
 
-Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir um inicialmente metadado como:
+\begin{textonovo}
+
+Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialmente um metadado da seguinte maneira:
 
 \begin{quote}
 \textit{''[...] an element of metadata describes an information resource, or helps provide access to an information resource.''}
 \end{quote}
 
-Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele temos. Com efeito, podemos simplificar ainda mais a definição de metadado com sendo \textit{um conjunto de dados sobre um recurso específico}.
+Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele temos. Com efeito, podemos simplificar ainda mais a definição de metadado com sendo \textit{um conjunto de dados sobre um determinado recurso}.
 
-Temos contato diariamente com diversos metadados, sejam eles visíveis naturalmente ou não, mas de uma maneira ou outra, são utilizados em tarefas do cotidiano de maneira ampla, geralmente um conjunto enorme de novos dados e informações sobre recursos dos mais diversos tipos e modelos.
+Temos contato diariamente com diversos metadados, sejam eles visíveis naturalmente ou não, mas de uma maneira ou outra, são utilizados em tarefas do cotidiano de maneira ampla; geralmente um conjunto enorme de novos dados e informações sobre recursos dos mais diversos tipos e modelos.
 
-Podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos reais e atuais de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são analisadas e assim catalogadas.
+Podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
 
-Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser melhor definidos, visando identificar e explicar melhor os conceitos que são e serão aplicados na análise das ferramentas e técnicas que aqui serão apresentadas.
+Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser direcionados, visando identificar e explicar melhor os conceitos que serão aplicados na análise das ferramentas e técnicas que aqui serão apresentadas.
 
-\subsection{Padrões de Metadado}
+\end{textonovo}
 
-Diante da infinidade de dados que podem estar atrelados a um recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão. 
+\subsection{Padrões de Metadados}
+\label{padroes-de-metadados}
 
-Para isso, foi criado o padrão Dublin Core \cite{dublin-core}, que se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página, um texto ou até mesmo um documento em um determinado formato.
+\begin{textonovo}
 
-O nome ''Dublin'' foi dado em virtude do \textit{workshop} original, que foi realizado em Dublin, Ohio. Já o nome ''core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
+Diante da infinidade de dados que podem estar atrelados a um recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão. 
 
-Os quinze elementos que fazem parte do padrão Dublin Core fazem parte de um vasto conjunto de vocabulários de metadados, juntamente com diversas especificações técnicas, que são mantidas pela Dublin Core Metadata Initiative (DCMI).
+Para isso, foi criado o padrão Dublin Core \cite{dublin-core}, que se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página, um texto ou até mesmo um documento em um determinado formato. O nome ''Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada em Dublin, Ohio. Já o nome ''core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
-Este padrão é utilizado nos dias atuais para se representar um recurso na Internet, por exemplo. Com base em suas características mecanismos de busca podem indexar um recurso de maneira mais rápida e precisa, pois são este é acompanhado de pequenas sinalizações sobre seu conteúdo, que são os metadados. 
+Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados, juntamente com diversas especificações técnicas, que são mantidas pela Dublin Core Metadata Initiative (DCMI), a agência responsável pela definição destes elementos.
 
-Para cada elemento descrito pelo padrão temos o \textit{label}, que é o texto para entendimento humano e o \textit{name}, que é usado para o processamento de máquina, ou seja, o nome que a máquina utiliza para reconhecimento. Os elementos que fazem parte da versão 1.1 do padrão Dublin Core podem ser vistos no Anexo \ref{anexo-dublin-core} deste trabalho.
+Este padrão é utilizado nos dias atuais para se representar um recurso na Internet, por exemplo, podendo ser qualquer coisa que possa ser identificada \cite{dublin-core-1-1}. Com base em suas características, mecanismos de busca podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, que são os metadados. 
 
-Abaixo podemos ver um exemplo de código para utilização de metadados Dublin Core em uma página da Internet, por exemplo, onde iremos referenciar o elementos \textit{creator}, \textit{title} e \textit{language}.
+Para cada elemento descrito pelo padrão temos informações como: 
+
+\begin{itemize}
+\item \textit{label}, que é o texto para leitura e entendimento humano;
+\item \textit{name}, que é usado para o processamento de máquina, ou seja, um identificador que a máquina utiliza para reconhecimento.
+\end{itemize}
+
+Os elementos que fazem parte da versão 1.1 do padrão Dublin Core \cite{dublin-core-1-1} podem ser vistos no \refanexo{anexo-dublin-core} deste trabalho.
+
+Abaixo podemos ver um exemplo de código para utilização de metadados Dublin Core em uma página da Internet, por exemplo, onde iremos referenciar os elementos \textit{creator}, \textit{title} e \textit{language}.
 
 \lstset{language=HTML}
 \begin{lstlisting}[escapechar=\#]
@@ -67,10 +83,58 @@ Abaixo podemos ver um exemplo de código para utilização de metadados Dublin C
 <meta name="DC.Language" content="pt_BR" >
 \end{lstlisting}
 
-Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\textit{DC.Title}) e idioma (\textit{DC.Language}), são feitos de maneira bem simplificada e direta. Para páginas da Internet, com as informações todas em formato HTML, a utilização destes metadados perderiam o sentido, visto que essas informações são facilmente encontradas de outras formas, como a análise do próprio código HTML. Porém, para documentos binários - em formato PDF ou Word, por exemplo - a utilização destes metadados são de suma importância, visto que permitem que essas informações básicas sejam capturadas sem a necessidade de análise do conteúdo dos arquivos, o que não seria uma tarefa simples.
+Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\textit{DC.Title}) e idioma (\textit{DC.Language}), são feitos de maneira bem simplificada e direta. Para páginas da Internet, com as informações todas em formato HTML, a utilização destes metadados perderiam o sentido, visto que essas informações poderiam ser facilmente encontradas de outras formas, como a análise do próprio código HTML. Porém, para documentos binários - em formato PDF ou Word, por exemplo - a utilização destes metadados é de suma importância, visto que permite que essas informações básicas sejam capturadas sem a necessidade de análise do conteúdo dos arquivos, o que traria complexidade ao processo.
+
+\end{textonovo}
+
+\subsection{Técnicas de Extração de Metadados}
+
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
+
+Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que agrega assertividade ao processo de extração.
+
+\subsubsection{Support Vector Machines (SVM)}
+
+\begin{textonovo}
+Support Vector Machines (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados sejam analisados, possibilitando que padrões sejam extraídos, criando uma espécie de memória, através de classificação.
+
+Esta técnica se baseia na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado por parte do reconhecimento de padrões \cite{vapnik-svm}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação entre um resultado e outro, de forma numérica.
+\end{textonovo}
+
+\begin{textoalterado}
+Vários algoritmos de extração se baseiam na utilização de SVM como técnica principal, visto sua eficiência no reconhecimento de padrões. Como descrito por \cite{svm} a utilização desta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, do qual se deseja obter os metadados.
+
+Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo, cada linha do cabeçalho do documento é classificada em uma ou mais classes, que fazem parte do padrão Dublin Core, detalhado na \autoref{padroes-de-metadados}.
+\end{textoalterado}
+
+\begin{textonovo}
+Estes campos são mapeados em uma representação bidimensional, permitindo identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{vapnik-svm}. Por sua vez, estes pontos são marcados como sendo os ''support vectors'', que permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-grafico}. Esta divisão então permite a distinção entre os metadados, diferenciando então os elementos analisados pelo algoritmo.
+\end{textonovo}
+
+\begin{figure}
+	\centering
+	\caption{Distância representando a separação entre classes na técnica de SVM.}
+	\label{fig:svm-grafico}
+	\includegraphics[width=0.6\linewidth]{./assets/svm-grafico}
+\end{figure}
 
 
-\subsection{Técnicas de Extração de Metadado}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% Falar mais de SVM, suas aplicações além da IE e inclusive da IE %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Revisão de Estado da Arte na Extração de Metadados}
 
@@ -82,19 +146,9 @@ Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como s
 
 \section{Técnicas e Algoritmos}
 
-Algumas técnicas e algoritmos de extração de dados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
 
-Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento.
 
-\subsection{Support Vector Machines (SVM)}
 
-Vários algoritmos de extração possuem referências na técnica de SVM descrita por  \cite{svm}. Esta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, do qual se deseja obter os metadados.
-
-Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo cada linha do cabeçalho do documento é classificada em uma ou mais classes.
-
-Estas classes seguem o padrão \cite{dublin-core} estabelecido pelo Dublin Core \cite{dublin-core}, que define por padrão 15 elementos para descrever um recurso de maneira digital.
-
-Seymore et al. \cite{seymore} definiu também 15 tags para esta definição do cabeçalho de um documento. Porém destas 15 tags definidas somente 4 correspondem ao padrão da Dublin Core e estão ilustradas na Tabela \ref{tab:svm-classes}.
 
 \begin{table}
     \caption{Relação de classes utilizadas e comparação com o padrão Dublin Core.}
@@ -150,6 +204,8 @@ Um exemplo prático citado por Rabiner e Juang \cite{hmm} é o caso de uso do jo
 Este exemplo é baseado tanto no estado de cada resultado (cara ou coroa) e em probabilidades matemáticas de ocorrência destes estados, neste caso 50\%. Assim desenha-se modelos onde os estados são representados com base nas inúmeras possibilidades existentes, levando inclusive em consideração a sequência dos fatos, ou estados.
 
 No âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al. \cite{seymore}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com um estado por campo. 
+
+%Seymore et al. \cite{seymore} definiu também 15 (quinze) tags para esta definição do cabeçalho de um documento. Porém, destas 15 (quinze) tags definidas, somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}.
 
 \begin{figure}
 \centering
@@ -211,7 +267,7 @@ A utilização de CRFs na extração de metadados mostra-se muito eficaz por red
 
 \section{Trabalhos Comparativos}
 
-\duvida{Falar sobre as comparações realizadas por Granitzer, tanto no que diz respeito a layouts \cite{granitzer-layout-based}, quanto no que diz respeito a dicionários \cite{Granitzer2011a}.}
+\comentario{Falar sobre as comparações realizadas por Granitzer, tanto no que diz respeito a layouts \cite{granitzer-layout-based}, quanto no que diz respeito a dicionários \cite{Granitzer2011a}.}
 
 \section{Ferramentas e Projetos de Destaque}
 
@@ -233,7 +289,7 @@ Seu grande diferencial em comparação com as demais técnicas é que ele não s
 
 Seu mecanismo considera somente arquivos PDF com texto gerado de maneira pura, sem a utilização de imagens. Basicamente ele considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{svm}. Com base nisso ele condensa um layout onde as informações geralmente estão dispostas, permitindo assim que em um determinado local do arquivo esteja, provavelmente, o título e o nome dos autores. 
 
-Com estas regiões definidas o CERMINE extrai as informações com base em padrões preestabelecidos, de maneira a gerar então sua saída para os metadados e sua saída para as referências encontradas. A saída trabalhada pelo projeto é no formato XML, permitindo assim que possa ser compartilhado com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de máquinas. A figura \ref{fig:cermine-workflow} demonstra como o processo de extração do CERMINE funciona.
+Com estas regiões definidas o CERMINE extrai as informações com base em padrões preestabelecidos, de maneira a gerar então sua saída para os metadados e sua saída para as referências encontradas. A saída trabalhada pelo projeto é no formato XML, permitindo assim que possa ser compartilhado com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de máquinas. A \autoref{fig:cermine-workflow} demonstra como o processo de extração do CERMINE funciona.
 
 \begin{figure}
 \centering
@@ -271,26 +327,26 @@ Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser compar
 
 A fim de analisar os resultados obtidos com a aplicação das técnicas descritas no TeamBeam, os autores comparam as técnicas utilizadas com outras técnicas de outras ferramentas, que utilizam processos diferentes de análises.
 
-Para fins de comparação de resultados, os autores citam as técnicas ParsCit (\ref{tec-parscit}), Layout-CRFs (\ref{tec-layout-crfs}) e Mendeley Desktop (\ref{tec-mendeley}). Como conclusão ele compara estas três técnicas separadamente, por não abrangerem todos os detalhes que o TeamBeam possui, o que tornaria a comparação desleal.
+Para fins de comparação de resultados, os autores citam as técnicas ParsCit (\autoref{tec-parscit}), Layout-CRFs (\autoref{tec-layout-crfs}) e Mendeley Desktop (\autoref{tec-mendeley}). Como conclusão ele compara estas três técnicas separadamente, por não abrangerem todos os detalhes que o TeamBeam possui, o que tornaria a comparação desleal.
 
-Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\ref{tec-layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
+Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{tec-layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
-\duvida{Devo explicar aqui o que seriam esses Data-Sets? Exemplo: E-Prints, Mendeley e PubMed.}
+\comentario{Devo explicar aqui o que seriam esses Data-Sets? Exemplo: E-Prints, Mendeley e PubMed.}
 
 \subsection{Layout-CRF's}
 \label{tec-layout-crfs}
 
-\duvida{Escrever sobre.}
+\comentario{Escrever sobre.}
 
 \subsection{Mendeley Desktop}
 \label{tec-mendeley}
 
-\duvida{Escrever sobre.}
+\comentario{Escrever sobre.}
 
 \subsection{CiteULike}
 \label{tec-citeulike}
 
-\duvida{Escrever sobre CiteULike, com base no artigo de seus autores \cite{citeulike}.}
+\comentario{Escrever sobre CiteULike, com base no artigo de seus autores \cite{citeulike}.}
 
 \subsection{CiteSeer}
 
@@ -355,4 +411,4 @@ Visando também analisar outros projetos a mesma comparação de resultados foi 
 	% Diferencial do projeto
 	% Se está ativo ou não
 	
-\duvida{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
+\comentario{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}

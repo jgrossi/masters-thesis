@@ -1,6 +1,7 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Processo de Extra\IeC {\c c}\IeC {\~a}o de Metadados}}{20}{figure.1.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de modelo HMM, onde X s\IeC {\~a}o os estados, Y as observa\IeC {\c c}\IeC {\~o}es poss\IeC {\'\i }veis, A as probabilidades de mudan\IeC {\c c}a de estado e B as sa\IeC {\'\i }das das probabilidades.}}{33}{figure.2.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Workflow da extra\IeC {\c c}\IeC {\~a}o de metadados usando \textit {cluster} de palavras}}{34}{figure.2.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces CERMINE Extraction Workflow}}{37}{figure.2.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Processo de Metodologia}}{44}{figure.3.5}
+\contentsline {figure}{\numberline {1}{\ignorespaces Processo de Extra\IeC {\c c}\IeC {\~a}o de Metadados}}{13}{figure.1.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Dist\IeC {\^a}ncia representando a separa\IeC {\c c}\IeC {\~a}o entre classes na t\IeC {\'e}cnica de SVM.}}{24}{figure.2.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de modelo HMM, onde X s\IeC {\~a}o os estados, Y as observa\IeC {\c c}\IeC {\~o}es poss\IeC {\'\i }veis, A as probabilidades de mudan\IeC {\c c}a de estado e B as sa\IeC {\'\i }das das probabilidades.}}{27}{figure.2.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Workflow da extra\IeC {\c c}\IeC {\~a}o de metadados usando \textit {cluster} de palavras}}{28}{figure.2.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces CERMINE Extraction Workflow}}{31}{figure.2.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Processo de Metodologia}}{39}{figure.3.6}
