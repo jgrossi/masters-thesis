@@ -24,6 +24,11 @@ v.~2, n.~4, 1997.}
 Dispon{\'\i}vel em:
   \url{http://www.nla.gov.au/openpublish/index.php/nlasp/article/view/1019/1289}.}
 
+\bibitem[Chieu e Ng 2002]{Chieu}
+\abntrefinfo{Chieu e Ng}{CHIEU; NG}{2002}
+{CHIEU, H.~L.; NG, H.~T. \emph{A Maximum Entropy Approach to Information
+  Extraction from Semi-Structured and Free Text}. 2002.}
+
 \bibitem[Emamy e Cameron 2007]{citeulike}
 \abntrefinfo{Emamy e Cameron}{EMAMY; CAMERON}{2007}
 {EMAMY, K.; CAMERON, R. Citeulike: A researcher's social bookmarking service.
@@ -47,7 +52,7 @@ p. 89--98, 1998.}
 {GRANITZER, M. et al. A comparison of layout based bibliographic metadata
   extraction techniques. In:  . [S.l.]: ACM, 2012.}
 
-\bibitem[Han et al. 2003]{svm}
+\bibitem[Han et al. 2003]{Han-SVM}
 \abntrefinfo{Han et al.}{HAN et al.}{2003}
 {HAN, H. et al. Automatic document metadata extraction using support vector
   machines.
@@ -94,18 +99,18 @@ ISBN 978-0-262-01825-8.}
   using conditional random fields. In:  \emph{HLT-NAACL04}. [S.l.: s.n.], 2004.
   p. 329--336.}
 
-\bibitem[Rabiner 1989]{hmm2}
+\bibitem[Rabiner 1989]{Rabiner-HMM-Speech}
 \abntrefinfo{Rabiner}{RABINER}{1989}
 {RABINER, L.~R. A tutorial on hidden markov models and selected applications in
   speech recognition.
 v.~77, n.~2, 1989.}
 
-\bibitem[Rabiner e Juang 1986]{hmm}
+\bibitem[Rabiner e Juang 1986]{Rabiner-HMM}
 \abntrefinfo{Rabiner e Juang}{RABINER; JUANG}{1986}
 {RABINER, L.~R.; JUANG, B.~H. An introduction to hidden markov models.
 1986.}
 
-\bibitem[Seymore e Rosenfield 1999]{seymore}
+\bibitem[Seymore e Rosenfield 1999]{Seymore-HMM-IE}
 \abntrefinfo{Seymore e Rosenfield}{SEYMORE; ROSENFIELD}{1999}
 {SEYMORE, K.; ROSENFIELD, R. Learning hidden markov model structure for
   information extraction.
@@ -123,7 +128,7 @@ Dispon{\'\i}vel em: \url{http://world.std.com/~rjs/indinf56.pdf}.}
   from scientific literature.
 2014.}
 
-\bibitem[Vapnik e Cortes 1995]{vapnik-svm}
+\bibitem[Vapnik e Cortes 1995]{Vapnik-SVM}
 \abntrefinfo{Vapnik e Cortes}{VAPNIK; CORTES}{1995}
 {VAPNIK, V.; CORTES, C. Support-vector networks. In:  PUBLISHERS, B. K.~A.
   (Ed.). \emph{Machine Learning}. [S.l.]: Kluwer Academic Publishers, Boston,
