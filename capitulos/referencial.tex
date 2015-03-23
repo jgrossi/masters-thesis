@@ -1,3 +1,5 @@
+%!TEX root = ../grossi.tex
+
 \chapter{Referencial Teórico}
 
 % Falar sobre RSL
@@ -88,6 +90,8 @@ Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como s
 \end{textonovo}
 
 \subsection{Técnicas de Extração de Metadados}
+
+\comentario{Lembrando que todo texto em ROXO não estava presente na última versão enviada e todo texto em VERMELHO foi alterado deste a última versão.}
 
 Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
 
@@ -185,7 +189,7 @@ O resultado obtido pela utilização de SVM como técnica de extração de metad
 % % % % % Parei a revisão aqui em 17/03/2015 23:22 % % % % % % % % %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-\subsection{Hidden Markov Models (HMM)}
+\subsubsection{Hidden Markov Models (HMM)}
 \label{tecnica-hmm}
 
 A teoria básica de Markov foi conhecida próximo dos anos 80 por engenheiros e matemáticos com grande aplicação inicialmente em processamento da fala, mas com vasta amplitude em outras áreas onde a descoberta de padrões pode ser aplicada \cite{Rabiner-HMM}.
@@ -236,7 +240,29 @@ Deste modo, para extração dos metadados, o HMM pode ser utilizado aplicando um
 % % % % % % % % % % % % % % % % % % % % % %
 % % % % % % % % % % % % % % % % % % % % % %
 
-Uma outra utilização de HMM na extração de informação é descrita por \cite{Zhang-HMM-IE}, onde é realizado um experimento de extração de informação utilizando um conjunto de dados semi-estruturados em formato HTML contendo informações sobre restaurantes da cidade de Los Angeles.
+% begin Seymore-HMM-IE
+
+Para isso seria necessário entender melhor a estrutura do modelo de acordo com dados de treino (\textit{training data}), utilizando-se então de múltiplos estados para cada classe, o que traria resultados melhores. Deste modo, este \textit{training data} permitiria a construção de um modelo chamado \textit{maximally-specific model}. Neste modelo, cada palavra do \textit{training data} seria associada com seu próprio estado, com transição para o estado correspondente à palavra seguinte \cite{Seymore-HMM-IE}.
+
+Este modelo - segundo os autores - poderia ser usado como o ponto de partida de uma variedade de técnicas para junção de estados (\textit{state merging techniques}). Desta forma os autores propõe duas formas de junção de estados que permita a construção deste \textit{maximally-specific model}:
+
+\begin{enumerate}
+
+\item \textit{\textbf{Neighbor-merging:}} combina todos os estados que compartilham transições e possuem o mesmo nome de classe. Por exemplo, uma sequência de estados correspondentes ao título seriam juntados em apenas um estado. Assim, vários estados vizinhos com os mesmos nomes de classes seriam juntados em apenas um.
+
+\item \textit{\textbf{V-merging:}} combina quaisquer dois estados que possuem o mesmo nome de classe e compartilham transições ''de'' ou ''para'' um estado comum. Desde modo, ao invés de começar no estado inicial e decidir para qual estado correspondente ao título será feita a transição, esta técnica juntaria os estados ''filhos'' em um único estado, de maneira que somente uma transição do estado inicial para o estado de título iria existir. Desta forma, esta técnica poderia ser utilizada como modelo diretamente para extração de dados, podendo também criar novas combinações de estados, implicando em uma futura melhora deste modelo.
+
+\end{enumerate}
+
+Como o objetivo de Seymore et al. é extrair informações relevantes de cabeçalho de artigos de Ciência da Computação, a área de análise nestes documentos se limita até o início da introdução, ou ao final da primeira página, o que ocorrer primeiro.
+
+O resumo (\textit{abstract}) é extraído facilmente com a utilização de expressão regular. Algumas classes de palavras especiais são identificadas também através de expressão regular e transformadas em \textit{tags} ou \textit{tokens}, como \texttt{<EMAIL>} ou \texttt{<YEAR\_NUMBER>}, por exemplo. Em todos estes casos, todos os acentos e informações de novas linhas (\texttt{\\n}) são removidos do texto.
+
+Os resultados apontam como muito positiva a utilização de HMM para a extração de dados em cabeçalhos de artigos científicos. A precisão encontrada no experimento foi de 92,9\% para todas as classes do cabeçalho e, mais especificamente, 97,2\% para a extração dos autores. Também como resultado pode-se afirmar que modelos HMM com mais de um estado por classe são mais eficientes do que os que utilizam apenas um estado para cada classe analisada \cite{Seymore-HMM-IE}.
+
+% end Seymore-HMM-IE
+
+Uma outra utilização de HMM na extração de informação é descrita por \cite{Zhang-HMM-IE}, onde é realizado um experimento de extração de informação utilizando um conjunto de dados semi-estruturados, em formato HTML, contendo informações sobre restaurantes da cidade de Los Angeles.
 
 Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \textit{Prefix}, \textit{Suffix} e \textit{Target}. O \textit{Target} é o estado responsável pela emissão do símbolo - chamado pelo autor de \textit{token} - para o ''campo-alvo''. O \textit{Preffix} e \textit{Suffix} são estados que emitem símbolos que aparecem respectivamente antes e depois deste campo-alvo. Todos os demais símbolos são emitidos no estado \textit{Background}. A relação entre os estados pode ser visualizada na \autoref{fig:zhang-hmm-ie}.
 
@@ -247,23 +273,38 @@ Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \
 	\includegraphics[width=0.8\linewidth]{./assets/zhang-hmm-ie}
 \end{figure}
 
-Os seguintes campos deveriam ser extraídos das informações dos restaurantes: \textit{restaurant name} (nome do restaurante), \textit{telephone number} (número de telefone), \textit{hours (horas)} e \textit{cuisine} (tipo de comida servida, como italiana, alemã, etc). Segundo Zhang \cite{Zhang-HMM-IE} os campos \textit{restaurant name} e \textit{telephone number} deveriam ser mais fáceis de serem obtidos, visto que o nome do restaurante geralmente se encontra em destaque, com alguma diferenciação visual. Já o telefone possui um padrão numérico, que permite mais facilmente uma identificação de padrão. O campo \textit{hours} também não foi complicado, embora se tenha uma variedade muito grande na disposição desta informação. Já o campo \textit{cousine} foi mais difícil de ser extraído, visto a diversidade que existe na forma de um restaurante especificar sua cozinha, tanto na utilização de palavras diferentes quanto na própria identificação do estilo do restaurante por si só.
+Os seguintes campos deveriam ser extraídos das informações dos restaurantes: \textit{restaurant name} (nome do restaurante), \textit{telephone number} (número de telefone), \textit{hours (horas)} e \textit{cuisine} (tipo de comida servida, como italiana, alemã, etc). Segundo Zhang \cite{Zhang-HMM-IE} os campos \textit{restaurant name} e \textit{telephone number} deveriam ser mais fáceis de serem obtidos, visto que o nome do restaurante geralmente se encontra em destaque, com alguma diferenciação visual. Já o telefone possui um formato numérico, que permite mais facilmente uma identificação de um padrão. O campo \textit{hours} também não foi complicado, embora se tenha uma variedade muito grande na disposição desta informação. Já o campo \textit{cousine} foi mais difícil de ser extraído, visto a diversidade que existe na forma de um restaurante especificar e/ou representar sua cozinha, tanto na utilização de palavras diferentes quanto na própria identificação do estilo do restaurante por si só.
 
-Como resultados esperados, os campos \textit{restaurant name} e \textit{telephone number} obtiveram muito êxito em sua extração, com resultados realmente consideráveis. Já os campos \textit{hours} e \textit{cousine} não tiveram resultados muito satisfatórios, o que pode ser  explicado em função da característica dos HMMs de utilizar como modelo resultado de aprendizados anteriores, os \textit{training data set}. Como nestes dois campos há uma grande possibilidade de representação diferente, os resultados não foram tão eficazes, o que poderia ser resolvido com uma alteração no modelo HMM que permitisse que as palavras identificadas como sendo do campo \textit{cousine} fossem capturadas de maneira mais proveitosa, que estão, neste modelo atual, isoladas no estado \textit{Background}.
+Como resultados esperados, os campos \textit{restaurant name} e \textit{telephone number} obtiveram muito êxito em sua extração, com resultados realmente consideráveis. Já os campos \textit{hours} e \textit{cousine} não tiveram resultados muito satisfatórios, o que pode ser  explicado em função da característica dos HMMs de utilizar como modelo resultado de aprendizados anteriores, os \textit{training data set} ou simplesmente \textit{traning data}. Como nestes dois campos há uma grande possibilidade de representação diferente, os resultados não foram tão eficazes, o que poderia ser resolvido com uma alteração no modelo HMM que permitisse que as palavras identificadas como sendo do campo \textit{cousine} fossem capturadas de maneira mais proveitosa, que estão, neste modelo sugerido, isoladas no estado \textit{Background}.
 
-Em função dos resultados obtidos, pode-se considerar a performance de HMM na extração de informação muito positiva, visto as possibilidades de variação do modelo, que permite um resultado mais acurado e próximo dos objetivos reais. Além disso, a utilização de resultados passados garante um aprendizado muito importante para que o modelo seja estabelecido, o que garante ainda mais um ganho de eficiência na aplicação desta técnica.
+Em função dos resultados obtidos, pode-se considerar a performance de HMM na extração de informação muito positiva, visto as possibilidades de variação do modelo, que permite um resultado mais acurado e próximo dos objetivos reais \cite{Zhang-HMM-IE}. Além disso, a utilização de resultados passados garante um aprendizado muito importante para que o modelo seja estabelecido, o que garante ainda mais um ganho de eficiência na aplicação desta técnica.
 
 \end{textonovo}
 
 
 
-\subsection{Word Clustering}
+\subsubsection{Word Clustering}
 
-Utilizando de trabalhos tradicionais, como \cite{Han-SVM}, Han et al. \cite{rule-based} apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de documentos, indo de maneira relativamente contrária às propostas tradicionais, baseando apenas na ocorrência e estatísticas de palavras isoladas.
+\begin{textonovo}
 
-Técnicas baseada em \textit{cluster} de palavras geralmente apresentam performance maiores do que as técnicas tradicionais \cite{rule-based}. Este grupo de palavras demonstra relação entre palavras semelhantes dentro de um contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais eficaz.
+Técnicas de classificação de texto geralmente utilizam palavras extraídas do texto como a principal fonte de recursos para a representação. Por outro lado, os \textit{clusters} de palavras tem sido uma proposta eficaz para a redução da dimensionalidade e da dispersão, melhorando assim a performance desta classificação \cite{Han-Giles-WC}.
 
-Han et al. agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, que possuem conhecimento prévio de classes específicas, como autor, título, etc. Deste modo palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar por grupos características de metadados, como por exemplo, a palavra ''Mary'' faz parte do contexto de ''nomes'', portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor fazerem parte da classe ''autor'' por exemplo. Esta lógica é apresentada para outras classes, como ''e-mail'' por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere ''@''.
+Basicamente o conceito de \textit{clusters} compreende um conjunto de palavras formando um banco de dados de domínio (\textit{domain database}), aliado com um conjunto de propriedades ortográficas de demais palavras dentro daquele contexto específico. A utilização destes \textit{clusters} juntamente com outras técnicas tem mostrado um ganho de 6.6\% na performance de classificação de elementos de um cabeçalho de artigo científico, e ainda 8,4\% de ganho de performance para a extração da bibliografia destes documentos \cite{Han-Giles-WC}.
+
+A utilização destes grupos de palavras demonstra uma relação entre palavras semelhantes dentro de um determinado contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais eficaz, com resultados mais eficazes.
+
+\end{textonovo}
+
+
+\begin{textoalterado}
+
+Sendo assim, Han et al. apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos da área de Ciência da Computação, indo de maneira relativamente contrária às propostas tradicionais, que baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
+
+Han et al. agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, com base em um conhecimento prévio de classes específicas, como autor, título, etc. Deste modo, palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster} construído, permitindo identificar, por grupos, características de metadados. Para cada classe cria-se um \textit{cluster}, com suas palavras e propriedades ortográficas específicas.
+
+Como exemplo, a palavra ''Mary'' faz parte do contexto de ''nomes''. Portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ''autor'', por exemplo. Esta lógica é apresentada para outras classes, como ''e-mail'' por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere ''@'', o que levaria ao conceito de utilização de expressões regulares para encontrar padrões de ocorrências.
+
+\end{textoalterado}
 
 \begin{figure}
 \centering
@@ -272,25 +313,48 @@ Han et al. agrupou bases de dados de domínios diversos incluindo também propri
 \includegraphics[width=0.7\linewidth]{./assets/workflow-rule-based}
 \end{figure}
 
-Han et al. ainda utiliza da técnica  de SVM (Support Vector Machines) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com o \textit{cluster}, identificando mais facilmente os metadados.
+\begin{textonovo}
+A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
+\end{textonovo}
 
-Além disso é utilizada também a técnica de HMM \cite{Rabiner-HMM-Speech} para a extração das referências, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
+\begin{textoalterado}
 
-Basicamente a \textit{Rule-based Word Clustering} se resume em 3 (três) etapas. A primeira etapa se resume na construção das bases de dados, assim como \cite{Han-SVM}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} de maneira a unir não somente estas bases externas mas também bases construídas dentro de um domínio específico, como palavras que fazem parte de um conjunto finito, não genérico.
+Han et al. ainda utiliza da técnica  de SVM (\autoref{tecnica-svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação.
 
-A segunda etapa é chamada de \textit{Cluster Design}. Esta etapa é onde os \textit{clusters} são arquitetados, de maneira a contemplar também propriedades ortográficas das palavras, como se funcionasse de maneira geral como uma expressão regular de palavras, formando então um \textit{cluster} com base nas características apresentadas.
+\end{textoalterado}
 
-A terceira etapa é chamada de \textit{Rule Design}, que resume-se basicamente na representação de cada palavras dentro de seu contexto de apresentação. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como do grupo de ''nomes''.
+Além disso é utilizada também a técnica de HMM (\autoref{tecnica-hmm}) para a extração das referências bibliográficas, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
 
-Como resultado este \textit{cluster} permite um ganho considerável de performance, além de permitir uma precisão maior dos resultados, visto que eles são apresentados com base nestas bases focadas em um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos ao se comparar por exemplo com técnicas de \textit{cluster} distribuídos.
+Basicamente a \textit{Rule-based Word Clustering} se resume em 3 (três) etapas. A primeira etapa se resume na construção das bases de dados, assim como \cite{Han-SVM}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} (nomes de estados americanos, países, cidades, nomes de dicionários, nomes de pessoas, códigos postais, etc), de maneira a unir, não somente estas bases externas, mas também bases construídas dentro de um domínio específico, como palavras que pertencem a uma classe específica.
 
-Por outro lado a utilização desta técnica possui uma falha em semântica dos dados, visto que quando um dígito ou conjunto deles é substituído por \texttt{:number} ele se torna apenas um número, sem um contexto específico, ou seja, pode ser tanto uma referência a alguma página ou até mesmo um mês de um ano.
+A segunda etapa é chamada de \textit{Cluster Design}. Nesta etapa é onde os \textit{clusters} são arquitetados, de maneira a contemplar também propriedades ortográficas das palavras, como se funcionasse de maneira geral como uma expressão regular de palavras, formando então este \textit{cluster} com base nas características apresentadas.
 
-\subsection{Conditional Random Fields (CRFs)}
+\begin{textoalterado}
+Já a terceira etapa é chamada de \textit{Rule Design}, que resume-se basicamente na  combinação de palavras em diferentes domínios, na verificação ortográfica destas palavras e na classificação delas no seu \textit{cluster} correto. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como pertencentes ao \textit{cluster} ''nomes''.
+\end{textoalterado}
+
+\begin{textonovo}
+Além disso, foi observada também a presença de certas palavras que faziam parte de diversos \textit{clusters} ao mesmo tempo, o que permitiu que elas fossem classificadas em seu próprio grupo de palavras, tornando-se então independentes.
+\end{textonovo}
+
+\begin{textonovo}
+A representação através de \textit{clusters} utilizada por Han et al. \cite{Han-Giles-WC} conseguiu reduzir um texto original de 11.223 palavras em um \textit{cluster} de 588 elementos, permitindo ainda que ele fosse distribuído entre as classes distintas, o que tornou o processo muito menos trabalhoso mas, ao mesmo tempo, eficaz.
+\end{textonovo}
+
+\begin{textoalterado}
+Como resultado, a utilização desta técnica de clusterização permitiu um ganho considerável de performance, além de permitir uma precisão maior dos resultados, visto que eles são apresentados com base nestas bases focadas em um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos.
+
+Por outro lado a utilização desta técnica possui uma falha na semântica dos dados. No momento da classificação das classes, na separação e criação dos \textit{clusters}, um dígito ou conjunto deles é substituído por \texttt{:number:}. Isso faz com que ele se torne apenas um número qualquer, sem um contexto específico, ou seja, pode ser tanto uma referência a alguma página do documento ou até mesmo um mês de um ano.
+
+\end{textoalterado}
+
+
+
+\subsubsection{Conditional Random Fields (CRFs)}
 
 % Falar sobre CRFs 
 
-Conditional Random Fields é um framework proposto por Lafferty et al. \cite{crf} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquinas (\textit{machine learning}).
+CRF é um framework proposto por Lafferty et al. \cite{Lafferty-CRF} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquinas (\textit{machine learning}).
 
 Sua representação é puramente matemática com modelos gráficos a fim de maximizar as probabilidades condicionais que se desejam aplicar.
 
@@ -300,7 +364,7 @@ Além disso, CRFs são utilizadas também em marcação e parseamento de dados s
 
 % Falar sobre o uso de CRFs na extração de informação
 
-Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{crf-ie}, como uma maneira eficaz de extrair padrões em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
+Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair padrões em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
 A utilização de CRFs na extração de metadados mostra-se muito eficaz por reduzir bastante os erros em algumas métricas, aumentando o sucesso da aplicação desta técnica nesta área.
 
@@ -386,7 +450,7 @@ Outros projeto de destaque é o TeamBeam \cite{teambeam}, cuja base ideológica 
 
 O projeto também é de código livre (\textit{open source}) e é baseado na extração de pequenos blocos de texto. A manipulação dos arquivos PDF são feitas pela biblioteca PDFBox \footnote{Biblioteca de manipulação de arquivos PDF mantida pela Fundação Apache. Disponível em \url{https://pdfbox.apache.org/}}, que fornece meios eficazes de extrair textos com base nas regiões desejadas.
 
-O algoritmo do TeamBeam utiliza o algoritmo de \textit{Maximum Entropy} \cite{maximum-entropy}, que utiliza basicamente de tarefas de classificação sequencial como ferramenta principal para obtenção de padrões. A base deste algoritmo está na utilização de CRFs \cite{crf}, principalmente no que diz respeito à extração dos metadados \cite{crf-ie}.
+O algoritmo do TeamBeam utiliza o algoritmo de \textit{Maximum Entropy} \cite{maximum-entropy}, que utiliza basicamente de tarefas de classificação sequencial como ferramenta principal para obtenção de padrões. A base deste algoritmo está na utilização de CRFs \cite{Lafferty-CRF}, principalmente no que diz respeito à extração dos metadados \cite{Peng-CRF-IE}.
 
 O processo de extração é feito basicamente em duas etapas. A primeira é a etapa de classificação de blocos de texto (\textit{text block classification}), onde geralmente já é possível obter algum dado concreto de resultado. Neste etapa o objetivo é associar certos blocos de texto a um dos seguintes marcadores: \textit{Title Block}; \textit{Sub-Title Block}; \textit{Journal Block}; \textit{Abstract Block}; \textit{Author Block}; \textit{E-Mail Block}; \textit{Affiliation Block}; \textit{Author-Mixed Block}; e \textit{Other Block}.
 
@@ -472,7 +536,7 @@ A utilização deste projeto é feita de maneira muito simples, podendo ser exec
 
 \subsubsection{Resultados Comparativos}
 
-Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{crf-ie}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto.
+Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto.
 
 Visando também analisar outros projetos a mesma comparação de resultados foi feita com o projeto CiteSeer \cite{citeseer}, onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como no ParsCit.
 

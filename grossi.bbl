@@ -58,7 +58,7 @@ p. 89--98, 1998.}
   machines.
 2003.}
 
-\bibitem[Han et al. 2005]{rule-based}
+\bibitem[Han et al. 2005]{Han-Giles-WC}
 \abntrefinfo{Han et al.}{HAN et al.}{2005}
 {HAN, H. et al. Rule-based word clustering for document metadata extraction.
 p. 1049--1053, 2005.}
@@ -79,7 +79,7 @@ Dispon{\'\i}vel em: \url{http://www.dlib.org/dlib/july12/kern/07kern.html}.}
 {KUNZE, J.; BAKER, T. \emph{The Dublin Core Metadata Element Set}.
 [S.l.], 2007. Dispon{\'\i}vel em: \url{http://www.ietf.org/rfc/rfc5013.txt}.}
 
-\bibitem[Lafferty, McCallum e Pereira 2001]{crf}
+\bibitem[Lafferty, McCallum e Pereira 2001]{Lafferty-CRF}
 \abntrefinfo{Lafferty, McCallum e Pereira}{LAFFERTY; MCCALLUM; PEREIRA}{2001}
 {LAFFERTY, J.; MCCALLUM, A.; PEREIRA, F.~C. Conditional random fields:
   Probabilistic models for segmenting and labeling sequence data. In:  ACM
@@ -98,12 +98,6 @@ ISBN 978-0-262-01825-8.}
 {PENG, F.; MCCALLUM, A. Accurate information extraction from research papers
   using conditional random fields. In:  \emph{HLT-NAACL04}. [S.l.: s.n.], 2004.
   p. 329--336.}
-
-\bibitem[Rabiner 1989]{Rabiner-HMM-Speech}
-\abntrefinfo{Rabiner}{RABINER}{1989}
-{RABINER, L.~R. A tutorial on hidden markov models and selected applications in
-  speech recognition.
-v.~77, n.~2, 1989.}
 
 \bibitem[Rabiner e Juang 1986]{Rabiner-HMM}
 \abntrefinfo{Rabiner e Juang}{RABINER; JUANG}{1986}

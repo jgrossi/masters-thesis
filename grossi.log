@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  19 MAR 2015 23:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.19)  22 MAR 2015 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1218,13 +1218,13 @@ Package pdftex.def Info: ./assets/introducao.png used on input line 32.
 \openout2 = `capitulos/referencial.aux'.
 
  (./capitulos/referencial.tex
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 22.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 20.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 22.
  [20
 
 
@@ -1236,7 +1236,7 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 80.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 82.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1246,71 +1246,71 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 83.
  [22] [23]
-[24] <./assets/svm-grafico.png, id=348, 736.7525pt x 549.05125pt>
+[24] <./assets/svm-grafico.png, id=347, 736.7525pt x 549.05125pt>
 File: ./assets/svm-grafico.png Graphic file (type png)
 
 <use ./assets/svm-grafico.png>
-Package pdftex.def Info: ./assets/svm-grafico.png used on input line 150.
+Package pdftex.def Info: ./assets/svm-grafico.png used on input line 154.
 (pdftex.def)             Requested size: 273.00278pt x 203.44739pt.
- [25 <./assets/svm-grafico.png>] [26]
-<./assets/hmm-states.png, id=378, 612.2875pt x 514.92375pt>
+ [25 <./assets/svm-grafico.png>] [26] [27]
+<./assets/hmm-states.png, id=383, 612.2875pt x 514.92375pt>
 File: ./assets/hmm-states.png Graphic file (type png)
 
 <use ./assets/hmm-states.png>
-Package pdftex.def Info: ./assets/hmm-states.png used on input line 224.
+Package pdftex.def Info: ./assets/hmm-states.png used on input line 228.
 (pdftex.def)             Requested size: 318.49861pt x 267.84831pt.
- [27] [28 <./assets/hmm-states.png>]
-<./assets/zhang-hmm-ie.png, id=400, 633.36626pt x 101.37875pt>
+ [28 <./assets/hmm-states.png>] [29]
+<./assets/zhang-hmm-ie.png, id=409, 633.36626pt x 101.37875pt>
 File: ./assets/zhang-hmm-ie.png Graphic file (type png)
 
 <use ./assets/zhang-hmm-ie.png>
-Package pdftex.def Info: ./assets/zhang-hmm-ie.png used on input line 247.
+Package pdftex.def Info: ./assets/zhang-hmm-ie.png used on input line 273.
 (pdftex.def)             Requested size: 364.00139pt x 58.26447pt.
- [29 <./assets/zhang-hmm-ie.png>]
-<./assets/workflow-rule-based.png, id=414, 880.28876pt x 650.43pt>
+ [30 <./assets/zhang-hmm-ie.png>]
+<./assets/workflow-rule-based.png, id=424, 880.28876pt x 650.43pt>
 File: ./assets/workflow-rule-based.png Graphic file (type png)
 
 <use ./assets/workflow-rule-based.png>
-Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 27
-2.
+Package pdftex.def Info: ./assets/workflow-rule-based.png used on input line 31
+3.
 (pdftex.def)             Requested size: 318.49861pt x 235.32573pt.
- [30 <./assets/workflow-rule-based.png (PNG copy)>] [31] [32] <./assets/cermine
-.png, id=455, 1027.84pt x 579.16376pt>
+ [31] [32 <./assets/workflow-rule-based.png (PNG copy)>] [33] [34]
+<./assets/cermine.png, id=471, 1027.84pt x 579.16376pt>
 File: ./assets/cermine.png Graphic file (type png)
 
 <use ./assets/cermine.png>
-Package pdftex.def Info: ./assets/cermine.png used on input line 369.
+Package pdftex.def Info: ./assets/cermine.png used on input line 433.
 (pdftex.def)             Requested size: 318.49861pt x 179.4682pt.
- [33] [34 <./assets/cermine.png (PNG copy)>] [35]
-[36] [37] [38]) [39]
+ [35 <./assets/cermine.png (PNG copy)>] [36] [37]
+[38] [39] [40]) [41]
 \openout2 = `capitulos/metodologia.aux'.
 
  (./capitulos/metodologia.tex
-<./assets/metodology.png, id=527, 545.03625pt x 457.71pt>
+<./assets/metodology.png, id=543, 545.03625pt x 457.71pt>
 File: ./assets/metodology.png Graphic file (type png)
 
 <use ./assets/metodology.png>
 Package pdftex.def Info: ./assets/metodology.png used on input line 23.
 (pdftex.def)             Requested size: 318.49861pt x 267.46944pt.
- [40
+ [42
 
 
 
-] [41 <./assets/metodology.png>] [42] [43]
-[44]) [45]
+] [43 <./assets/metodology.png>] [44] [45]
+[46]) [47]
 \openout2 = `capitulos/resultados.aux'.
 
- (./capitulos/resultados.tex) [46
+ (./capitulos/resultados.tex) [48
 
 
 
-] [47]
+] [49]
 \openout2 = `capitulos/conclusao.aux'.
 
  (./capitulos/conclusao.tex)
-[48
+[50
 
 
 
@@ -1320,15 +1320,15 @@ Package pdftex.def Info: ./assets/metodology.png used on input line 23.
 
 
 bibitemlist
-[49
+[51
 
 
-]) [50]
+]) [52]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 580.
 
-[51
+[53
 
 
 ]
@@ -1343,15 +1343,15 @@ Overfull \hbox (0.85582pt too wide) in alignment at lines 7--71
 Underfull \vbox (badness 10000) detected at line 71
  []
 
-[52
+[54
 
 
-] [53]) [54]
+] [55]) [56]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 598.
 
-[55
+[57
 
 
 
@@ -1402,10 +1402,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 Underfull \vbox (badness 10000) detected at line 26
  []
 
-[56
+[58
 
 
-] [57]) [58] (./grossi.ind) 
+] [59]) [60] (./grossi.ind) 
 AED: lastpage setting LastPage
 \tf@lof=\write6
 \openout6 = `grossi.lof'.
@@ -1425,7 +1425,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
 Package rerunfilecheck Info: File `grossi.brf' has not changed.
-(rerunfilecheck)             Checksum: A8126B5E1A9020F9949A91E0657FBC6E;2558.
+(rerunfilecheck)             Checksum: CD04B4A8FE41A7468ABFC7D00A53A873;2788.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1433,16 +1433,16 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
  ) 
 Here is how much of TeX's memory you used:
- 16247 strings out of 493315
- 237408 string characters out of 6137904
- 552463 words of memory out of 5000000
- 19014 multiletter control sequences out of 15000+600000
- 97195 words of font info for 152 fonts, out of 8000000 for 9000
+ 16238 strings out of 493315
+ 237285 string characters out of 6137904
+ 552332 words of memory out of 5000000
+ 19004 multiletter control sequences out of 15000+600000
+ 97066 words of font info for 151 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,13n,51p,1085b,2119s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-13/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2013/texmf-dist/
+ 42i,13n,51p,1105b,2119s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2013/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+13/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2013/texmf-dist/
 fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips
 /lm/lm-mathsy.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmb
 x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><
@@ -1460,10 +1460,10 @@ ts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /public/lm/lmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/couri
 er/ucrb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8
 a.pfb>
-Output written on grossi.pdf (59 pages, 713662 bytes).
+Output written on grossi.pdf (61 pages, 716181 bytes).
 PDF statistics:
- 979 PDF objects out of 1000 (max. 8388607)
- 879 compressed objects within 9 object streams
- 189 named destinations out of 1000 (max. 500000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 890 compressed objects within 9 object streams
+ 192 named destinations out of 1000 (max. 500000)
  31276 words of extra memory for PDF output out of 35830 (max. 10000000)
 
