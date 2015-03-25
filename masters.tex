@@ -76,6 +76,7 @@
 \usepackage{framed}					% Borda em um paragrafo com \framed
 \usepackage{listings}				% Para escrita de código
 \usepackage{courier}				% Fonte Courier para os códigos
+\usepackage{datetime}				% Datas customizadas
 
 % Configurações para o Listing exibir os códigos na fonte Courier
 \lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
@@ -124,7 +125,7 @@
 \MakeFramed {\FrameRestore}}%
 {\endMakeFramed}
 
-\newcommand{\comment}[1]{
+\renewcommand{\comment}[1]{
 	\begin{frshaded}
 		\noindent
 		\textbf{Comentário:} #1
@@ -133,8 +134,14 @@
 
 \newenvironment{textnew}{\color{Plum}}{}
 \newenvironment{textedited}{\color{red}}{}
-\newcommand{\textnew}[1]{\begin{textnew}#1\end{textnew}}
-\newcommand{\textedited}[1]{\begin{textedited}#1\end{textedited}}
+% \newcommand{\textnew}[1]{\begin{textnew}#1\end{textnew}}
+% \newcommand{\textedited}[1]{\begin{textedited}#1\end{textedited}}
+
+% Configs
+\input{config.tex}
+
+% Git support
+% \input{gitinfo.tex}	
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -142,7 +149,7 @@
 \titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
-\data{Mar 2015, v-0.5.6}
+\data{\thesisdate, v-\gitbranch}
 \orientador{Marcello Peixoto Bax}
 \coorientador{Renato Rocha Souza}
 \instituicao{%
@@ -418,7 +425,6 @@
     Este trabalho demonstra que as técnicas livres existentes para extração de metadados em artigos científicos não são suficientes para abranger os diversos formatos existentes de apresentação dos conteúdos, uma vez que são baseados em layout pré-definidos, sem possibilidade de expansão ou adaptação de acordo com a necessidade de certos grupos de pesquisa, cujo formato de apresentação deste tipo de documento se dá de maneira diferenciada, ou até mesmo, adaptada para seu universo de pesquisadores.
 
     \textbf{Palavras-chaves}: artigos científicos. extração de metadados. extração de dados em artigos.
-
 
 \end{resumo}
 
