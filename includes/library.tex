@@ -5,11 +5,15 @@
 
 % Falar sobre RSL
 
-Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no relatório técnico de \cite{Kitchenham}. Diante disso, o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa e seus resultados.
+% Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no relatório técnico de \cite{Kitchenham}. Diante disso, o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa e seus resultados.
+
+
 
 % Bases pesquisadas
 
-Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases de natureza mais genérica também foram pesquisadas, geralmente através do site da CAPES, mas com caráter mais de apoio teórico realmente.
+\begin{textedited}
+Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases multidisciplinares também foram pesquisadas, através do site da CAPES, mas com caráter mais de apoio teórico.
+\end{textedited}
 
 Embora a amplitude desta área de estudo, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco. A pesquisa necessitava ser focada em técnicas de extração de metadados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia deste processo.
 
@@ -17,7 +21,9 @@ Como a pesquisa necessita de um resultado prático eficaz os critérios que ser�
 
 % Falar sobre os eventos encontrados na área
 
-Seguindo as orientações propostas em \cite{Kitchenham} foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+\begin{textedited}
+Visando abranger grande parte da literatura sobre o assunto foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+\end{textedited}
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval)
@@ -99,9 +105,17 @@ Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como s
 
 Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
 
+\begin{textedited}
 Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que agrega assertividade ao processo de extração.
+\end{textedited}
 
 % Explicar o conceito de dataset também, que algumas técnicas utilizam datasets já prontos para facilitar o processo de testes.
+
+\begin{textnew}
+Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Estes dados são fornecidos por diversas entidades/órgãos de certa forma estruturados para serem analisados, com alguma bagagem semântica já presente; são os chamados \emph{datasets}. Algumas bases de dados já consolidadas fornecem estes conjunto de dados reais, com base nos \emph{papers} que estão catalogados internamente, justamente para serem objetos de pesquisa, a fim de facilitar o manuseio e seleção dos documentos de entrada para análise e desenvolvimento de pesquisas.
+
+Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar o modelo, de maneira a promover um padrão de extração com base nestes dados previamente informadas.
+\end{textnew}
 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
@@ -377,21 +391,112 @@ Visando a comprovação e reconhecimento da eficiência da técnica de CRF na ex
     \item Geração de dados utilizando HMM aleatórios.
 \end{enumerate}
 
-Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a CRF a melhor técnicas a ser utilizada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
+Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a CRF a melhor técnica a ser empregada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
 
-De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativos melhores.
+De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativos melhores. Por corresponder a uma ''máquina'' de estado finito, ela é muito aplicável para a função de classificação sequencial, o que permite que ainda seja treinada para se obter os melhores resultados probabilísticos \cite{Peng-CRF-IE}. Nas CRFs as transições de estado são também representadas como \emph{features} por alguns autores.
 
 \end{textnew}
 
 %Esta técnica é comparada e quase sempre utilizada juntamente com a HMM (Hidden Markov Models), de maneira a possuir algumas vantagens sobre esta última, como a habilidade de relacionar pressupostos independentes nos modelos, ou seja, relacionar observações e/ou interpretações.
 
-Além disso, CRFs são utilizadas também em marcação e parseamento de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
+Uma outra vantagem da técnia de CRFs - assim como dos modelos \emph{maximum entropy} - é que eles facilmente proporcionam o uso de características arbitrárias dos dados de entrada.
+
+Os CRFs são utilizadas também em marcação e classificação de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
 
 % Falar sobre o uso de CRFs na extração de informação
 
-Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair padrões em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
+Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair metadados em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
-A utilização de CRFs na extração de metadados mostra-se muito eficaz por reduzir bastante os erros em algumas métricas, aumentando o sucesso da aplicação desta técnica nesta área.
+\begin{textnew}
+Peng et al. apresenta resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM \autoref{sssec:hmm} e SVM \autoref{sssec:svm}, mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando o a junção entre as sequências e características dependentes mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, dramáticas, ao se comparar com as demais técnicas de SVM e HMM.
+
+Os autores definem quatro diferentes transições de estado para diferentes classes, em ordem diferente das técnicas derivadas de Markov (HMM):
+
+\begin{enumerate}
+    \item \emph{\textbf{First-order:}} os dados de entrada são examinados no contexto de somente um estado;
+    \item \emph{\textbf{First-order + transitions:}} são adicionados alguns parâmetros correspondentes às transições;
+    \item \emph{\textbf{Second-order:}} as entradas são examinadas no contexto dos estados atual e anterior;
+    \item \emph{\textbf{Third-order:}} os dados de entrada são examinados no contexto do estado atual e de dois estados anteriores.
+\end{enumerate}
+
+Para a extração destes dados Peng et al. também considera como sendo o cabeçalho de um \emph{paper} como sendo a parte inicial do documento até o início da introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
+
+Do \emph{dataset} para extração dos metadados de cabeçalhos utilizado foram analisados 935 (novecentos e trinta e cinco) documentos. Destes 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinheitos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
+
+Para os fins de resultados comparativos foram utilizadas três métricas:
+
+\begin{enumerate}
+    \item \emph{\textbf{Overall word accuracy:}} é uma métrica que utiliza a porcentagem de palavras das quais os nomes (\emph{labels}) previstos são exatamente seus valores reais. Esta métrica favorece aqueles campos que possuem muitas palavras, como por exemplo a introdução (\emph{abstract});
+    \item \emph{\textbf{Average F-measure:}} esta métrica é contada se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta metrica favorece campos com poucas palavras, visto sua característica mais importante focar na exatidão dos resultados.
+    \item \emph{\textbf{Whole instance accuracy:}} nesta métrica uma ''instância'' é considerada como sendo todo um cabeçalho ou referência, de maneira integral. Desta forma esta métrica utiliza da porcentagem de instâncias das quais cada palavra é corretamente associada.
+\end{enumerate}
+
+Conforme pode-se observar na \autoref{tab:crf-results-headers} e \autoref{tab:crf-results-references} a utilização de CRFs para extração de metadados - tanto de cabeçalhos como das referências - teve resultados melhores do que a utilização de HMM (\autoref{sssec:hmm}), aumentando a performance em praticamente todos os campos, chegando a uma precisão de 98,3\% (\emph{overall accuracy}).
+
+Pode observar também que a utilização de modelos HMM para precisão de palavras (campos com poucas palavras, onde a precisão é muito mais importante) é, de modo geral, pior que quando utiliza-se SVMs (coluna F1 da \autoref{tab:crf-results-headers}). Por outro lado, no campo \emph{abstract} HHM possui performance bem melhor que quando utilizado SVM (98\% contra 93,8\%).
+
+\begin{table}
+    \caption{Resultados de extração para CRFs após análise do \emph{dataset} com cabeçalhos \cite{Peng-CRF-IE}.}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|} \hline             
+             & \multicolumn{2}{c|}{HMM} & \multicolumn{2}{c|}{CRF} & \multicolumn{2}{c|}{SVM} \\  \hline 
+            Overall acc. & \multicolumn{2}{c|}{93.1\%} & \multicolumn{2}{c|}{\textbf{98.3\%}} & \multicolumn{2}{c|}{92.9\%} \\ \hline
+            Instance acc. & \multicolumn{2}{c|}{4.13\%} & \multicolumn{2}{c|}{\textbf{73.3\%}} & \multicolumn{2}{c|}{-} \\ \hline \hline
+             & acc. & F1 & acc. & F1 & acc. & F1 \\ \hline
+            Title & 98.2 & 82.2 & 99.7 & \textbf{97.1} & 98.9 & 96.5 \\ \hline
+            Author & 98.7 & 81.0 & 99.8 & \textbf{97.5} & 99.3 & 97.2 \\ \hline
+            Affiliation & 98.3 & 85.1 & 99.7 & \textbf{97.0} & 98.1 & 93.8 \\ \hline
+            Address & 99.1 & 84.8 & 99.7 & \textbf{95.8} & 99.1 & 94.7 \\ \hline
+            Note & 97.8 & 81.4 & 98.8 & \textbf{91.2} & 95.5 & 81.6 \\ \hline
+            Email & 99.9 & 92.5 & 99.9 & \textbf{95.3} & 99.6 & 91.7 \\ \hline
+            Date & 99.8 & 80.6 & 99.9 & \textbf{95.0} & 99.7 & 90.2 \\ \hline
+            Abstract & 97.1 & 98.0 & 99.6 & \textbf{99.7} & 97.5 & 93.8 \\ \hline
+            Phone & 99.8 & 53.8 & 99.9 & \textbf{97.9} & 99.9 & 92.4 \\ \hline
+            Keyword & 98.7 & 40.6 & 99.7 & \textbf{88.8} & 99.2 & 88.5 \\ \hline
+            Web & 99.9 & 68.6 & 99.9 & \textbf{94.1} & 99.9 & 92.4 \\ \hline
+            Degree & 99.5 & 68.8 & 99.8 & \textbf{84.9} & 99.5 & 70.1 \\ \hline
+            Pubnum & 99.8 & 64.2 & 99.9 & 86.6 & 99.9 & \textbf{89.2} \\ \hline
+            \hline
+            Average F1 & & 75.6 & & \textbf{93.9} & & 89.7 \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:crf-results-headers}
+\end{table}
+
+\begin{table}
+    \caption{Resultados de extração para CRFs após análise do \emph{dataset} com referências \cite{Peng-CRF-IE}.}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline             
+             & \multicolumn{2}{c|}{HMM} & \multicolumn{2}{c|}{CRF} \\  \hline 
+            Overall acc. & \multicolumn{2}{c|}{85.1\%} & \multicolumn{2}{c|}{\textbf{95.37\%}} \\ \hline 
+            Instance acc. & \multicolumn{2}{c|}{10\%} & \multicolumn{2}{c|}{\textbf{77.33\%}} \\ \hline \hline
+             & acc. & F1 & acc. & F1 \\ \hline 
+            Author & 96.8 & 92.7 & 99.9 & \textbf{99.4} \\ \hline 
+            Booktitle & 94.4 & 0.85 & 97.7 & \textbf{93.7} \\ \hline 
+            Date & 99.7 & 96.9 & 99.8 & \textbf{98.9} \\ \hline 
+            Editor & 98.9 & 70.8 & 99.5 & \textbf{87.7} \\ \hline 
+            Institution & 98.5 & 72.3 & 99.7 & \textbf{94.0} \\ \hline 
+            Journal & 96.6 & 67.7 & 99.1 & \textbf{91.3} \\ \hline 
+            Location & 99.1 & 81.8 & 99.3 & \textbf{87.2} \\ \hline 
+            Note & 99.2 & 50.9 & 99.7 & \textbf{80.8} \\ \hline
+            Pages & 98.1 & 72.9 & 99.9 & \textbf{98.6} \\ \hline
+            Publisher & 99.4 & \textbf{79.2} & 99.4 & 76.1 \\ \hline
+            Tech & 98.8 & 74.9 & 99.4 & \textbf{86.7} \\ \hline
+            Title & 92.2 & 87.2 & 98.9 & \textbf{98.3} \\ \hline
+            Volume & 98.6 & 75.8 & 99.9 & \textbf{97.8} \\ \hline
+            \hline
+            Average F1 & & 77.6\% & & \textbf{91.5\%} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:crf-results-references}
+\end{table}
+
+\end{textnew}
+
+\begin{textedited}
+Com base nos resultados apresentados pode-se considerar que a trabalho de \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
+\end{textedited}
 
 
 
