@@ -5,11 +5,9 @@ function clean_files {
 }
 
 # Clean root folder
-
 clean_files
 
 # Child folders
-
 cd includes
 clean_files
 cd ..

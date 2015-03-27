@@ -427,7 +427,7 @@ Para os fins de resultados comparativos foram utilizadas três métricas:
 
 \begin{enumerate}
     \item \emph{\textbf{Overall word accuracy:}} é uma métrica que utiliza a porcentagem de palavras das quais os nomes (\emph{labels}) previstos são exatamente seus valores reais. Esta métrica favorece aqueles campos que possuem muitas palavras, como por exemplo a introdução (\emph{abstract});
-    \item \emph{\textbf{Average F-measure:}} esta métrica é contada se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta metrica favorece campos com poucas palavras, visto sua característica mais importante focar na exatidão dos resultados.
+    \item \emph{\textbf{Average F-measure (F1):}} esta métrica é contada se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta metrica favorece campos com poucas palavras, visto sua característica mais importante focar na exatidão dos resultados.
     \item \emph{\textbf{Whole instance accuracy:}} nesta métrica uma ''instância'' é considerada como sendo todo um cabeçalho ou referência, de maneira integral. Desta forma esta métrica utiliza da porcentagem de instâncias das quais cada palavra é corretamente associada.
 \end{enumerate}
 
@@ -501,42 +501,52 @@ Com base nos resultados apresentados pode-se considerar que a trabalho de \cite{
 
 
 
-
-
-
-
-
-
-
-
 \section{Revisão de Estado da Arte na Extração de Metadados}
 \label{sec:revision}
+
+\begin{textnew}
+
+% Falar aqui sobre os estudos de comparações de Granitizer
+
+Técnicas de \emph{machine learning} não são novas, porém suas aplicações vão muito mais além do que se podia imaginar. As técnicas então utilizadas para apenas classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
+
+O aperfeiçoamento da aplicação destas técnicas para a área de \emph{information extraction} acarretou em um resultado muito positivo, melhorando cada dia mais a precisão dos resultados obtidos. Assim, algoritmos foram/são alterados e otimizados visando obter maiores performances e resultados melhores.
+
+Pode-se perceber que cada técnica de classificação e/ou extração de informação possui suas particularidades e características técnicas diferentes. Assim, nota-se que cada uma possui uma melhor aplicação para extração de determinado campo, ou conjunto deles. Pequenas modificações são necessárias para que todo o contexto de um artigo científico seja mapeado com sucesso, sendo às vezes necessária a utilização de diversas técnicas em um único projeto.
+
+Para isso, diversas comparações destas técnicas foram feitas. Algumas, inclusive já mencionadas ao longo deste trabalho, foram feitas no surgimento de uma nova técnica, onde esta era comparada com técnicas anteriores, a fim de comprovar sua aplicabilidade e aumento de performance. Porém, este tipo de comparação torna-se tendencioso, visto que os campos analisados, bem como os \emph{datasets} utilizados, tendenciam para resultados positivos da nova técnica apresentada. Além disso, geralmente os \emph{datasets} utilizados são focados em documentos da área de Ciência da Computação, e tendem a seguir um padrão visual já estipulado pelos grandes eventos da área.
+
+Em função deste problema alguns autores realizam comparações de técnicas, isoladamente ou com utilização de ferramentas, para analisar um grupo de documentos reais, objetivando um resultado mais próximo da realidade e, consequentemente, mais passível de erros.
+
+Granitzer et al. \cite{Granitzer-2012-LayoutBased} comparam o uso de Conditional Random Fields (\autoref{sssec:crf})) e Support Vector Machines (\autoref{sssec:svm})) na extração de metadados em artigos científicos, utilizando para tal \emph{datasets} multidisciplinares, como \emph{Mendeley} e \emph{e-Prints}, que fazem parte de um grupo social de \emph{datasets}, permitindo a contribuição global, unindo pesquisadores de diversas áreas do conhecimento, construindo um repositório diversificado e recheado de novos desafios reais.
+
+Em função da existências destes repositórios a informação fica cada vez mais descentralizada e, portanto, é necessária cada vez mais mecanismos inteligentes para garantir a alta qualidade dos metadados extraídos e armazenados de cada documento \cite{Granitzer-2012-LayoutBased}. A combinação destes mecanismos com pós-processamento inteligente contribui para o processo, elevando a qualidade do resultado final encontrado.
+
+% CiteSeer e Mendeley utilizam SVMs. Granitzer 2012
+
+Visando um reconhecimento maior dos resultados obtidos Granitzer et al. realizam comparações dos resultados obtidos com a aplicação de três ferramentas: ParsCit (\autoref{ssec:parscit})), Mendeley Desktop (\autoref{ssec:mendeley})) e sua própria ferramenta baseada em CRFs, no qual se referem como Layout-based CRF.
+
+Este trabalho \cite{Granitzer-2012-LayoutBased} é uma continuação do trabalho anteriormente realizado \cite{Granitzer-2012-Crowdsourced}, onde as ferramentas Mendeley Desktop (\autoref{ssec:mendeley}) e ParsCit (\autoref{ssec:parscit})) foram comparadas, utilizando, porém, um \emph{dataset} menor. Desta vez foi incluída a técnica de Conditional Random Fields (CRF) na comparação, que de acordo com a literatura mencionada neste trabalho, possui resultados melhores do que com a utilização da técnica Hidden Markov Models (HMMs - \autoref{sssec:hmm}).
+
+Foram analisadas 20.672 publicações do \emph{dataset} Mendeley, abrangendo diversas áreas do conhecimento como ciência de modo geral, ciência da computação, biomedicina e física. Já no \emph{dataset} e-Prints foram analisadas 2.452 publicações de áreas como física, medicina e diversas outras pertencentes ao IEEE, ligadas geralmente à área de computação.
+
+Foi relatado que umas etapas principais para um processamento eficaz e uma extração mais precisa é o pós-processamento. A aplicação de diversas análise, inclusive matemáticas, nos resultados extraídos garante um conjunto de dados de saída muito melhor e mais acurado. Segundo Granitzer et al. \cite{Granitzer-2012-LayoutBased} estas tarefas são mais de responsabilidade do setor de engenharia, onde diversos detalhes devem ser observados e diversos algoritmos devem ser aplicados.
+
+De modo geral, os resultados obtidos pelas ferramentas Mendeley e ParsCit foram considerados ruins para os grupos pertencentes à área médica \cite{Granitzer-2012-LayoutBased}. Porém estes resultados poderiam ser melhorados com um novo treino dos dados (\emph{training set}), com aplicações específicas para aquela área do conhecimento, no caso, medicina. Outro ponto interessante observado foi que a extração dos títulos ocorreram mais facilmente do que a extração dos autores, que possui sua performance muito variada em função da técnica que é utilizada.
+
+Para os outros grupos, os resultados foram bem positivos, observando uma pequena diferença entre os números obtidos com as ferramentas Mendeley e ParsCit, que foram muito superiores aos resultados da implementação CRF dos autores. Isso se deve ao fato das duas ferramentas anteriores utilizarem de pós-processamento dos dados, o que garantiu aos resultados obtidos uma precisão muito maior \cite{Granitzer-2012-LayoutBased}.
+
+De acordo com Gratnizer et al., mesmo a técnica de CRF possuindo melhores modelos de extração de informação, foi-se observada que a técnica de SVM utilizada pelo Mendeley Desktop supera a CRF no que tange extração de metadados \cite{Granitzer-2012-LayoutBased}.
+
+A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo do Mendeley Desktop. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas tiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
+
+\end{textnew}
 
 \section{Técnicas de Algoritmos}
 \label{sec:algorithms-tecniques}
 
 \section{Ambientes de Extração de Metadados}
 \label{sec:environments}
-
-% % % % % % % % % %
-
-
-
-
-
-
-
-
-
-
-
-\section{Trabalhos Comparativos}
-\label{sec:comparatives-works}
-
-\comment{Falar sobre as comparações realizadas por Granitzer, tanto no que diz respeito a layouts \cite{granitzer-layout-based}, quanto no que diz respeito a dicionários \cite{Granitzer2011a}.}
-
-\section{Ferramentas e Projetos de Destaque}
-\label{sec:tools}
 
 Alguns projetos baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
 
@@ -601,8 +611,6 @@ Para fins de comparação de resultados, os autores citam as técnicas ParsCit (
 
 Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{ssec:layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
-\comment{Devo explicar aqui o que seriam esses Data-Sets? Exemplo: E-Prints, Mendeley e PubMed.}
-
 \subsection{Layout-CRFs}
 \label{ssec:layout-crfs}
 
@@ -610,6 +618,8 @@ Assim, ele chega à conclusão que em virtude das diferentes formas de processam
 
 \subsection{Mendeley Desktop}
 \label{ssec:mendeley}
+
+% Mendeley usa two-stages SVM method \cite{Han-SVM}
 
 \comment{Escrever sobre.}
 
@@ -654,13 +664,15 @@ O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) an
 \subsection{ParsCit}
 \label{ssec:parscit}
 
-Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências. 
+\begin{textedited}
+Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências bibliográficas, utilizando uma implementação desta técnica chamada CRF++ \cite{Councill-Giles-2008-ParsCit}.
+\end{textedited}
 
 O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro do servidor.
 
-Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do documento, que o autor chama de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
+Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do documento, que os autores chamam de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
 
-Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.}.
+Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.} \cite{Councill-Giles-2008-ParsCit}.
 
 Desta forma a fase de pré-processamento se inicia com esta analise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências à artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
 
@@ -673,7 +685,37 @@ A utilização deste projeto é feita de maneira muito simples, podendo ser exec
 \subsubsection{Resultados Comparativos}
 \label{sssec:parscit-comparative}
 
-Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto.
+Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto (detalhes na \autoref{tab:parscit-results}).
+
+\begin{table}
+    \caption{Resultados comparativos entre ParsCit e Peng \cite{Peng-CRF-IE}}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline 
+            \multirow{2}{*}{Field} & \multicolumn{3}{c|}{ParsCit} & \multicolumn{2}{c|}{Peng} \\
+            \cline{2-6}
+             & Precision & Recall & F1 & Acc. & F1 \\ 
+            \hline
+            Author & 98.7 & 99.3 & .99 & 99.9 & .99 \\
+            Booktitle & 92.7 & 94.2 & .93 & 97.7 & .94 \\
+            Date & 100 & 98.4 & .99 & 99.8 & .99 \\
+            Editor & 92.0 & 81.0 & .86 & 99.5 & .88 \\
+            Institution & 90.9 & 87.9 & .89 & 99.7 & .94 \\
+            Journal & 90.8 & 91.2 & .91 & 99.1 & .91 \\
+            Location & 95.6 & 90.0 & .93 & 99.3 & .87 \\
+            Note & 74.2 & 59.0 & .65 & 99.7 & .81 \\
+            Pages & 97.7 & 98.4 & .98 & 99.9 & .99  \\
+            Publisher & 95.2 & 88.7 & .92 & 99.4 & .76 \\
+            Tech & 94.0 & 79.6 & .86 & 99.4 & .87 \\
+            Title & 96.0 & 98.4 & .97 & 98.9 & .98 \\
+            Volume & 97.3 & 95.5 & .96 & 99.9 & .98 \\
+            \hline
+            Average & 95.7 & 95.7 & .95 & – & .91 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:parscit-results}
+\end{table}
 
 Visando também analisar outros projetos a mesma comparação de resultados foi feita com o projeto CiteSeer \cite{citeseer}, onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como no ParsCit.
 
@@ -683,6 +725,6 @@ Visando também analisar outros projetos a mesma comparação de resultados foi 
 	% Diferencial do projeto
 	% Se está ativo ou não
 	
-\comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
+% \comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
 
