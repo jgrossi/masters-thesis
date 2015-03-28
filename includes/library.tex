@@ -611,11 +611,6 @@ Para fins de comparação de resultados, os autores citam as técnicas ParsCit (
 
 Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{ssec:layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
-\subsection{Layout-CRFs}
-\label{ssec:layout-crfs}
-
-\comment{Escrever sobre.}
-
 \subsection{Mendeley Desktop}
 \label{ssec:mendeley}
 
@@ -626,7 +621,35 @@ Assim, ele chega à conclusão que em virtude das diferentes formas de processam
 \subsection{CiteULike}
 \label{ssec:citeulike}
 
-\comment{Escrever sobre CiteULike, com base no artigo de seus autores \cite{citeulike}.}
+Uma outra ferramenta de destaque é o Citeulike \cite{citeulike} e pode ser acessada em \url{http://citeulike.org}. Ela é uma fusão de dois serviços: um serviço de \emph{bookmarking} via Internet, bem como também um sistema de gestão de referências bibliográficas. A união destas duas funcionalidades permite um compartilhamento muito grande de conhecimento entre pesquisadores, de modo a promover uma disseminação de informação com o envio de links contendo \emph{papers} de pesquisa. 
+
+O projeto foi criado em 2004 por Richard Cameron, mas em 2006 a empresa Oversity Ltd. assumiu seu controle e manutenção \cite{Citeulike-FAQ}. O Citeulike pode ser acessado através de um navegador e fica disponível na Internet, de fácil acesso. O projeto ainda encontra-se ativo e em constante evolução, tanto por parte da equipe que o mantém, como por parte de seus usuários.
+
+O projeto é livre desde seu lançamento e não tem nenhum custo para seus usuários. Seu objetivo inicial surgiu de um problema para busca de material bibliográfico. Deste modo o Citeulike foi criado para remover este espaço vazio entre pesquisadores, além de permitir que eles compartilhem bibliografias de maneira simplificada, podendo inclusive contribuir para grupos de pesquisa, por exemplo.
+
+Um dos detalhes desta ferramenta é que ela funciona com base em fontes externas de dados. Quando um usuário encontra na Internet um artigo que lhe é interessante ele pode adicioná-lo à sua lista pessoal (\emph{bookmarking}). Assim, o Citeulike automaticamente visita este endereço informado e realiza uma extração de dados dos detalhes das citações do artigo, salvando o link para este \emph{paper} em sua base de dados \cite{citeulike}. Além disso, ele permite que os metadados deste artigo também sejam extraídos, como título, autores, \emph{journal name}, número de páginas, etc.
+
+Como se pode ver, o Citeulike preserva a informação livre. Ele somente coleta \emph{papers} que já estão disponíveis na Internet, com base em um link fornecido por um usuário seu. Outro ponto de interesse é que a ferramenta também analisa informações de citação para que possa criar um link reverso para os \emph{papers} já analisados. Deste modo, de posse de um link para um determinado artigo o Citeulike consegue analisar quais outros artigos este artigos cita, permitindo criar uma rede de citações entre documentos, o que facilita a disseminação de conhecimento e permite que pesquisadores distintos possam usufruir deste conjunto de informações previamente analisadas.
+
+Outro detalhe importante é o fato do projeto ser ao mesmo tempo um serviço social. Além do armazenamento destes artigos em forma de links, ao adicionar um artigo em sua lista pessoal, o usuário também pode associar \emph{tags} àquele artigo. Isso permite uma categorização muito particular e ainda permite que artigos sejam procurados bem facilmente com bases nestas \emph{tags} fornecidas. De certa forma, outros pesquisadores podem se beneficiar destas informações, pois elas funcionam como uma folksonomia específica para aquele determinado domínio, que pode ser de interesse de outros pesquisadores também. Outro detalhe importante de destaque do ponto social da ferramenta é que ela permite um sistema de votação nos artigos. Cada artigo pode ser votado por usuários, de maneira a criar-se um ranking de artigos mais interessantes, tendo um local de destaque na página inicial da ferramenta.
+
+Um grande detalhe do Citeulike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadada extraction}. Como o Citeulike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset}, visto suas informações semi-estruturadas. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do Citeulike para realizar suas análises \cite{citeulike}. Atualmente na base de dados do Citeulike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
+
+Como o banco de dados do Citeulike é criado de forma estruturada a disseminação de conhecimento entre os pesquisadores é facilmente realizada. De posse do link para um determinado artigo a ferramenta possui todos os detalhes deste documento, como título, autores, etc. Assim permite-se uma pesquisa muito rica em um conjunto de metadados previamente extraídos, criando então uma rede de distribuição de artigos, contribuindo para a comunicação entre pesquisadores de modo geral.
+
+O projeto cumpriu basicamente duas regras:
+
+\begin{enumerate}
+    \item Ele criou um modelo para coleta de informações que é de fácil entendimento para o usuário final, extraindo metadados relevantes que permitem criar automaticamente uma rede de conteúdo, sem deixar de apontar para o artigo em seu site original;
+    \item Ele mudou a maneira tradicional de descobrir e compartilhar informação, visto que a ferramenta permite que usuários acessem suas listas pessoais entre si, disseminando conhecimento com base em um conhecimento já pré-definido por um pesquisador.
+\end{enumerate}
+
+Outro detalhe que permite um uso diferenciado do projeto é a formação de grupos de pesquisa. Com base em interesses similares no histórico de pesquisa, o Citeulike permite que pesquisadores sejam ligados globalmente, compartilhando de temas semelhantes e compartilhando informações entre eles de maneira eficaz e direta.
+
+Tecnicamente o Citeulike foi criado utilizando como banco de dados o PostgreSQL\footnote{Sistema de Banco de Dados relacional com tradição e excelente performance. Sua página inicial é \url{http://www.postgresql.org}.}, Tcl\footnote{Linguagem de programação de scripts muito utilizada em ambientes Linux. Pode ser acessada em \url{http://www.tcl.tk}.} como linguagem de programação e ainda utilizando Memcached\footnote{Sistema de cacheamento baseado em memória, que permite um ganho excelente de performance em ambientes Web, sendo uma das mais utilizadas nos dias atuais. Detalhes em \url{http://memcached.org}.} para criação de cache dos dados armazenados, o que aumentou (e muito) a performance da ferramenta. Seus servidores são baseados em Linux e backups são feitos de 15 em 15 minutos \cite{citeulike}.
+
+Com base nesta quantidade de detalhes e vantagens o Citeulike se tornou um ponto de referência para catalogação e organização de artigos científicos, permitindo a contribuição entre pesquisadores e formando então uma rede de contribuição que favorece a disseminação da pesquisa ao redor do mundo.
+
 
 \subsection{CiteSeer}
 \label{ssec:citeseer}
