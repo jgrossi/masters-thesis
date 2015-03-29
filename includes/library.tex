@@ -611,33 +611,73 @@ Para fins de comparação de resultados, os autores citam as técnicas ParsCit (
 
 Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{ssec:layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
-\subsection{Mendeley Desktop}
+\subsection{Mendeley}
 \label{ssec:mendeley}
 
-% Mendeley usa two-stages SVM method \cite{Han-SVM}
+\begin{textnew}
 
-\comment{Escrever sobre.}
+Mendeley é um dos projetos mais complexos e completos que existem na atualidade. Além de uma poderosa ferramenta na extração de metadados o projeto se transformou em uma plataforma completa para pesquisadores. Sua pesquisa se iniciou em novembro de 2007 por três estudantes alemães de doutorado, tendo sua primeira versão lançada em agosto de 2008. Em 2013 o projeto foi vendido para uma empresa, que passou a liderar o processo de criação e desenvolvimento. Atualmente o Mendeley é um projeto amplo, porém estritamente comercial, que possui uma plataforma de pesquisa e gestão de documentos como seu principal produto ofertado.
+
+Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade do usuário. Assim como o CiteULike \autoref{ssec:citeulike} o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto, o que não permite seu uso sem ser através do serviço oferecido pela empresa, através da Internet.
+
+A ferramenta pode ser utilizada via Web, como aplicativo \emph{desktop}, para \emph{tablets} ou \emph{smartphones}. Visto seu aspecto social e suas inúmeras funcionalidades o projeto se tornou uma rede social acadêmica, tanto do ponto de vista de organização de documentos até mesmo para interação entre pesquisadores.
+
+Além de organizar sua biblioteca pessoal é possível também fazer anotações em documentos, destacar partes de texto, exportar citações, gerenciar documentos e compartilhar informações com outros pesquisadores, o que torna a plataforma extremamente completa e funcional.
+
+A pesquisa iniciada pelos três estudantes de doutorado levou em consideração técnicas de \emph{machine learning} e \emph{metadata extraction}, como SVM, por exemplo \cite{Granitzer-2012-LayoutBased}. A ferramenta utiliza um modelo de SVM de dois estágios (\emph{two-stages SVM}) \cite{Han-SVM} no que tange a extração dos metadados, obtendo uma grande exatidão dos resultados.
+
+Pela sua complexidade e por abranger uma gama de funcionalidades muito grande, s serviço foi comparado à rede Last.FM \cite{Mendeley-LastFM}. Assim como a rede social de música o Mendeley permite que o usuário organize sua biblioteca digital de pesquisa de maneira bem eficaz, podendo compartilhar, distribuir e realizar diversas outras funções, assim como é possível na plataforma musical Last.FM.
+
+Por ser um serviço a bastante tempo no mercado o Mendeley funciona também como um grande \emph{dataset}, permitindo que parte de sua coleção de artigos seja utilizada para fins de pesquisa, assim como ocorre com o CiteULike \autoref{ssec:citeulike}, por exemplo. Isso facilita muito a pesquisa pois permite que uma quantidade muito grande de documentos sejam analisados de maneira semi-estruturada, facilitando a descoberta de novos conhecimentos nesta área.
+
+Após a venda da plataforma o projeto teve seu foco muito mais voltado ao comercial, ao contrário do que era anteriormente. A utilização de seus dados ficou restrita e a geração de receita se transformou no principal objetivo da companhia, o que trouxe algumas desvantagens para a pesquisa livre como um todo.
+
+Algumas das funcionalidades do Mendeley:
+
+\begin{itemize}
+    \item Multiplataforma, podendo funcionar tanto na Web como em Windows, Mac, Linux, iPhone e iPad;
+    \item Extração de metadados de artigos em formato PDF (ponto de pesquisa deste trabalho);
+    \item Centralização de sua biblioteca digital, sendo a mesma disponibilizada em qualquer plataforma, pois fica disponível na nuvem (\emph{cloud computing});
+    \item Visualizador de PDF embutido, o que permite marcações em texto e inclusão de notas personalizadas;
+    \item Pesquisa completa da base de dados dos artigos existentes;
+    \item Inclusão de \emph{tags} nos documentos, permitindo uma categorização dos mesmos dentro da biblioteca pessoal de cada usuário;
+    \item Permite que citações e bibliografias sejam exportas em formato Microsoft Word, LibreOffice e LaTeX;
+    \item Criação de grupos públicos e privados entre pesquisadores, permitindo compartilhamento de conteúdo entre os usuários;
+    \item É uma Rede Social completa, permitindo \emph{posts}, comentários, páginas de perfil, etc;
+    \item Provém uma série de estatísticas com base nos documentos pertencentes à sua biblioteca digital.
+\end{itemize}
+
+% Mendeley usa two-stages SVM method \cite{Han-SVM} e \cite{Granitzer-2012-LayoutBased}
+
+Embora o sucesso do projeto seja muito grande e suas funcionalidades permitem uma série de funções a serem utilizadas pelos pesquisadores, em virtude do foco deste trabalho, o Mendeley se torna uma ferramenta pouco útil, visto que não possui o seu código aberto e não permite que seu código seja instalado em outras máquinas para que sua funcionalidade de extração de metadados seja testada. Mesmo assim, o projeto é bastante promissor e garante uma gama de funções que todo pesquisador necessita, além de organizar de maneira bem eficaz os artigos e demais documentos que fazem parte de um bom trabalho de pesquisa.
+
+\end{textnew}
+
+\subsection{Zotero}
+\label{ssec:zotero}
+
+\comment{Escrever sobre Zotero.}
 
 \subsection{CiteULike}
 \label{ssec:citeulike}
 
 \begin{textnew}
 
-Uma outra ferramenta de destaque é o Citeulike \cite{citeulike} e pode ser acessada em \url{http://citeulike.org}. Ela é uma fusão de dois serviços: um serviço de \emph{bookmarking} via Internet, bem como também um sistema de gestão de referências bibliográficas. A união destas duas funcionalidades permite um compartilhamento muito grande de conhecimento entre pesquisadores, de modo a promover uma disseminação de informação com o envio de links contendo \emph{papers} de pesquisa. 
+Uma outra ferramenta de destaque é o CiteULike \cite{citeulike} e pode ser acessada em \url{http://citeulike.org}. Ela é uma fusão de dois serviços: um serviço de \emph{bookmarking} via Internet, bem como também um sistema de gestão de referências bibliográficas. A união destas duas funcionalidades permite um compartilhamento muito grande de conhecimento entre pesquisadores, de modo a promover uma disseminação de informação com o envio de links contendo \emph{papers} de pesquisa. 
 
-O projeto foi criado em 2004 por Richard Cameron, mas em 2006 a empresa Oversity Ltd. assumiu seu controle e manutenção \cite{Citeulike-FAQ}. O Citeulike pode ser acessado através de um navegador e fica disponível na Internet, de fácil acesso. O projeto ainda encontra-se ativo e em constante evolução, tanto por parte da equipe que o mantém, como por parte de seus usuários.
+O projeto foi criado em 2004 por Richard Cameron, mas em 2006 a empresa Oversity Ltd. assumiu seu controle e manutenção \cite{CiteULike-FAQ}. O CiteULike pode ser acessado através de um navegador e fica disponível na Internet, de fácil acesso. O projeto ainda encontra-se ativo e em constante evolução, tanto por parte da equipe que o mantém, como por parte de seus usuários.
 
-O projeto é livre desde seu lançamento e não tem nenhum custo para seus usuários. Seu objetivo inicial surgiu de um problema para busca de material bibliográfico. Deste modo o Citeulike foi criado para remover este espaço vazio entre pesquisadores, além de permitir que eles compartilhem bibliografias de maneira simplificada, podendo inclusive contribuir para grupos de pesquisa, por exemplo.
+O projeto é livre desde seu lançamento e não tem nenhum custo para seus usuários. Seu objetivo inicial surgiu de um problema para busca de material bibliográfico. Deste modo o CiteULike foi criado para remover este espaço vazio entre pesquisadores, além de permitir que eles compartilhem bibliografias de maneira simplificada, podendo inclusive contribuir para grupos de pesquisa, por exemplo.
 
-Um dos detalhes desta ferramenta é que ela funciona com base em fontes externas de dados. Quando um usuário encontra na Internet um artigo que lhe é interessante ele pode adicioná-lo à sua lista pessoal (\emph{bookmarking}). Assim, o Citeulike automaticamente visita este endereço informado e realiza uma extração de dados dos detalhes das citações do artigo, salvando o link para este \emph{paper} em sua base de dados \cite{citeulike}. Além disso, ele permite que os metadados deste artigo também sejam extraídos, como título, autores, \emph{journal name}, número de páginas, etc.
+Um dos detalhes desta ferramenta é que ela funciona com base em fontes externas de dados. Quando um usuário encontra na Internet um artigo que lhe é interessante ele pode adicioná-lo à sua lista pessoal (\emph{bookmarking}). Assim, o CiteULike automaticamente visita este endereço informado e realiza uma extração de dados dos detalhes das citações do artigo, salvando o link para este \emph{paper} em sua base de dados \cite{citeulike}. Além disso, ele permite que os metadados deste artigo também sejam extraídos, como título, autores, \emph{journal name}, número de páginas, etc.
 
-Como se pode ver, o Citeulike preserva a informação livre. Ele somente coleta \emph{papers} que já estão disponíveis na Internet, com base em um link fornecido por um usuário seu. Outro ponto de interesse é que a ferramenta também analisa informações de citação para que possa criar um link reverso para os \emph{papers} já analisados. Deste modo, de posse de um link para um determinado artigo o Citeulike consegue analisar quais outros artigos este artigos cita, permitindo criar uma rede de citações entre documentos, o que facilita a disseminação de conhecimento e permite que pesquisadores distintos possam usufruir deste conjunto de informações previamente analisadas.
+Como se pode ver, o CiteULike preserva a informação livre. Ele somente coleta \emph{papers} que já estão disponíveis na Internet, com base em um link fornecido por um usuário seu. Outro ponto de interesse é que a ferramenta também analisa informações de citação para que possa criar um link reverso para os \emph{papers} já analisados. Deste modo, de posse de um link para um determinado artigo o CiteULike consegue analisar quais outros artigos este artigos cita, permitindo criar uma rede de citações entre documentos, o que facilita a disseminação de conhecimento e permite que pesquisadores distintos possam usufruir deste conjunto de informações previamente analisadas.
 
 Outro detalhe importante é o fato do projeto ser ao mesmo tempo um serviço social. Além do armazenamento destes artigos em forma de links, ao adicionar um artigo em sua lista pessoal, o usuário também pode associar \emph{tags} àquele artigo. Isso permite uma categorização muito particular e ainda permite que artigos sejam procurados bem facilmente com bases nestas \emph{tags} fornecidas. De certa forma, outros pesquisadores podem se beneficiar destas informações, pois elas funcionam como uma folksonomia específica para aquele determinado domínio, que pode ser de interesse de outros pesquisadores também. Outro detalhe importante de destaque do ponto social da ferramenta é que ela permite um sistema de votação nos artigos. Cada artigo pode ser votado por usuários, de maneira a criar-se um ranking de artigos mais interessantes, tendo um local de destaque na página inicial da ferramenta.
 
-Um grande detalhe do Citeulike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadada extraction}. Como o Citeulike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset}, visto suas informações semi-estruturadas. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do Citeulike para realizar suas análises \cite{citeulike}. Atualmente na base de dados do Citeulike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
+Um grande detalhe do CiteULike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadada extraction}. Como o CiteULike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset}, visto suas informações semi-estruturadas. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do CiteULike para realizar suas análises \cite{citeulike}. Atualmente na base de dados do CiteULike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
 
-Como o banco de dados do Citeulike é criado de forma estruturada a disseminação de conhecimento entre os pesquisadores é facilmente realizada. De posse do link para um determinado artigo a ferramenta possui todos os detalhes deste documento, como título, autores, etc. Assim permite-se uma pesquisa muito rica em um conjunto de metadados previamente extraídos, criando então uma rede de distribuição de artigos, contribuindo para a comunicação entre pesquisadores de modo geral.
+Como o banco de dados do CiteULike é criado de forma estruturada a disseminação de conhecimento entre os pesquisadores é facilmente realizada. De posse do link para um determinado artigo a ferramenta possui todos os detalhes deste documento, como título, autores, etc. Assim permite-se uma pesquisa muito rica em um conjunto de metadados previamente extraídos, criando então uma rede de distribuição de artigos, contribuindo para a comunicação entre pesquisadores de modo geral.
 
 O projeto cumpriu basicamente duas regras:
 
@@ -646,11 +686,11 @@ O projeto cumpriu basicamente duas regras:
     \item Ele mudou a maneira tradicional de descobrir e compartilhar informação, visto que a ferramenta permite que usuários acessem suas listas pessoais entre si, disseminando conhecimento com base em um conhecimento já pré-definido por um pesquisador.
 \end{enumerate}
 
-Outro detalhe que permite um uso diferenciado do projeto é a formação de grupos de pesquisa. Com base em interesses similares no histórico de pesquisa, o Citeulike permite que pesquisadores sejam ligados globalmente, compartilhando de temas semelhantes e compartilhando informações entre eles de maneira eficaz e direta.
+Outro detalhe que permite um uso diferenciado do projeto é a formação de grupos de pesquisa. Com base em interesses similares no histórico de pesquisa, o CiteULike permite que pesquisadores sejam ligados globalmente, compartilhando de temas semelhantes e compartilhando informações entre eles de maneira eficaz e direta.
 
-Tecnicamente o Citeulike foi criado utilizando como banco de dados o PostgreSQL\footnote{Sistema de Banco de Dados relacional com tradição e excelente performance. Sua página inicial é \url{http://www.postgresql.org}.}, Tcl\footnote{Linguagem de programação de scripts muito utilizada em ambientes Linux. Pode ser acessada em \url{http://www.tcl.tk}.} como linguagem de programação e ainda utilizando Memcached\footnote{Sistema de cacheamento baseado em memória, que permite um ganho excelente de performance em ambientes Web, sendo uma das mais utilizadas nos dias atuais. Detalhes em \url{http://memcached.org}.} para criação de cache dos dados armazenados, o que aumentou (e muito) a performance da ferramenta. Seus servidores são baseados em Linux e backups são feitos de 15 em 15 minutos \cite{citeulike}.
+Tecnicamente o CiteULike foi criado utilizando como banco de dados o PostgreSQL\footnote{Sistema de Banco de Dados relacional com tradição e excelente performance. Sua página inicial é \url{http://www.postgresql.org}.}, Tcl\footnote{Linguagem de programação de scripts muito utilizada em ambientes Linux. Pode ser acessada em \url{http://www.tcl.tk}.} como linguagem de programação e ainda utilizando Memcached\footnote{Sistema de cacheamento baseado em memória, que permite um ganho excelente de performance em ambientes Web, sendo uma das mais utilizadas nos dias atuais. Detalhes em \url{http://memcached.org}.} para criação de cache dos dados armazenados, o que aumentou (e muito) a performance da ferramenta. Seus servidores são baseados em Linux e backups são feitos de 15 em 15 minutos \cite{citeulike}.
 
-Com base nesta quantidade de detalhes e vantagens o Citeulike se tornou um ponto de referência para catalogação e organização de artigos científicos, permitindo a contribuição entre pesquisadores e formando então uma rede de contribuição que favorece a disseminação da pesquisa ao redor do mundo.
+Com base nesta quantidade de detalhes e vantagens o CiteULike se tornou um ponto de referência para catalogação e organização de artigos científicos, permitindo a contribuição entre pesquisadores e formando então uma rede de contribuição que favorece a disseminação da pesquisa ao redor do mundo.
 
 \end{textnew}
 
@@ -658,7 +698,7 @@ Com base nesta quantidade de detalhes e vantagens o Citeulike se tornou um ponto
 \subsection{CiteSeer}
 \label{ssec:citeseer}
 
-Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural.
+Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural. O CiteSeer utiliza modelos SVM para extração de metadados com bastante eficácia \cite{Granitzer-2012-LayoutBased}.
 
 Desta forma, com estas informações identificadas, ele consegue criar um \textit{ranking} dos documentos citados, incluindo seus autores e \textit{journals}, criando a partir de um documento fonte todo um conjunto de relações com outros documentos de uma maneira estatística bem eficaz.
 
