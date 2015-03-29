@@ -17,7 +17,9 @@ Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases 
 
 Embora a amplitude desta área de estudo, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco. A pesquisa necessitava ser focada em técnicas de extração de metadados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia deste processo.
 
-Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados. Com base em uma técnica potencialmente eficaz, esta deve ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus dados mapeados de maneira a poder comparar os resultados obtidos com cada uma das técnicas e seus respectivos resultados. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
+\begin{textedited}
+Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados, sua presença de mercado e sua maturidade, visto que necessitam ainda estarem ativos para serem devidamente testados. Com base em uma técnica potencialmente eficaz, esta deve ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus metadados extraídos de maneira a poder comparar os resultados obtidos com o resultado de cada uma das ferramentas. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
+\end{textedited}
 
 % Falar sobre os eventos encontrados na área
 
@@ -34,7 +36,7 @@ Visando abranger grande parte da literatura sobre o assunto foram mapeados algun
 \end{itemize}
 
 \begin{textedited}
-Estes eventos foram analisados, observando todas as citações e referências utilizadas, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
+Estes eventos foram analisados, observando todas as citações e referências utilizadas em cada artigo publicado, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
 \end{textedited}
 
 \section{Metadados}
@@ -545,6 +547,8 @@ A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo
 \section{Técnicas de Algoritmos}
 \label{sec:algorithms-tecniques}
 
+\comment{Este tópico foi sugestão do Prof. Renato. Qual o conteúdo deve ser colocado neste tópico?}
+
 \section{Ambientes de Extração de Metadados}
 \label{sec:environments}
 
@@ -620,7 +624,7 @@ Mendeley é um dos projetos mais complexos e completos que existem na atualidade
 
 Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade do usuário. Assim como o CiteULike \autoref{ssec:citeulike} o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto, o que não permite seu uso sem ser através do serviço oferecido pela empresa, através da Internet.
 
-A ferramenta pode ser utilizada via Web, como aplicativo \emph{desktop}, para \emph{tablets} ou \emph{smartphones}. Visto seu aspecto social e suas inúmeras funcionalidades o projeto se tornou uma rede social acadêmica, tanto do ponto de vista de organização de documentos até mesmo para interação entre pesquisadores.
+A ferramenta pode ser utilizada via Web, como aplicativo \emph{desktop}, para \emph{tablets} ou \emph{smartphones}. Visto seu aspecto social e suas inúmeras funcionalidades o projeto se tornou uma rede social acadêmica, tanto do ponto de vista de organização de documentos até mesmo para interação entre pesquisadores. A ferramente permite que usuários façam \emph{upload} de artigos em formato PDF para que sejam armazenados em sua biblioteca pessoal. Estes arquivos são analisados e seus metadados são extraídos e enviados para os servidores centrais da ferramenta.
 
 Além de organizar sua biblioteca pessoal é possível também fazer anotações em documentos, destacar partes de texto, exportar citações, gerenciar documentos e compartilhar informações com outros pesquisadores, o que torna a plataforma extremamente completa e funcional.
 
@@ -641,7 +645,7 @@ Algumas das funcionalidades do Mendeley:
     \item Visualizador de PDF embutido, o que permite marcações em texto e inclusão de notas personalizadas;
     \item Pesquisa completa da base de dados dos artigos existentes;
     \item Inclusão de \emph{tags} nos documentos, permitindo uma categorização dos mesmos dentro da biblioteca pessoal de cada usuário;
-    \item Permite que citações e bibliografias sejam exportas em formato Microsoft Word, LibreOffice e LaTeX;
+    \item Permite que citações e bibliografias sejam exportas em formato Microsoft Word, LibreOffice e \LaTeX;
     \item Criação de grupos públicos e privados entre pesquisadores, permitindo compartilhamento de conteúdo entre os usuários;
     \item É uma Rede Social completa, permitindo \emph{posts}, comentários, páginas de perfil, etc;
     \item Provém uma série de estatísticas com base nos documentos pertencentes à sua biblioteca digital.
@@ -652,11 +656,6 @@ Algumas das funcionalidades do Mendeley:
 Embora o sucesso do projeto seja muito grande e suas funcionalidades permitem uma série de funções a serem utilizadas pelos pesquisadores, em virtude do foco deste trabalho, o Mendeley se torna uma ferramenta pouco útil, visto que não possui o seu código aberto e não permite que seu código seja instalado em outras máquinas para que sua funcionalidade de extração de metadados seja testada. Mesmo assim, o projeto é bastante promissor e garante uma gama de funções que todo pesquisador necessita, além de organizar de maneira bem eficaz os artigos e demais documentos que fazem parte de um bom trabalho de pesquisa.
 
 \end{textnew}
-
-\subsection{Zotero}
-\label{ssec:zotero}
-
-\comment{Escrever sobre Zotero.}
 
 \subsection{CiteULike}
 \label{ssec:citeulike}
@@ -698,7 +697,7 @@ Com base nesta quantidade de detalhes e vantagens o CiteULike se tornou um ponto
 \subsection{CiteSeer}
 \label{ssec:citeseer}
 
-Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural. O CiteSeer utiliza modelos SVM para extração de metadados com bastante eficácia \cite{Granitzer-2012-LayoutBased}.
+Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural. O CiteSeer foi criado pelos pesquisadores Lee Giles, Kurt Bollacker e Steve Lawrence em 1997 e utiliza modelos SVM para extração de metadados com bastante eficácia \cite{Granitzer-2012-LayoutBased}.
 
 Desta forma, com estas informações identificadas, ele consegue criar um \textit{ranking} dos documentos citados, incluindo seus autores e \textit{journals}, criando a partir de um documento fonte todo um conjunto de relações com outros documentos de uma maneira estatística bem eficaz.
 
@@ -794,4 +793,23 @@ Visando também analisar outros projetos a mesma comparação de resultados foi 
 	
 % \comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
+\subsection{Outras Ferramentas e Projetos}
+\label{ssec:other-tools}
+
+\begin{textnew}
+
+Além das ferramentas apresentadas diversas outras apresentam características semelhantes, porém com pouca participação de mercado ou com foco em funcionalidades que não são objetos de estudo deste trabalho, como por exemplo, somente o foco no armazenamento e gestão dos artigos científicos. Alguns destes projetos que pode-se citar são:
+
+\begin{itemize}
+    \item \textbf{Zotero:} Seu objetivo é servir como um repositório centralizado onde os artigos ficam armazenados, permitindo que as referências sejam exportadas para diversos formatos. Disponível em \url{https://www.zotero.org}.
+    \item \textbf{Citavi:} Permite que você organize artigos científicos de maneira bem estruturada, permitindo inclusive contribuição através de formação de times de pesquisadores. Também permite exportação de suas referências para diversos outros formatos. Disponível em \url{http://www.citavi.com/}.
+    \item \textbf{BibDesk:} Exclusivo para usuários Mac/Apple. É um \emph{software} final que permite que usuários organizem seus artigos, simplificando todo o processo de exportação dos formatos de referências. É focado para usuários \LaTeX. Disponível em \url{http://bibdesk.sourceforge.net}.
+    \item \textbf{Docear:} Permite que usuários organizem suas bibliotecas digitais de artigos científicos, permitindo também compartilhar informações com outros usuários. Possui versões para Windows, Linux e Mac. Disponível em \url{https://www.docear.org/}.
+    \item \textbf{Qiqqa:} Permite que além de organizar os usuários façam gestão das referências de seus artigos, que ficam armazenados também em \emph{cloud computing}. Possui versões Windows e Android. Disponível em \url{http://www.qiqqa.com/}.
+    \item \textbf{Papers:} Aplicativo disponível para Windows, Mac, iPhone e iPad que permite que usuários gerenciem e pesquisem artigos científicos. Possui um banco de dados próprio e é oferecido apenas em versão paga. Disponível em \url{http://www.papersapp.com/}.
+    \item \textbf{JabRef:} Muito parecido com a ferramenta \emph{BibDesk}, visto que organizar artigos e referências focados em usuários \LaTeX. Possui versões para Windows, Linux e Mac. Uma de suas vantagens é possuir uma interface muito simplificada, facilitando a utilização pelos usuários. Disponível em \url{http://jabref.sourceforge.net/}.
+    \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
+\end{itemize}
+
+\end{textnew}
 
