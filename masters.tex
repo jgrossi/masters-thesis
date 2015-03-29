@@ -77,6 +77,7 @@
 \usepackage{listings}				% Para escrita de código
 \usepackage{courier}				% Fonte Courier para os códigos
 \usepackage{datetime}				% Datas customizadas
+\usepackage{multirow}				% Multirow em tabelas
 
 % Configurações para o Listing exibir os códigos na fonte Courier
 \lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
@@ -134,8 +135,6 @@
 
 \newenvironment{textnew}{\color{Plum}}{}
 \newenvironment{textedited}{\color{red}}{}
-% \newcommand{\textnew}[1]{\begin{textnew}#1\end{textnew}}
-% \newcommand{\textedited}[1]{\begin{textedited}#1\end{textedited}}
 
 % Configs
 \input{config.tex}
@@ -146,7 +145,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Análise Comparativa de Técnicas de Extração de Metadados em Artigos Científicos}
+\titulo{Análise Comparativa de Ferramentas de Extração de Metadados em Artigos Científicos}
 \autor{José Alberto Grossi Júnior}
 \local{Belo Horizonte/MG, Brasil}
 \data{\thesisdate, v-\gitbranch}
@@ -272,7 +271,7 @@
 		1. Extração de informação
 		2. Metadados.
 		I. Artigos científicos.
-		II. Universidade Federal de Minas Gerais.
+		II. Extração de metadados.
 		III. Escola de Ciência da Informação.
 		IV. \imprimirtitulo\\            
 	
@@ -364,13 +363,13 @@
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{Este trabalho é dedicado a todas as pessoas que desejam,\\ 
-   de uma forma ou outra, superar seus objetivos pessoais.} \vspace*{\fill}
-\end{dedicatoria}
+% \begin{dedicatoria}
+%    \vspace*{\fill}
+%    \centering
+%    \noindent
+%    \textit{Este trabalho é dedicado a todas as pessoas que desejam,\\ 
+%    de uma forma ou outra, superar seus objetivos pessoais.} \vspace*{\fill}
+% \end{dedicatoria}
 % ---
 
 % ---
@@ -420,29 +419,33 @@
 
  % \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
 
-    A necessidade de contribuição entre a comunidade acadêmica é evidente quando da necessidade de leituras específicas de artigos científicos de autores espalhados pelo mundo. Porém, esta contribuição se dá de maneira muito pessoal, com envios manuais de artigos quando da necessidade de certos nichos acadêmicos. A dificuldade apresentada geralmente é a centralização de artigos de maneira livre e compensatória, por meio de extração automática de metadados relevantes para o catálogo destes documentos, de maneira a permitir que qualquer pesquisador, devidamente reconhecido, possa compartilhar e obter estes documentos de maneira eficaz e anônima.
+% A necessidade de contribuição entre a comunidade acadêmica é evidente quando da necessidade de leituras específicas de artigos científicos de autores espalhados pelo mundo. Porém, esta contribuição se dá de maneira muito pessoal, com envios manuais de artigos quando da necessidade de certos nichos acadêmicos. A dificuldade apresentada geralmente é a centralização de artigos de maneira livre e compensatória, por meio de extração automática de metadados relevantes para a correta catalogação destes documentos, de maneira a permitir que qualquer pesquisador, devidamente reconhecido, possa compartilhar e obter estes documentos de maneira eficaz e anônima.
 
-    Este trabalho demonstra que as técnicas livres existentes para extração de metadados em artigos científicos não são suficientes para abranger os diversos formatos existentes de apresentação dos conteúdos, uma vez que são baseados em layout pré-definidos, sem possibilidade de expansão ou adaptação de acordo com a necessidade de certos grupos de pesquisa, cujo formato de apresentação deste tipo de documento se dá de maneira diferenciada, ou até mesmo, adaptada para seu universo de pesquisadores.
+% Este trabalho demonstra que as técnicas livres existentes para extração de metadados em artigos científicos não são suficientes para abranger os diversos formatos existentes de apresentação dos conteúdos, uma vez que são baseados em layout pré-definidos, sem possibilidade de expansão ou adaptação de acordo com a necessidade de certos grupos de pesquisa, cujo formato de apresentação deste tipo de documento se dá de maneira diferenciada, ou até mesmo, adaptada para seu universo de pesquisadores.
 
-    \textbf{Palavras-chaves}: artigos científicos. extração de metadados. extração de dados em artigos.
+O resumo precisará ser totalmente reescrito em função das últimas alterações realizadas.
+
+% \textbf{Palavras-chaves}: artigos científicos. extração de metadados. extração de dados em artigos.
 
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
+\begin{otherlanguage*}{english}
 	
-	The need of contribution existent in the academic community is focused based on the sharing of papers from authors around the world, when specific studies are needed. However, this contribution is made in a very basic and personal way, with papers sent by manual interactions from some specific research groups. The main goal is focused on the papers centralization in a free and compensatory format, by automatic relevant metadata extraction to the indexation of these documents, allowing any researcher to share and get these documents in a very effective manner. 
+% The need of contribution existent in the academic community is focused based on the sharing of papers from authors around the world, when specific studies are needed. However, this contribution is made in a very basic and personal way, with papers sent by manual interactions from some specific research groups. The main goal is focused on the papers centralization in a free and compensatory format, by automatic relevant metadata extraction to the indexation of these documents, allowing any researcher to share and get these documents in a very effective manner. 
 
-	This work shows how the existent metadata extraction techniques in scientific papers are not totally perfect to perform the different papers formats to present research works, once they are based on pre-defined layouts, without any change of customization according with some groups needs, because of a different presentation format, or even, adapted to your researchers' worlds.
+% This work shows how the existent metadata extraction techniques in scientific papers are not totally perfect to perform the different papers formats to present research works, once they are based on pre-defined layouts, without any change of customization according with some groups needs, because of a different presentation format, or even, adapted to your researchers' worlds.
 
-    \textbf{Palavras-chaves}: scientific papers. metadata extraction. data extraction on scientific papers.
+O \emph{abstract} também precisará ser totalmente reescrito em função das últimas alterações realizadas.
 
-   % \vspace{\onelineskip}
- 
-   % \noindent 
-   % \textbf{Key-words}: latex. abntex. text editoration.
- \end{otherlanguage*}
+% \textbf{Palavras-chaves}: scientific papers. metadata extraction. data extraction on scientific papers.
+
+% \vspace{\onelineskip}
+
+% \noindent 
+% \textbf{Key-words}: latex. abntex. text editoration.
+\end{otherlanguage*}
 \end{resumo}
 
 % resumo em francês 
@@ -519,13 +522,13 @@
 \include{includes/library}
 	
 % Metodologia
-\include{includes/metodology}
+% \include{includes/metodology}
 
 % Análise e Apresentação de Resultados
-\include{includes/results}
+% \include{includes/results}
 
 % Conclusao
-\include{includes/conclusion}
+% \include{includes/conclusion}
 
 
 % ---

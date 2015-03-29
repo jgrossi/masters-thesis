@@ -5,19 +5,27 @@
 
 % Falar sobre RSL
 
-Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no relatório técnico de \cite{Kitchenham}. Diante disso, o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa e seus resultados.
+% Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no relatório técnico de \cite{Kitchenham}. Diante disso, o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa e seus resultados.
+
+
 
 % Bases pesquisadas
 
-Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases de natureza mais genérica também foram pesquisadas, geralmente através do site da CAPES, mas com caráter mais de apoio teórico realmente.
+\begin{textedited}
+Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases multidisciplinares também foram pesquisadas, através do site da CAPES, mas com caráter mais de apoio teórico.
+\end{textedited}
 
 Embora a amplitude desta área de estudo, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco. A pesquisa necessitava ser focada em técnicas de extração de metadados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia deste processo.
 
-Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados. Com base em uma técnica potencialmente eficaz, esta deve ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus dados mapeados de maneira a poder comparar os resultados obtidos com cada uma das técnicas e seus respectivos resultados. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
+\begin{textedited}
+Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados, sua presença de mercado e sua maturidade, visto que necessitam ainda estarem ativos para serem devidamente testados. Com base em uma técnica potencialmente eficaz, esta deve ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus metadados extraídos de maneira a poder comparar os resultados obtidos com o resultado de cada uma das ferramentas. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
+\end{textedited}
 
 % Falar sobre os eventos encontrados na área
 
-Seguindo as orientações propostas em \cite{Kitchenham} foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+\begin{textedited}
+Visando abranger grande parte da literatura sobre o assunto foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+\end{textedited}
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval)
@@ -28,7 +36,7 @@ Seguindo as orientações propostas em \cite{Kitchenham} foram mapeados alguns e
 \end{itemize}
 
 \begin{textedited}
-Estes eventos foram analisados, observando todas as citações e referências utilizadas, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
+Estes eventos foram analisados, observando todas as citações e referências utilizadas em cada artigo publicado, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
 \end{textedited}
 
 \section{Metadados}
@@ -99,9 +107,17 @@ Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como s
 
 Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
 
+\begin{textedited}
 Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que agrega assertividade ao processo de extração.
+\end{textedited}
 
 % Explicar o conceito de dataset também, que algumas técnicas utilizam datasets já prontos para facilitar o processo de testes.
+
+\begin{textnew}
+Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Estes dados são fornecidos por diversas entidades/órgãos de certa forma estruturados para serem analisados, com alguma bagagem semântica já presente; são os chamados \emph{datasets}. Algumas bases de dados já consolidadas fornecem estes conjunto de dados reais, com base nos \emph{papers} que estão catalogados internamente, justamente para serem objetos de pesquisa, a fim de facilitar o manuseio e seleção dos documentos de entrada para análise e desenvolvimento de pesquisas.
+
+Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar o modelo, de maneira a promover um padrão de extração com base nestes dados previamente informadas.
+\end{textnew}
 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
@@ -377,29 +393,112 @@ Visando a comprovação e reconhecimento da eficiência da técnica de CRF na ex
     \item Geração de dados utilizando HMM aleatórios.
 \end{enumerate}
 
-Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a CRF a melhor técnicas a ser utilizada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
+Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a CRF a melhor técnica a ser empregada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
 
-De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativos melhores.
+De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativos melhores. Por corresponder a uma ''máquina'' de estado finito, ela é muito aplicável para a função de classificação sequencial, o que permite que ainda seja treinada para se obter os melhores resultados probabilísticos \cite{Peng-CRF-IE}. Nas CRFs as transições de estado são também representadas como \emph{features} por alguns autores.
 
 \end{textnew}
 
 %Esta técnica é comparada e quase sempre utilizada juntamente com a HMM (Hidden Markov Models), de maneira a possuir algumas vantagens sobre esta última, como a habilidade de relacionar pressupostos independentes nos modelos, ou seja, relacionar observações e/ou interpretações.
 
-Além disso, CRFs são utilizadas também em marcação e parseamento de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
+Uma outra vantagem da técnia de CRFs - assim como dos modelos \emph{maximum entropy} - é que eles facilmente proporcionam o uso de características arbitrárias dos dados de entrada.
+
+Os CRFs são utilizadas também em marcação e classificação de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
 
 % Falar sobre o uso de CRFs na extração de informação
 
-Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair padrões em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
+Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair metadados em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
-A utilização de CRFs na extração de metadados mostra-se muito eficaz por reduzir bastante os erros em algumas métricas, aumentando o sucesso da aplicação desta técnica nesta área.
+\begin{textnew}
+Peng et al. apresenta resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM \autoref{sssec:hmm} e SVM \autoref{sssec:svm}, mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando o a junção entre as sequências e características dependentes mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, dramáticas, ao se comparar com as demais técnicas de SVM e HMM.
 
+Os autores definem quatro diferentes transições de estado para diferentes classes, em ordem diferente das técnicas derivadas de Markov (HMM):
 
+\begin{enumerate}
+    \item \emph{\textbf{First-order:}} os dados de entrada são examinados no contexto de somente um estado;
+    \item \emph{\textbf{First-order + transitions:}} são adicionados alguns parâmetros correspondentes às transições;
+    \item \emph{\textbf{Second-order:}} as entradas são examinadas no contexto dos estados atual e anterior;
+    \item \emph{\textbf{Third-order:}} os dados de entrada são examinados no contexto do estado atual e de dois estados anteriores.
+\end{enumerate}
 
+Para a extração destes dados Peng et al. também considera como sendo o cabeçalho de um \emph{paper} como sendo a parte inicial do documento até o início da introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
 
+Do \emph{dataset} para extração dos metadados de cabeçalhos utilizado foram analisados 935 (novecentos e trinta e cinco) documentos. Destes 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinheitos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
 
+Para os fins de resultados comparativos foram utilizadas três métricas:
 
+\begin{enumerate}
+    \item \emph{\textbf{Overall word accuracy:}} é uma métrica que utiliza a porcentagem de palavras das quais os nomes (\emph{labels}) previstos são exatamente seus valores reais. Esta métrica favorece aqueles campos que possuem muitas palavras, como por exemplo a introdução (\emph{abstract});
+    \item \emph{\textbf{Average F-measure (F1):}} esta métrica é contada se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta metrica favorece campos com poucas palavras, visto sua característica mais importante focar na exatidão dos resultados.
+    \item \emph{\textbf{Whole instance accuracy:}} nesta métrica uma ''instância'' é considerada como sendo todo um cabeçalho ou referência, de maneira integral. Desta forma esta métrica utiliza da porcentagem de instâncias das quais cada palavra é corretamente associada.
+\end{enumerate}
 
+Conforme pode-se observar na \autoref{tab:crf-results-headers} e \autoref{tab:crf-results-references} a utilização de CRFs para extração de metadados - tanto de cabeçalhos como das referências - teve resultados melhores do que a utilização de HMM (\autoref{sssec:hmm}), aumentando a performance em praticamente todos os campos, chegando a uma precisão de 98,3\% (\emph{overall accuracy}).
 
+Pode observar também que a utilização de modelos HMM para precisão de palavras (campos com poucas palavras, onde a precisão é muito mais importante) é, de modo geral, pior que quando utiliza-se SVMs (coluna F1 da \autoref{tab:crf-results-headers}). Por outro lado, no campo \emph{abstract} HHM possui performance bem melhor que quando utilizado SVM (98\% contra 93,8\%).
+
+\begin{table}
+    \caption{Resultados de extração para CRFs após análise do \emph{dataset} com cabeçalhos \cite{Peng-CRF-IE}.}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|} \hline             
+             & \multicolumn{2}{c|}{HMM} & \multicolumn{2}{c|}{CRF} & \multicolumn{2}{c|}{SVM} \\  \hline 
+            Overall acc. & \multicolumn{2}{c|}{93.1\%} & \multicolumn{2}{c|}{\textbf{98.3\%}} & \multicolumn{2}{c|}{92.9\%} \\ \hline
+            Instance acc. & \multicolumn{2}{c|}{4.13\%} & \multicolumn{2}{c|}{\textbf{73.3\%}} & \multicolumn{2}{c|}{-} \\ \hline \hline
+             & acc. & F1 & acc. & F1 & acc. & F1 \\ \hline
+            Title & 98.2 & 82.2 & 99.7 & \textbf{97.1} & 98.9 & 96.5 \\ \hline
+            Author & 98.7 & 81.0 & 99.8 & \textbf{97.5} & 99.3 & 97.2 \\ \hline
+            Affiliation & 98.3 & 85.1 & 99.7 & \textbf{97.0} & 98.1 & 93.8 \\ \hline
+            Address & 99.1 & 84.8 & 99.7 & \textbf{95.8} & 99.1 & 94.7 \\ \hline
+            Note & 97.8 & 81.4 & 98.8 & \textbf{91.2} & 95.5 & 81.6 \\ \hline
+            Email & 99.9 & 92.5 & 99.9 & \textbf{95.3} & 99.6 & 91.7 \\ \hline
+            Date & 99.8 & 80.6 & 99.9 & \textbf{95.0} & 99.7 & 90.2 \\ \hline
+            Abstract & 97.1 & 98.0 & 99.6 & \textbf{99.7} & 97.5 & 93.8 \\ \hline
+            Phone & 99.8 & 53.8 & 99.9 & \textbf{97.9} & 99.9 & 92.4 \\ \hline
+            Keyword & 98.7 & 40.6 & 99.7 & \textbf{88.8} & 99.2 & 88.5 \\ \hline
+            Web & 99.9 & 68.6 & 99.9 & \textbf{94.1} & 99.9 & 92.4 \\ \hline
+            Degree & 99.5 & 68.8 & 99.8 & \textbf{84.9} & 99.5 & 70.1 \\ \hline
+            Pubnum & 99.8 & 64.2 & 99.9 & 86.6 & 99.9 & \textbf{89.2} \\ \hline
+            \hline
+            Average F1 & & 75.6 & & \textbf{93.9} & & 89.7 \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:crf-results-headers}
+\end{table}
+
+\begin{table}
+    \caption{Resultados de extração para CRFs após análise do \emph{dataset} com referências \cite{Peng-CRF-IE}.}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|} \hline             
+             & \multicolumn{2}{c|}{HMM} & \multicolumn{2}{c|}{CRF} \\  \hline 
+            Overall acc. & \multicolumn{2}{c|}{85.1\%} & \multicolumn{2}{c|}{\textbf{95.37\%}} \\ \hline 
+            Instance acc. & \multicolumn{2}{c|}{10\%} & \multicolumn{2}{c|}{\textbf{77.33\%}} \\ \hline \hline
+             & acc. & F1 & acc. & F1 \\ \hline 
+            Author & 96.8 & 92.7 & 99.9 & \textbf{99.4} \\ \hline 
+            Booktitle & 94.4 & 0.85 & 97.7 & \textbf{93.7} \\ \hline 
+            Date & 99.7 & 96.9 & 99.8 & \textbf{98.9} \\ \hline 
+            Editor & 98.9 & 70.8 & 99.5 & \textbf{87.7} \\ \hline 
+            Institution & 98.5 & 72.3 & 99.7 & \textbf{94.0} \\ \hline 
+            Journal & 96.6 & 67.7 & 99.1 & \textbf{91.3} \\ \hline 
+            Location & 99.1 & 81.8 & 99.3 & \textbf{87.2} \\ \hline 
+            Note & 99.2 & 50.9 & 99.7 & \textbf{80.8} \\ \hline
+            Pages & 98.1 & 72.9 & 99.9 & \textbf{98.6} \\ \hline
+            Publisher & 99.4 & \textbf{79.2} & 99.4 & 76.1 \\ \hline
+            Tech & 98.8 & 74.9 & 99.4 & \textbf{86.7} \\ \hline
+            Title & 92.2 & 87.2 & 98.9 & \textbf{98.3} \\ \hline
+            Volume & 98.6 & 75.8 & 99.9 & \textbf{97.8} \\ \hline
+            \hline
+            Average F1 & & 77.6\% & & \textbf{91.5\%} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:crf-results-references}
+\end{table}
+
+\end{textnew}
+
+\begin{textedited}
+Com base nos resultados apresentados pode-se considerar que a trabalho de \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
+\end{textedited}
 
 
 
@@ -407,31 +506,51 @@ A utilização de CRFs na extração de metadados mostra-se muito eficaz por red
 \section{Revisão de Estado da Arte na Extração de Metadados}
 \label{sec:revision}
 
+\begin{textnew}
+
+% Falar aqui sobre os estudos de comparações de Granitizer
+
+Técnicas de \emph{machine learning} não são novas, porém suas aplicações vão muito mais além do que se podia imaginar. As técnicas então utilizadas para apenas classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
+
+O aperfeiçoamento da aplicação destas técnicas para a área de \emph{information extraction} acarretou em um resultado muito positivo, melhorando cada dia mais a precisão dos resultados obtidos. Assim, algoritmos foram/são alterados e otimizados visando obter maiores performances e resultados melhores.
+
+Pode-se perceber que cada técnica de classificação e/ou extração de informação possui suas particularidades e características técnicas diferentes. Assim, nota-se que cada uma possui uma melhor aplicação para extração de determinado campo, ou conjunto deles. Pequenas modificações são necessárias para que todo o contexto de um artigo científico seja mapeado com sucesso, sendo às vezes necessária a utilização de diversas técnicas em um único projeto.
+
+Para isso, diversas comparações destas técnicas foram feitas. Algumas, inclusive já mencionadas ao longo deste trabalho, foram feitas no surgimento de uma nova técnica, onde esta era comparada com técnicas anteriores, a fim de comprovar sua aplicabilidade e aumento de performance. Porém, este tipo de comparação torna-se tendencioso, visto que os campos analisados, bem como os \emph{datasets} utilizados, tendenciam para resultados positivos da nova técnica apresentada. Além disso, geralmente os \emph{datasets} utilizados são focados em documentos da área de Ciência da Computação, e tendem a seguir um padrão visual já estipulado pelos grandes eventos da área.
+
+Em função deste problema alguns autores realizam comparações de técnicas, isoladamente ou com utilização de ferramentas, para analisar um grupo de documentos reais, objetivando um resultado mais próximo da realidade e, consequentemente, mais passível de erros.
+
+Granitzer et al. \cite{Granitzer-2012-LayoutBased} comparam o uso de Conditional Random Fields (\autoref{sssec:crf})) e Support Vector Machines (\autoref{sssec:svm})) na extração de metadados em artigos científicos, utilizando para tal \emph{datasets} multidisciplinares, como \emph{Mendeley} e \emph{e-Prints}, que fazem parte de um grupo social de \emph{datasets}, permitindo a contribuição global, unindo pesquisadores de diversas áreas do conhecimento, construindo um repositório diversificado e recheado de novos desafios reais.
+
+Em função da existências destes repositórios a informação fica cada vez mais descentralizada e, portanto, é necessária cada vez mais mecanismos inteligentes para garantir a alta qualidade dos metadados extraídos e armazenados de cada documento \cite{Granitzer-2012-LayoutBased}. A combinação destes mecanismos com pós-processamento inteligente contribui para o processo, elevando a qualidade do resultado final encontrado.
+
+% CiteSeer e Mendeley utilizam SVMs. Granitzer 2012
+
+Visando um reconhecimento maior dos resultados obtidos Granitzer et al. realizam comparações dos resultados obtidos com a aplicação de três ferramentas: ParsCit (\autoref{ssec:parscit})), Mendeley Desktop (\autoref{ssec:mendeley})) e sua própria ferramenta baseada em CRFs, no qual se referem como Layout-based CRF.
+
+Este trabalho \cite{Granitzer-2012-LayoutBased} é uma continuação do trabalho anteriormente realizado \cite{Granitzer-2012-Crowdsourced}, onde as ferramentas Mendeley Desktop (\autoref{ssec:mendeley}) e ParsCit (\autoref{ssec:parscit})) foram comparadas, utilizando, porém, um \emph{dataset} menor. Desta vez foi incluída a técnica de Conditional Random Fields (CRF) na comparação, que de acordo com a literatura mencionada neste trabalho, possui resultados melhores do que com a utilização da técnica Hidden Markov Models (HMMs - \autoref{sssec:hmm}).
+
+Foram analisadas 20.672 publicações do \emph{dataset} Mendeley, abrangendo diversas áreas do conhecimento como ciência de modo geral, ciência da computação, biomedicina e física. Já no \emph{dataset} e-Prints foram analisadas 2.452 publicações de áreas como física, medicina e diversas outras pertencentes ao IEEE, ligadas geralmente à área de computação.
+
+Foi relatado que umas etapas principais para um processamento eficaz e uma extração mais precisa é o pós-processamento. A aplicação de diversas análise, inclusive matemáticas, nos resultados extraídos garante um conjunto de dados de saída muito melhor e mais acurado. Segundo Granitzer et al. \cite{Granitzer-2012-LayoutBased} estas tarefas são mais de responsabilidade do setor de engenharia, onde diversos detalhes devem ser observados e diversos algoritmos devem ser aplicados.
+
+De modo geral, os resultados obtidos pelas ferramentas Mendeley e ParsCit foram considerados ruins para os grupos pertencentes à área médica \cite{Granitzer-2012-LayoutBased}. Porém estes resultados poderiam ser melhorados com um novo treino dos dados (\emph{training set}), com aplicações específicas para aquela área do conhecimento, no caso, medicina. Outro ponto interessante observado foi que a extração dos títulos ocorreram mais facilmente do que a extração dos autores, que possui sua performance muito variada em função da técnica que é utilizada.
+
+Para os outros grupos, os resultados foram bem positivos, observando uma pequena diferença entre os números obtidos com as ferramentas Mendeley e ParsCit, que foram muito superiores aos resultados da implementação CRF dos autores. Isso se deve ao fato das duas ferramentas anteriores utilizarem de pós-processamento dos dados, o que garantiu aos resultados obtidos uma precisão muito maior \cite{Granitzer-2012-LayoutBased}.
+
+De acordo com Gratnizer et al., mesmo a técnica de CRF possuindo melhores modelos de extração de informação, foi-se observada que a técnica de SVM utilizada pelo Mendeley Desktop supera a CRF no que tange extração de metadados \cite{Granitzer-2012-LayoutBased}.
+
+A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo do Mendeley Desktop. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas tiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
+
+\end{textnew}
+
 \section{Técnicas de Algoritmos}
 \label{sec:algorithms-tecniques}
 
+\comment{Este tópico foi sugestão do Prof. Renato. Qual o conteúdo deve ser colocado neste tópico?}
+
 \section{Ambientes de Extração de Metadados}
 \label{sec:environments}
-
-% % % % % % % % % %
-
-
-
-
-
-
-
-
-
-
-
-\section{Trabalhos Comparativos}
-\label{sec:comparatives-works}
-
-\comment{Falar sobre as comparações realizadas por Granitzer, tanto no que diz respeito a layouts \cite{granitzer-layout-based}, quanto no que diz respeito a dicionários \cite{Granitzer2011a}.}
-
-\section{Ferramentas e Projetos de Destaque}
-\label{sec:tools}
 
 Alguns projetos baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
 
@@ -496,27 +615,89 @@ Para fins de comparação de resultados, os autores citam as técnicas ParsCit (
 
 Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{ssec:layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
-\comment{Devo explicar aqui o que seriam esses Data-Sets? Exemplo: E-Prints, Mendeley e PubMed.}
-
-\subsection{Layout-CRFs}
-\label{ssec:layout-crfs}
-
-\comment{Escrever sobre.}
-
-\subsection{Mendeley Desktop}
+\subsection{Mendeley}
 \label{ssec:mendeley}
 
-\comment{Escrever sobre.}
+\begin{textnew}
+
+Mendeley é um dos projetos mais complexos e completos que existem na atualidade. Além de uma poderosa ferramenta na extração de metadados o projeto se transformou em uma plataforma completa para pesquisadores. Sua pesquisa se iniciou em novembro de 2007 por três estudantes alemães de doutorado, tendo sua primeira versão lançada em agosto de 2008. Em 2013 o projeto foi vendido para uma empresa, que passou a liderar o processo de criação e desenvolvimento. Atualmente o Mendeley é um projeto amplo, porém estritamente comercial, que possui uma plataforma de pesquisa e gestão de documentos como seu principal produto ofertado.
+
+Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade do usuário. Assim como o CiteULike \autoref{ssec:citeulike} o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto, o que não permite seu uso sem ser através do serviço oferecido pela empresa, através da Internet.
+
+A ferramenta pode ser utilizada via Web, como aplicativo \emph{desktop}, para \emph{tablets} ou \emph{smartphones}. Visto seu aspecto social e suas inúmeras funcionalidades o projeto se tornou uma rede social acadêmica, tanto do ponto de vista de organização de documentos até mesmo para interação entre pesquisadores. A ferramente permite que usuários façam \emph{upload} de artigos em formato PDF para que sejam armazenados em sua biblioteca pessoal. Estes arquivos são analisados e seus metadados são extraídos e enviados para os servidores centrais da ferramenta.
+
+Além de organizar sua biblioteca pessoal é possível também fazer anotações em documentos, destacar partes de texto, exportar citações, gerenciar documentos e compartilhar informações com outros pesquisadores, o que torna a plataforma extremamente completa e funcional.
+
+A pesquisa iniciada pelos três estudantes de doutorado levou em consideração técnicas de \emph{machine learning} e \emph{metadata extraction}, como SVM, por exemplo \cite{Granitzer-2012-LayoutBased}. A ferramenta utiliza um modelo de SVM de dois estágios (\emph{two-stages SVM}) \cite{Han-SVM} no que tange a extração dos metadados, obtendo uma grande exatidão dos resultados.
+
+Pela sua complexidade e por abranger uma gama de funcionalidades muito grande, s serviço foi comparado à rede Last.FM \cite{Mendeley-LastFM}. Assim como a rede social de música o Mendeley permite que o usuário organize sua biblioteca digital de pesquisa de maneira bem eficaz, podendo compartilhar, distribuir e realizar diversas outras funções, assim como é possível na plataforma musical Last.FM.
+
+Por ser um serviço a bastante tempo no mercado o Mendeley funciona também como um grande \emph{dataset}, permitindo que parte de sua coleção de artigos seja utilizada para fins de pesquisa, assim como ocorre com o CiteULike \autoref{ssec:citeulike}, por exemplo. Isso facilita muito a pesquisa pois permite que uma quantidade muito grande de documentos sejam analisados de maneira semi-estruturada, facilitando a descoberta de novos conhecimentos nesta área.
+
+Após a venda da plataforma o projeto teve seu foco muito mais voltado ao comercial, ao contrário do que era anteriormente. A utilização de seus dados ficou restrita e a geração de receita se transformou no principal objetivo da companhia, o que trouxe algumas desvantagens para a pesquisa livre como um todo.
+
+Algumas das funcionalidades do Mendeley:
+
+\begin{itemize}
+    \item Multiplataforma, podendo funcionar tanto na Web como em Windows, Mac, Linux, iPhone e iPad;
+    \item Extração de metadados de artigos em formato PDF (ponto de pesquisa deste trabalho);
+    \item Centralização de sua biblioteca digital, sendo a mesma disponibilizada em qualquer plataforma, pois fica disponível na nuvem (\emph{cloud computing});
+    \item Visualizador de PDF embutido, o que permite marcações em texto e inclusão de notas personalizadas;
+    \item Pesquisa completa da base de dados dos artigos existentes;
+    \item Inclusão de \emph{tags} nos documentos, permitindo uma categorização dos mesmos dentro da biblioteca pessoal de cada usuário;
+    \item Permite que citações e bibliografias sejam exportas em formato Microsoft Word, LibreOffice e \LaTeX;
+    \item Criação de grupos públicos e privados entre pesquisadores, permitindo compartilhamento de conteúdo entre os usuários;
+    \item É uma Rede Social completa, permitindo \emph{posts}, comentários, páginas de perfil, etc;
+    \item Provém uma série de estatísticas com base nos documentos pertencentes à sua biblioteca digital.
+\end{itemize}
+
+% Mendeley usa two-stages SVM method \cite{Han-SVM} e \cite{Granitzer-2012-LayoutBased}
+
+Embora o sucesso do projeto seja muito grande e suas funcionalidades permitem uma série de funções a serem utilizadas pelos pesquisadores, em virtude do foco deste trabalho, o Mendeley se torna uma ferramenta pouco útil, visto que não possui o seu código aberto e não permite que seu código seja instalado em outras máquinas para que sua funcionalidade de extração de metadados seja testada. Mesmo assim, o projeto é bastante promissor e garante uma gama de funções que todo pesquisador necessita, além de organizar de maneira bem eficaz os artigos e demais documentos que fazem parte de um bom trabalho de pesquisa.
+
+\end{textnew}
 
 \subsection{CiteULike}
 \label{ssec:citeulike}
 
-\comment{Escrever sobre CiteULike, com base no artigo de seus autores \cite{citeulike}.}
+\begin{textnew}
+
+Uma outra ferramenta de destaque é o CiteULike \cite{citeulike} e pode ser acessada em \url{http://citeulike.org}. Ela é uma fusão de dois serviços: um serviço de \emph{bookmarking} via Internet, bem como também um sistema de gestão de referências bibliográficas. A união destas duas funcionalidades permite um compartilhamento muito grande de conhecimento entre pesquisadores, de modo a promover uma disseminação de informação com o envio de links contendo \emph{papers} de pesquisa. 
+
+O projeto foi criado em 2004 por Richard Cameron, mas em 2006 a empresa Oversity Ltd. assumiu seu controle e manutenção \cite{CiteULike-FAQ}. O CiteULike pode ser acessado através de um navegador e fica disponível na Internet, de fácil acesso. O projeto ainda encontra-se ativo e em constante evolução, tanto por parte da equipe que o mantém, como por parte de seus usuários.
+
+O projeto é livre desde seu lançamento e não tem nenhum custo para seus usuários. Seu objetivo inicial surgiu de um problema para busca de material bibliográfico. Deste modo o CiteULike foi criado para remover este espaço vazio entre pesquisadores, além de permitir que eles compartilhem bibliografias de maneira simplificada, podendo inclusive contribuir para grupos de pesquisa, por exemplo.
+
+Um dos detalhes desta ferramenta é que ela funciona com base em fontes externas de dados. Quando um usuário encontra na Internet um artigo que lhe é interessante ele pode adicioná-lo à sua lista pessoal (\emph{bookmarking}). Assim, o CiteULike automaticamente visita este endereço informado e realiza uma extração de dados dos detalhes das citações do artigo, salvando o link para este \emph{paper} em sua base de dados \cite{citeulike}. Além disso, ele permite que os metadados deste artigo também sejam extraídos, como título, autores, \emph{journal name}, número de páginas, etc.
+
+Como se pode ver, o CiteULike preserva a informação livre. Ele somente coleta \emph{papers} que já estão disponíveis na Internet, com base em um link fornecido por um usuário seu. Outro ponto de interesse é que a ferramenta também analisa informações de citação para que possa criar um link reverso para os \emph{papers} já analisados. Deste modo, de posse de um link para um determinado artigo o CiteULike consegue analisar quais outros artigos este artigos cita, permitindo criar uma rede de citações entre documentos, o que facilita a disseminação de conhecimento e permite que pesquisadores distintos possam usufruir deste conjunto de informações previamente analisadas.
+
+Outro detalhe importante é o fato do projeto ser ao mesmo tempo um serviço social. Além do armazenamento destes artigos em forma de links, ao adicionar um artigo em sua lista pessoal, o usuário também pode associar \emph{tags} àquele artigo. Isso permite uma categorização muito particular e ainda permite que artigos sejam procurados bem facilmente com bases nestas \emph{tags} fornecidas. De certa forma, outros pesquisadores podem se beneficiar destas informações, pois elas funcionam como uma folksonomia específica para aquele determinado domínio, que pode ser de interesse de outros pesquisadores também. Outro detalhe importante de destaque do ponto social da ferramenta é que ela permite um sistema de votação nos artigos. Cada artigo pode ser votado por usuários, de maneira a criar-se um ranking de artigos mais interessantes, tendo um local de destaque na página inicial da ferramenta.
+
+Um grande detalhe do CiteULike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadada extraction}. Como o CiteULike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset}, visto suas informações semi-estruturadas. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do CiteULike para realizar suas análises \cite{citeulike}. Atualmente na base de dados do CiteULike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
+
+Como o banco de dados do CiteULike é criado de forma estruturada a disseminação de conhecimento entre os pesquisadores é facilmente realizada. De posse do link para um determinado artigo a ferramenta possui todos os detalhes deste documento, como título, autores, etc. Assim permite-se uma pesquisa muito rica em um conjunto de metadados previamente extraídos, criando então uma rede de distribuição de artigos, contribuindo para a comunicação entre pesquisadores de modo geral.
+
+O projeto cumpriu basicamente duas regras:
+
+\begin{enumerate}
+    \item Ele criou um modelo para coleta de informações que é de fácil entendimento para o usuário final, extraindo metadados relevantes que permitem criar automaticamente uma rede de conteúdo, sem deixar de apontar para o artigo em seu site original;
+    \item Ele mudou a maneira tradicional de descobrir e compartilhar informação, visto que a ferramenta permite que usuários acessem suas listas pessoais entre si, disseminando conhecimento com base em um conhecimento já pré-definido por um pesquisador.
+\end{enumerate}
+
+Outro detalhe que permite um uso diferenciado do projeto é a formação de grupos de pesquisa. Com base em interesses similares no histórico de pesquisa, o CiteULike permite que pesquisadores sejam ligados globalmente, compartilhando de temas semelhantes e compartilhando informações entre eles de maneira eficaz e direta.
+
+Tecnicamente o CiteULike foi criado utilizando como banco de dados o PostgreSQL\footnote{Sistema de Banco de Dados relacional com tradição e excelente performance. Sua página inicial é \url{http://www.postgresql.org}.}, Tcl\footnote{Linguagem de programação de scripts muito utilizada em ambientes Linux. Pode ser acessada em \url{http://www.tcl.tk}.} como linguagem de programação e ainda utilizando Memcached\footnote{Sistema de cacheamento baseado em memória, que permite um ganho excelente de performance em ambientes Web, sendo uma das mais utilizadas nos dias atuais. Detalhes em \url{http://memcached.org}.} para criação de cache dos dados armazenados, o que aumentou (e muito) a performance da ferramenta. Seus servidores são baseados em Linux e backups são feitos de 15 em 15 minutos \cite{citeulike}.
+
+Com base nesta quantidade de detalhes e vantagens o CiteULike se tornou um ponto de referência para catalogação e organização de artigos científicos, permitindo a contribuição entre pesquisadores e formando então uma rede de contribuição que favorece a disseminação da pesquisa ao redor do mundo.
+
+\end{textnew}
+
 
 \subsection{CiteSeer}
 \label{ssec:citeseer}
 
-Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural.
+Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer}. Seu objetivo não é apenas extrair dados em artigos, mas sim também analisar citações de outros documentos no conteúdo textual encontrado. Assim, ele é capaz de identificar quais documentos são citados, quantas vezes são citados e onde são citados, se assemelhando muito ao processo de citação natural. O CiteSeer foi criado pelos pesquisadores Lee Giles, Kurt Bollacker e Steve Lawrence em 1997 e utiliza modelos SVM para extração de metadados com bastante eficácia \cite{Granitzer-2012-LayoutBased}.
 
 Desta forma, com estas informações identificadas, ele consegue criar um \textit{ranking} dos documentos citados, incluindo seus autores e \textit{journals}, criando a partir de um documento fonte todo um conjunto de relações com outros documentos de uma maneira estatística bem eficaz.
 
@@ -549,13 +730,15 @@ O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) an
 \subsection{ParsCit}
 \label{ssec:parscit}
 
-Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências. 
+\begin{textedited}
+Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências bibliográficas, utilizando uma implementação desta técnica chamada CRF++ \cite{Councill-Giles-2008-ParsCit}.
+\end{textedited}
 
 O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro do servidor.
 
-Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do documento, que o autor chama de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
+Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do documento, que os autores chamam de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
 
-Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.}.
+Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.} \cite{Councill-Giles-2008-ParsCit}.
 
 Desta forma a fase de pré-processamento se inicia com esta analise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências à artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
 
@@ -568,7 +751,37 @@ A utilização deste projeto é feita de maneira muito simples, podendo ser exec
 \subsubsection{Resultados Comparativos}
 \label{sssec:parscit-comparative}
 
-Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto.
+Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto (detalhes na \autoref{tab:parscit-results}).
+
+\begin{table}
+    \caption{Resultados comparativos entre ParsCit e Peng \cite{Peng-CRF-IE}}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline 
+            \multirow{2}{*}{Field} & \multicolumn{3}{c|}{ParsCit} & \multicolumn{2}{c|}{Peng} \\
+            \cline{2-6}
+             & Precision & Recall & F1 & Acc. & F1 \\ 
+            \hline
+            Author & 98.7 & 99.3 & .99 & 99.9 & .99 \\
+            Booktitle & 92.7 & 94.2 & .93 & 97.7 & .94 \\
+            Date & 100 & 98.4 & .99 & 99.8 & .99 \\
+            Editor & 92.0 & 81.0 & .86 & 99.5 & .88 \\
+            Institution & 90.9 & 87.9 & .89 & 99.7 & .94 \\
+            Journal & 90.8 & 91.2 & .91 & 99.1 & .91 \\
+            Location & 95.6 & 90.0 & .93 & 99.3 & .87 \\
+            Note & 74.2 & 59.0 & .65 & 99.7 & .81 \\
+            Pages & 97.7 & 98.4 & .98 & 99.9 & .99  \\
+            Publisher & 95.2 & 88.7 & .92 & 99.4 & .76 \\
+            Tech & 94.0 & 79.6 & .86 & 99.4 & .87 \\
+            Title & 96.0 & 98.4 & .97 & 98.9 & .98 \\
+            Volume & 97.3 & 95.5 & .96 & 99.9 & .98 \\
+            \hline
+            Average & 95.7 & 95.7 & .95 & – & .91 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:parscit-results}
+\end{table}
 
 Visando também analisar outros projetos a mesma comparação de resultados foi feita com o projeto CiteSeer \cite{citeseer}, onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como no ParsCit.
 
@@ -578,6 +791,25 @@ Visando também analisar outros projetos a mesma comparação de resultados foi 
 	% Diferencial do projeto
 	% Se está ativo ou não
 	
-\comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
+% \comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
+\subsection{Outras Ferramentas e Projetos}
+\label{ssec:other-tools}
+
+\begin{textnew}
+
+Além das ferramentas apresentadas diversas outras apresentam características semelhantes, porém com pouca participação de mercado ou com foco em funcionalidades que não são objetos de estudo deste trabalho, como por exemplo, somente o foco no armazenamento e gestão dos artigos científicos. Alguns destes projetos que pode-se citar são:
+
+\begin{itemize}
+    \item \textbf{Zotero:} Seu objetivo é servir como um repositório centralizado onde os artigos ficam armazenados, permitindo que as referências sejam exportadas para diversos formatos. Disponível em \url{https://www.zotero.org}.
+    \item \textbf{Citavi:} Permite que você organize artigos científicos de maneira bem estruturada, permitindo inclusive contribuição através de formação de times de pesquisadores. Também permite exportação de suas referências para diversos outros formatos. Disponível em \url{http://www.citavi.com/}.
+    \item \textbf{BibDesk:} Exclusivo para usuários Mac/Apple. É um \emph{software} final que permite que usuários organizem seus artigos, simplificando todo o processo de exportação dos formatos de referências. É focado para usuários \LaTeX. Disponível em \url{http://bibdesk.sourceforge.net}.
+    \item \textbf{Docear:} Permite que usuários organizem suas bibliotecas digitais de artigos científicos, permitindo também compartilhar informações com outros usuários. Possui versões para Windows, Linux e Mac. Disponível em \url{https://www.docear.org/}.
+    \item \textbf{Qiqqa:} Permite que além de organizar os usuários façam gestão das referências de seus artigos, que ficam armazenados também em \emph{cloud computing}. Possui versões Windows e Android. Disponível em \url{http://www.qiqqa.com/}.
+    \item \textbf{Papers:} Aplicativo disponível para Windows, Mac, iPhone e iPad que permite que usuários gerenciem e pesquisem artigos científicos. Possui um banco de dados próprio e é oferecido apenas em versão paga. Disponível em \url{http://www.papersapp.com/}.
+    \item \textbf{JabRef:} Muito parecido com a ferramenta \emph{BibDesk}, visto que organizar artigos e referências focados em usuários \LaTeX. Possui versões para Windows, Linux e Mac. Uma de suas vantagens é possuir uma interface muito simplificada, facilitando a utilização pelos usuários. Disponível em \url{http://jabref.sourceforge.net/}.
+    \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
+\end{itemize}
+
+\end{textnew}
 

@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+./clean.sh
+
 git_branch=`git rev-parse --abbrev-ref HEAD`
 git_hash=`git log --pretty=format:'%h' -n 1`
 thesis_date=`LANG=pt_BR date +"%b %Y"`
