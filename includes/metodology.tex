@@ -3,24 +3,17 @@
 \chapter{Metodologia}
 \label{cha:metodology}
 
-\section{Escolha do Corpus}
-\label{sec:corpus}
-
-\section{Desenho do Experimento}
-\label{sec:experiment-design}
-
-\section{Ambiente Tecnológico}
-\label{sec:tech-environment}
-
-Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de coleta de informações e comparação de resultados de técnicas de extração de metadados em artigos científicos.
-
-Desta maneira, a pesquisa de modo padrão não traz alteração nos ambientes pesquisados, apenas os analisa e os compara com base em padrões estabelecidos como sendo de resultado adequado. Assim, o projeto em si trata muito mais de pré-seleção de documentos e técnicas a serem testadas como também dos resultados já analisados e que são necessários para uma técnica ser considerada produtiva.
+Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de extração automática de metadados por ferramentas previamente selecionadas, tendo os resultados comparados com a extração manual do mesmo conjunto de artigos científicos.
 
 % Explicar o passo a passo que será utilizado
 
-Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmente as que são necessárias dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados. Os elementos se relacionam entre si e estão identificados na \autoref{fig:metodology}. 
+Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realmente as que possuem viabilidade técnica de testes dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados.
 
-% Colocar diagrama demonstrando a relação entre todos os objetos, como artigos, técnicas, o processamento, a planilha de resultados e as conclusões
+% Explicar de modo geral como será o processo
+
+\begin{textnew}
+De modo geral o procedimento de testes deste trabalho será realizado através da instalação de cada ferramenta selecionada em máquinas (servidores) distintas, permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados em cada uma destas ferramentas e seus resultados analisados, centralizados e consolidados a fim de se obter uma nota final para cada resultado encontrado. O fluxo de passos necessários para a realização destes testes pode ser melhor visualizado na \autoref{fig:metodology}.
+\end{textnew}
 
 \begin{figure}
     \centering
@@ -30,10 +23,82 @@ Primeiramente, são filtradas as técnicas encontradas a fim de analisar realmen
 \end{figure}
 
 
-\section{Seleção das Técnicas/Ferramentas}
-\label{sec:choosen-tools}
+\section{Escolha do Corpus}
+\label{sec:corpus}
 
-As técnicas que foram analisadas dentro do capítulo de \textbf{Revisão de Literatura} compreendem um universo atuante e de caráter livre, independente da linguagem de programação que foi utilizada no desenvolvimento, exceto pelos detalhes explicados nas limitações do trabalho.
+% Falar da seleção de artigos de várias áreas
+
+\begin{textedited}
+Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente coletados. Deste modo, foi selecionada uma série de artigos científicos (\emph{Corpus}) das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são possível de ser analisados e coletados.
+\end{textedited}
+
+% Porque selecionar artigos de diferentes áreas
+
+\begin{textnew}
+Em virtude da necessidade de testar estas ferramentas em um ambiente real, estes artigos que compõem o \emph{Corpus} foram selecionados por estudantes de graduação, mestrado e doutorado de diversas instituições de ensino e áreas do conhecimento, fazendo com que esta seleção de documentos faça parte de um conjunto real e concreto, que necessita ser testada para comprovar a eficácia das ferramentas analisadas neste trabalho.
+
+Assim, com uma seleção de artigos que faz parte do cotidiano destes estudantes podemos aferir se os resultados fornecidos pelas ferramentas podem ser considerados positivos ou negativos, com base na comparação entre os resultados automaticamente coletados e a análise visual e manual destes documentos.
+\end{textnew}
+
+% Áreas dos Artigos e Eventos
+
+\begin{textedited}
+A lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados permitindo a comparação desejada. Na \autoref{tab:papers-list} pode-se ter acesso ao número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no \autoref{appendix:papers} deste documento.
+\end{textedited}
+
+\begin{table}
+    \caption{Seleção de artigos científicos para testes (ainda em desenvolvimento)}
+    \begin{center}
+        \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Área de Conhecimento} & \textbf{Total de Artigos} \\ 
+            \hline
+            Arquitetura e Urbanismo & 7 \\ 
+            Música & 7 \\ 
+            Ciência da Computação & 8 \\
+            Ciência da Informação & 9 \\
+            Ciências Biológicas & 7 \\
+            Direito & 7 \\
+            Engenharia Civil & 8 \\
+            Letras & 7 \\
+            Matemática Computacional & 7 \\
+            Medicina & 9 \\ 
+            Odontologia & 8 \\ 
+            Psicologia & 9 \\
+            Sociologia & 7 \\   
+            \hline
+            \textbf{Total} & \textbf{100} \\
+            \hline 
+        \end{tabular}
+    \end{center}
+    \label{tab:papers-list}
+\end{table}
+
+\begin{textedited}
+A seleção dos artigos foi feita tomando por base a máxima diferenciação visual possível na disposição dos metadados, permitindo que uma maior variedade de documentos seja analisada, aumentando ainda a confiança nos resultados obtidos.
+\end{textedited}
+
+% Artigos em Inglês, somente
+
+\begin{textedited}
+Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escrito no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ''processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
+\end{textedited}
+
+\begin{textedited}
+Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês por exemplo, tenham análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas a fim de se obter resultados satisfatórios.
+\end{textedited}
+
+
+
+\section{Desenho do Experimento}
+\label{sec:experiment-design}
+
+\subsection{Seleção das Ferramentas}
+\label{ssec:choosen-tools}
+
+\begin{textedited}
+As técnicas que foram analisadas no capítulo de \nameref{cha:library} compreendem um universo atuante e de caráter livre, independente da linguagem de programação que foi utilizada no desenvolvimento, exceto pelos detalhes explicados nas limitações do trabalho.
+\end{textedited}
 
 Em função do grande número de ferramentas disponíveis como resultado desta pesquisa, algumas foram selecionadas a fim de se obter ao máximo os testes e os resultados esperados.
 
@@ -46,82 +111,20 @@ Assim sendo, a \autoref{tab:tools} lista as seguintes ferramentas que foram sele
 \begin{table}
     \caption{Ferramentas selecionadas para testes}
     \begin{center}
-    	\begin{tabular}{|p{6cm}|p{5cm}|}
-			\hline \textbf{Ferramenta} & \textbf{Linguagem} \\ 
-			\hline Ferramenta 1 & Java\\
-			\hline Ferramenta 2 & Perl\\
-			\hline Ferramenta 3 & Python\\
-			\hline Ferramenta 4 & Java\\
-	    	\hline 
-    	\end{tabular} 
-    \end{center}
-  	\label{tab:tools}
-\end{table}
-
-\section{Seleção de Artigos}
-
-Visando provar a eficiência destas técnicas, desejamos ter informações de saída consideradas corretas para que seus resultados possam ser comparados e verificados com exatidão. Assim, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são possível de ser analisados e coletados.
-
-% Áreas dos Artigos e Eventos
-
-Desde modo a lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados a fim de ter o resultado da aplicação das técnicas comparado com os resultados obtidos manualmente. Na \autoref{tab:papers-list} pode-se ver o número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no \autoref{appendix:papers} deste documento.
-
-Os artigos foram selecionados tomando como base a principal forma de análise das técnicas selecionadas para testes: o layout, ou seja, a disposição dos elementos nos artigos científicos. Esta seleção foi feite com base a abranger um maior número de representações, com disposições diferentes, tipografias diferentes e inclusive ordem diferentes nas exibições. Desta forma as técnicas poderão ser confrontadas e os resultados comparados com os resultados esperados.
-
-% Artigos em Inglês, somente
-
-Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de além de ser a língua inglesa universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, de maneira a ter um universo muito maior de artigos escrito em inglês do que outras línguas.
-
-Além disso a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês, tenham análises diferenciadas em função de suas diferenças na forma de representação.
-
-\begin{table}
-    \caption{Seleção de artigos científicos para testes (ainda em desenvolvimento)}
-    \begin{center}
-        \begin{tabular}{|l|l|}
-        	\hline
-            \textbf{Área de Conhecimento} & \textbf{Total de Artigos} \\ 
-            \hline
-            Arquitetura e Urbanismo & 7 \\ 
-			Música & 7 \\ 
-			Ciência da Computação & 8 \\
-			Ciência da Informação & 9 \\
-            Ciências Biológicas & 7 \\
-            Direito & 7 \\
-            Engenharia Civil & 8 \\
-            Letras & 7 \\
-            Matemática Computacional & 7 \\
-            Medicina & 9 \\ 
-            Odontologia & 8 \\ 
-            Psicologia & 9 \\
-            Sociologia & 7 \\	
-            \hline
-            \textbf{Total} & \textbf{100} \\
+        \begin{tabular}{|p{6cm}|p{5cm}|}
+            \hline \textbf{Ferramenta} & \textbf{Linguagem} \\ 
+            \hline Ferramenta 1 & Java\\
+            \hline Ferramenta 2 & Perl\\
+            \hline Ferramenta 3 & Python\\
+            \hline Ferramenta 4 & Java\\
             \hline 
-        \end{tabular}
+        \end{tabular} 
     \end{center}
-    \label{tab:papers-list}
+    \label{tab:tools}
 \end{table}
 
-\section{Infraestrutura Computacional}
-\label{sec:computational-structure}
-
-Para que os testes sejam feitos de maneira adequada e independente, sem interferência de outras técnicas nos resultados, serão utilizados N servidores, sendo N o número total de técnicas a serem avaliadas.
-
-Deste modo, para cada técnica avaliada será configurado um servidor com as linguagens de programação necessárias e todos os pré-requisitos que a técnica necessita para funcionar. Estes servidores serão definidos através de máquinas virtuais, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica.
-
-\subsection{Testes In Logo}
-\label{ssec:in-loco-tests}
-
-% Falar de técnicas que já possuem algum site para testes, demonstrando a ferramente funcionando
-
-Algumas técnicas de extração de metadados disponibilizam acesso online a uma ferramenta gratuita para testes. Deste modo, para estes casos específicos não será necessária a criação de servidores e instalação dos pacotes, visto que o ambiente de testes poderá ser feito dentro da ferramente fornecida pelas desenvolvedoras das técnicas.
-
-% Vantagem de ser feito o teste online
-
-Este fato garante uma maior precisão nos resultados, inclusive pelo fato de o ambiente de testes estar 100\% funcionando e ter sido disponibilizado pela mesma equipe de desenvolvedores do projeto, garantindo a eficácia nos resultados que essa técnicas fornece.
-
-\section{Quadro Comparativo}
-\label{sec:comparative-board}
+\subsection{Quadro Comparativo}
+\label{ssec:comparative-board}
 
 Visando uma comparação dos resultados eficaz todos os resultados serão inseridos em um documento formato planilha para serem comparados manualmente e as conclusões então obtidas. Para tal esta planilha de resultados a chamaremos de 'Quadro Comparativo" e será exclusiva para comparação dos resultados das técnicas analisadas.
 
@@ -129,8 +132,8 @@ Visando uma comparação dos resultados eficaz todos os resultados serão inseri
 
 Com o objetivo de facilitar o acesso às informações este documento é disponibilizado como anexo deste projeto e ainda tem seu acesso liberado em formato online. Desta forma qualquer pessoa poderá ter acesso aos resultados obtidos pelos testes e comparar elas mesmas os dados contidos na planilha.
 
-\section{Metadados, Pesos e Resultados}
-\label{sec:metadata-results}
+\subsection{Metadados, Pesos e Resultados}
+\label{ssec:metadata-results}
 
 % Importância de se ter pesos em função dos metadados
 
@@ -151,17 +154,17 @@ Assim sendo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cad
 \begin{table}
     \caption{Os metadados e seus pesos atribuídos}
     \begin{center}
-    	\begin{tabular}{|p{3cm}|p{8cm}|C{1cm}|}
-			\hline \textbf{Metadado} & \textbf{Relevância} & \textbf{Peso} \\ 
-			\hline Título & Um dos termos mais buscados quando se pesquisa um artigo & 5 \\
-	    	\hline Autor(es) & O segundo termo mais pesquisado & 4 \\
-	    	\hline E-mail(s) & Pouco relevante no quesito pesquisa de artigos & 1 \\
-	    	\hline Resumo & Importante por conter palavras chaves e o resumo propriamente dito & 3 \\
-	    	\hline Referências & Muito importante e necessário, pois será utilizada na referência inversa de autores & 5 \\
-	    	\hline 
-    	\end{tabular} 
+        \begin{tabular}{|p{3cm}|p{8cm}|C{1cm}|}
+            \hline \textbf{Metadado} & \textbf{Relevância} & \textbf{Peso} \\ 
+            \hline Título & Um dos termos mais buscados quando se pesquisa um artigo & 5 \\
+            \hline Autor(es) & O segundo termo mais pesquisado & 4 \\
+            \hline E-mail(s) & Pouco relevante no quesito pesquisa de artigos & 1 \\
+            \hline Resumo & Importante por conter palavras chaves e o resumo propriamente dito & 3 \\
+            \hline Referências & Muito importante e necessário, pois será utilizada na referência inversa de autores & 5 \\
+            \hline 
+        \end{tabular} 
     \end{center}
-  	\label{tab:metadata-weight}
+    \label{tab:metadata-weight}
 \end{table}
 
 % Falar sobre a porcentagem de acertos em cada metadado, por exemplo, se o resultado extraiu 90\% do resultado (não a totalidade), deve ser considerado um valor para este resultado, não somente sim ou não.
@@ -183,15 +186,15 @@ Assim, temos o valor de cada resultado possível, que será também utilizado no
 \begin{table}
     \caption{Resultados obtidos em cada metadado e sua precisão}
     \begin{center}
-    	\begin{tabular}{|C{3cm}|C{3cm}|}
-			\hline \textbf{Resultado} & \textbf{Precisão} \\ 
-			\hline Preciso & 1\\
-	    	\hline Satisfatório & 0.60 \\
-	    	\hline Inaceitável & 0 \\
-	    	\hline 
-    	\end{tabular} 
+        \begin{tabular}{|C{3cm}|C{3cm}|}
+            \hline \textbf{Resultado} & \textbf{Precisão} \\ 
+            \hline Preciso & 1\\
+            \hline Satisfatório & 0.60 \\
+            \hline Inaceitável & 0 \\
+            \hline 
+        \end{tabular} 
     \end{center}
-  	\label{tab:precision}
+    \label{tab:precision}
 \end{table}
 
 \subsection{Índice de Confiabilidade}
@@ -210,23 +213,50 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
 A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:confiability-index}, onde temos as variáveis que fazem parte da fórmula descrita.
 
 \begin{center}
-	$ IC=\frac{5(PT)+4(PA)+PE+3(PR)+5(PRF)}{18} $
+    $ IC=\frac{5(PT)+4(PA)+PE+3(PR)+5(PRF)}{18} $
 \end{center}
 
 \begin{table}
     \caption{Descrição de cada variável no Índice de Confiabilidade}
     \begin{center}
-    	\begin{tabular}{|p{3cm}|p{8cm}|}
-			\hline \textbf{Variável} & \textbf{Descrição}\\ 
-			\hline PT & Precisão na obtenção do título \\
-			\hline PA & Precisão na obtenção do(s) autor(es)\\
-			\hline PE & Precisão na obtenção dos e-mails dos autores \\
-			\hline PR & Precisão na obtenção do resumo \\
-			\hline PRF & Precisão na obtenção das referências \\
-	    	\hline 
-    	\end{tabular} 
+        \begin{tabular}{|p{3cm}|p{8cm}|}
+            \hline \textbf{Variável} & \textbf{Descrição}\\ 
+            \hline PT & Precisão na obtenção do título \\
+            \hline PA & Precisão na obtenção do(s) autor(es)\\
+            \hline PE & Precisão na obtenção dos e-mails dos autores \\
+            \hline PR & Precisão na obtenção do resumo \\
+            \hline PRF & Precisão na obtenção das referências \\
+            \hline 
+        \end{tabular} 
     \end{center}
-  	\label{tab:confiability-index}
+    \label{tab:confiability-index}
 \end{table}
+
+
+
+
+\section{Ambiente Tecnológico}
+\label{sec:tech-environment}
+
+\subsection{Infraestrutura Computacional}
+\label{ssec:computational-structure}
+
+Para que os testes sejam feitos de maneira adequada e independente, sem interferência de outras técnicas nos resultados, serão utilizados N servidores, sendo N o número total de técnicas a serem avaliadas.
+
+Deste modo, para cada técnica avaliada será configurado um servidor com as linguagens de programação necessárias e todos os pré-requisitos que a técnica necessita para funcionar. Estes servidores serão definidos através de máquinas virtuais, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica.
+
+
+\subsection{Testes In Loco}
+\label{ssec:in-loco-tests}
+
+% Falar de técnicas que já possuem algum site para testes, demonstrando a ferramente funcionando
+
+Algumas técnicas de extração de metadados disponibilizam acesso online a uma ferramenta gratuita para testes. Deste modo, para estes casos específicos não será necessária a criação de servidores e instalação dos pacotes, visto que o ambiente de testes poderá ser feito dentro da ferramente fornecida pelas desenvolvedoras das técnicas.
+
+% Vantagem de ser feito o teste online
+
+Este fato garante uma maior precisão nos resultados, inclusive pelo fato de o ambiente de testes estar 100\% funcionando e ter sido disponibilizado pela mesma equipe de desenvolvedores do projeto, garantindo a eficácia nos resultados que essa técnicas fornece.
+
+
 
 
