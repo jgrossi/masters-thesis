@@ -11,21 +11,15 @@
 
 % Bases pesquisadas
 
-\begin{textedited}
 Como o objetivo do trabalho tem foco na resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM, por exemplo. Outras bases multidisciplinares também foram pesquisadas, através do site da CAPES, mas com caráter mais de apoio teórico.
-\end{textedited}
 
 Embora a amplitude desta área de estudo, alguns detalhes necessitam ser observados para evitar assim redundância e perda de foco. A pesquisa necessitava ser focada em técnicas de extração de metadados em artigos científicos, somente. Estas técnicas necessitam ser reais, de maneira a existir realmente uma forma prática de serem testadas, fazendo assim com que os resultados obtidos sejam comparados e confrontados para verificar então a eficácia deste processo.
 
-\begin{textedited}
 Como a pesquisa necessita de um resultado prático eficaz os critérios que serão adotados para demonstrar a relevância de um estudo serão seus resultados, sua presença de mercado e sua maturidade, visto que necessitam ainda estarem ativos para serem devidamente testados. Com base em uma técnica potencialmente eficaz, esta deve ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus metadados extraídos de maneira a poder comparar os resultados obtidos com o resultado de cada uma das ferramentas. Portanto os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
-\end{textedited}
 
 % Falar sobre os eventos encontrados na área
 
-\begin{textedited}
 Visando abranger grande parte da literatura sobre o assunto foram mapeados alguns eventos para serem pesquisados, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
-\end{textedited}
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval)
@@ -35,19 +29,13 @@ Visando abranger grande parte da literatura sobre o assunto foram mapeados algun
     \item ACM Conference on Digital Libraries
 \end{itemize}
 
-\begin{textedited}
 Estes eventos foram analisados, observando todas as citações e referências utilizadas em cada artigo publicado, a fim de encontrar também detalhes importantes para a pesquisa, sem perder o foco do trabalho.
-\end{textedited}
 
 \section{Metadados}
 \label{sec:metadados}
 
-\comment{Esta nova seção foi incluída para definir alguns conceitos que são apresentados mais a frente com a apresentação das técnicas.}
-
 \subsection{Conceito de Metadado}
 \label{ssec:metadata-concept}
-
-\begin{textnew}
 
 Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialmente um metadado da seguinte maneira:
 
@@ -63,12 +51,8 @@ Podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre u
 
 Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser direcionados, visando identificar e explicar melhor os conceitos que serão aplicados na análise das ferramentas e técnicas que aqui serão apresentadas.
 
-\end{textnew}
-
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
-
-\begin{textnew}
 
 Diante da infinidade de dados que podem estar atrelados a um recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão. 
 
@@ -98,47 +82,34 @@ Abaixo podemos ver um exemplo de código para utilização de metadados Dublin C
 
 Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\textit{DC.Title}) e idioma (\textit{DC.Language}), são feitos de maneira bem simplificada e direta. Para páginas da Internet, com as informações todas em formato HTML, a utilização destes metadados perderiam o sentido, visto que essas informações poderiam ser facilmente encontradas de outras formas, como a análise do próprio código HTML. Porém, para documentos binários - em formato PDF ou Word, por exemplo - a utilização destes metadados é de suma importância, visto que permite que essas informações básicas sejam capturadas sem a necessidade de análise do conteúdo dos arquivos, o que traria complexidade ao processo.
 
-\end{textnew}
 
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-\comment{Lembrando que todo texto em ROXO não estava presente na última versão enviada e todo texto em VERMELHO foi alterado deste a última versão.}
-
 Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
 
-\begin{textedited}
 Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que agrega assertividade ao processo de extração.
-\end{textedited}
 
 % Explicar o conceito de dataset também, que algumas técnicas utilizam datasets já prontos para facilitar o processo de testes.
 
-\begin{textnew}
 Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Estes dados são fornecidos por diversas entidades/órgãos de certa forma estruturados para serem analisados, com alguma bagagem semântica já presente; são os chamados \emph{datasets}. Algumas bases de dados já consolidadas fornecem estes conjunto de dados reais, com base nos \emph{papers} que estão catalogados internamente, justamente para serem objetos de pesquisa, a fim de facilitar o manuseio e seleção dos documentos de entrada para análise e desenvolvimento de pesquisas.
 
 Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar o modelo, de maneira a promover um padrão de extração com base nestes dados previamente informadas.
-\end{textnew}
 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
 
-\begin{textnew}
 Support Vector Machines (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados sejam analisados, possibilitando que padrões sejam extraídos, criando uma espécie de memória \cite{Vapnik-SVM}. Seu objetivo inicial era ser uma técnica de classificação de dados, por ser focada em reconhecimento de padrão através de análises matemáticas.
 
 Esta técnica se baseia na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado por parte da distância entre ocorrências \cite{Vapnik-SVM}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação entre um resultado e outro, de forma numérica.
 
 De acordo com Chieu \cite{Chieu}, ele sugere que a tarefa de extrair informação pode ser considerada um problema de classificação. Partindo deste pensamento foi que Han \cite{Han-SVM} decidiu utilizar técnicas de SVM para extração de metadados, utilizando das qualidades matemáticas do processo no reconhecimento de padrões, o que permitiu que novas descobertas fossem feitas, expandindo o estudo da extração de dados para um patamar mais amplo e elevado.
 
-\end{textnew}
-
-\begin{textedited}
 Várias ferramentas de extração se baseiam na utilização de SVM como técnica principal, visto sua eficiência no reconhecimento de padrões. Como descrito por \cite{Han-SVM} a utilização desta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, do qual se deseja obter os metadados, por exemplo.
 
 Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo, cada linha do cabeçalho do documento é classificada em uma ou mais classes, onde algumas fazem parte do padrão Dublin Core, detalhado na \autoref{ssec:metadata-patterns}.
 
 Seymore et al. \cite{Seymore-HMM-IE} definiu 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas 15 (quinze) \textit{tags} definidas, somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han para a extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
-
-\end{textedited}
 
 
 \begin{table}
@@ -166,9 +137,7 @@ Seymore et al. \cite{Seymore-HMM-IE} definiu 15 (quinze) \textit{tags} para esta
     \label{tab:svm-classes}
 \end{table}
 
-\begin{textnew}
 A ocorrência dos campos é mapeada em uma representação bidimensional, permitindo identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ''support vectors'', que permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
-\end{textnew}
 
 \begin{figure}
     \label{fig:svm-graph}
@@ -177,9 +146,7 @@ A ocorrência dos campos é mapeada em uma representação bidimensional, permit
     \includegraphics[width=0.6\linewidth]{./assets/images/svm-graph}
 \end{figure}
 
-\begin{textedited}
 Além desta análise são utilizadas comparações de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilita na identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
-\end{textedited}
 
 \begin{itemize}
     \item Dicionário online padrão em sistemas Linux;
@@ -193,14 +160,11 @@ Além desta análise são utilizadas comparações de palavras dentro de um cont
 
 Para cada uma das classes analisadas são feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, sejam extraídos com base em expressões regulares utilizadas em linguagens de programação.
 
-\begin{textnew}
 Support Vector Machine é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica sua principal funcionalidade é baseada em opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, de modo a confrontar e comparar classes de metadados, a fim de identificá-los e diferenciá-los.
 
 Han também encontrou alguns desafios na diferenciação de campos, como é o caso dos múltiplos autores. Em alguns casos a diferenciação de autores, que fazem do mesmo campo, poderiam estar até em linhas ou grupos diferentes. Para isso foram utilizados alguns elementos para representar a separação dos nomes (\textit{chunks}), como pontuações e a palavra ''and''. Desta forma, os autores eram extraídos seguindo este padrão estipulado.
 
 O resultado obtido pela utilização de SVM como técnica de extração de metadados foi bem relevante. O autor realizou uma comparação com a aplicação da técnica de Hidden Markov Models (HMM) - detalhada na \autoref{sssec:hmm} - onde a SVM se mostrou mais eficaz na precisão da extração para algumas classes específicas, como é o caso dos títulos, autores e endereços, por exemplo. Para outras classes a utilização da técnica de HMM ainda demonstrou ser mais eficiente na extração de metadados.
-
-\end{textnew}
 
 % Han também utiliza dicionários para facilitar na extração das informações
 
@@ -219,7 +183,7 @@ O processo é baseado na identificação de modelos observáveis que representem
 
 Um exemplo prático citado por Rabiner e Juang \cite{Rabiner-HMM} é o caso de uso do jogo  \textit{Cara e Coroa}. Toma-se um observador em um quarto fechado com uma cortina totalmente fechada para outro cômodo. Este observador não consegue ver nada que acontece no outro cômodo, onde está uma outra pessoa jogando uma moeda pra cima, relatando sempre o resultado obtido (cara ou coroa). Neste caso o problema é construir um modelo Hidden Markov Model (HMM) para explicar ao observador a sequência dos resultados obtidos. 
 
-Neste exemplo, o primeiro caso é baseado tanto no estado de cada resultado (cara ou coroa) e em probabilidades matemáticas de ocorrência destes estados, neste caso, 0.5, ou seja, dois estados. Assim desenha-se modelos onde os estados são representados com base nas inúmeras possibilidades existentes, levando inclusive em consideração a sequência dos últimos acontecimentos. \begin{textnew}Outra possibilidade seria a existência de duas moedas, o que daria ainda dois estados existentes, mas não em função da probabilidade de sair cara ou coroa, mas sim por serem consideradas duas moedas ''justas'', o que daria também uma probabilidade de 0.5 pra cada.
+Neste exemplo, o primeiro caso é baseado tanto no estado de cada resultado (cara ou coroa) e em probabilidades matemáticas de ocorrência destes estados, neste caso, 0.5, ou seja, dois estados. Assim desenha-se modelos onde os estados são representados com base nas inúmeras possibilidades existentes, levando inclusive em consideração a sequência dos últimos acontecimentos. Outra possibilidade seria a existência de duas moedas, o que daria ainda dois estados existentes, mas não em função da probabilidade de sair cara ou coroa, mas sim por serem consideradas duas moedas ''justas'', o que daria também uma probabilidade de 0.5 pra cada.
 
 Neste último exemplo o grande detalhe do modelo é que este é oculto (\textit{hidden}). Isso se deve ao fato de os dois estados, representados pelas duas moedas, serem totalmente independentes, o que não permite identificar qual moeda é a ''justa'' e então informar ao observador o resultado daquela rodada.
 
@@ -237,8 +201,6 @@ A utilização dos resultados passados - \textit{training data set} - é muito i
 
 Seguindo este padrão o HMM pode ser utilizado, por exemplo, para reconhecimento de palavras isoladas que, juntamente com a utilização de um vocabulário de palavras permite a criação de modelos de reconhecimento. Cada palavra deste vocabulário seria um modelo HMM, permitindo que a palavra escolhida fosse a pertencente ao modelo com maior probabilidade.
 
-\end{textnew}
-
 Já no âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al. \cite{Seymore-HMM-IE}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com um estado por campo. 
 
 
@@ -249,11 +211,9 @@ Já no âmbito da extração da informação, o HMM pode ser aplicado conforme �
     \includegraphics[width=0.7\linewidth]{./assets/images/hmm-states}
 \end{figure}
 
-\begin{textedited}
 Um dos pontos positivos deste modelo é que por serem baseados em estatística eles são muito bem empregados em problemas de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem deste método podemos citar o fato de, por ser baseado em estatística, uma grande quantidade prévia de dados deve ser utilizada a título de treino para se obter padrões significativos para então ser aplicados de maneira final na criação do modelo.
-\end{textedited}
 
-Deste modo, para extração dos metadados, o HMM pode ser utilizado aplicando um marcador (\textit{label}) em cada palavra do cabeçalho de um documento (artigo científico), relacionando cada palavra a uma classe, como título, autor, etc. \begin{textnew}Assim, uma opção seria a criação de um modelo com \texttt{N} estados, onde cada estado corresponderia a uma classe que se deseja extrair - por exemplo o título do documento. Porém, no caso da existência de sequências ocultas (\textit{hidden sequences}) - o que alteraria a seleção do estado seguinte - a utilização de vários estados para cada classe traria resultados melhores \cite{Seymore-HMM-IE}.
+Deste modo, para extração dos metadados, o HMM pode ser utilizado aplicando um marcador (\textit{label}) em cada palavra do cabeçalho de um documento (artigo científico), relacionando cada palavra a uma classe, como título, autor, etc. Assim, uma opção seria a criação de um modelo com \texttt{N} estados, onde cada estado corresponderia a uma classe que se deseja extrair - por exemplo o título do documento. Porém, no caso da existência de sequências ocultas (\textit{hidden sequences}) - o que alteraria a seleção do estado seguinte - a utilização de vários estados para cada classe traria resultados melhores \cite{Seymore-HMM-IE}.
 
 % begin Seymore-HMM-IE
 
@@ -296,12 +256,8 @@ Em função dos resultados obtidos, pode-se considerar a performance de HMM na e
 
 Além da utilização de HMM de forma natural, algumas variações de seu algoritmo são também citadas na literatura, como é o caso dos MEMMs (\textit{Maximum Entropy Markov Models}) \cite{maximum-entropy}. Nos MEMMs cada estado possui um modelo exponencial que utiliza as características de observação como entrada de dados (\textit{input}) \cite{Lafferty-CRF}. Estes modelos são baseados na técnica de HMM, se diferenciando na maneira como os estados se relacionam, bem como a relação entre suas transições, o que leva à citações de maneira independente por alguns autores, porém, com herança lógica dos conceitos de HMM.
 
-\end{textnew}
-
 \subsubsection{Word Clustering}
 \label{sssec:word-clustering}
-
-\begin{textnew}
 
 Técnicas de classificação de texto geralmente utilizam palavras extraídas do texto como a principal fonte de recursos para a representação. Por outro lado, os \textit{clusters} de palavras tem sido uma proposta eficaz para a redução da dimensionalidade e da dispersão, melhorando assim a performance desta classificação \cite{Han-Giles-WC}.
 
@@ -309,18 +265,11 @@ Basicamente o conceito de \textit{clusters} compreende um conjunto de palavras f
 
 A utilização destes grupos de palavras demonstra uma relação entre palavras semelhantes dentro de um determinado contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais eficaz, com resultados mais eficazes.
 
-\end{textnew}
-
-
-\begin{textedited}
-
 Sendo assim, Han et al. apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos da área de Ciência da Computação, indo de maneira relativamente contrária às propostas tradicionais, que baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
 
 Han et al. agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, com base em um conhecimento prévio de classes específicas, como autor, título, etc. Deste modo, palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster} construído, permitindo identificar, por grupos, características de metadados. Para cada classe cria-se um \textit{cluster}, com suas palavras e propriedades ortográficas específicas.
 
 Como exemplo, a palavra ''Mary'' faz parte do contexto de ''nomes''. Portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ''autor'', por exemplo. Esta lógica é apresentada para outras classes, como ''e-mail'' por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere ''@'', o que levaria ao conceito de utilização de expressões regulares para encontrar padrões de ocorrências.
-
-\end{textedited}
 
 \begin{figure}
     \centering
@@ -329,15 +278,9 @@ Como exemplo, a palavra ''Mary'' faz parte do contexto de ''nomes''. Portanto ex
     \includegraphics[width=0.7\linewidth]{./assets/images/workflow-rule-based}
 \end{figure}
 
-\begin{textnew}
 A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
-\end{textnew}
-
-\begin{textedited}
 
 Han et al. ainda utiliza da técnica  de SVM (\autoref{sssec:svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação.
-
-\end{textedited}
 
 Além disso é utilizada também a técnica de HMM (\autoref{sssec:hmm}) para a extração das referências bibliográficas, observando sempre a ocorrência de padrões como título e autor para identificação dos mesmos em referências existentes no documento.
 
@@ -345,24 +288,15 @@ Basicamente a \textit{Rule-based Word Clustering} se resume em 3 (três) etapas.
 
 A segunda etapa é chamada de \textit{Cluster Design}. Nesta etapa é onde os \textit{clusters} são arquitetados, de maneira a contemplar também propriedades ortográficas das palavras, como se funcionasse de maneira geral como uma expressão regular de palavras, formando então este \textit{cluster} com base nas características apresentadas.
 
-\begin{textedited}
 Já a terceira etapa é chamada de \textit{Rule Design}, que resume-se basicamente na  combinação de palavras em diferentes domínios, na verificação ortográfica destas palavras e na classificação delas no seu \textit{cluster} correto. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como pertencentes ao \textit{cluster} ''nomes''.
-\end{textedited}
 
-\begin{textnew}
 Além disso, foi observada também a presença de certas palavras que faziam parte de diversos \textit{clusters} ao mesmo tempo, o que permitiu que elas fossem classificadas em seu próprio grupo de palavras, tornando-se então independentes.
-\end{textnew}
 
-\begin{textnew}
 A representação através de \textit{clusters} utilizada por Han et al. \cite{Han-Giles-WC} conseguiu reduzir um texto original de 11.223 palavras em um \textit{cluster} de 588 elementos, permitindo ainda que ele fosse distribuído entre as classes distintas, o que tornou o processo muito menos trabalhoso mas, ao mesmo tempo, eficaz.
-\end{textnew}
 
-\begin{textedited}
 Como resultado, a utilização desta técnica de clusterização permitiu um ganho considerável de performance, além de permitir uma precisão maior dos resultados, visto que eles são apresentados com base nestas bases focadas em um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos.
 
 Por outro lado a utilização desta técnica possui uma falha na semântica dos dados. No momento da classificação das classes, na separação e criação dos \textit{clusters}, um dígito ou conjunto deles é substituído por \texttt{:number:}. Isso faz com que ele se torne apenas um número qualquer, sem um contexto específico, ou seja, pode ser tanto uma referência a alguma página do documento ou até mesmo um mês de um ano.
-
-\end{textedited}
 
 
 \subsubsection{Conditional Random Fields (CRFs)}
@@ -371,8 +305,6 @@ Por outro lado a utilização desta técnica possui uma falha na semântica dos 
 % Falar sobre CRFs 
 
 CRFs é um framework proposto por Lafferty et al. \cite{Lafferty-CRF} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquinas (\textit{machine learning}).
-
-\begin{textnew}
 
 Esta técnica oferece algumas vantagens ao se comparar com técnicas mais tradicionais, como HMM (\autoref{sssec:hmm}), se destacando a habilidade de diminuir pressupostos independentes feitas nestes modelos \cite{Lafferty-CRF}.
 
@@ -397,8 +329,6 @@ Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}
 
 De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativos melhores. Por corresponder a uma ''máquina'' de estado finito, ela é muito aplicável para a função de classificação sequencial, o que permite que ainda seja treinada para se obter os melhores resultados probabilísticos \cite{Peng-CRF-IE}. Nas CRFs as transições de estado são também representadas como \emph{features} por alguns autores.
 
-\end{textnew}
-
 %Esta técnica é comparada e quase sempre utilizada juntamente com a HMM (Hidden Markov Models), de maneira a possuir algumas vantagens sobre esta última, como a habilidade de relacionar pressupostos independentes nos modelos, ou seja, relacionar observações e/ou interpretações.
 
 Uma outra vantagem da técnia de CRFs - assim como dos modelos \emph{maximum entropy} - é que eles facilmente proporcionam o uso de características arbitrárias dos dados de entrada.
@@ -409,8 +339,7 @@ Os CRFs são utilizadas também em marcação e classificação de dados sequenc
 
 Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair metadados em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
-\begin{textnew}
-Peng et al. apresenta resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM \autoref{sssec:hmm} e SVM \autoref{sssec:svm}, mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando o a junção entre as sequências e características dependentes mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, dramáticas, ao se comparar com as demais técnicas de SVM e HMM.
+Peng et al. apresenta resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM (\autoref{sssec:hmm}) e SVM (\autoref{sssec:svm}), mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando o a junção entre as sequências e características dependentes mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, dramáticas, ao se comparar com as demais técnicas de SVM e HMM.
 
 Os autores definem quatro diferentes transições de estado para diferentes classes, em ordem diferente das técnicas derivadas de Markov (HMM):
 
@@ -494,19 +423,11 @@ Pode observar também que a utilização de modelos HMM para precisão de palavr
     \label{tab:crf-results-references}
 \end{table}
 
-\end{textnew}
-
-\begin{textedited}
 Com base nos resultados apresentados pode-se considerar que a trabalho de \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
-\end{textedited}
-
-
 
 
 \section{Revisão de Estado da Arte na Extração de Metadados}
 \label{sec:revision}
-
-\begin{textnew}
 
 % Falar aqui sobre os estudos de comparações de Granitizer
 
@@ -526,7 +447,7 @@ Em função da existências destes repositórios a informação fica cada vez ma
 
 % CiteSeer e Mendeley utilizam SVMs. Granitzer 2012
 
-Visando um reconhecimento maior dos resultados obtidos Granitzer et al. realizam comparações dos resultados obtidos com a aplicação de três ferramentas: ParsCit (\autoref{ssec:parscit})), Mendeley Desktop (\autoref{ssec:mendeley})) e sua própria ferramenta baseada em CRFs, no qual se referem como Layout-based CRF.
+Visando um reconhecimento maior dos resultados obtidos Granitzer et al. realizam comparações dos resultados obtidos com a aplicação de três ferramentas: ParsCit (\autoref{ssec:parscit}), Mendeley Desktop (\autoref{ssec:mendeley}) e sua própria ferramenta baseada em CRFs, no qual se referem como Layout-based CRF.
 
 Este trabalho \cite{Granitzer-2012-LayoutBased} é uma continuação do trabalho anteriormente realizado \cite{Granitzer-2012-Crowdsourced}, onde as ferramentas Mendeley Desktop (\autoref{ssec:mendeley}) e ParsCit (\autoref{ssec:parscit})) foram comparadas, utilizando, porém, um \emph{dataset} menor. Desta vez foi incluída a técnica de Conditional Random Fields (CRF) na comparação, que de acordo com a literatura mencionada neste trabalho, possui resultados melhores do que com a utilização da técnica Hidden Markov Models (HMMs - \autoref{sssec:hmm}).
 
@@ -542,12 +463,8 @@ De acordo com Gratnizer et al., mesmo a técnica de CRF possuindo melhores model
 
 A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo do Mendeley Desktop. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas tiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
 
-\end{textnew}
-
 \section{Técnicas de Algoritmos}
 \label{sec:algorithms-tecniques}
-
-\comment{Este tópico foi sugestão do Prof. Renato. Qual o conteúdo deve ser colocado neste tópico?}
 
 \section{Ambientes de Extração de Metadados}
 \label{sec:environments}
@@ -606,23 +523,18 @@ Dependendo do layout do artigo alguns metadados podem vir divididos em blocos de
 
 Kern et al. defendem a ideia dos excelentes resultados do TeamBeam ao ser comparado com outros projetos. Este fato é dado em virtude das características que são levadas em consideração no processamento do algoritmo, utilizando de dicionários, informações de layout e modelo de linguagem.
 
-\subsubsection{Resultados Comparativos}
-\label{sssec:teambeam-comparative}
-
 A fim de analisar os resultados obtidos com a aplicação das técnicas descritas no TeamBeam, os autores comparam as técnicas utilizadas com outras técnicas de outras ferramentas, que utilizam processos diferentes de análises.
 
-Para fins de comparação de resultados, os autores citam as técnicas ParsCit (\autoref{ssec:parscit}), Layout-CRFs (\autoref{ssec:layout-crfs}) e Mendeley Desktop (\autoref{ssec:mendeley}). Como conclusão ele compara estas três técnicas separadamente, por não abrangerem todos os detalhes que o TeamBeam possui, o que tornaria a comparação desleal.
+Para fins de comparação de resultados, os autores citam as ferramentas ParsCit (\autoref{ssec:parscit}) e Mendeley Desktop (\autoref{ssec:mendeley}). Como conclusão ele compara estas três técnicas separadamente, por não abrangerem todos os detalhes que o TeamBeam possui, o que tornaria a comparação desleal.
 
-Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. Por exemplo, o Layout-CRF's (\autoref{ssec:layout-crfs}) é mais abrangente e mais assertivo para extração de títulos, por ser baseado em CRF. Já as ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
+Assim, ele chega à conclusão que em virtude das diferentes formas de processamento dos dados feitas por cada umas das ferramentas, chega-se a resultados mais precisos para cada campo extraído. As ferramentas baseadas em dicionário apresentam melhores resultados para extração de autores, visto se basearem em \textit{data-sets\footnote{Bases de dados com nomes dos autores mais citados e outras informações já catalogadas que são armazenadas para consulta pública.}} já consolidados.
 
 \subsection{Mendeley}
 \label{ssec:mendeley}
 
-\begin{textnew}
-
 Mendeley é um dos projetos mais complexos e completos que existem na atualidade. Além de uma poderosa ferramenta na extração de metadados o projeto se transformou em uma plataforma completa para pesquisadores. Sua pesquisa se iniciou em novembro de 2007 por três estudantes alemães de doutorado, tendo sua primeira versão lançada em agosto de 2008. Em 2013 o projeto foi vendido para uma empresa, que passou a liderar o processo de criação e desenvolvimento. Atualmente o Mendeley é um projeto amplo, porém estritamente comercial, que possui uma plataforma de pesquisa e gestão de documentos como seu principal produto ofertado.
 
-Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade do usuário. Assim como o CiteULike \autoref{ssec:citeulike} o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto, o que não permite seu uso sem ser através do serviço oferecido pela empresa, através da Internet.
+Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade do usuário. Assim como o CiteULike (\autoref{ssec:citeulike}) o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto, o que não permite seu uso sem ser através do serviço oferecido pela empresa, através da Internet.
 
 A ferramenta pode ser utilizada via Web, como aplicativo \emph{desktop}, para \emph{tablets} ou \emph{smartphones}. Visto seu aspecto social e suas inúmeras funcionalidades o projeto se tornou uma rede social acadêmica, tanto do ponto de vista de organização de documentos até mesmo para interação entre pesquisadores. A ferramente permite que usuários façam \emph{upload} de artigos em formato PDF para que sejam armazenados em sua biblioteca pessoal. Estes arquivos são analisados e seus metadados são extraídos e enviados para os servidores centrais da ferramenta.
 
@@ -632,7 +544,7 @@ A pesquisa iniciada pelos três estudantes de doutorado levou em consideração 
 
 Pela sua complexidade e por abranger uma gama de funcionalidades muito grande, s serviço foi comparado à rede Last.FM \cite{Mendeley-LastFM}. Assim como a rede social de música o Mendeley permite que o usuário organize sua biblioteca digital de pesquisa de maneira bem eficaz, podendo compartilhar, distribuir e realizar diversas outras funções, assim como é possível na plataforma musical Last.FM.
 
-Por ser um serviço a bastante tempo no mercado o Mendeley funciona também como um grande \emph{dataset}, permitindo que parte de sua coleção de artigos seja utilizada para fins de pesquisa, assim como ocorre com o CiteULike \autoref{ssec:citeulike}, por exemplo. Isso facilita muito a pesquisa pois permite que uma quantidade muito grande de documentos sejam analisados de maneira semi-estruturada, facilitando a descoberta de novos conhecimentos nesta área.
+Por ser um serviço a bastante tempo no mercado o Mendeley funciona também como um grande \emph{dataset}, permitindo que parte de sua coleção de artigos seja utilizada para fins de pesquisa, assim como ocorre com o CiteULike (\autoref{ssec:citeulike}), por exemplo. Isso facilita muito a pesquisa pois permite que uma quantidade muito grande de documentos sejam analisados de maneira semi-estruturada, facilitando a descoberta de novos conhecimentos nesta área.
 
 Após a venda da plataforma o projeto teve seu foco muito mais voltado ao comercial, ao contrário do que era anteriormente. A utilização de seus dados ficou restrita e a geração de receita se transformou no principal objetivo da companhia, o que trouxe algumas desvantagens para a pesquisa livre como um todo.
 
@@ -655,12 +567,8 @@ Algumas das funcionalidades do Mendeley:
 
 Embora o sucesso do projeto seja muito grande e suas funcionalidades permitem uma série de funções a serem utilizadas pelos pesquisadores, em virtude do foco deste trabalho, o Mendeley se torna uma ferramenta pouco útil, visto que não possui o seu código aberto e não permite que seu código seja instalado em outras máquinas para que sua funcionalidade de extração de metadados seja testada. Mesmo assim, o projeto é bastante promissor e garante uma gama de funções que todo pesquisador necessita, além de organizar de maneira bem eficaz os artigos e demais documentos que fazem parte de um bom trabalho de pesquisa.
 
-\end{textnew}
-
 \subsection{CiteULike}
 \label{ssec:citeulike}
-
-\begin{textnew}
 
 Uma outra ferramenta de destaque é o CiteULike \cite{citeulike} e pode ser acessada em \url{http://citeulike.org}. Ela é uma fusão de dois serviços: um serviço de \emph{bookmarking} via Internet, bem como também um sistema de gestão de referências bibliográficas. A união destas duas funcionalidades permite um compartilhamento muito grande de conhecimento entre pesquisadores, de modo a promover uma disseminação de informação com o envio de links contendo \emph{papers} de pesquisa. 
 
@@ -690,9 +598,6 @@ Outro detalhe que permite um uso diferenciado do projeto é a formação de grup
 Tecnicamente o CiteULike foi criado utilizando como banco de dados o PostgreSQL\footnote{Sistema de Banco de Dados relacional com tradição e excelente performance. Sua página inicial é \url{http://www.postgresql.org}.}, Tcl\footnote{Linguagem de programação de scripts muito utilizada em ambientes Linux. Pode ser acessada em \url{http://www.tcl.tk}.} como linguagem de programação e ainda utilizando Memcached\footnote{Sistema de cacheamento baseado em memória, que permite um ganho excelente de performance em ambientes Web, sendo uma das mais utilizadas nos dias atuais. Detalhes em \url{http://memcached.org}.} para criação de cache dos dados armazenados, o que aumentou (e muito) a performance da ferramenta. Seus servidores são baseados em Linux e backups são feitos de 15 em 15 minutos \cite{citeulike}.
 
 Com base nesta quantidade de detalhes e vantagens o CiteULike se tornou um ponto de referência para catalogação e organização de artigos científicos, permitindo a contribuição entre pesquisadores e formando então uma rede de contribuição que favorece a disseminação da pesquisa ao redor do mundo.
-
-\end{textnew}
-
 
 \subsection{CiteSeer}
 \label{ssec:citeseer}
@@ -730,9 +635,7 @@ O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) an
 \subsection{ParsCit}
 \label{ssec:parscit}
 
-\begin{textedited}
 Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências bibliográficas, utilizando uma implementação desta técnica chamada CRF++ \cite{Councill-Giles-2008-ParsCit}.
-\end{textedited}
 
 O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro do servidor.
 
@@ -747,9 +650,6 @@ Com este modelo CRF definido algumas etapas são aplicadas a fim de normalizar o
 Esta análise posterior dos nomes dos autores é feita com base na inspeção de cada palavra individualmente, respeitando então um padrão de normalização definido, sempre com as iniciais dos nomes seguidas do sobrenome escrito normalmente.
 
 A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilitam os testes e a extração de dados. Os resultados obtidos desta análise é então exibido (ou gravado em arquivo) em formato XML, que permite utilização posterior em qualquer tecnologia. Como informado anteriormente os resultados também podem ser coletados em formato de \textit{Web Service}, mas para os fins desta pesquisa apenas sua execução em linha de comando é suficiente.
-
-\subsubsection{Resultados Comparativos}
-\label{sssec:parscit-comparative}
 
 Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia do projeto (detalhes na \autoref{tab:parscit-results}).
 
@@ -793,12 +693,40 @@ Visando também analisar outros projetos a mesma comparação de resultados foi 
 	
 % \comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
+\subsection{CrossRef}
+\label{ssec:crossref}
+
+CrossRef é uma associação independente mantida por diversas editoras científicas. Além de ser uma organização sem fins lucrativos ela atua como um identificador de um recurso de pesquisa na Internet. Ele permite que referências cruzadas de citações sejam associadas com seus artigos originais, fazendo o link para o recurso no site de sua editora de origem \cite{Bergmark:2000:AER:867169}.
+
+Suas atividades foram iniciadas em 1999 como uma iniciativa a desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto a permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
+
+Inicialmente a extração realizada pelo CrossRef levava em consideração apenas as referências citadas em um artigo, mas posteriormente verificou-se que demais partes de um artigo eram necessárias, inclusive para que a referência cruzada fosse feita de maneira completa. Assim, um documento foi dividido em três partes \cite{Bergmark:2000:AER:867169}:
+
+\begin{itemize}
+    \item \emph{Header Material}: Dados gerais do cabeçalho do artigo, como título, autores, ano de publicação, etc;
+    \item \emph{The Body}: O corpo do documento, onde citações podem ser analisadas de maneira quantitativa, com base na coleta de referências existente do final do documento;
+    \item \emph{The Reference Section}: Parte em que as referências completas são citadas, permitindo que ligações possam ser feitas entre as ligações encontradas no corpo do documento com os dados obtidos nesta parte do documento.
+\end{itemize}
+
+O CrossRef não possui uma base de dados de artigos definida com seus próprios documentos, como acontece nos outros projetos e ferramentas, ele apenas une informações sobre os artigos e faz a referência cruzada destes documentos na Internet, permitindo que citações sejam transformadas em links para os artigos originais, em sua editora de origem.
+
+Por outro lado existe um incentivo por parte do CrossRef para realização do link direto entre documentos PDF e suas referências cruzadas. O projeto CrossRef Labs (\url{http://labs.crossref.org/}) fornece uma série de ferramentas de código aberto que permitem diversas ações no que tange a área científica de artigos, como por exemplo, extração de metadados de artigos científicos.
+
+Esta ferramenta de extração de metadados fornecida pelo CrossRef Labs, chamada \texttt{pdfextract}, foi criada a fim de permitir que editoras de menor porte possam integrar sua bases de dados com as referências do CrossRef, aumentando ainda mais o número de bases que fazem parte do projeto. A ferramenta é desenvolvida na linguagem de programação Ruby, estando em constante atualização, conforme pode ser visto em seu repositório oficial em \url{https://github.com/CrossRef/pdfextract}.
+
+A \texttt{pdfextract} utiliza de informações visuais para identificar cada parte de um artigo científico, pré-selecionando áreas onde cada metadado pode ser encontrado, realizando então um conjunto de identificações por padrões (expressões regulares) que espera-se encontrar (\autoref{fig:crossref}).
+
+\begin{figure}
+    \centering
+    \caption{Extração de Metadados com base na suposta localização de cada campo dos documentos.}
+    \label{fig:crossref}
+    \includegraphics[width=0.6\linewidth]{./assets/images/crossref}
+\end{figure}
+
 \subsection{Outras Ferramentas e Projetos}
 \label{ssec:other-tools}
 
-\begin{textnew}
-
-Além das ferramentas apresentadas diversas outras apresentam características semelhantes, porém com pouca participação de mercado ou com foco em funcionalidades que não são objetos de estudo deste trabalho, como por exemplo, somente o foco no armazenamento e gestão dos artigos científicos. Alguns destes projetos que pode-se citar são:
+Além das ferramentas apresentadas diversas outras apresentam características semelhantes, porém com pouca participação de mercado ou com foco em funcionalidades que não são objetos de estudo deste trabalho, embora utilizem de alguma forma extração de metadados, seja com sua própria implementação ou utilizando-se de ferramentas de terceiros. Alguns destes projetos que pode-se citar são:
 
 \begin{itemize}
     \item \textbf{Zotero:} Seu objetivo é servir como um repositório centralizado onde os artigos ficam armazenados, permitindo que as referências sejam exportadas para diversos formatos. Disponível em \url{https://www.zotero.org}.
@@ -811,5 +739,27 @@ Além das ferramentas apresentadas diversas outras apresentam características s
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
 \end{itemize}
 
-\end{textnew}
+Após a análise das ferramentas foi criado um quadro consolidando as principais informações de cada uma, permitindo que as ferramentas que farão parte dos testes deste trabalho possam ser selecionadas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas de extração de metadados empregadas e a possibilidade de execução de cada ferramenta utilizando a linha de comando, o que permite com facilidade a execução de testes com cada uma delas.
+
+\begin{table}
+    \caption{Características de cada ferramenta analisada}
+    \begin{center}
+        \begin{tabular}{|C{3cm}|C{3cm}|C{3cm}|C{4cm}|}
+            \hline 
+            \textbf{Ferramenta} & \textbf{Linguagens de Programação} & \textbf{Técnicas Utilizadas} & \textbf{Utilização via \emph{Command Line}} \\ 
+            \hline 
+            Cermine & Java & SVM, CRF, Word Clustering & Sim \\ \hline
+            TeamBeam & Java & Maximun Entropy, HMM & Não \\ \hline
+            Mendeley & Qt & SVM, Word Clustering & Não \\ \hline
+            CiteULike & Perl, Python, Ruby, Tcl, Java & Expressões Regulares & Não \\ \hline
+            CiteSeer & Python, Perl, Java & SVM, CRF (ParsCit), Word Clustering & Sim \\ \hline
+            ParsCit & Perl, Ruby & CRF & Sim \\ \hline
+            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento visual  & Sim \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:tools-consolidated}
+\end{table}
+
+
+
 

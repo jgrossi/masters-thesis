@@ -7,27 +7,17 @@ A necessidade de contribuição acontece de forma natural no ser humano. Os dese
 
 Somos seres realizados pela satisfação do outro, e seu sucesso de uma forma ou outra acarreta em nosso sucesso, nossa satisfação pessoal e de certa forma também profissional. Sentimos atraídos por contribuir e por compartilhar conhecimento, sendo ele umas das principais formas de realização como pessoa.
 
-\begin{textedited}
 Com o crescimento da pesquisa e o acesso à informação um grande número de publicações foram inseridas no meio, fazendo com que uma infinidade de material estivesse disponível em poucos segundos. Deste modo, a necessidade de centralização automatizada dos dados e a contribuição dentre os pesquisadores é inerente ao desenvolvimento desta área. 
-\end{textedited}
 
-\begin{textedited}
 No âmbito acadêmico sempre contribuímos de uma forma ou outra com a formação de nossos colegas e parceiros de pesquisa. Esta contribuição pode ser feita através de uma conversa informal ou até mesmo com uma ajuda em documentação ou sugestão de um texto para leitura. Esta sugestão de leitura geralmente possui um caráter muito técnico, e envolve na maioria dos casos a utilização de artigos acadêmicos, objeto central de análise e estudo deste trabalho.
-\end{textedited}
 
-\begin{textedited}
 Sabemos da existência de bases de conhecimento nacionais e internacionais, porém, quando estamos falando da contribuição social, em pequena escala, interpessoal, estamos falando de contribuições físicas, com envio de sugestões de artigos para nossos amigos pesquisadores. Este envio é feito de maneira direta, reduzindo o tempo e aumentando consequentemente a praticidade do processo de pesquisa.
-\end{textedited}
 
-\begin{textedited}
 Sendo assim, esta experiência como objetivo global seria uma ferramenta de apoio à pesquisa, com pesquisadores compartilhando conhecimentos de maneira informal, anônima, e segura. Esta forma de disseminação de conhecimento traria um benefício muito grande socialmente falando, uma vez que pesquisadores iriam se unir, mesmo que virtualmente, na transmissão de conhecimento, fazendo do processo da pesquisa um processo mais simplificado e desta maneira evitando o desperdício de tempo durante a fase de pesquisa em busca por novos conhecimentos.
-\end{textedited}
 
 Para isso, a utilização de técnicas de extração de metadados deve ser utilizada de maneira eficaz, para que, de maneira automática, diversos artigos sejam analisados e catalogados em pequenos universos de pesquisa. Entende-se por metadados os campos básicos e necessários para que uma pesquisa por título de um artigo, por exemplo, seja feita com sucesso. Resume-se então que os metadados que esperam-se ser extraídos destes artigos são: o título do artigo, o nome e e-mail de seus autores, o resumo/\textit{abstract} e as referências utilizadas no texto.
 
-\begin{textedited}
 Basicamente estes campos já permitem que uma pesquisa mais detalhada fosse feita e então o artigo localizado com facilidade. Já as referências são necessárias para se fazer referências inversas de autores que publicam e são citados posteriormente, facilitando ainda mais aos pesquisadores poderem, por exemplo, encontrar artigos semelhantes de uma mesma área do conhecimento.
-\end{textedited}
 
 \begin{figure}
 	\centering
@@ -56,19 +46,19 @@ Sendo assim iniciou-se minha pesquisa pelo campo da extração de informação e
 \section{Problema}
 \label{sec:problem}
 
-Diversas ferramentas e técnicas para extração de metadados em artigos podem ser facilmente encontradas com uma rápida pesquisa pela Internet. Porém, algumas são propriedade de universidades ou até mesmo de instituições privadas, o que dificulta sua análise e teste, visto que seu código fonte é fechado, ou seja, sem acesso.
+Diversas ferramentas e técnicas para extração de metadados em artigos podem ser facilmente encontradas com uma rápida pesquisa pela Internet. Porém, algumas são propriedade de universidades ou até mesmo de instituições privadas, o que dificulta sua análise e teste, visto que seu código fonte é fechado, ou seja, sem acesso direto.
 
-As técnicas abordadas por este trabalho são aquelas cujo código fonte é aberto, ou seja, que pode ser analisado, testado e alterado, o que chamamos de projetos \textit{open source} (código livre).
+\begin{textedited}
+Este trabalho aborda as principais ferramentas encontradas atualmente, principalmente no que diz respeito à utilização e participação de mercado. Algumas ferramentas não permitem que testes automatizados sejam feitos, visto que não possuem acesso ao código fonte ou não pode ser utilizada via linha de comando, dificultando portanto os testes.
+\end{textedited}
 
-De modo geral, estas técnicas livres de extração são focadas em \textit{layouts} (disposição visual) pré-definidos, geralmente seguindo modelos de conferências e/ou congressos internacionais, que possuem um padrão visual parecido, como é o caso do IEEE por exemplo, que serve de referência para diversos outros eventos da área da computação, tomando seu \textit{layout}, a princípio, como base.
+De modo geral, as ferramentas e técnicas de extração são focadas em \textit{layouts} (disposição visual) pré-definidos, geralmente seguindo modelos de conferências e/ou congressos internacionais, que possuem um padrão visual parecido, como é o caso do IEEE por exemplo, que serve de referência para diversos outros eventos da área da computação, tomando seu \textit{layout}, a princípio, como base.
 
 Porém, existem diversos outros eventos que possuem \textit{layouts} de artigos considerados fora do padrão e, portanto, necessitam de adaptações destas técnicas para que seus trabalhos possam ser analisados e catalogados de maneira eficaz. Esta customização promoveria uma série de tentativas para verificar o melhor \textit{layout} para ser utilizado em cada caso, automaticamente.
 
 Algumas técnicas/ferramentas são aparentemente muito eficazes para um certo grupo de artigos, já seguindo um padrão visual pré-determinado. Porém, para alguns \textit{layouts} pouco comuns, de áreas do conhecimento diversas, espera-se que estas ferramentas não sejam tão eficazes, o que varia de acordo com a tecnologia aplicada e principalmente de acordo com o princípio teórico utilizado pelos seus autores, que será mais aprofundado nos próximos capítulos.
 
-\begin{textnew}
 Os estudos de comparação já realizados em pesquisa focam os testes em artigos da área de Ciência da Computação, formando uma base viciosa, visto que geralmente os artigos desta área possuem um layout padronizado, facilitando o processo de extração. Assim, um trabalho que teste artigos de diversas áreas, não tendenciosos, geraria um resultado importante para a pesquisa, podendo realmente analisar a eficácia destas técnicas e ferramentas empregadas em casos de uso reais, de diversas áreas, sub-áreas e eventos ao redor do mundo.
-\end{textnew}
 
 \section{Justificativa}
 \label{sec:justification}
@@ -77,7 +67,7 @@ Interessante notar a necessidade de centralização de artigos científicos para
 
 Diante disso, esta extração de metadados automatizada e eficaz traria benefícios para que estes repositórios de artigos fossem criados e catalogados com precisão, tendo então milhões e milhões de documentos em suas bases de dados, prontos para serem pesquisados por pesquisadores de todas as nacionalidades e áreas do conhecimento.
 
-Este trabalho busca, portanto, identificar a melhor maneira que isso pode ser feito, levando em consideração o melhor resultado matemático possível dentro das técnicas e ferramentes disponíveis atualmente. Este resultado traria, para tanto, um ganho científico incalculável, permitindo que novas ferramentas e repositórios fossem criados e a disseminação do conhecimento fosse cada vez maior, e mais rápida.
+Este trabalho busca, portanto, identificar a melhor maneira que isso pode ser feito, levando em consideração o melhor resultado matemático possível dentro das técnicas e ferramentes disponíveis atualmente. Este resultado traria, para tanto, um ganho científico considerável, permitindo que novas ferramentas e repositórios fossem criados e a disseminação do conhecimento fosse cada vez maior, e mais rápida.
 
 \section{Histórico}
 \label{sec:history}
@@ -104,7 +94,7 @@ Dessa forma, este assunto tem sido discutido e pesquisado muito amplamente na Ci
 \subsection{Objetivo Geral}
 \label{ssec:main-goal}
 
-Este trabalho possui como objetivo geral identificar quais são as melhores técnicas de extração de metadados em artigos científicos e suas melhores aplicações, com base em um conjunto de documentos pré-selecionados para testes, dos mais diversos padrões e de diversas áreas do conhecimento.
+Este trabalho possui como objetivo geral identificar quais são as melhores ferramentas de extração de metadados em artigos científicos e suas melhores aplicações, com base em um conjunto de documentos pré-selecionados para testes, dos mais diversos padrões e de diversas áreas do conhecimento.
 
 Com efeito, esta identificação permite que resultados sejam comparados e confrontados, permitindo decidir qual técnica é melhor utilizada para cada padrão visual, abrangendo um conjunto cada vez maior de dados e tendo resultados cada vez mais precisos.
 
@@ -113,22 +103,23 @@ Com efeito, esta identificação permite que resultados sejam comparados e confr
 \subsection{Objetivos Específicos}
 \label{ssec:specific-goals}
 
-Com base na diferenciação dos \textit{layouts} de artigos científicos, este trabalho tem como objetivos específicos identificar também pontos em que as técnicas de extração de metadados necessitam de adaptações por parte de seus usuários e desenvolvedores, permitindo desta forma uma ampliação do universo de aplicação e garantindo assim uma cobertura mais abrangente dos artigos científicos analisados.
+\begin{textedited}
+Com base na diferenciação dos \textit{layouts} de artigos científicos, este trabalho tem como objetivos específicos identificar também pontos em que as ferramentas de extração de metadados necessitam de adaptações por parte de seus usuários e desenvolvedores, permitindo desta forma uma ampliação do universo de aplicação e garantindo assim uma cobertura mais abrangente dos artigos científicos analisados. Além disso, com base nos resultados coletados pode-se identificar qual ferramenta é melhor aplicada para cada tipo distinto de meta-dado.
+\end{textedited}
 
-Acredita-se que os padrões de extração existentes no mercado são, de maneira geral, insuficientes para suprir todos os padrões de artigos existente, limitando a apenas uma pequena parcela destes, dentro de um \textit{layout} específico, o que acaba gerando um desconforto e uma perda de credibilidade destas técnicas existentes atualmente.
+Acredita-se que os padrões de extração existentes no mercado são, de maneira geral, insuficientes para suprir todos os padrões de artigos existente, limitando a apenas uma pequena parcela destes, dentro de um \textit{layout} específico, o que acaba gerando um desconforto e uma perda de compatibilidade destas ferramentas existentes atualmente.
 
 
 \section{Resultados Esperados}
 \label{sec:expected-results}
 
-
-As formas de extração de metadados em artigos científicos são geralmente baseadas em \textit{layouts}, ou seja, em pequenos pedaços onde certos dados devem ser extraídos. Porém em virtude da grande diversidade de materiais produzidos, dos mais diversos padrões visuais existentes, este \textit{layout} padrão - geralmente utilizado em artigos científicos - não se mostra eficiente na abrangência total das necessidades da comunidade científica mundial. 
-
-Sobre este aspecto, espera-se que certos artigos científicos não tenham seus metadados analisados de maneira eficaz por todas as técnicas de extração analisadas, uma vez que adaptações no código seriam necessárias a fim de permitir que outros padrões visuais de artigos fossem também analisados, aplicando então um dos fundamentos do \textit{machine learning}, o aprendizado. 
-
 \begin{textedited}
-Por fim, espera-se que, com esta análise aprofundada das técnicas existentes, as mais eficazes na extração de metadados sejam identificadas e analisadas, elevando então o ganho científico neste tema importante para o desenvolvimento tecnológico.
+As formas de extração de metadados em artigos científicos são geralmente baseadas em \textit{layouts}, ou seja, em pequenos pedaços onde certos dados devem ser extraídos. Porém, em virtude da grande diversidade de materiais produzidos, dos mais diversos padrões visuais e áreas do conhecimento, este \textit{layout} padrão não se mostra eficiente na abrangência total das necessidades da comunidade científica como um todo. 
 \end{textedited}
+
+Sobre este aspecto, espera-se que certos artigos científicos não tenham seus metadados analisados de maneira eficaz por todas as ferramentas de extração analisadas, uma vez que adaptações no código seriam necessárias a fim de permitir que outros padrões visuais de artigos fossem também analisados, aplicando então um dos fundamentos do \textit{machine learning}, o aprendizado. 
+
+Por fim, espera-se que, com esta análise aprofundada das ferramentas existentes, as mais eficazes na extração de metadados sejam identificadas e analisadas, elevando então o ganho científico neste tema importante para o desenvolvimento tecnológico.
 
 
 \section{Estrutura}
@@ -137,10 +128,12 @@ Por fim, espera-se que, com esta análise aprofundada das técnicas existentes, 
 Esta pesquisa é estruturada iniciando com uma breve introdução sobre o tema; a apresentação do contexto da pesquisa, bem como sua origem e motivação; a definição do problema; a justificativa; o histórico do trabalho, demonstrando suas origens e fundamentos históricos; os objetivos gerais e específicos e, por fim, os resultados esperados.
 
 \begin{textedited}
-O segundo capítulo tem como base o referencial teórico feito através de um mapeamento de bases de dados e eventos científicos relevantes para a área, propondo um caminho de pesquisa eficaz visando atingir os resultados desejáveis com este projeto.
+O segundo capítulo tem como base o referencial teórico feito através de um mapeamento de bases de dados e eventos científicos relevantes para a área, propondo um caminho de pesquisa eficaz visando atingir os resultados desejáveis com este projeto. Neste capítulo são apresentados alguns conceitos básicos de meta-dados além das técnicas mais utilizadas e as ferramentas mais comuns utilizadas atualmente.
 \end{textedited}
 
-No terceiro capítulo temos a metodologia para o desenvolvimento do trabalho, as técnicas que serão aplicadas e principalmente como serão feitas. Posteriormente, no capítulo quarto temos a análise e apresentação dos resultados, explicando como os testes foram realizados, os ambientes de teste criados e os resultados coletados.
+\begin{textedited}
+No terceiro capítulo temos a metodologia para o desenvolvimento do trabalho, com as ferramentas que serão testadas e principalmente como serão feitos estes testes. Posteriormente, no capítulo quarto temos a análise e apresentação dos resultados, explicando como os testes foram realizados, os ambientes de teste criados e os resultados coletados.
+\end{textedited}
 
 No quinto capítulo temos a discussão/conclusão, trabalhos futuros e considerações finais sobre o trabalho apresentado.
 
