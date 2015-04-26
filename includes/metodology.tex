@@ -7,7 +7,7 @@ Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e 
 
 % Explicar o passo a passo que será utilizado
 
-Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realmente as que possuem viabilidade técnica de testes dentro do objetivo da pesquisa, fazendo do projeto o mais conciso possível. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados.
+Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realmente as que possuem viabilidade técnica de testes dentro do objetivo da pesquisa. Desta forma, diversos elementos serão utilizados a fim de se obter os resultados desejados.
 
 % Explicar de modo geral como será o processo
 
@@ -15,7 +15,7 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
 
 \begin{figure}
     \centering
-    \caption{Processo de Metodologia}
+    \caption{Processo de Metodologia utilizado}
     \label{fig:metodology}
     \includegraphics[width=0.8\linewidth]{./assets/images/metodology}
 \end{figure}
@@ -26,20 +26,20 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
 
 % Falar da seleção de artigos de várias áreas
 
-Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente coletados. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são possível de ser analisados e coletados.
+Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são passível de ser analisados e seus metadados coletados.
 
 % Porque selecionar artigos de diferentes áreas
 
-Em virtude da necessidade de testar estas ferramentas em um ambiente real, estes artigos selecionados foram coletados por estudantes de graduação, mestrado e doutorado de diversas instituições de ensino e áreas do conhecimento, fazendo com que esta seleção de documentos faça parte de um conjunto real e concreto, que necessita ser testada para comprovar a eficácia das ferramentas analisadas neste trabalho.
+Em virtude da necessidade de testar estas ferramentas em um ambiente real, estes artigos selecionados foram coletados por estudantes de graduação, mestrado e doutorado de diversas instituições de ensino e áreas do conhecimento, fazendo com que esta seleção de documentos faça parte de um conjunto real e concreto, que necessita ser testado para comprovar a eficácia das ferramentas analisadas neste trabalho.
 
-Assim, com uma seleção de artigos que faz parte do cotidiano destes estudantes podemos aferir se os resultados fornecidos pelas ferramentas podem ser considerados positivos ou negativos, com base na comparação entre os resultados automaticamente coletados e a análise visual e manual destes documentos.
+Assim, com uma seleção de artigos que faz parte do cotidiano destes estudantes, podemos aferir se os resultados fornecidos pelas ferramentas podem ser considerados positivos ou negativos, com base na comparação entre os resultados manualmente coletados e a análise visual destes documentos.
 
 % Áreas dos Artigos e Eventos
 
-A lista destes artigos compreende um total de 100 documentos variados, com seus metadados já extraídos manualmente e todos catalogados permitindo a comparação desejada. Na \autoref{tab:papers-list} pode-se ter acesso ao número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos analisados pode ser obtida no \autoref{appendix:papers} deste documento.
+A lista destes artigos compreende um total de 100 (cem) documentos variados, com seus metadados já extraídos manualmente e todos catalogados, permitindo a comparação desejada. Na \autoref{tab:papers-list} pode-se ter acesso ao número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos utilizados neste trabalho pode ser obtida no \autoref{appendix:papers} deste documento.
 
 \begin{table}
-    \caption{Seleção de artigos científicos para testes (ainda em desenvolvimento)}
+    \caption{Seleção de artigos científicos para testes.}
     \begin{center}
         \begin{tabular}{|l|l|}
             \hline
@@ -70,38 +70,40 @@ A seleção dos artigos foi feita tomando por base a máxima diferenciação vis
 
 % Artigos em Inglês, somente
 
-Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escrito no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ''processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
+Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escrito no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
 
-Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês por exemplo, tenham análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas a fim de se obter resultados satisfatórios.
+Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês por exemplo, tenham análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas a fim de se obter os resultados esperados.
 
-No que tange a escolha das ferramentas para testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando. Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização de apenas este recurso, objetivo deste trabalho. Assim, foram selecionadas para teste apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados por linha de comando, independente da linguagem de programação ou tecnologia apresentada. 
+No que tange a escolha das ferramentas para testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando. Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização de apenas este recurso. Assim, foram selecionadas para teste apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individual, independente da linguagem de programação ou tecnologia apresentada. 
 
-Deste modo, as ferramentas selecionadas para teste foram: Cermine, CiteSeer, CrossRef e ParsCit, conforme detalhado na \autoref{tab:tools-consolidated}.
+Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \autoref{tab:tools-consolidated}, as ferramentas selecionadas para teste foram: Cermine, CiteSeer, CrossRef e ParsCit.
     
 
 \section{Desenho do Experimento}
 \label{sec:experiment-design}
 
-Tendo selecionadas as ferramentas e os artigos que serão utilizados para os testes parte-se para a instalação adequada de cada ferramenta nos servidores de testes, juntamente com as tecnologias necessárias e as linguagens de programação solicitadas pelos seus desenvolvedores. 
+Tendo selecionadas as ferramentas e os artigos que serão utilizados para os testes parte-se para a instalação adequada de cada ferramenta nos servidores, juntamente com as tecnologias necessárias e as linguagens de programação utilizadas pelos seus desenvolvedores. 
 
-Cada ferramenta será testada em separado, observando suas características particulares. Assim, cada artigo selecionado será testado para aquela ferramenta, anotando os resultados obtidos na extração dos metadados. Estes resultados serão separados por metadados, o que permitirá calcular qual a porcentagem de acerto que a ferramenta teve na extração de cada metadado analisado.
+Cada ferramenta será testada em separado, observando suas características particulares. Assim, cada artigo selecionado será testado para aquela ferramenta, anotando os resultados obtidos na extração. Estes resultados serão separados por metadados, o que permitirá calcular qual a porcentagem de acerto que a ferramenta teve na extração de cada metadado analisado.
 
-Assim, o processo será repetido para cada ferramenta e o resultado registrado, permitindo calcular sua porcentagem total de acertos de maneira simplificada. Para isso será criado um ''Quadro Comparativo', no qual serão inseridos os resultados dos testes de cada ferramenta. 
+Assim, o processo será repetido para cada ferramenta e o resultado registrado, permitindo calcular sua porcentagem total de acertos de maneira simplificada. Para isso será criado um ``Quadro Comparativo'', no qual serão inseridos os resultados dos testes de cada ferramenta. 
 
 \subsection{Metadados, Pesos e Resultados}
 \label{ssec:metadata-results}
 
 % Importância de se ter pesos em função dos metadados
 
-A extração de metadados de artigos científicos engloba um processo onde os resultados obtidos possuem características diferenciadas que podem influenciar em uma busca por artigos, feita por um pesquisador, por exemplo. Desde modo serão atribuídos pesos para cada um dos metadados analisados, de maneira a identificar os mais importantes e que podem contribuir com um número maior de resultados de busca. 
+\begin{textedited}
+Em se tratando de pesquisa por artigos científicos, pequenos detalhes podem fazer a diferença. Desta forma, uma extração de metadados não muito eficaz pode prejudicar direta ou indiretamente os resultados apresentados por esta busca. Por outro lado, alguns metadados tendem a ser mais utilizados na pesquisa que outros, o que implica em uma responsabilidade maior na eficiência de sua extração. 
+\end{textedited}
 
 % Quais metadados são mais importantes para uma pesquisa de artigos
 
-Alguns metadados são mais importantes que outros no que diz respeito à funcionalidade de pesquisa. Geralmente quando vamos buscar artigos, geralmente buscamos primeiro pelo título do artigo (quando procuramos por um artigo em específico) ou então pelo nome do autor (quanto procuramos artigos de um determinado autor).
+\begin{textedited}
+Geralmente quando vamos buscar artigos, procuramos primeiro pelo título (quando procuramos por um documento específico) ou então pelo nome do autor (quanto procuramos por artigos de um determinado pesquisador). Deste modo serão atribuídos pesos para cada um dos metadados, de maneira a valorizar a extração destas informações que podem influenciar diretamente os resultados de busca.
+\end{textedited}
 
-Além disso, utilizamos também o título, juntamente com o resumo, para buscar por palavras chaves ou palavras que podem ser relevantes na pesquisa pelos documentos. Desta forma alguns metadados devem possuir uma relevância maior no resultado destas extrações, por serem mais importantes no ponto de vista de busca e pesquisa.
-
-Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada metadado deve ser interpretado e qual o peso que lhe será atribuído, sendo utilizado o inteiro 1 (um) para o peso mais baixo e o 5 (cinco) para peso mais alto, sendo consequentemente o(s) mais importante(s).
+Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada metadado deve ser interpretado e qual o peso que lhe será atribuído, sendo utilizado o inteiro 1 (um) para o peso mais baixo e o 5 (cinco) para o peso mais alto, sendo consequentemente o(s) metadado(s) mais importante(s). Os pesos utilizados, assim como a ordem de importância escolhida foram fundamentados de maneira arbitrária, baseados na experiência do autor.
 
 % Tabela de metadados e pesos
 
@@ -111,7 +113,7 @@ Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada
         \begin{tabular}{|p{3cm}|p{8cm}|C{1cm}|}
             \hline \textbf{Metadado} & \textbf{Relevância} & \textbf{Peso} \\ 
             \hline Título & Um dos termos mais buscados quando se pesquisa um artigo & 5 \\
-            \hline Autor(es) & O segundo termo mais pesquisado & 4 \\
+            \hline Autor(es) & Outro termo muito utilizado na busca por artigos & 4 \\
             \hline E-mail(s) & Pouco relevante no quesito pesquisa de artigos & 1 \\
             \hline Resumo & Importante por conter palavras chaves e o resumo propriamente dito & 3 \\
             \hline Referências & Muito importante e necessário, pois será utilizada na referência inversa de autores & 4 \\
@@ -121,7 +123,13 @@ Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada
     \label{tab:metadata-weight}
 \end{table}
 
-Como cada ferramenta será testada em separado, será registrado o resultado da extração de cada artigo, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ''A'' serão analisados 100 (cem) artigos. A porcentagem de acerto para o título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, será somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a nota para o metadado ''Título'' para a Ferramenta ''A'' ($P_{título}$):
+\begin{textnew}
+Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, será calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo será feito por algoritmo desenvolvido pelo próprio autor, analisando qual a taxa de acerto para cada metadado, referenciado posteriormente por $P_{título}$ (precisão de acerto para o metadado título).
+\end{textnew}
+
+\begin{textedited}
+Como cada ferramenta será testada em separado, os resultados da extração de cada artigo serão registrados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' serão analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, será somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' da Ferramenta ``A'' ($P_{título}$):
+\end{textedited}
 
 \begin{center}
     \begin{math}
@@ -130,23 +138,23 @@ Como cada ferramenta será testada em separado, será registrado o resultado da 
     \end{math}
 \end{center}
 
-De posse dos resultados para cada metadado extraído podemos comparar as ferramentas a fim de obter qual é mais adequada para cada tipo de metadado. Podemos inferir, portanto, que a ferramenta ''X'' apresento melhores resultados do que ''Y'' na extração do nome dos autores, por exemplo.
+De posse dos resultados para cada metadado extraído podemos comparar as ferramentas a fim de obter qual é mais adequada para cada tipo de metadado. Podemos inferir, portanto, que a ferramenta ``X'' apresenta melhores resultados do que ``Y'' na extração do nome dos autores, por exemplo.
 
 \subsection{Índice de Confiabilidade}
 \label{ssec:confiability-index}
 
 % Fórmula final para a nota final de cada técnica
 
-Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada ferramenta testada. Assim chegamos a uma fórmula matemática à qual chamaremos ''Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada campo, para cada ferramenta. Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos para todos os metadados analisados.
+Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada ferramenta testada. Assim chegamos a uma fórmula matemática à qual chamaremos ``Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada metadado, para cada ferramenta. Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos por ela.
 
-Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em uma única nota final para cada técnica aplicada.
+Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em uma única nota final para cada ferramenta testada.
 
-Basicamente a fórmula é a média ponderada dos resultados alcançados na extração de cada metadado dos artigos, seguindo os pesos apresentados na \autoref{tab:metadata-weight}. Cada peso é atribuído ao resultado encontrado em cada ferramenta testada. 
+Basicamente a fórmula é a média ponderada dos resultados alcançados na extração de cada metadado dos artigos, seguindo os pesos apresentados na \autoref{tab:metadata-weight}. Cada peso é atribuído ao resultado encontrado em cada ferramenta. 
 
-A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicado pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados apresentados, seguindo seus respectivos pesos. A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:confiability-index}.
+A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicado pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados extraídos, seguindo seus respectivos pesos. A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:confiability-index}.
 
 \begin{center}
-    $ IC_{Ferramenta X}=(5*P_{título}+4*P_{autor}+1*P_{email}+3*P_{resumo}+5*P_{referências}) / 17 $
+    $ IC_{Ferramenta X}=(5*P_{título}+4*P_{autor}+1*P_{email}+3*P_{resumo}+4*P_{referências}) / 17 $
 \end{center}
 
 \begin{table}
@@ -165,30 +173,32 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
     \label{tab:confiability-index}
 \end{table}
 
-Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificar cada uma com base nos seus resultados apresentados. Desta forma podemos classificar cada ferramenta seguindo os tópicos abaixo:
+\begin{textedited}
+Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificar cada uma com base nos seus resultados apresentados. Esta classificação será feita de maneira arbitrária, sem objetivo algum de denegrir alguma ferramenta em favorecimento de outra, mas sim classificar cada uma delas com base nos resultados obtidos e critérios adotados neste trabalho. Desta forma, podemos classificar cada ferramenta seguindo os tópicos abaixo:
+\end{textedited}
 
 \begin{enumerate}
-    \item \textbf{Preciso (P):} Quando o Índice de Confiabilidade é maior ou igual a 90 ($IC\geq90$).
-    \item \textbf{Satisfatório (S):} Quando o Índice de Confiabilidade é maior ou igual a 80 e menor que 90 ($80 \leq IC < 90$).
-    \item \textbf{Inaceitável (I):} Quando o Índice de Confiabilidade é menor que 80 ($IC < 80$).
+    \item \textbf{Precisa (P):} Quando o Índice de Confiabilidade é maior ou igual a 90 ($IC\geq90$).
+    \item \textbf{Satisfatória (S):} Quando o Índice de Confiabilidade é maior ou igual a 80 e menor que 90 ($80 \leq IC < 90$).
+    \item \textbf{Insatisfatória (I):} Quando o Índice de Confiabilidade é menor que 80 ($IC < 80$).
 \end{enumerate}
 
 \section{Ambiente Tecnológico}
 \label{sec:tech-environment}
 
-Algumas ferramentas exigem um conjunto de tecnologias muito diferente das demais, como é o caso do CiteSeer (\autoref{ssec:citeseer}). Sendo assim, neste caso em específico, será utilizado um servidor apenas para os testes desta ferramenta, juntamente com as tecnologias que esta exige para um correto funcionamento. 
+Algumas ferramentas exigem um conjunto de tecnologias muito diferente das demais, como é o caso do CiteSeer (\autoref{ssec:citeseer}). Sendo assim, neste caso em específico, será utilizado um servidor apenas para os testes desta ferramenta, juntamente com as tecnologias que ela exige para um correto funcionamento. 
 
 Outras ferramentas, por serem escritas em linguagens de programação iguais ou por terem seu conjunto tecnológico muito semelhante, serão instaladas em um único servidor, compartilhando recursos e simplificando o trabalho de configuração, visto que possuem necessidades parecidas.
 
 Estes servidores serão criados através de máquinas virtuais, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica, permitindo que os testes possam ser feitos em sistemas operacionais distintos mas utilizando dos mesmos recursos computacionais.
 
-Deste modo, dentro de um mesmo servidor podemos criar diversos outros servidores ''virtuais'', com características diferentes e linguagens de programação diferentes, compartilhando dos mesmos recursos do servidor original, como memória RAM, espaço em disco, dentre outros recursos, como pode ser visto na \autoref{fig:virtual-server}.
+Deste modo, dentro de um mesmo servidor podemos criar diversos outros servidores ``virtuais'', com características diferentes e linguagens de programação diferentes, compartilhando dos mesmos recursos do servidor original, como memória RAM, espaço em disco, dentre outros recursos, como pode ser visto na \autoref{fig:virtual-server}.
 
 \begin{figure}
     \centering
     \caption{Utilização de Máquinas Virtuais como Ambiente de Testes}
     \label{fig:virtual-server}
-    \includegraphics[width=0.6\linewidth]{./assets/images/virtual-server}
+    \includegraphics[width=0.5\linewidth]{./assets/images/virtual-server}
 \end{figure}
 
 
