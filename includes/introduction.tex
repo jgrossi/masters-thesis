@@ -8,18 +8,19 @@
 	\centering
 	\caption{Processo de Extração de Metadados}
 	\label{fig:introduction}
-	\includegraphics[width=0.7\linewidth]{./assets/images/introduction}
+	\includegraphics[width=0.9\linewidth]{./assets/images/introduction}
 \end{figure}
 
-\section{Contexto}
-\label{sec:context}
+% \section{Contexto}
+% \label{sec:context}
 
-A eficácia no armazenamento de artigos requer análise automatizada de seus conteúdos de maneira a extrair as partes mais importantes, como título, autores e referências. Assim eles poder ser catalogados de maneira organizada e estruturada, que facilita a busca posterior. 
+A eficácia no armazenamento de artigos requer análise automatizada de seus conteúdos de maneira a extrair as partes mais importantes, como título, autores e referências. Assim eles poder ser catalogados de maneira organizada e estruturada, o que facilita a busca posterior.
+
 Estes dados retirados dos documentos analisados são referenciados neste projeto pelo nome de ``metadados'', e são detalhados mais a frente de maneira aprofundada.
 
 A pesquisa aqui realizada situa-se no campo da extração de metadados principalmente via \textit{machine learning}. Este trabalho aborda as principais ferramentas encontradas atualmente. Diversas ferramentas e técnicas para extração de metadados em artigos podem ser encontradas na Internet. Algumas são propriedade de universidades ou instituições privadas, o que dificulta a análise. Algumas ferramentas não permitem que testes automatizados sejam feitos, visto que não permitem acesso ao código fonte ou não podem ser utilizadas via linha de comando, dificultando a análise dos resultados.
 
-De modo geral, as ferramentas de extração são focadas em \textit{layouts} (disposição visual) pré-definidos, geralmente seguindo modelos de conferências e/ou congressos internacionais, que possuem um padrão visual já estabelecido, como é o caso do IEEE (\textit{Institute of Electrical and Electronics Engineers}), por exemplo, que serve de referência para diversos outros eventos da área da computação, tomando seu \textit{layout}, a princípio, como base.
+De modo geral, as ferramentas de extração são focadas em \textit{layouts} (disposição visual) pré-definidos, geralmente seguindo modelos de conferências e/ou congressos internacionais, que possuem um padrão visual já estabelecido, como é o caso do IEEE (\textit{Institute of Electrical and Electronics Engineers}), por exemplo, que serve de referência para diversos outros eventos da área da Ciência da Computação, tomando seu \textit{layout}, a princípio, como base.
 
 Porém, existem diversos outros eventos que possuem \textit{layouts} de artigos fora de padrão que necessitam de adaptações por parte das ferramentas para serem analisados e catalogados de maneira automática. 
 
@@ -33,7 +34,7 @@ O objetivo da pesquisa é identificar quais são as melhores ferramentas de extr
 
 Com efeito, esta identificação permite que resultados sejam comparados e confrontados, para decidir qual ferramenta é melhor utilizada para cada padrão visual, abrangendo um conjunto cada vez maior de dados e tendo resultados cada vez mais precisos.
 
-Com base na diferenciação dos \textit{layouts} de artigos científicos, este trabalho visa identificar também pontos em que as ferramentas de extração de metadados necessitam de adaptações por parte de seus usuários e desenvolvedores, permitindo, garantindo assim, uma cobertura mais abrangente dos artigos científicos. Além disso, com base nos resultados coletados, pode-se identificar qual ferramenta é melhor aplicada para cada tipo distinto de metadado.
+Com base na diferenciação dos \textit{layouts} de artigos científicos, este trabalho visa identificar também pontos em que as ferramentas de extração de metadados necessitam de adaptações por parte de seus usuários e desenvolvedores, garantindo assim, uma cobertura mais abrangente dos artigos científicos. Além disso, com base nos resultados coletados, pode-se identificar qual ferramenta é melhor aplicada para cada tipo distinto de metadado.
 
 Acredita-se que os padrões de extração existentes hoje são, de maneira geral, insuficientes para suprir todos os \emph{layouts} de artigos existentes, limitando a apenas uma pequena parcela destes, dentro de um padrão visual específico.
 
@@ -41,12 +42,13 @@ As formas de extração de metadados em artigos científicos são geralmente bas
 
 Sobre este aspecto, espera-se que certos artigos científicos não tenham seus metadados extraídos de maneira precisa por todas as ferramentas analisadas, uma vez que adaptações no código seriam necessárias a fim de permitir que outros padrões visuais de artigos fossem também reconhecidos, aplicando então um dos fundamentos do \textit{machine learning}, o aprendizado por repetição. 
 
-Por fim, espera-se que, com esta análise aprofundada das ferramentas selecionadas, as mais eficazes na extração de metadados sejam identificadas e analisadas, elevando então o ganho científico neste tema importante para o desenvolvimento tecnológico.
+Por fim, espera-se que, com esta análise aprofundada das ferramentas selecionadas, as mais eficazes na extração de metadados sejam identificadas e comparadas, elevando então o ganho científico neste tema importante para o desenvolvimento tecnológico.
 
 O documento é estruturado iniciando com uma breve introdução sobre o tema.
+
 O segundo capítulo tem como base o referencial teórico feito através de um mapeamento de bases de dados e eventos científicos relevantes para a área. Neste capítulo são apresentados alguns conceitos básicos, além das técnicas mais utilizadas e as ferramentas mais comuns encontradas atualmente.
 
-O terceiro capítulo apresenta a metodologia usada no trabalho. Cita as ferramentas que serão testadas e principalmente como serão feitos os testes. 
+O terceiro capítulo apresenta a metodologia usada no trabalho, citando as ferramentas que serão testadas e principalmente como serão feitos os testes. 
 
 Posteriormente, no capítulo quarto faz-se a análise e apresentação dos resultados, explicando como os testes foram realizados, os ambientes de teste criados e os resultados coletados.
 

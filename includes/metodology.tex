@@ -93,15 +93,11 @@ Assim, o processo será repetido para cada ferramenta e o resultado registrado, 
 
 % Importância de se ter pesos em função dos metadados
 
-\begin{textedited}
 Em se tratando de pesquisa por artigos científicos, pequenos detalhes podem fazer a diferença. Desta forma, uma extração de metadados não muito eficaz pode prejudicar direta ou indiretamente os resultados apresentados por esta busca. Por outro lado, alguns metadados tendem a ser mais utilizados na pesquisa que outros, o que implica em uma responsabilidade maior na eficiência de sua extração. 
-\end{textedited}
 
 % Quais metadados são mais importantes para uma pesquisa de artigos
 
-\begin{textedited}
 Geralmente quando vamos buscar artigos, procuramos primeiro pelo título (quando procuramos por um documento específico) ou então pelo nome do autor (quanto procuramos por artigos de um determinado pesquisador). Deste modo serão atribuídos pesos para cada um dos metadados, de maneira a valorizar a extração destas informações que podem influenciar diretamente os resultados de busca.
-\end{textedited}
 
 Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada metadado deve ser interpretado e qual o peso que lhe será atribuído, sendo utilizado o inteiro 1 (um) para o peso mais baixo e o 5 (cinco) para o peso mais alto, sendo consequentemente o(s) metadado(s) mais importante(s). Os pesos utilizados, assim como a ordem de importância escolhida foram fundamentados de maneira arbitrária, baseados na experiência do autor.
 
@@ -123,13 +119,9 @@ Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada
     \label{tab:metadata-weight}
 \end{table}
 
-\begin{textnew}
 Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, será calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo será feito por algoritmo desenvolvido pelo próprio autor, analisando qual a taxa de acerto para cada metadado, referenciado posteriormente por $P_{título}$ (precisão de acerto para o metadado título).
-\end{textnew}
 
-\begin{textedited}
 Como cada ferramenta será testada em separado, os resultados da extração de cada artigo serão registrados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' serão analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, será somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' da Ferramenta ``A'' ($P_{título}$):
-\end{textedited}
 
 \begin{center}
     \begin{math}
@@ -173,9 +165,9 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
     \label{tab:confiability-index}
 \end{table}
 
-\begin{textedited}
+\newpage
+
 Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificar cada uma com base nos seus resultados apresentados. Esta classificação será feita de maneira arbitrária, sem objetivo algum de denegrir alguma ferramenta em favorecimento de outra, mas sim classificar cada uma delas com base nos resultados obtidos e critérios adotados neste trabalho. Desta forma, podemos classificar cada ferramenta seguindo os tópicos abaixo:
-\end{textedited}
 
 \begin{enumerate}
     \item \textbf{Precisa (P):} Quando o Índice de Confiabilidade é maior ou igual a 90 ($IC\geq90$).
