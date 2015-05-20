@@ -45,9 +45,7 @@ Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialm
 
 Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele teremos. Com efeito, podemos simplificar ainda mais a definição de metadado com sendo ``um conjunto de dados sobre um determinado recurso''.
 
-Temos contato diariamente com diversos metadados, sejam eles visíveis naturalmente ou não, mas de uma maneira ou outra, são utilizados amplamente em tarefas do cotidiano; geralmente um conjunto enorme de novos dados e informações sobre recursos dos mais diversos tipos e modelos.
-
-Podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
+Para exemplificar podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
 
 Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser direcionados, visando identificar e explicar melhor os conceitos que serão aplicados nos testes das técnicas e ferramentas que aqui serão apresentadas.
 
@@ -144,6 +142,7 @@ A ocorrência dos campos é mapeada em uma representação bidimensional, permit
     \centering
     \caption{Distância representando a separação entre classes na técnica de SVM.}
     \includegraphics[width=0.6\linewidth]{./assets/images/svm-graph}
+    \center\footnotesize{Fonte: \cite{Vapnik-SVM}}
 \end{figure}
 
 Além desta análise são utilizadas comparações de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilita a identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
@@ -208,6 +207,7 @@ Já no âmbito da extração da informação, o HMM pode ser aplicado conforme �
     \caption{Exemplo de modelo HMM, onde ``X'' são os estados, ``Y'' as observações possíveis, ``A'' as probabilidades de mudança de estado e ``B'' as saídas destas probabilidades.}
     \label{fig:hmm-states}
     \includegraphics[width=0.7\linewidth]{./assets/images/hmm-states}
+    \center\footnotesize{Fonte: Wikipedia / Hidden Markov Model \url{http://goo.gl/pI3XUU}}
 \end{figure}
 
 Um dos pontos positivos deste modelo é que por ser baseado em estatística ele é muito bem empregado em problemas de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem desta técnica podemos citar o fato de, por ser baseada em estatística matemática, uma grande quantidade prévia de dados deve ser utilizada - a título de treino - para se obter padrões significativos para então ser aplicados de maneira final na criação do modelo.
@@ -245,6 +245,7 @@ Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \
 	\caption{Estados utilizados por \cite{Zhang-HMM-IE} em seu modelo HMM.}
 	\label{fig:zhang-hmm-ie}
 	\includegraphics[width=0.8\linewidth]{./assets/images/zhang-hmm-ie}
+    \center\footnotesize{Fonte: O próprio autor.}
 \end{figure}
 
 Os seguintes campos deveriam ser extraídos das informações dos restaurantes: \textit{restaurant name} (nome do restaurante), \textit{telephone number} (número de telefone), \textit{hours} (horas) e \textit{cuisine} (tipo de comida servida, como italiana, alemã, etc). Segundo Zhang \cite{Zhang-HMM-IE} os campos \textit{restaurant name} e \textit{telephone number} deveriam ser mais fáceis de serem obtidos, visto que o nome do restaurante geralmente se encontra em destaque, com alguma diferenciação visual. Já o telefone possui um formato numérico, que permite mais facilmente uma identificação de um padrão. O campo \textit{hours} também não foi complicado, embora se tenha uma variedade muito grande na disposição desta informação. Já o campo \textit{cousine} foi mais difícil de ser extraído, visto a diversidade que existe na forma de um restaurante especificar e/ou representar sua cozinha, tanto na utilização de palavras diferentes quanto na própria identificação do estilo do restaurante por si só.
@@ -275,6 +276,7 @@ Como exemplo, a palavra ``Mary'' faz parte do contexto de ``nomes''. Portanto ex
     \caption{Workflow da extração de metadados usando \textit{cluster} de palavras.}
     \label{fig:workflow-rule-based}
     \includegraphics[width=0.7\linewidth]{./assets/images/workflow-rule-based}
+    \center\footnotesize{Fonte: \cite{Han-Giles-WC}}
 \end{figure}
 
 A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
@@ -426,7 +428,7 @@ Com base nos resultados apresentados pode-se considerar que o trabalho de Peng \
 
 % Falar aqui sobre os estudos de comparações de Granitizer
 
-Técnicas de \emph{machine learning} não são novas, porém suas aplicações vão muito mais além do que se podia imaginar. As técnicas então utilizadas para apenas classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
+Técnicas de \emph{machine learning} não são novas, porém suas aplicações são inúmeras. Estas técnicas eram então utilizadas apenas para classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
 
 O aperfeiçoamento da aplicação destas técnicas para a área de \emph{information extraction} acarretou em um resultado muito positivo, melhorando cada dia mais a precisão dos resultados obtidos. Assim, algoritmos foram/são alterados e otimizados visando obter maiores performances e resultados cada vez melhores.
 
@@ -464,7 +466,9 @@ A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo
 \section{Ferramentas de Extração de Metadados}
 \label{sec:environments}
 
-Algumas ferramentas baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica dos artigos, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
+Algumas ferramentas baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica dos artigos, facilitando a procura e consequentemente aumentando a velocidade no resultado.
+
+\comment{Citar trabalho do Prof. Renato Rocha}
 
 Estas ferramentas geralmente permitem uma variedade muito grande de layouts, embora nem todos já estejam previamente definidos. Geralmente novos layouts são inseridos em novas versões ou até mesmo por contribuições das mais diversas, como é o caso dos projetos de código livre, os chamados projetos \textit{open source}.
 
@@ -490,6 +494,7 @@ Com estas regiões definidas o CERMINE extrai as informações com base em padr�
     \caption{CERMINE Extraction Workflow}
     \label{fig:cermine-workflow}
     \includegraphics[width=0.7\linewidth]{./assets/images/cermine}
+    \center\footnotesize{Fonte: \cite{cermine}}
 \end{figure}
 
 Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, as quais ele chama de \textit{zones}. Esta regiões são determinadas a fim de extrair as informações relevantes para cada uma, de maneira a separar, por exemplo, a área destinada aos metadados do arquivo. O CERMINE divide estas \textit{zones} da seguinte maneira:
@@ -716,6 +721,7 @@ A \texttt{pdfextract} utiliza de informações visuais para identificar cada par
     \caption{Extração de Metadados com base na suposta localização de cada metadado dos artigos.}
     \label{fig:crossref}
     \includegraphics[width=0.6\linewidth]{./assets/images/crossref}
+    \center\footnotesize{Fonte: \cite{CrossRef-2009}}
 \end{figure}
 
 \subsection{Outras Ferramentas e Projetos}
