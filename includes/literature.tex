@@ -94,6 +94,11 @@ Técnicas de \emph{machine learning}, extração e classificação de dados util
 
 Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
 
+\subsubsection{Regular Expressions (Regex)}
+\label{sssec:regular-expressions}
+
+% Escrever sobre
+
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
 
@@ -422,6 +427,10 @@ Pode-se observar também que a utilização de modelos HMM para precisão de pal
 
 Com base nos resultados apresentados pode-se considerar que o trabalho de Peng \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
 
+\subsubsection{Outras Técnicas e Conceitos}
+\label{sssec:others-techniques}
+
+% Falar um pouco de KOSS, Tesauros, Glossários e Ontologias
 
 \section{Revisão de Estado da Arte na Extração de Metadados}
 \label{sec:revision}
@@ -740,6 +749,8 @@ Além das ferramentas apresentadas diversas outras apresentam características s
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
 \end{itemize}
 
+\comment{Falar sobre o ResearchGate.}
+
 Após a análise das ferramentas foi criado um quadro consolidando as principais informações sobre cada uma, permitindo que as ferramentas que farão parte dos testes deste trabalho possam ser selecionadas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas de extração de metadados empregadas e a possibilidade de execução de cada ferramenta utilizando a linha de comando, o que permite com facilidade a execução de testes com cada uma delas.
 
 \begin{table}
@@ -755,12 +766,12 @@ Após a análise das ferramentas foi criado um quadro consolidando as principais
             CiteULike & Perl, Python, Ruby, Tcl, Java & Expressões Regulares & Não \\ \hline
             CiteSeer & Python, Perl, Java & SVM, CRF (ParsCit), Word Clustering & Sim \\ \hline
             ParsCit & Perl, Ruby & CRF & Sim \\ \hline
-            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento visual  & Sim \\ \hline
+            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento Espacial  & Sim \\ \hline
         \end{tabular}
     \end{center}
     \label{tab:tools-consolidated}
 \end{table}
 
-
+\comment{Escrever sobre Posicionamento Espacial}
 
 
