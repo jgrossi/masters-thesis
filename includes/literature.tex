@@ -94,8 +94,67 @@ Técnicas de \emph{machine learning}, extração e classificação de dados util
 
 Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
 
-\subsubsection{Regular Expressions (Regex)}
+\subsubsection{Regular Expressions (RegEx)}
 \label{sssec:regular-expressions}
+
+\emph{Regular Expressions} ou Expressões Regulares é uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definido.
+
+Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que seu uso ficou conhecido através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos texto.
+
+Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos ou caracteres, que determina uma forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja buscar dentro do texto.
+
+Existem variações de formas de representação de uma Expressão Regular, porém a maioria das linguagens de programação atualmente seguem o padrão POSIX - sob responsabilidade do IEEE e do Open Group \url{http://opengroup.org/}, que determina algumas regras para utilização desta técnica \cite{posix-2013}.
+
+Como exemplo, visando identificar somente os números existentes dentro da frase ``Foram encontrados 4 passageiros dentro do veículo parado na BR262.'', devemos escrever um padrão para que estes números sejam identificados. Desta forma podemos representar o que desejamos buscar da seguinte maneira: \texttt{/[0-9]+/}, onde temos:
+
+\begin{itemize}
+    \item O caractere \texttt{/} determina o começo e fim do padrão. Ele pode ser substituído por outro caractere como \texttt{\$} por exemplo, desde que seja o mesmo para identificar o início e fim do conjunto.
+    \item Para representação de algarismos utilizamos a representação \texttt{[0-9]}, que significa todos os dígitos de 0 a 9, permitindo que os números sejam identificados.
+    \item Como existem na frase dígitos com mais de um algarismo, como é o caso de ``262'', necessitamos complementar nosso padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}.
+\end{itemize}
+
+Para as repetições temos 6 (seis) formas de representação:
+
+\begin{enumerate}
+    \item Como pôde ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrência''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
+    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar nenhuma ou apenas uma ocorrência, ou seja, aquele padrão pode ou não existir, é opcional. No padrão \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente.
+    \item Podemos utilizar o caractere \texttt{*} (asterisco) para representar ``nenhum ou mais'', ou seja, podemos ter nenhuma ou várias ocorrências daquele conjunto, indo do zero ao infinito.
+    \item Além disso, podemos estipular quantidade mínima de repetições, como por exemplo \texttt{[0-9]\{3,\}}, que significa ``qualquer número que possua no mínimo 3 dígitos'', ou seja, os números 123, 481145, 9182 seriam identificados, mas 14 não, visto que possui apenas 2 dígitos.
+    \item Podemos também estipular apenas a quantidade máxima desejada, como \texttt{[0-9]\{,8\}}, ou seja, somente os números que possuem até no máximo 8 dígitos. Neste caso, um número com 9 ou mais dígitos não entraria no reconhecimento.
+    \item Tomando como base os dois últimos exemplos podemos informar os valores mínimo e máximo ao mesmo tempo, como \texttt{[0-9]\{4,8\}}, ou seja, números que possuem no mínimo 4 dígitos e no máximo 8.
+\end{enumerate}
+
+Desta forma podemos consolidar as formas de repetição em Expressões Regulares com base na \autoref{tab:regex-repeticao}.
+
+\begin{table}
+    \caption{Formas de representação de repetições em Expressões Regulares.}
+    \begin{center}
+        \begin{tabular}{|c|l|}
+            \hline 
+            \textbf{Forma de Representação} & \textbf{Significado} \\ 
+            \hline 
+            \texttt{?} & Nenhuma ou apenas uma ocorrência \\
+            \hline 
+            \texttt{*} & Nenhuma ou várias ocorrências \\
+            \hline
+            \texttt{+} & Uma ou mais ocorrências \\
+            \hline
+            \texttt{\{4,\}} & No mínimo 4 ocorrências \\
+            \hline
+            \texttt{\{,8\}} & No máximo 8 ocorrências \\
+            \hline
+            \texttt{\{4,8\}} & No mínimo 4 e no máximo 8 ocorrências \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:regex-repeticao}
+\end{table}
+
+O padrão POSIX permite que dígitos sejam também representados sob a forma \texttt{\textbackslash{d}}, o que é exatamente equivalente ao \texttt{[0-9]}, que utilizamos nos exemplos acima. Assim, podemos reescrever nosso padrão para \texttt{/\textbackslash{d}+/} simplificando sua escrita e entendimento.
+
+Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria é o Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
+
+Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres, como por exemplo \texttt{/abaca(te|xi)/}, que quer identificar as palavras ``abacate'' ou ``abacaxi'', de maneira que ele preserva os caracteres \texttt{abaca} e alterna entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos dos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capaz de identificar apenas as palavras ``abacate'' ou a palavra ``xi'', somente.
 
 % Escrever sobre
 
