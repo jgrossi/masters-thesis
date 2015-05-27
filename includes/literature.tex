@@ -99,31 +99,49 @@ Com a utilização destes \emph{datasets} o processo de teste fica muito mais f�
 
 \emph{Regular Expressions} ou Expressões Regulares é uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
 
-Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que seu uso ficou conhecido através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos texto.
+Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que as expressões regulares ficaram conhecidas, através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos.
 
-Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos e caracteres, que determina uma forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja buscar dentro do texto.
+Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos, que determina a forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja reconhecer dentro do texto.
 
 Existem variações de formas de representação de uma Expressão Regular, porém a maioria das linguagens de programação atualmente seguem o padrão POSIX - sob responsabilidade do IEEE e do Open Group \url{http://opengroup.org/} -, que determina algumas regras para utilização desta técnica \cite{posix-2013}.
 
-Como exemplo, visando identificar somente os números existentes dentro da frase ``Foram encontrados 4 passageiros dentro do veículo parado na BR262.'', devemos escrever um padrão para que estes números sejam identificados. Desta forma podemos representar o que desejamos buscar com a seguinte expressão regulat: \texttt{/[0-9]+/}, onde temos:
+Como exemplo, visando identificar somente os números existentes dentro da frase ``Foram encontrados 4 passageiros dentro do veículo parado na BR262.'', devemos escrever uma expressão regular para que estes números sejam identificados. Desta forma podemos representar o que desejamos buscar da seguinte forma: \texttt{/[0-9]+/}, onde identificamos:
 
 \begin{itemize}
-    \item O caractere \texttt{/} neste caso determina o começo e fim da expressão regular. Ele pode ser substituído por outro caractere como \texttt{\$} por exemplo, desde que seja o mesmo para identificar o início e fim do conjunto.
-    \item Para representação de algarismos utilizamos a representação \texttt{[0-9]}, que significa todos os dígitos de 0 a 9, permitindo que os números sejam identificados dentro do texto.
-    \item Como existem na frase dígitos com mais de um algarismo, como é o caso de \texttt{262}, necessitamos complementar nosso padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}, que significa exatamente ``uma ou mais ocorrência''.
+
+    \item o uso do caractere \texttt{/}, que determina o começo e fim da expressão regular;
+    
+    \item a representação de algarismos utilizando \texttt{[0-9]}, que significa qualquer dígitos de 0 a 9, permitindo que os números sejam identificados dentro do texto; 
+    
+    \item a existência de números com mais de um dígito, como é o caso de \texttt{262}, necessitando complementar o padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}, que significa exatamente ``uma ou mais ocorrência''.
+
 \end{itemize}
 
-Para as repetições temos 7 (sete) formas de representação:
+Em diversas ocasiões é necessária a utilização de repetições, informando que aquele padrão pode ocorrer diversas vezes. Assim, temos as seguintes formas de representação para repetições:
 
-\begin{enumerate}
-    \item Como pôde ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrência''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
-    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar nenhuma ou apenas uma ocorrência, ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente.
+\begin{itemize}
+
+    \item Como pôde ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrências''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
+    
+    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar ``nenhuma ou apenas uma ocorrência'', ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente no reconhecimento.
+    
     \item Podemos utilizar o caractere \texttt{*} (asterisco) para representar ``nenhum ou mais'', ou seja, podemos ter nenhuma ou várias ocorrências daquele conjunto, indo do zero ao infinito.
-    \item Visando identificar apenas um número exato de dígitos podemos utilizar da expressão regular \texttt{[0-9]\{4\}}, que exige que para identificação do padrão o número tenha exatamente 4 dígitos.
-    \item Além disso, podemos estipular quantidade mínima de repetições, como por exemplo \texttt{[0-9]\{3,\}}, que significa ``qualquer número que possua no mínimo 3 dígitos'', ou seja, os números 123, 481145, 9182 seriam identificados, mas 14 não, visto que possui apenas 2 dígitos.
-    \item Podemos também estipular apenas a quantidade máxima desejada, como \texttt{[0-9]\{,8\}}, ou seja, somente os números que possuem até no máximo 8 dígitos. Neste caso, um número com 9 ou mais dígitos não entraria no reconhecimento.
-    \item Tomando como base os dois últimos exemplos podemos informar os valores mínimo e máximo ao mesmo tempo, como \texttt{[0-9]\{4,8\}}, ou seja, números que possuem no mínimo 4 dígitos e no máximo 8.
-\end{enumerate}
+
+\end{itemize}
+
+Além das repetições, em alguns momentos necessitamos identificar um número exato de caracteres. Para identificar um ano de 4 (quatro) dígitos, necessitamos informar que o padrão deve ser identificado para apenas 4 dígitos, nem mais, nem menos. Desta forma temos as seguintes formas de representação:
+
+\begin{itemize}
+
+    \item Para número de ocorrências exatos utilizamos da expressão regular \texttt{[0-9]\{4\}}, que exige que para identificação do padrão o número tenha exatamente 4 dígitos de 0 a 9.
+
+    \item Podemos estipular quantidade mínima de repetições, como por exemplo \texttt{[0-9]\{3,\}}, que significa ``qualquer número que possua no mínimo 3 dígitos'', ou seja, os números 123, 481145, 9182 seriam identificados, mas 14 não, visto que possui apenas 2 dígitos.
+
+    \item Podemos também estipular apenas a quantidade máxima desejada, como \texttt{[0-9]\{,8\}}, ou seja, somente os números que possuem até no máximo 8 dígitos. Neste caso, um número com 9 ou mais dígitos não entraria no reconhecimento de padrão.
+
+    \item Por fim, tomando como base os dois últimos exemplos, podemos informar os valores mínimo e máximo ao mesmo tempo, como \texttt{[0-9]\{4,8\}}, ou seja, números que possuem no mínimo 4 dígitos e no máximo 8 dígitos.
+
+\end{itemize}
 
 Desta forma podemos consolidar as formas de repetição em Expressões Regulares com base na \autoref{tab:regex-repeticao}.
 
@@ -140,6 +158,8 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
             \hline
             \texttt{+} & Uma ou mais ocorrências \\
             \hline
+            \texttt{\{4\}} & Exatamente 4 ocorrências \\
+            \hline
             \texttt{\{4,\}} & No mínimo 4 ocorrências \\
             \hline
             \texttt{\{,8\}} & No máximo 8 ocorrências \\
@@ -151,11 +171,73 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
     \label{tab:regex-repeticao}
 \end{table}
 
-O padrão POSIX permite que dígitos sejam também representados sob a forma \texttt{\textbackslash{d}}, o que é exatamente equivalente ao \texttt{[0-9]}, que utilizamos nos exemplos acima. Assim, podemos reescrever nosso padrão para \texttt{/\textbackslash{d}+/} simplificando sua escrita e entendimento.
+% O padrão POSIX permite que dígitos sejam também representados sob a forma \texttt{\textbackslash{d}}, o que é exatamente equivalente ao \texttt{[0-9]}, que utilizamos nos exemplos acima. Assim, podemos reescrever nosso padrão para \texttt{/\textbackslash{d}+/} simplificando sua escrita e entendimento.
 
-Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria é o Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
+Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
 
-Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres, como por exemplo \texttt{/abaca(te|xi)/}, que quer identificar as palavras ``abacate'' ou ``abacaxi'', de maneira que ele preserva os caracteres \texttt{abaca} e alterna entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos dos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capaz de identificar apenas as palavras ``abacate'' ou a palavra ``xi'', somente.
+Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capaz de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
+
+A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas objetivando outras formas de representação.
+
+\begin{itemize}
+
+    \item O ponto (\texttt{.}) possui um significado muito importante, sendo considerado ``qualquer coisa''. Assim, a expressão regular \texttt{/abaca../} permite que \texttt{abacaxi} e \texttt{abacate} também sejam identificados. Ela representa ``qualquer coisa que comece com \texttt{abaca} e possui mais 2 caracteres quaisquer depois''. Ou seja, além de identificar \texttt{abacate} e \texttt{abacaxi} ela permite identificar \texttt{abaca17} ou até mesmo \texttt{abaca s}, visto que espaço também é um caracteres e faz parte do reconhecimento de \texttt{.}.
+
+    \item Os colchetes - já visto anteriormente - representam um conjunto de caracteres únicos dentro de várias possibilidades. Isso quer dizer que em \texttt{/[abc]/} conseguimos identificar qualquer um dos caracteres \texttt{a}, \texttt{b} ou \texttt{c}. Assim, dentro da palavra \texttt{casa} conseguimos identificar a letra \texttt{c} e as letras \texttt{a}.
+
+    \item O acento circunflexo (\texttt{\textasciicircum}) possui significado de negação quando presente dentro de colchetes. Com base no exemplo acima (\texttt{/[abc]/}), caso ele seja escrito como \texttt{/[\textasciicircum{abc}]/}, seu significado é exatamente o oposto, representando quaisquer caracteres exceto \texttt{a}, \texttt{b} e \texttt{c}. Além deste significado, ele é utilizado para representar o início de algum padrão no seu texto de origem. Na expressão regular \texttt{/\textasciicircum{a.+}/} temos o seguinte significado: ``um texto que comece com a letra \texttt{a} seguido de qualquer caractere em qualquer quantidade''. Desta forma, com esta expressão, conseguimos identificar \texttt{abcd}, \texttt{ab}, \texttt{abcdefghijk} e até mesmo \texttt{a9715263}. A única exigência, neste caso, é começar com a letra \texttt{a}, de maneira que no texto ``as mulheres marcaram presença'' seremos capaz de identificar toda a frase, mas já em ``todas as mulheres marcaram presença'' ela não identificará nada, visto que o texto começa com a letra \texttt{t}.
+
+    \item Assim como o \texttt{\textasciicircum} representa o início de um texto o \texttt{\$} indica o fim. A lógica é a mesma, se aplicando para todo o texto, e não apenas em ocorrências. Assim, para a expressão \texttt{/\textasciicircum{a.+z}\$/} exige-se que o texto comece com a letra \texttt{a} e termine com a letra \texttt{z}. Nada além disso é permitido.
+
+    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/} podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressão regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra coisa, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
+
+\end{itemize}
+
+Em virtude da existência dos metacaracteres, caso seja necessária a representação de algum destes caracteres em sua forma pura, utiliza-se do caractere de escape \texttt{\textbackslash{}} (barra invertida) antes do caractere desejado. Por exemplo, para escrever o símbolo \texttt{+}, literalmente, deve-se representá-lo por \texttt{\textbackslash{+}}. Desta forma a expressão será interpretada como um ``mais'' e não como um caractere de repetição.
+
+Assim como vimos a utilização de \texttt{0-9} para representação de dígitos, temos outras representações, tanto para indicar letras maiúsculas quanto minúsculas, utilizando de \texttt{A-Z} e \texttt{a-z}, respectivamente. Sendo assim, podemos identificar dígitos, letras minúsculas e maiúsculas com a expressão regular \texttt{/[A-Za-z0-9]+/}. Além disso, no padrão POSIX podemos representar conjuntos de letras e números de outras formas chamadas ``classes'', como pode ser verificado na \autoref{tab:posix-classes}.
+
+\begin{table}
+    \caption{Classes do padrão POSIX.}
+    \begin{center}
+        \begin{tabular}{|l|p{6cm}|l|}
+            \hline 
+            \textbf{POSIX} & \textbf{Equivalência} & \textbf{Descrição} \\ 
+            \hline 
+            \texttt{[:alnum:]} & \texttt{[A-Za-z0-9]} & Caracteres alfanuméricos \\
+            \hline
+            \texttt{[:alpha:]} & \texttt{[A-Za-z]} & Caracteres alfabéticos \\
+            \hline
+            \texttt{[:blank:]} & \texttt{[ \textbackslash{t}]} & Espaço e tabulação (tab) \\
+            \hline
+            \texttt{[:cntrl:]} & \texttt{[\textbackslash{x}00-\textbackslash{x}1F\textbackslash{x}7F]} & Caracteres de controle ASCII \\
+            \hline
+            \texttt{[:digit:]} & \texttt{[0-9]} & Dígitos \\
+            \hline
+            \texttt{[:graph:]} & \texttt{[\textbackslash{x}21-\textbackslash{x}7E]} & Caracteres visíveis \\
+            \hline
+            \texttt{[:lower:]} & \texttt{[a-z]} & Letras minúsculas \\
+            \hline
+            \texttt{[:print:]} & \texttt{[\textbackslash{x}20-\textbackslash{x}7E]} & Caracteres visíveis e espaço \\
+            \hline
+            \texttt{[:punct:]} & \texttt{[][!"\#\$\%\&'()*+,./:;\textless=\textgreater?@\newline\textbackslash\textasciicircum\_`\{\textbar\}\textasciitilde-]} & Caracteres de pontuação \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:posix-classes}
+\end{table}
+
+% Falar de flags também -> não incluído por ser específico de linguagens de programação
+
+% Expressão regular para email
+
+No caso específico de extração de metadados a utilização de expressão regular é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, que possui um formato muito específico. Deste modo, podemos escrever uma expressão regular para identificar e-mails dentro de um texto a título de exemplo:
+
+\begin{center}
+\texttt{/[A-Za-z0-9-\textbackslash.]\{2,\}@[A-Za-z0-9-]\{2,\}\textbackslash.([A-Za-z0-9]\{2,\})+/}
+\end{center}
+
+Assim, as aplicações de Expressões Regulares são infinitas, podendo ser capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras.
 
 % Escrever sobre
 
