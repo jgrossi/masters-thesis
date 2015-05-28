@@ -1,7 +1,7 @@
 %!TEX root = ../masters.tex
 
 \chapter{Metodologia}
-\label{cha:metodology}
+\label{cha:methodology}
 
 Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de extração automática de metadados por ferramentas previamente selecionadas, tendo os resultados comparados com a extração manual do mesmo conjunto de artigos científicos.
 
@@ -27,7 +27,7 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
 
 % Falar da seleção de artigos de várias áreas
 
-Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são passível de ser analisados e seus metadados coletados.
+Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
 
 % Porque selecionar artigos de diferentes áreas
 
@@ -58,9 +58,9 @@ Em virtude da necessidade de realizar testes com as ferramentas selecionadas em 
     \label{tab:areas-cnpq}
 \end{table}
 
-Com base no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas será limitada a 2 (duas) e a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
+Com base no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas será limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
 
-Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, de maneira a construir um \emph{corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
+Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
 
 \begin{table}
     \caption{Professores entrevistados para cada subárea do conhecimento.}
@@ -81,24 +81,27 @@ Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou
             \hline
             Ciências Biológicas (Zoologia) & Alfredo Hannemann Wieloch \\
             \hline
-            Enfermagem & Eline Lima Borges \\
+            Enfermagem & Eline Lima Borges \par
+                         Tania Couto Machado Chianca \par
+                         Daclé Vilma Carvalho \\
             \hline
-            Engenharia Civil & \\
+            Engenharia Civil & Antônio Neves de Carvalho Júnior \\
             \hline
-            Engenharia Mecânica & Antônio Eustáquio de Melo Pertence \\
+            Engenharia Mecânica & Antônio Eustáquio de Melo Pertence \par
+                                  Alexandre Mendes Abrao \\
             \hline
             Fonoaudiologia & Sirley Alves da Silva Carvalho \\
             \hline
             Geologia & \\
             \hline
-            História & \\
+            História & Adriana Romeiro \\
             \hline
             Letras & Adriana Silvina Pagano \\
             \hline
             Medicina Veterinária & João Paulo Amaral Haddad \par
                                    Jenner Karlisson Pimenta dos Reis \\
             \hline
-            Música &  João Pedro Paiva de Oliveira \\
+            Música & João Pedro Paiva de Oliveira \\
             \hline
             Psicologia & Carmen Elvira Flores-Mendoza Prado \par
                          Livia de Oliveira Borges \\
@@ -110,7 +113,51 @@ Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou
     \label{tab:subareas-professores}
 \end{table}
 
-Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete) artigos científicos, levando em consideração a quantidade de bases de dados informadas, divididas da maneira mais igualitária possível. Por exemplo, para uma subárea que possui apenas 1 (uma) base de dados informada foram coletados 7 (sete) artigos desta base. Para uma subárea com 2 (duas) bases de dados foram coletados 4 (quatro) artigos para a primeira base e 3 (três) para a segunda, e assim por diante. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 subáreas do conhecimento, formando então o \emph{corpus} da pesquisa.
+Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete) artigos científicos. Em virtude da diversidade de quantidade de bases de dados informadas pelos professores de cada subárea do conhecimento (\autoref{tab:databases}), a pesquisa foi limitada a 2 (duas) bases, na ordem apresentada pelos próprios pesquisadores, contemplando 4 (quatro) artigos para a primeira base e 3 (três) para a segunda. Para a subárea ``Ciências Biológicas (Genética)'' somente uma base de dados será utilizada, portanto dela serão retirados os 7 artigos necessários. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 subáreas do conhecimento e 32 bases de dados, formando então o \emph{corpus} utilizado como base desta pesquisa.
+
+\begin{table}
+    \caption{Bases de Dados informadas pelos professores entrevistados, por subárea do conhecimento.}
+    \begin{center}
+        \begin{tabular}{|p{6cm}|p{8cm}|}
+            \hline 
+            \textbf{Subárea do Conhecimento} & \textbf{Bases de Dados} \\ 
+            \hline 
+            Arquitetura e Urbanismo & Scielo, Web of Science, Scopus \\
+            \hline
+            Ciência da Computação & DBLP, ACM Digital Library, IEEE Xplore \\
+            \hline
+            Ciência da Informação & LISA, ISTA, LISTA \\
+            \hline
+            Ciências Biológicas (Genética) & PubMed \\
+            \hline
+            Ciências Biológicas (Zoologia) & Zoological Records, Biological Abstracts \\
+            \hline
+            Enfermagem & MedLine, Lilacs, CINAHL, EBSCO, IBECS, BDENF \\
+            \hline
+            Engenharia Civil & Construction and Building Materials (ELSEVIER), Cement and Concrete Composites (ELSEVIER), Composites Science and Technology (ScienceDirect), Cement and Concrete Research (ELSEVIER), Materials Research (Scielo) \\
+            \hline
+            Engenharia Mecânica & Scopus, ScienceDirect, Web of Science, SpringerLink, Elsevier, Research Gate \\
+            \hline
+            Fonoaudiologia & Pubmed, Bireme \\
+            \hline
+            Geologia & \\
+            \hline
+            História & Scielo, Jstor, Redalyc \\
+            \hline
+            Letras & Delta (Scielo), Periódicos Letras UFMG, Periódicos UFSC \\
+            \hline
+            Medicina Veterinária & PubMed, Scielo \\
+            \hline
+            Música & RISM, RILM, JSTOR, Grove Dictionary of Music \\
+            \hline
+            Psicologia & Scopus, PsycInfo, Scopus, Psicodoc \\
+            \hline
+            Zootecnia & Dairy Science, Animal, Poutry Science \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:databases}
+\end{table}
 
 A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, levando em consideração diferenças de layouts e posicionamento dos elementos, permitindo que uma maior variedade de documentos seja analisada.
 
