@@ -36,7 +36,9 @@ Os nomes dos autores foram comparados seguindo a mesma lógica do metadado ``tí
 
 No caso específico do metadado ``e-mail'' a comparação foi realizada com base na identificação correta ou não do endereço eletrônico. Neste caso não foi considerada porcentagem de similaridade entre os resultados, ou seja, ou o endereço foi corretamente identificado ou não. Para estes resultados foram utilizados os valores 0 (zero) para a extração que não foi possível de encontrar o endereço de e-mail e 100 (cem) para a ferramenta que conseguiu identificar corretamente o campo.
 
-% Falar que considerei apenas os artigos que possuem email. Os que não tinha o cálculo da média desconsidera os resultados, marcando-os como -1.
+% Falar que considerei apenas os artigos que possuem email. Os que não tinha o cálculo da média desconsidera os resultados, marcando-os como -1. (FEITO)
+
+Uma grande parte dos artigos utilizados no Corpus deste trabalho não possue informações de e-mail dos autores. Desta forma, as extrações destes documentos são desconsideradas, permitindo que as ferramentas tenham seus resultados avaliados apenas para as extrações realmente computadas, valorizando ainda mais o trabalho de cada ferramenta.
 
 Já para a comparação das referências foram utilizadas duas informações: o título e o nome dos autores. Para o caso do título da referência a lógica utilizada foi a mesma utilizada no metadado ``título'', utilizando de um valor percentual para representação da similaridade. Já para o nome dos autores a lógica seguiu a mesma do metadado ``autores'', onde é levado em consideração tanto a similaridade textual como também a ordem de apresentação. Deste modo, a extração de cada referência levou em consideração 60\% do resultado para o título e 40\% para os nomes dos autores, chegando em um numero final que representa o resultado da extração de cada referência identificada.
 
