@@ -4,17 +4,106 @@
 
 % Construção da teoria
 
-Com base no objetivo de identificar como as ferramentas atuais se comportam nos mais diversos tipos de padrões visuais foram realizados vários experimentos práticos a fim de obter os resultados numéricos desejados para que o objetivo fosse alcançado.
+% Falar sobre o corpus e as ferramentas (FEITO)
 
-Desta maneira, foram separadas algumas ferramentas/técnicas implementáveis tecnicamente para que os artigos selecionados (citados no capítulo anterior) pudessem ser analisados e seus dados extraídos segundo os propósitos de cada uma.
+Com o Corpus totalmente definido e as ferramentas devidamente instaladas no ambiente de desenvolvimento foram realizadas uma série de experimentos para que os resultados pudessem ser analisados e apresentados numericamente.
+
+% Falar das dificuldades encontradas na extração (FEITO)
+
+Durante a extração dos metadados algumas observações puderam ser feitas tanto pela análise manual de cada resultado individual como também em conjunto, tendo em vista os números apresentados pelas ferramentas utilizadas.
+
+A ferramenta Cermine demonstrou-se de bem simples execução. Pode se tratar de um arquivo único em formato JAR (Java) em forma de executável, a extração ocorreu sem maiores problemas, tendo os dados de saída da ferramenta gravados em arquivos isolados para posterior análise. Além disso os resultados apresentados são os mais completos, com utilização de diversas tags XML que permitem que os dados sejam manipulados facilmente, da maneira que desejar. Já o processo de extração dos metadados para cada artigo científico foi o mais lento das 4 (quatro) ferramentas testadas, demorando entre 15 e 20 segundos para uma completa análise do documento.
+
+Já a ferramenta CiteSeer foi a que mais exigiu conhecimentos técnicos específicos para que pudesse ser testada. Sua execução depende da instalação de diversos outros componentes e serviços de terceiros, o que contribuiu para o aumento da complexidade de seu uso. Um fato interessante é que a ferramenta utiliza de outras ferramentas para alguns processos específicos de extração, como é o caso da sessão de referências, onde também utiliza a ferramenta ParsCit para realização do processo, porém com uma forma de entrada de dados um pouco diferenciada do que quando utilizada da sua maneira original.
+
+No caso da ferramenta CrossRef algumas particularidades devem ser mencionadas. Seus resultados de extração são apresentados de maneira muito básica, com tags XML muito genéricas e resultados pouco precisos, dificultando um pós-processamento dos dados a fim de se obter melhores resultados. Os metadados ``autores'', ``e-mails'' e ``resumo'' não puderam ser extraídos. Além da versão atual de desenvolvimento da ferramenta não permitir esta separação os dados são coletados mas em tags distintas chamadas ``sections''. Estas tags possuem informações textuais de modo geral, não sendo possível serem filtrados com a utilização da própria ferramenta. Portanto, para a ferramenta CrossRef somente os dados de ``título'' e ``referências'' foram utilizados. As referências também merecem considerações, por serem apresentadas de maneira muito genérica, em uma única tag, sendo impossível separar título e autor dentro do texto.
+
+A ferramenta ParsCit também foi utilizada sem maiores dificuldades. Em virtude de sua particularidade de processar apenas arquivos de entrada em formato texto ou XML, conforme sugerido pelos desenvolvedores, foi utilizada a ferramenta de linha de comando \texttt{pdftotext} para conversão dos arquivos PDF em arquivos TXT, permitindo que a ferramenta fosse utilizada com sucesso. Esta conversão foi feita em tempo de execução e os resultados coletados e gravados com sucesso.
+
+De modo geral, exceto pela ferramente CrossRef as demais ferramentas tiveram um processo de extração bem eficaz e dentro do esperado, em virtude da grande diferenciação visual testada com o Corpus selecionado. 
+
+% Falar das particularidades nos algoritmos de comparação (FEITO)
+
+No que diz respeito à comparação dos resultados foi necessária uma padronização dos dados para que as quatro ferramentas pudessem ser testadas de maneira uniforme. Em virtude de apresentar resultados bem detalhados, a ferramenta Cermine permitiu que os autores das referências fossem retornados seguindo a forma ``primeiro nome'' e em seguida ``sobrenome''. Já as demais ferramentas não apresentaram os resultados com tantos detalhes, variando em alguns momentos a ordem e disposição do nome dos autores. Assim, foi necessário um pré-processamento computacional a fim de manter, na grande maioria dos casos, o primeiro nome do autor na frente, tornando a comparação a mais padronizada possível.
+
+Já para a extração do metadado ``e-mails'', algumas ferramentas continham em sua tag correspondente outras informações, como foi o caso de poucas extrações realizadas pela ferramenta Cermine. Em um destes casos a ferramenta retornou como e-mail o seguinte conteúdo: \texttt{e-mail: autor@dominio.com}. Assim, sempre visando a comparação justa das ferramentas foi realizada uma análise em todas as comparações deste metadado para que somente pudessem ser comparados endereços de e-mails, o que tornou o processo bem simplificado.
+
+De modo geral os demais metadados não tiveram problemas nas comparações. O metadado ``título'' foi comparado sem sua pontuação final, retirando antes do teste qualquer caractere passível de erros como asteriscos, pontos finais e espaços em branco. O resultado das extrações dos título foi feito seguindo a lógica anteriormente apresentada, comparando a similaridade entre os dois conteúdos através da função \texttt{similar\_text} da linguagem de programação PHP, que apresenta como resultado um valor numérico representando o percentual de similaridade. Esta mesma lógica foi aplicada para o ``resumo'' e a comparação se fez da mesma forma.
+
+Os nomes dos autores foram comparados seguindo a mesma lógica do metadado ``título'', porém levando em consideração a ordem de apresentação e extração dos mesmos. Sendo assim, além de verificar a similaridade entre os nomes os testes levaram em consideração a ordem de apresentação dos nomes, requisito necessário para que uma extração considerada positiva.
+
+% Falar também da questão dos nomes dos autores com acentos, no caso de autores russos, croatas e latinos. Algumas ferramentas retornaram os resultados sem acento o que implica em uma comparação menos precisa.
+
+No caso específico do metadado ``e-mail'' a comparação foi realizada com base na identificação correta ou não do endereço eletrônico. Neste caso não foi considerada porcentagem de similaridade entre os resultados, ou seja, ou o endereço foi corretamente identificado ou não. Para estes resultados foram utilizados os valores 0 (zero) para a extração que não foi possível de encontrar o endereço de e-mail e 100 (cem) para a ferramenta que conseguiu identificar corretamente o campo.
+
+% Falar que considerei apenas os artigos que possuem email. Os que não tinha o cálculo da média desconsidera os resultados, marcando-os como -1.
+
+Já para a comparação das referências foram utilizadas duas informações: o título e o nome dos autores. Para o caso do título da referência a lógica utilizada foi a mesma utilizada no metadado ``título'', utilizando de um valor percentual para representação da similaridade. Já para o nome dos autores a lógica seguiu a mesma do metadado ``autores'', onde é levado em consideração tanto a similaridade textual como também a ordem de apresentação. Deste modo, a extração de cada referência levou em consideração 60\% do resultado para o título e 40\% para os nomes dos autores, chegando em um numero final que representa o resultado da extração de cada referência identificada.
+
+% Resultados das comparações (FEITO)
+
+Com os dados de cada extração armazenados a comparação foi feita de maneira automática levando em consideração todos os pontos apresentados acima. Para cada subárea do conhecimento foi realizada uma comparação, registrando o resultado consolidado para cada artigo extraído, bem como a média aritmética dos resultados daquela subárea em análise. Portanto, para cada ferramenta e para cada subárea foi gravado um valor médio dos resultados.
+
+Posteriormente foi feita a coleta destes dados separados por subáreas, porém consolidando-os para cada ferramenta. Assim foi calculada a média aritmética dos resultados de cada ferramenta para todas as subáreas, chegando então a uma nota final para cada ferramenta em cada metadado extraído.
 
 % Conceitos criados pelo autor
 
-Para que os resultados pudessem ser medidos e comparados foi utilizado o ``Índice de Confiabilidade'' detalhado no capítulo de \textbf{Metodologia}, a fim de obter um valor numérico para cada resultado apresentado com a utilização das ferramentas, permitindo que os valores obtidos fossem comparados e então confrontados para se obter o comportamento de cada ferramenta.
+Para que os resultados pudessem ser melhores interpretados foi calculado o ``Índice de Confiabilidade'' para cada ferramenta, detalhado no capítulo de \textbf{Metodologia}. Este índice utilizou-se da média dos resultados de extração de todas as subáreas, tomando os devidos pesos para cada metadado, obtendo então um resultado geral para cada ferramenta.
 
 % Trabalhar as evidências de que sua hipótese é verdadeira
 
+\section{Resultados}
+\label{sec:results}
+
 % Apresentar dados, testes, provas, estudos de caso, etc
+
+Conforme esperado os resultados foram coletados de maneira individual para cada artigo e consolidados de maneira geral para cada ferramenta e cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separados por cada uma das ferramentas. Os resultados da ferramenta Cermina estão presentes na \ref{tab:results-cermine}. Os resultados da CiteSeer estão na XXXXXX Os resultado da ferramenta CrossRef na XXXXXXX e da ParsCit na XXXXXXXX Todas as tabelas mostram o percentual de acerto separado por subárea do conhecimento e por metadados.
+
+\begin{table}
+    \caption{Resultados da Cermine por subárea do conhecimento.}
+    \begin{center}
+        \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
+            \hline 
+            \textbf{Subárea do Conhecimento} & \textbf{Tit.} & \textbf{Aut.} & \textbf{Ema.} & \textbf{Res.} & \textbf{Ref.} \\ 
+            \hline 
+            Arquitetura e Urbanismo & 100 & 58.75 & 0 & 99.01 & 82.67 \\
+            \hline  
+            Ciência da Computação & 88.27 & 71.87 & 30.00 & 98.83 & 77.25 \\
+            \hline  
+            Ciência da Informação & 76.55 & 61.90 & 33.33 & 78.02 & 53.81 \\
+            \hline  
+            Ciências Biológicas (Genética) & 91.58 & 85.31 & 50.00 & 84.72 & 96.11 \\
+            \hline  
+            Ciências Biológicas (Zoologia) & 99.78 & 73.16 & 0 & 84.74 & 72.28 \\
+            \hline  
+            Enfermagem & 99.77 & 39.38 & 16.67 & 98.09 & 81.69 \\
+            \hline  
+            Engenharia Civil & 71.43 & 76.34 & 25.00 & 94.18 & 56.23 \\
+            \hline  
+            Engenharia Mecânica & 99.45 & 75.97 & 50.00 & 77.97 & 82.87 \\
+            \hline  
+            Fonoaudiologia & 100 & 77.75 & 60.00 & 98.13 & 80.05 \\
+            \hline  
+            Geologia & 99.54 & 100 & 80.00 & 53.66 & 64.03 \\
+            \hline  
+            História & 99.20 & 89.29 & - & 65.59 & 53.40 \\
+            \hline  
+            Letras & 88.01 & 99.50 & 33.33 & 82.10 & 86.74 \\
+            \hline  
+            Medicina Veterinária & 85.71 & 91.11 & 83.33 & 98.77 & 80.05 \\
+            \hline  
+            Música & 99.03 & 90.61 & 66.67 & 95.47 & 68.50 \\
+            \hline  
+            Psicologia & 88.46 & 63.96 & 47.62 & 92.53 & 63.25 \\
+            \hline  
+            Zootecnia & 49.95 & 70.82 & 0 & 87.40 & 81.99 \\
+            \hline  
+            \textbf{Média Geral} & 89.80 & 76.61 & 38.40 & 86.83 & 73.81 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:results-cermine}
+\end{table}
 
 \section{Ambiente de Testes}
 
@@ -29,14 +118,14 @@ Por restringir apenas os testes utilizando ferramentas de código livre, todos o
 \begin{table}
     \caption{Ferramentas e Ambientes de Testes}
     \begin{center}
-    	\begin{tabular}{|p{3cm}|p{8cm}|}
-			\hline \textbf{Ferramenta} & \textbf{Ambiente}\\ 
-			\hline Ferramenta 1 & Linux Ubuntu 12.04, Java 7, Sqlite, Tomcat 6 \\
-			\hline Ferramenta 2 & Linux Ubuntu 12.04, Perl, MySQL, Nginx \\
-			\hline Ferramenta 3 & Linux Ubuntu 12.04, Perl, PostgreSQL, Apache \\
-			\hline Ferramenta 4 & Linux Ubuntu 12.04, Java 6, MySQL, Tomcat 6 \\
-	    	\hline 
-    	\end{tabular} 
+        \begin{tabular}{|p{3cm}|p{8cm}|}
+            \hline \textbf{Ferramenta} & \textbf{Ambiente}\\ 
+            \hline Ferramenta 1 & Linux Ubuntu 12.04, Java 7, Sqlite, Tomcat 6 \\
+            \hline Ferramenta 2 & Linux Ubuntu 12.04, Perl, MySQL, Nginx \\
+            \hline Ferramenta 3 & Linux Ubuntu 12.04, Perl, PostgreSQL, Apache \\
+            \hline Ferramenta 4 & Linux Ubuntu 12.04, Java 6, MySQL, Tomcat 6 \\
+            \hline 
+        \end{tabular} 
     \end{center}
-  	\label{tab:lista-servidores}
+    \label{tab:lista-servidores}
 \end{table}
