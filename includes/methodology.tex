@@ -1,7 +1,7 @@
 %!TEX root = ../masters.tex
 
 \chapter{Metodologia}
-\label{cha:metodology}
+\label{cha:methodology}
 
 Este trabalho tem como metodologia uma pesquisa de caráter não-experimental e quantitativa, por se tratar de extração automática de metadados por ferramentas previamente selecionadas, tendo os resultados comparados com a extração manual do mesmo conjunto de artigos científicos.
 
@@ -18,6 +18,7 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
     \caption{Processo de Metodologia utilizado}
     \label{fig:metodology}
     \includegraphics[width=0.8\linewidth]{./assets/images/metodology}
+    \center\footnotesize{Fonte: O próprio autor}
 \end{figure}
 
 
@@ -26,47 +27,139 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
 
 % Falar da seleção de artigos de várias áreas
 
-Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, de diversos eventos distintos, com padrões visuais totalmente diferentes e que são passível de ser analisados e seus metadados coletados.
+Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, de maneira que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
 
 % Porque selecionar artigos de diferentes áreas
 
-Em virtude da necessidade de testar estas ferramentas em um ambiente real, estes artigos selecionados foram coletados por estudantes de graduação, mestrado e doutorado de diversas instituições de ensino e áreas do conhecimento, fazendo com que esta seleção de documentos faça parte de um conjunto real e concreto, que necessita ser testado para comprovar a eficácia das ferramentas analisadas neste trabalho.
-
-Assim, com uma seleção de artigos que faz parte do cotidiano destes estudantes, podemos aferir se os resultados fornecidos pelas ferramentas podem ser considerados positivos ou negativos, com base na comparação entre os resultados manualmente coletados e a análise visual destes documentos.
-
-% Áreas dos Artigos e Eventos
-
-A lista destes artigos compreende um total de 100 (cem) documentos variados, com seus metadados já extraídos manualmente e todos catalogados, permitindo a comparação desejada. Na \autoref{tab:papers-list} pode-se ter acesso ao número de artigos que foram selecionados por cada área do conhecimento. A relação de todos os artigos utilizados neste trabalho pode ser obtida no \autoref{appendix:papers} deste documento.
+Em virtude da necessidade de realizar testes com as ferramentas selecionadas em um ambiente real e representativo, foi realizada uma pesquisa no site do CNPq \url{http://www.cnpq.br/} a fim de se obter a relação das áreas e subáreas do conhecimento reconhecidas oficialmente. Deste modo foi constatada a existência de 9 (nove) áreas do conhecimento, totalizando 1.288 (mil duzentas e oitenta e oito) subáreas, conforme pode ser verificado na \autoref{tab:areas-cnpq}.
 
 \begin{table}
-    \caption{Seleção de artigos científicos para testes.}
+    \caption{Áreas do Conhecimento (CNPq)}
     \begin{center}
-        \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Área de Conhecimento} & \textbf{Total de Artigos} \\ 
-            \hline
-            Arquitetura e Urbanismo & 7 \\ 
-            Música & 7 \\ 
-            Ciência da Computação & 8 \\
-            Ciência da Informação & 9 \\
-            Ciências Biológicas & 7 \\
-            Direito & 7 \\
-            Engenharia Civil & 8 \\
-            Letras & 7 \\
-            Matemática Computacional & 7 \\
-            Medicina & 9 \\ 
-            Odontologia & 8 \\ 
-            Psicologia & 9 \\
-            Sociologia & 7 \\   
-            \hline
-            \textbf{Total} & \textbf{100} \\
+        \begin{tabular}{|l|c|}
             \hline 
+            \textbf{Áreas do Conhecimento} & \textbf{Subáreas} \\ 
+            \hline 
+            Ciências Agrárias & 157 \\
+            Ciências Biológicas & 104 \\
+            Ciências da Saúde & 76 \\
+            Ciências Exatas e da Terra & 243 \\
+            Ciências Humanas & 163 \\
+            Ciências Sociais Aplicadas & 185 \\
+            Engenharias & 305 \\
+            Lingüística, Letras e Artes & 53 \\
+            Outros & 4 \\
+            \hline
+            \textbf{Total} & \textbf{1288} \\
+            \hline
         \end{tabular}
     \end{center}
-    \label{tab:papers-list}
+    \center\footnotesize{Fonte: \url{http://www.memoria.cnpq.br/areasconhecimento/index.htm}}
+    \label{tab:areas-cnpq}
 \end{table}
 
-A seleção dos artigos foi feita tomando por base a máxima diferenciação visual possível na disposição dos metadados, permitindo que uma maior variedade de documentos seja analisada, aumentando ainda a confiança nos resultados obtidos.
+Com base no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas será limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
+
+Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
+
+\begin{table}
+    \caption{Professores entrevistados para cada subárea do conhecimento.}
+    \begin{center}
+        \begin{tabular}{|p{6cm}|p{8cm}|}
+            \hline 
+            \textbf{Subárea do Conhecimento} & \textbf{Professor(a)}\\ 
+            \hline 
+            Arquitetura e Urbanismo & Eleonora Sad de Assis \\
+            \hline
+            Ciência da Computação & Adriano Alonso Veloso \par 
+                                    Alberto Henrique Frade Laender \par 
+                                    Arnaldo de Albuquerque Araújo \\
+            \hline
+            Ciência da Informação & Beatriz Valadares Cendón \\
+            \hline
+            Ciências Biológicas (Genética) & Mônica Bucciarelli Rodriguez \\
+            \hline
+            Ciências Biológicas (Zoologia) & Alfredo Hannemann Wieloch \\
+            \hline
+            Enfermagem & Eline Lima Borges \par
+                         Tania Couto Machado Chianca \par
+                         Daclé Vilma Carvalho \\
+            \hline
+            Engenharia Civil & Antônio Neves de Carvalho Júnior \\
+            \hline
+            Engenharia Mecânica & Antônio Eustáquio de Melo Pertence \par
+                                  Alexandre Mendes Abrao \\
+            \hline
+            Fonoaudiologia & Sirley Alves da Silva Carvalho \\
+            \hline
+            Geologia & \\
+            \hline
+            História & Adriana Romeiro \\
+            \hline
+            Letras & Adriana Silvina Pagano \\
+            \hline
+            Medicina Veterinária & João Paulo Amaral Haddad \par
+                                   Jenner Karlisson Pimenta dos Reis \\
+            \hline
+            Música & João Pedro Paiva de Oliveira \\
+            \hline
+            Psicologia & Carmen Elvira Flores-Mendoza Prado \par
+                         Livia de Oliveira Borges \\
+            \hline
+            Zootecnia & Ângela Maria Quintão Lana \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:subareas-professores}
+\end{table}
+
+Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete) artigos científicos. Em virtude da diversidade de quantidade de bases de dados informadas pelos professores de cada subárea do conhecimento (\autoref{tab:databases}), a pesquisa foi limitada a 2 (duas) bases, na ordem apresentada pelos próprios pesquisadores, contemplando 4 (quatro) artigos para a primeira base e 3 (três) para a segunda. Para a subárea ``Ciências Biológicas (Genética)'' somente uma base de dados será utilizada, portanto dela serão retirados os 7 artigos necessários. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 subáreas do conhecimento e 32 bases de dados, formando então o \emph{corpus} utilizado como base desta pesquisa.
+
+\begin{table}
+    \caption{Bases de Dados informadas pelos professores entrevistados, por subárea do conhecimento.}
+    \begin{center}
+        \begin{tabular}{|p{6cm}|p{8cm}|}
+            \hline 
+            \textbf{Subárea do Conhecimento} & \textbf{Bases de Dados} \\ 
+            \hline 
+            Arquitetura e Urbanismo & Scielo, Web of Science, Scopus \\
+            \hline
+            Ciência da Computação & DBLP, ACM Digital Library, IEEE Xplore \\
+            \hline
+            Ciência da Informação & LISA, ISTA, LISTA \\
+            \hline
+            Ciências Biológicas (Genética) & PubMed \\
+            \hline
+            Ciências Biológicas (Zoologia) & Zoological Records, Biological Abstracts \\
+            \hline
+            Enfermagem & MedLine, Lilacs, CINAHL, EBSCO, IBECS, BDENF \\
+            \hline
+            Engenharia Civil & Construction and Building Materials (ELSEVIER), Cement and Concrete Composites (ELSEVIER), Composites Science and Technology (ScienceDirect), Cement and Concrete Research (ELSEVIER), Materials Research (Scielo) \\
+            \hline
+            Engenharia Mecânica & Scopus, ScienceDirect, Web of Science, SpringerLink, Elsevier, Research Gate \\
+            \hline
+            Fonoaudiologia & Pubmed, Bireme \\
+            \hline
+            Geologia & \\
+            \hline
+            História & Scielo, Jstor, Redalyc \\
+            \hline
+            Letras & Delta (Scielo), Periódicos Letras UFMG, Periódicos UFSC \\
+            \hline
+            Medicina Veterinária & PubMed, Scielo \\
+            \hline
+            Música & RISM, RILM, JSTOR, Grove Dictionary of Music \\
+            \hline
+            Psicologia & Scopus, PsycInfo, Scopus, Psicodoc \\
+            \hline
+            Zootecnia & Dairy Science, Animal, Poutry Science \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:databases}
+\end{table}
+
+A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, levando em consideração diferenças de layouts e posicionamento dos elementos, permitindo que uma maior variedade de documentos seja analisada.
 
 % Artigos em Inglês, somente
 
@@ -120,6 +213,8 @@ Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada
 \end{table}
 
 Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, será calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo será feito por algoritmo desenvolvido pelo próprio autor, analisando qual a taxa de acerto para cada metadado, referenciado posteriormente por $P_{título}$ (precisão de acerto para o metadado título).
+
+\comment{Falar a fórmula ou escrever o algorítimo citado no parágrafo acima.}
 
 Como cada ferramenta será testada em separado, os resultados da extração de cada artigo serão registrados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' serão analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, será somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' da Ferramenta ``A'' ($P_{título}$):
 
@@ -191,6 +286,7 @@ Deste modo, dentro de um mesmo servidor podemos criar diversos outros servidores
     \caption{Utilização de Máquinas Virtuais como Ambiente de Testes}
     \label{fig:virtual-server}
     \includegraphics[width=0.5\linewidth]{./assets/images/virtual-server}
+    \center\footnotesize{Fonte: O próprio autor}
 \end{figure}
 
 

@@ -13,7 +13,7 @@
 
 Como o objetivo do trabalho tem foco no resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM \emph{(Association for Computing Machinery)}, por exemplo. Outras bases multidisciplinares também foram pesquisadas, através do site da CAPES, porém com caráter de apoio na fundamentação teórica.
 
-Embora a amplitude desta área de estudo, alguns detalhes necessitavam ser observados para evitar, assim, redundância e perda de foco. A pesquisa deveria ser focada em técnicas e ferramentas para extração de metadados em artigos científicos, quer permitissem testes com dados reais, fazendo assim com que os resultados obtidos pudessem ser comparados e confrontados para verificar então a eficácia deste processo de extração.
+A pesquisa deveria ser focada em técnicas e ferramentas para extração de metadados em artigos científicos, que permitissem testes com dados reais, fazendo assim com que os resultados obtidos pudessem ser comparados e confrontados para verificar então a eficácia deste processo de extração.
 
 Como a pesquisa necessita de um resultado prático e eficaz, os critérios que serão adotados para demonstrar a relevância de uma ferramenta serão seus resultados, sua participação de mercado e sua maturidade. Cada ferramenta deverá ser testada juntamente com um grupo de artigos previamente selecionado. Estes artigos já possuirão seus metadados extraídos manualmente, permitindo então comparar os resultados obtidos com os resultados de cada uma das ferramentas. Portanto, os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
 
@@ -45,18 +45,16 @@ Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialm
 
 Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele teremos. Com efeito, podemos simplificar ainda mais a definição de metadado com sendo ``um conjunto de dados sobre um determinado recurso''.
 
-Temos contato diariamente com diversos metadados, sejam eles visíveis naturalmente ou não, mas de uma maneira ou outra, são utilizados amplamente em tarefas do cotidiano; geralmente um conjunto enorme de novos dados e informações sobre recursos dos mais diversos tipos e modelos.
-
-Podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
+Para exemplificar podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
 
 Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser direcionados, visando identificar e explicar melhor os conceitos que serão aplicados nos testes das técnicas e ferramentas que aqui serão apresentadas.
 
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
 
-Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão adotado em todo o mundo. 
+Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
 
-Para isso, foi criado o padrão ``Dublin Core'' \cite{dublin-core}, que se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página na Internet, um texto ou até mesmo um documento em um determinado formato. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
+Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página na Internet, um texto ou até mesmo um documento em um determinado formato. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
 Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados, juntamente com diversas especificações técnicas, que são mantidas pela \emph{Dublin Core Metadata Initiative} (DCMI), a agência responsável pela definição destes elementos.
 
@@ -95,6 +93,153 @@ Estas técnicas se baseiam basicamente na classificação de dados com base nas 
 Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Estes dados são fornecidos por diversas entidades/órgãos de certa forma estruturados para serem analisados, com alguma bagagem semântica já presente; são os chamados \emph{datasets}. Algumas bases de dados já consolidadas no mercado fornecem estes conjunto de dados reais, com base nos \emph{papers} que estão catalogados internamente, justamente para serem objetos de pesquisa posterior, a fim de facilitar o manuseio e seleção dos documentos de entrada para análise e desenvolvimento de novos projetos.
 
 Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
+
+\subsubsection{Regular Expressions (RegEx)}
+\label{sssec:regular-expressions}
+
+\emph{Regular Expressions} ou Expressões Regulares é uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
+
+Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que as expressões regulares ficaram conhecidas, através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos.
+
+Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos, que determina a forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja reconhecer dentro do texto.
+
+Existem variações de formas de representação de uma Expressão Regular, porém a maioria das linguagens de programação atualmente seguem o padrão POSIX - sob responsabilidade do IEEE e do Open Group \url{http://opengroup.org/} -, que determina algumas regras para utilização desta técnica \cite{posix-2013}.
+
+Como exemplo, visando identificar somente os números existentes dentro da frase ``Foram encontrados 4 passageiros dentro do veículo parado na BR262.'', devemos escrever uma expressão regular para que estes números sejam identificados. Desta forma podemos representar o que desejamos buscar da seguinte forma: \texttt{/[0-9]+/}, onde identificamos:
+
+\begin{itemize}
+
+    \item o uso do caractere \texttt{/}, que determina o começo e fim da expressão regular;
+    
+    \item a representação de algarismos utilizando \texttt{[0-9]}, que significa qualquer dígitos de 0 a 9, permitindo que os números sejam identificados dentro do texto; 
+    
+    \item a existência de números com mais de um dígito, como é o caso de \texttt{262}, necessitando complementar o padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}, que significa exatamente ``uma ou mais ocorrência''.
+
+\end{itemize}
+
+Em diversas ocasiões é necessária a utilização de repetições, informando que aquele padrão pode ocorrer diversas vezes. Assim, temos as seguintes formas de representação para repetições:
+
+\begin{itemize}
+
+    \item Como pôde ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrências''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
+    
+    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar ``nenhuma ou apenas uma ocorrência'', ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente no reconhecimento.
+    
+    \item Podemos utilizar o caractere \texttt{*} (asterisco) para representar ``nenhum ou mais'', ou seja, podemos ter nenhuma ou várias ocorrências daquele conjunto, indo do zero ao infinito.
+
+\end{itemize}
+
+Além das repetições, em alguns momentos necessitamos identificar um número exato de caracteres. Para identificar um ano de 4 (quatro) dígitos, necessitamos informar que o padrão deve ser identificado para apenas 4 dígitos, nem mais, nem menos. Desta forma temos as seguintes formas de representação:
+
+\begin{itemize}
+
+    \item Para número de ocorrências exatos utilizamos da expressão regular \texttt{[0-9]\{4\}}, que exige que para identificação do padrão o número tenha exatamente 4 dígitos de 0 a 9.
+
+    \item Podemos estipular quantidade mínima de repetições, como por exemplo \texttt{[0-9]\{3,\}}, que significa ``qualquer número que possua no mínimo 3 dígitos'', ou seja, os números 123, 481145, 9182 seriam identificados, mas 14 não, visto que possui apenas 2 dígitos.
+
+    \item Podemos também estipular apenas a quantidade máxima desejada, como \texttt{[0-9]\{,8\}}, ou seja, somente os números que possuem até no máximo 8 dígitos. Neste caso, um número com 9 ou mais dígitos não entraria no reconhecimento de padrão.
+
+    \item Por fim, tomando como base os dois últimos exemplos, podemos informar os valores mínimo e máximo ao mesmo tempo, como \texttt{[0-9]\{4,8\}}, ou seja, números que possuem no mínimo 4 dígitos e no máximo 8 dígitos.
+
+\end{itemize}
+
+Desta forma podemos consolidar as formas de repetição em Expressões Regulares com base na \autoref{tab:regex-repeticao}.
+
+\begin{table}
+    \caption{Formas de representação de repetições em Expressões Regulares.}
+    \begin{center}
+        \begin{tabular}{|c|l|}
+            \hline 
+            \textbf{Forma de Representação} & \textbf{Significado} \\ 
+            \hline 
+            \texttt{?} & Nenhuma ou apenas uma ocorrência \\
+            \hline 
+            \texttt{*} & Nenhuma ou várias ocorrências \\
+            \hline
+            \texttt{+} & Uma ou mais ocorrências \\
+            \hline
+            \texttt{\{4\}} & Exatamente 4 ocorrências \\
+            \hline
+            \texttt{\{4,\}} & No mínimo 4 ocorrências \\
+            \hline
+            \texttt{\{,8\}} & No máximo 8 ocorrências \\
+            \hline
+            \texttt{\{4,8\}} & No mínimo 4 e no máximo 8 ocorrências \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:regex-repeticao}
+\end{table}
+
+% O padrão POSIX permite que dígitos sejam também representados sob a forma \texttt{\textbackslash{d}}, o que é exatamente equivalente ao \texttt{[0-9]}, que utilizamos nos exemplos acima. Assim, podemos reescrever nosso padrão para \texttt{/\textbackslash{d}+/} simplificando sua escrita e entendimento.
+
+Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
+
+Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capaz de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
+
+A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas objetivando outras formas de representação.
+
+\begin{itemize}
+
+    \item O ponto (\texttt{.}) possui um significado muito importante, sendo considerado ``qualquer coisa''. Assim, a expressão regular \texttt{/abaca../} permite que \texttt{abacaxi} e \texttt{abacate} também sejam identificados. Ela representa ``qualquer coisa que comece com \texttt{abaca} e possui mais 2 caracteres quaisquer depois''. Ou seja, além de identificar \texttt{abacate} e \texttt{abacaxi} ela permite identificar \texttt{abaca17} ou até mesmo \texttt{abaca s}, visto que espaço também é um caracteres e faz parte do reconhecimento de \texttt{.}.
+
+    \item Os colchetes - já visto anteriormente - representam um conjunto de caracteres únicos dentro de várias possibilidades. Isso quer dizer que em \texttt{/[abc]/} conseguimos identificar qualquer um dos caracteres \texttt{a}, \texttt{b} ou \texttt{c}. Assim, dentro da palavra \texttt{casa} conseguimos identificar a letra \texttt{c} e as letras \texttt{a}.
+
+    \item O acento circunflexo (\texttt{\textasciicircum}) possui significado de negação quando presente dentro de colchetes. Com base no exemplo acima (\texttt{/[abc]/}), caso ele seja escrito como \texttt{/[\textasciicircum{abc}]/}, seu significado é exatamente o oposto, representando quaisquer caracteres exceto \texttt{a}, \texttt{b} e \texttt{c}. Além deste significado, ele é utilizado para representar o início de algum padrão no seu texto de origem. Na expressão regular \texttt{/\textasciicircum{a.+}/} temos o seguinte significado: ``um texto que comece com a letra \texttt{a} seguido de qualquer caractere em qualquer quantidade''. Desta forma, com esta expressão, conseguimos identificar \texttt{abcd}, \texttt{ab}, \texttt{abcdefghijk} e até mesmo \texttt{a9715263}. A única exigência, neste caso, é começar com a letra \texttt{a}, de maneira que no texto ``as mulheres marcaram presença'' seremos capaz de identificar toda a frase, mas já em ``todas as mulheres marcaram presença'' ela não identificará nada, visto que o texto começa com a letra \texttt{t}.
+
+    \item Assim como o \texttt{\textasciicircum} representa o início de um texto o \texttt{\$} indica o fim. A lógica é a mesma, se aplicando para todo o texto, e não apenas em ocorrências. Assim, para a expressão \texttt{/\textasciicircum{a.+z}\$/} exige-se que o texto comece com a letra \texttt{a} e termine com a letra \texttt{z}. Nada além disso é permitido.
+
+    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/} podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressão regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra coisa, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
+
+\end{itemize}
+
+Em virtude da existência dos metacaracteres, caso seja necessária a representação de algum destes caracteres em sua forma pura, utiliza-se do caractere de escape \texttt{\textbackslash{}} (barra invertida) antes do caractere desejado. Por exemplo, para escrever o símbolo \texttt{+}, literalmente, deve-se representá-lo por \texttt{\textbackslash{+}}. Desta forma a expressão será interpretada como um ``mais'' e não como um caractere de repetição.
+
+Assim como vimos a utilização de \texttt{0-9} para representação de dígitos, temos outras representações, tanto para indicar letras maiúsculas quanto minúsculas, utilizando de \texttt{A-Z} e \texttt{a-z}, respectivamente. Sendo assim, podemos identificar dígitos, letras minúsculas e maiúsculas com a expressão regular \texttt{/[A-Za-z0-9]+/}. Além disso, no padrão POSIX podemos representar conjuntos de letras e números de outras formas chamadas ``classes'', como pode ser verificado na \autoref{tab:posix-classes}.
+
+\begin{table}
+    \caption{Classes do padrão POSIX.}
+    \begin{center}
+        \begin{tabular}{|l|p{6cm}|l|}
+            \hline 
+            \textbf{POSIX} & \textbf{Equivalência} & \textbf{Descrição} \\ 
+            \hline 
+            \texttt{[:alnum:]} & \texttt{[A-Za-z0-9]} & Caracteres alfanuméricos \\
+            \hline
+            \texttt{[:alpha:]} & \texttt{[A-Za-z]} & Caracteres alfabéticos \\
+            \hline
+            \texttt{[:blank:]} & \texttt{[ \textbackslash{t}]} & Espaço e tabulação (tab) \\
+            \hline
+            \texttt{[:cntrl:]} & \texttt{[\textbackslash{x}00-\textbackslash{x}1F\textbackslash{x}7F]} & Caracteres de controle ASCII \\
+            \hline
+            \texttt{[:digit:]} & \texttt{[0-9]} & Dígitos \\
+            \hline
+            \texttt{[:graph:]} & \texttt{[\textbackslash{x}21-\textbackslash{x}7E]} & Caracteres visíveis \\
+            \hline
+            \texttt{[:lower:]} & \texttt{[a-z]} & Letras minúsculas \\
+            \hline
+            \texttt{[:print:]} & \texttt{[\textbackslash{x}20-\textbackslash{x}7E]} & Caracteres visíveis e espaço \\
+            \hline
+            \texttt{[:punct:]} & \texttt{[][!"\#\$\%\&'()*+,./:;\textless=\textgreater?@\newline\textbackslash\textasciicircum\_`\{\textbar\}\textasciitilde-]} & Caracteres de pontuação \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:posix-classes}
+\end{table}
+
+% Falar de flags também -> não incluído por ser específico de linguagens de programação
+
+% Expressão regular para email
+
+No caso específico de extração de metadados a utilização de expressão regular é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, que possui um formato muito específico. Deste modo, podemos escrever uma expressão regular para identificar e-mails dentro de um texto a título de exemplo:
+
+\begin{center}
+\texttt{/[A-Za-z0-9-\textbackslash.]\{2,\}@[A-Za-z0-9-]\{2,\}\textbackslash.([A-Za-z0-9]\{2,\})+/}
+\end{center}
+
+Assim, as aplicações de Expressões Regulares são infinitas, podendo ser capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras.
+
+% Escrever sobre
 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
@@ -144,6 +289,7 @@ A ocorrência dos campos é mapeada em uma representação bidimensional, permit
     \centering
     \caption{Distância representando a separação entre classes na técnica de SVM.}
     \includegraphics[width=0.6\linewidth]{./assets/images/svm-graph}
+    \center\footnotesize{Fonte: \cite{Vapnik-SVM}}
 \end{figure}
 
 Além desta análise são utilizadas comparações de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilita a identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
@@ -208,6 +354,7 @@ Já no âmbito da extração da informação, o HMM pode ser aplicado conforme �
     \caption{Exemplo de modelo HMM, onde ``X'' são os estados, ``Y'' as observações possíveis, ``A'' as probabilidades de mudança de estado e ``B'' as saídas destas probabilidades.}
     \label{fig:hmm-states}
     \includegraphics[width=0.7\linewidth]{./assets/images/hmm-states}
+    \center\footnotesize{Fonte: Wikipedia / Hidden Markov Model \url{http://goo.gl/pI3XUU}}
 \end{figure}
 
 Um dos pontos positivos deste modelo é que por ser baseado em estatística ele é muito bem empregado em problemas de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem desta técnica podemos citar o fato de, por ser baseada em estatística matemática, uma grande quantidade prévia de dados deve ser utilizada - a título de treino - para se obter padrões significativos para então ser aplicados de maneira final na criação do modelo.
@@ -241,10 +388,11 @@ Uma outra utilização de HMM na extração de informação é descrita por \cit
 Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \textit{Prefix}, \textit{Suffix} e \textit{Target}. O \textit{Target} é o estado responsável pela emissão do símbolo - chamado pelo autor de \textit{token} - para o ``campo-alvo''. O \textit{Preffix} e \textit{Suffix} são estados que emitem símbolos que aparecem respectivamente antes e depois deste campo-alvo. Todos os demais símbolos são emitidos no estado \textit{Background}. A relação entre os estados pode ser visualizada na \autoref{fig:zhang-hmm-ie}.
 
 \begin{figure}
-	\centering
-	\caption{Estados utilizados por \cite{Zhang-HMM-IE} em seu modelo HMM.}
-	\label{fig:zhang-hmm-ie}
-	\includegraphics[width=0.8\linewidth]{./assets/images/zhang-hmm-ie}
+    \centering
+    \caption{Estados utilizados por \cite{Zhang-HMM-IE} em seu modelo HMM.}
+    \label{fig:zhang-hmm-ie}
+    \includegraphics[width=0.8\linewidth]{./assets/images/zhang-hmm-ie}
+    \center\footnotesize{Fonte: O próprio autor.}
 \end{figure}
 
 Os seguintes campos deveriam ser extraídos das informações dos restaurantes: \textit{restaurant name} (nome do restaurante), \textit{telephone number} (número de telefone), \textit{hours} (horas) e \textit{cuisine} (tipo de comida servida, como italiana, alemã, etc). Segundo Zhang \cite{Zhang-HMM-IE} os campos \textit{restaurant name} e \textit{telephone number} deveriam ser mais fáceis de serem obtidos, visto que o nome do restaurante geralmente se encontra em destaque, com alguma diferenciação visual. Já o telefone possui um formato numérico, que permite mais facilmente uma identificação de um padrão. O campo \textit{hours} também não foi complicado, embora se tenha uma variedade muito grande na disposição desta informação. Já o campo \textit{cousine} foi mais difícil de ser extraído, visto a diversidade que existe na forma de um restaurante especificar e/ou representar sua cozinha, tanto na utilização de palavras diferentes quanto na própria identificação do estilo do restaurante por si só.
@@ -275,6 +423,7 @@ Como exemplo, a palavra ``Mary'' faz parte do contexto de ``nomes''. Portanto ex
     \caption{Workflow da extração de metadados usando \textit{cluster} de palavras.}
     \label{fig:workflow-rule-based}
     \includegraphics[width=0.7\linewidth]{./assets/images/workflow-rule-based}
+    \center\footnotesize{Fonte: \cite{Han-Giles-WC}}
 \end{figure}
 
 A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
@@ -420,13 +569,17 @@ Pode-se observar também que a utilização de modelos HMM para precisão de pal
 
 Com base nos resultados apresentados pode-se considerar que o trabalho de Peng \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
 
+\subsubsection{Outras Técnicas e Conceitos}
+\label{sssec:others-techniques}
+
+% Falar um pouco de KOSS, Tesauros, Glossários e Ontologias
 
 \section{Revisão de Estado da Arte na Extração de Metadados}
 \label{sec:revision}
 
 % Falar aqui sobre os estudos de comparações de Granitizer
 
-Técnicas de \emph{machine learning} não são novas, porém suas aplicações vão muito mais além do que se podia imaginar. As técnicas então utilizadas para apenas classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
+Técnicas de \emph{machine learning} não são novas, porém suas aplicações são inúmeras. Estas técnicas eram então utilizadas apenas para classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
 
 O aperfeiçoamento da aplicação destas técnicas para a área de \emph{information extraction} acarretou em um resultado muito positivo, melhorando cada dia mais a precisão dos resultados obtidos. Assim, algoritmos foram/são alterados e otimizados visando obter maiores performances e resultados cada vez melhores.
 
@@ -464,7 +617,9 @@ A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo
 \section{Ferramentas de Extração de Metadados}
 \label{sec:environments}
 
-Algumas ferramentas baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica dos artigos, facilitando a procura e consequentemente aumentando a velocidade no resultado. 
+Algumas ferramentas baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica dos artigos, facilitando a procura e consequentemente aumentando a velocidade no resultado.
+
+\comment{Citar trabalho do Prof. Renato Rocha}
 
 Estas ferramentas geralmente permitem uma variedade muito grande de layouts, embora nem todos já estejam previamente definidos. Geralmente novos layouts são inseridos em novas versões ou até mesmo por contribuições das mais diversas, como é o caso dos projetos de código livre, os chamados projetos \textit{open source}.
 
@@ -490,6 +645,7 @@ Com estas regiões definidas o CERMINE extrai as informações com base em padr�
     \caption{CERMINE Extraction Workflow}
     \label{fig:cermine-workflow}
     \includegraphics[width=0.7\linewidth]{./assets/images/cermine}
+    \center\footnotesize{Fonte: \cite{cermine}}
 \end{figure}
 
 Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, as quais ele chama de \textit{zones}. Esta regiões são determinadas a fim de extrair as informações relevantes para cada uma, de maneira a separar, por exemplo, a área destinada aos metadados do arquivo. O CERMINE divide estas \textit{zones} da seguinte maneira:
@@ -682,10 +838,10 @@ Visando também analisar outras ferramentas a mesma comparação de resultados f
 
 % Falar de cada trabalho encontrado com base nos eventos
 
-	% Falar um resumo
-	% Diferencial do projeto
-	% Se está ativo ou não
-	
+    % Falar um resumo
+    % Diferencial do projeto
+    % Se está ativo ou não
+    
 % \comment{Seria necessário falar também do Weka (\textit{The open-source machine learning framework})? Até que ponto ele seria relevante para a pesquisa em si? Neste caso tenho medo de fugir muito do escopo e detalhar demais técnicas.}
 
 \subsection{CrossRef}
@@ -716,6 +872,7 @@ A \texttt{pdfextract} utiliza de informações visuais para identificar cada par
     \caption{Extração de Metadados com base na suposta localização de cada metadado dos artigos.}
     \label{fig:crossref}
     \includegraphics[width=0.6\linewidth]{./assets/images/crossref}
+    \center\footnotesize{Fonte: \cite{CrossRef-2009}}
 \end{figure}
 
 \subsection{Outras Ferramentas e Projetos}
@@ -734,6 +891,8 @@ Além das ferramentas apresentadas diversas outras apresentam características s
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
 \end{itemize}
 
+\comment{Falar sobre o ResearchGate.}
+
 Após a análise das ferramentas foi criado um quadro consolidando as principais informações sobre cada uma, permitindo que as ferramentas que farão parte dos testes deste trabalho possam ser selecionadas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas de extração de metadados empregadas e a possibilidade de execução de cada ferramenta utilizando a linha de comando, o que permite com facilidade a execução de testes com cada uma delas.
 
 \begin{table}
@@ -749,12 +908,12 @@ Após a análise das ferramentas foi criado um quadro consolidando as principais
             CiteULike & Perl, Python, Ruby, Tcl, Java & Expressões Regulares & Não \\ \hline
             CiteSeer & Python, Perl, Java & SVM, CRF (ParsCit), Word Clustering & Sim \\ \hline
             ParsCit & Perl, Ruby & CRF & Sim \\ \hline
-            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento visual  & Sim \\ \hline
+            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento Espacial  & Sim \\ \hline
         \end{tabular}
     \end{center}
     \label{tab:tools-consolidated}
 \end{table}
 
-
+\comment{Escrever sobre Posicionamento Espacial}
 
 
