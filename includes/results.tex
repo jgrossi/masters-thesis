@@ -40,6 +40,8 @@ No caso específico do metadado ``e-mail'' a comparação foi realizada com base
 
 Uma grande parte dos artigos utilizados no Corpus deste trabalho não possue informações de e-mail dos autores. Desta forma, as extrações destes documentos são desconsideradas, permitindo que as ferramentas tenham seus resultados avaliados apenas para as extrações realmente computadas, valorizando ainda mais o trabalho de cada ferramenta.
 
+% Sobre a comparação dos Títulos
+
 Já para a comparação das referências foram utilizadas duas informações: o título e o nome dos autores. Para o caso do título da referência a lógica utilizada foi a mesma utilizada no metadado ``título'', utilizando de um valor percentual para representação da similaridade. Já para o nome dos autores a lógica seguiu a mesma do metadado ``autores'', onde é levado em consideração tanto a similaridade textual como também a ordem de apresentação. Deste modo, a extração de cada referência levou em consideração 60\% do resultado para o título e 40\% para os nomes dos autores, chegando em um numero final que representa o resultado da extração de cada referência identificada.
 
 % Resultados das comparações (FEITO)
@@ -59,7 +61,7 @@ Para que os resultados pudessem ser melhores interpretados foi calculado o ``Ín
 
 % Apresentar dados, testes, provas, estudos de caso, etc
 
-Conforme esperado os resultados foram coletados de maneira individual para cada artigo e consolidados de maneira geral para cada ferramenta e cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separados por cada uma das ferramentas. Os resultados da ferramenta Cermina estão presentes na \autoref{tab:results-cermine}. Os resultados da CiteSeer estão na \autoref{tab:results-citeseer} Os resultado da ferramenta CrossRef na XXXXXXX e da ParsCit na XXXXXXXX Todas as tabelas mostram o percentual de acerto separado por subárea do conhecimento e por metadados.
+Conforme esperado os resultados foram coletados de maneira individual para cada artigo e consolidados de maneira geral para cada ferramenta e cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separados por cada uma das ferramentas. Os resultados da ferramenta Cermina estão presentes na \autoref{tab:results-cermine}. Os resultados da CiteSeer estão na \autoref{tab:results-citeseer} Os resultado da ferramenta CrossRef na \autoref{tab:results-crossref} e da ParsCit na \autoref{tab:results-parscit} Todas as tabelas mostram o percentual de acerto separado por subárea do conhecimento e por metadados, representados pelas colunas Tit. (Título),  Aut. (Autores), Ema. (E-mails), Res. (Resumo) e Ref. (Referências).
 
 \begin{table}
     \caption{Resultados da Cermine por subárea do conhecimento.}
@@ -123,23 +125,23 @@ Conforme esperado os resultados foram coletados de maneira individual para cada 
         \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
             \hline 
             \textbf{Subárea do Conhecimento} & \textbf{Tit.} & \textbf{Aut.} & \textbf{Ema.} & \textbf{Res.} & \textbf{Ref.} \\ \hline 
-            Arquitetura e Urbanismo &  &  &  &  &  \\ \hline
-            Ciência da Computação &  &  &  &  &  \\ \hline
-            Ciência da Informação &  &  &  &  &  \\ \hline
-            Ciências Biológicas (Genética) &  &  &  &  &  \\ \hline
-            Ciências Biológicas (Zoologia) &  &  &  &  &  \\ \hline
-            Enfermagem &  &  &  &  &  \\ \hline
-            Engenharia Civil &  &  &  &  &  \\ \hline
-            Engenharia Mecânica &  &  &  &  &  \\ \hline
-            Fonoaudiologia &  &  &  &  &  \\ \hline
-            Geologia &  &  &  &  &  \\ \hline
-            História &  &  &  &  &  \\ \hline
-            Letras &  &  &  &  &  \\ \hline
-            Medicina Veterinária &  &  &  &  &  \\ \hline
-            Música &  &  &  &  &  \\ \hline
-            Psicologia &  &  &  &  &  \\ \hline
-            Zootecnia &  &  &  &  &  \\ \hline
-            \textbf{Média Geral} & 89.80 & 76.61 & 38.40 & 86.83 & 73.81 \\ \hline
+            Arquitetura e Urbanismo & 72.68 & 0 & - & 0 & 22.79 \\ \hline
+            Ciência da Computação & 64.19 & 0 & 0 & 0 & 14.64 \\ \hline
+            Ciência da Informação & 32.32 & 0 & 0 & 0 & 8.14 \\ \hline
+            Ciências Biológicas (Genética) & 47.05 & 0 & 0 & 0 & 14.62 \\ \hline
+            Ciências Biológicas (Zoologia) & 70.70 & 0 & 0 & 0 & 32.72 \\ \hline
+            Enfermagem & 55.96 & 0 & 0 & 0 & 10.29 \\ \hline
+            Engenharia Civil & 74.70 & 0 & 0 & 0 & 12.21 \\ \hline
+            Engenharia Mecânica & 89.27 & 0 & 0 & 0 & 27.50 \\ \hline
+            Fonoaudiologia & 71.43 & 0 & 0 & 0 & 13.92 \\ \hline
+            Geologia & 97.62 & 0 & 0 & 0 & 15.72 \\ \hline
+            História & 64.08 & 0 & - & 0 & 16.11 \\ \hline
+            Letras & 75.66 & 0 & 0 & 0 & 32.58 \\ \hline
+            Medicina Veterinária & 49.66 & 0 & 0 & 0 & 23.09 \\ \hline
+            Música & 84.63 & 0 & 0 & 0 & 28.16 \\ \hline
+            Psicologia & 82.92 & 0 & 0 & 0 & 23.19 \\ \hline
+            Zootecnia & 32.05 & 0 & 0 & 0 & 25.21 \\ \hline
+            \textbf{Média Geral} & 66.56 & 0 & 0 & 0 & 20.06 \\ \hline
         \end{tabular}
     \end{center}
     \label{tab:results-crossref}
