@@ -50,10 +50,6 @@ Com os dados de cada extração armazenados a comparação foi feita de maneira 
 
 Posteriormente foi feita a coleta destes dados separados por subáreas, porém consolidando-os para cada ferramenta. Assim foi calculada a média aritmética dos resultados de cada ferramenta para todas as subáreas, chegando então a uma nota final para cada ferramenta em cada metadado extraído.
 
-% Conceitos criados pelo autor
-
-Para que os resultados pudessem ser melhores interpretados foi calculado o ``Índice de Confiabilidade'' para cada ferramenta, detalhado no capítulo de \textbf{Metodologia}. Este índice utilizou-se da média dos resultados de extração de todas as subáreas, tomando os devidos pesos para cada metadado, obtendo então um resultado geral para cada ferramenta.
-
 % Trabalhar as evidências de que sua hipótese é verdadeira
 
 \section{Resultados}
@@ -61,7 +57,7 @@ Para que os resultados pudessem ser melhores interpretados foi calculado o ``Ín
 
 % Apresentar dados, testes, provas, estudos de caso, etc
 
-Conforme esperado os resultados foram coletados de maneira individual para cada artigo e consolidados de maneira geral para cada ferramenta e cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separados por cada uma das ferramentas. Os resultados da ferramenta Cermina estão presentes na \autoref{tab:results-cermine}. Os resultados da CiteSeer estão na \autoref{tab:results-citeseer} Os resultado da ferramenta CrossRef na \autoref{tab:results-crossref} e da ParsCit na \autoref{tab:results-parscit} Todas as tabelas mostram o percentual de acerto separado por subárea do conhecimento e por metadados, representados pelas colunas Tit. (Título),  Aut. (Autores), Ema. (E-mails), Res. (Resumo) e Ref. (Referências).
+Conforme esperado os resultados foram coletados de maneira individual para cada artigo e consolidados de maneira geral para cada ferramenta e cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separados por cada uma das ferramentas. Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cermine}. Os resultados da CiteSeer estão na \autoref{tab:results-citeseer} Os resultado da ferramenta CrossRef na \autoref{tab:results-crossref} e da ParsCit na \autoref{tab:results-parscit} Todas as tabelas mostram o percentual de acerto separado por subárea do conhecimento e por metadados, representados pelas colunas Tit. (Título),  Aut. (Autores), Ema. (E-mails), Res. (Resumo) e Ref. (Referências).
 
 \begin{table}
     \caption{Resultados da Cermine por subárea do conhecimento.}
@@ -111,27 +107,38 @@ Conforme esperado os resultados foram coletados de maneira individual para cada 
     \label{tab:results-parscit}
 \end{table}
 
-\section{Ambiente de Testes}
+% Conceitos criados pelo autor
 
-Para que esta análise pudesse ser feita com exatidão e garantir assim os resultados esperados, foi-se criado um ambiente de testes abrangendo um conjunto de tecnologias para que as ferramentas pudessem ser instaladas e testas seguindo o propósito de cada uma.
-
-\subsection{Servidores de Teste}
-
-Para cada teste de ferramenta foi criada uma Máquina Virtual dentro do Ambiente de Testes, com o objetivo de ter plataformas operando independentemente, com apenas as tecnologias necessárias para seu correto funcionamento, sem influência de códigos terceiro e/ou programas desnecessários.
-
-Por restringir apenas os testes utilizando ferramentas de código livre, todos os testes realizados ocorreram em máquinas Linux\footnote{Sistema operacional de código livre com ampla utilização em servidores de todo o mundo.}, de acordo com a Tabela \ref{tab:lista-servidores}, respeitando os requisitos necessários para cada ferramenta.
+Para que os resultados pudessem ser melhores interpretados foi calculado o ``Índice de Confiabilidade'' para cada ferramenta, detalhado no capítulo de \textbf{Metodologia}. Este índice utilizou-se da média dos resultados de extração de todas as subáreas, tomando os devidos pesos para cada metadado, obtendo então um resultado geral para cada ferramenta. Os resultados calculados deste índice estão presentes na \autoref{tab:conf-index-results}.
 
 \begin{table}
-    \caption{Ferramentas e Ambientes de Testes}
+    \caption{Índice de Confiabilidade de cada ferramenta}
     \begin{center}
-        \begin{tabular}{|p{3cm}|p{8cm}|}
-            \hline \textbf{Ferramenta} & \textbf{Ambiente}\\ 
-            \hline Ferramenta 1 & Linux Ubuntu 12.04, Java 7, Sqlite, Tomcat 6 \\
-            \hline Ferramenta 2 & Linux Ubuntu 12.04, Perl, MySQL, Nginx \\
-            \hline Ferramenta 3 & Linux Ubuntu 12.04, Perl, PostgreSQL, Apache \\
-            \hline Ferramenta 4 & Linux Ubuntu 12.04, Java 6, MySQL, Tomcat 6 \\
+        \begin{tabular}{|p{3cm}|C{3cm}|}
             \hline 
-        \end{tabular} 
+            \textbf{Ferramenta} & \textbf{Resultado} \\ \hline 
+            \input{results/index}
+        \end{tabular}
     \end{center}
-    \label{tab:lista-servidores}
+    \label{tab:conf-index-results}
 \end{table}
+
+\section{Ambiente de Testes}
+
+Para a realização das extrações e das comparações foi criado um ambiente de testes contendo todas as tecnologias necessárias para que as ferramentas pudessem ser executadas dentro do esperado. Desta maneira, foi utilizado um servidor virtual com a seguinte configuração:
+
+\begin{itemize}
+    \item Sistema Operacional Linux Ubuntu 14.04 64 Bits
+    \item 2GB de Memória RAM
+    \item 20GB de Espaço em Disco
+\end{itemize}
+
+As tecnologias utilizadas foram instaladas de acordo com as recomendações de cada ferramenta, seguindo suas dependências e as necessidades de cada linguagem de programação. Foram instaladas as seguintes linguagens/bibliotecas, separadas de acordo com cada ferramenta:
+
+\begin{itemize}
+    \item \textbf{Cermine:} Java OpenJDK Runtime Environment 1.7.0\_79
+    \item \textbf{CiteSeer:} Python 2.7.6, GROBID \url{https://github.com/kermitt2/grobid}, PDFBox \url{http://pdfbox.apache.org/}, PDF Classifier Jar, Java SE Environment (Maven). 
+    \item \textbf{CrossRef:} Ruby 2.1.2p95, RubyGem pdf-extract 0.0.1 e pdf-reader 1.3.2.
+    \item \textbf{ParsCit:} Perl 5.18.2, G++ Compiler e CRF++ 0.51. Diversas outras dependências da linguagem Perl foram também instaladas: Class::Struct, Getopt::Long, Getopt::Std, File::Basename, File::Spec, FindBin, HTML::Entities, IO::File, POSIX, XML::Parser, XML::Twig, XML::Writer e XML::Writer::String.
+\end{itemize}
+
