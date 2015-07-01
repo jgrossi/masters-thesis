@@ -11,7 +11,7 @@ Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realm
 
 % Explicar de modo geral como será o processo
 
-De modo geral o procedimento de testes deste trabalho será realizado através da instalação de cada ferramenta selecionada em máquinas (servidores), permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados em cada uma destas ferramentas e seus resultados analisados, centralizados e consolidados a fim de se obter uma nota final para cada análise encontrada. O fluxo de passos necessários para a realização destes testes pode ser melhor visualizado na \autoref{fig:metodology}.
+De modo geral o procedimento de testes deste trabalho será realizado através da instalação e execução de cada ferramenta selecionada, permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados em cada uma destas ferramentas e seus resultados analisados, centralizados e consolidados a fim de se obter uma conclusão para cada análise encontrada. O fluxo de passos necessários para a realização destes testes pode ser melhor visualizado na \autoref{fig:metodology}.
 
 \begin{figure}
     \centering
@@ -92,7 +92,7 @@ Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou
             \hline
             Fonoaudiologia & Sirley Alves da Silva Carvalho \\
             \hline
-            Geologia & \\
+            Geologia & Adolf Heinrich Horn \\
             \hline
             História & Adriana Romeiro \\
             \hline
@@ -140,7 +140,7 @@ Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete
             \hline
             Fonoaudiologia & Pubmed, Bireme \\
             \hline
-            Geologia & \\
+            Geologia & Springer, Scielo, Portal CAPES \\
             \hline
             História & Scielo, Jstor, Redalyc \\
             \hline
@@ -163,11 +163,11 @@ A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, 
 
 % Artigos em Inglês, somente
 
-Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escrito no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
+Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escritos no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
 
 Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês por exemplo, tenham análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas a fim de se obter os resultados esperados.
 
-No que tange a escolha das ferramentas para testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando. Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização de apenas este recurso. Assim, foram selecionadas para teste apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individual, independente da linguagem de programação ou tecnologia apresentada. 
+No que tange a escolha das ferramentas para testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando (\emph{command line}). Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização de apenas este recurso. Assim, foram selecionadas para testes apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individual, independente da linguagem de programação ou tecnologia apresentada. 
 
 Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \autoref{tab:tools-consolidated}, as ferramentas selecionadas para teste foram: Cermine, CiteSeer, CrossRef e ParsCit.
     
@@ -175,9 +175,9 @@ Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \aut
 \section{Desenho do Experimento}
 \label{sec:experiment-design}
 
-Tendo selecionadas as ferramentas e os artigos que serão utilizados para os testes parte-se para a instalação adequada de cada ferramenta nos servidores, juntamente com as tecnologias necessárias e as linguagens de programação utilizadas pelos seus desenvolvedores. 
+Tendo selecionadas as ferramentas e os artigos que serão utilizados para os testes parte-se para a instalação adequada de cada ferramenta, juntamente com as tecnologias necessárias e as linguagens de programação utilizadas pelos seus desenvolvedores. 
 
-Cada ferramenta será testada em separado, observando suas características particulares. Assim, cada artigo selecionado será testado para aquela ferramenta, anotando os resultados obtidos na extração. Estes resultados serão separados por metadados, o que permitirá calcular qual a porcentagem de acerto que a ferramenta teve na extração de cada metadado analisado.
+Cada ferramenta será testada em separado, observando suas características particulares. Assim, cada artigo selecionado será testado para aquela ferramenta, anotando os resultados obtidos na extração. Estes resultados serão separados por metadados, o que permitirá calcular qual a porcentagem de acerto que cada ferramenta teve na extração de cada metadado analisado.
 
 Assim, o processo será repetido para cada ferramenta e o resultado registrado, permitindo calcular sua porcentagem total de acertos de maneira simplificada. Para isso será criado um ``Quadro Comparativo'', no qual serão inseridos os resultados dos testes de cada ferramenta. 
 
@@ -212,9 +212,25 @@ Deste modo apresentamos a \autoref{tab:metadata-weight}, que demonstra como cada
     \label{tab:metadata-weight}
 \end{table}
 
-Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, será calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo será feito por algoritmo desenvolvido pelo próprio autor, analisando qual a taxa de acerto para cada metadado, referenciado posteriormente por $P_{título}$ (precisão de acerto para o metadado título).
+Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, será calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo será feito com o uso da função \texttt{similar\_text} da linguagem de programação PHP \url{http://php.net/similar_text}, que calcula a porcentagem de similaridade entre dois textos. Assim, serão comparados:
 
-\comment{Falar a fórmula ou escrever o algorítimo citado no parágrafo acima.}
+\begin{enumerate}
+    \item O dado correto, retirado manualmente dos artigos;
+    \item O dado extraído, obtido por cada ferramenta.
+\end{enumerate}
+
+Esta taxa de acerto será referenciada posteriormente, como por exemplo, por $P_{título}$ (porcentagem de acerto para o metadado título). Segundo a documentação da função \texttt{similar\_text} temos:
+
+\begin{quote}
+    \emph{``This calculates the similarity between two strings as described in Programming Classics: Implementing the World's Best Algorithms by Oliver (ISBN 0-131-00413-1). Note that this implementation does not use a stack as in Oliver's pseudo code, but recursive calls which may or may not speed up the whole process. Note also that the complexity of this algorithm is O(N**3) where N is the length of the longest string.''}
+\end{quote}
+
+Esta função recebe três parâmetros: o primeiro texto, o segundo texto e uma variável onde será armazenada a porcentagem de acerto. Como retorno é retornado um inteiro representando o número de caracteres em comum entre os dois textos comparados. Sua estrutura de utilização é a seguinte:
+
+\lstset{language=PHP}
+\begin{lstlisting}[escapechar=\#]
+int similar_text ( string $first , string $second [, float &$percent ] )
+\end{lstlisting}
 
 Como cada ferramenta será testada em separado, os resultados da extração de cada artigo serão registrados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' serão analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, será somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' da Ferramenta ``A'' ($P_{título}$):
 
@@ -232,13 +248,13 @@ De posse dos resultados para cada metadado extraído podemos comparar as ferrame
 
 % Fórmula final para a nota final de cada técnica
 
-Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada ferramenta testada. Assim chegamos a uma fórmula matemática à qual chamaremos ``Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada metadado, para cada ferramenta. Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos por ela.
+Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada ferramenta testada. Assim chegamos a uma fórmula matemática à qual chamaremos ``Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada metadado, para cada ferramenta. Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos por ela para o conjunto de artigos testado neste trabalho.
 
-Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar em uma única nota final para cada ferramenta testada.
+Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar a uma única nota final para cada ferramenta testada.
 
-Basicamente a fórmula é a média ponderada dos resultados alcançados na extração de cada metadado dos artigos, seguindo os pesos apresentados na \autoref{tab:metadata-weight}. Cada peso é atribuído ao resultado encontrado em cada ferramenta. 
+Esta fórmula é a média ponderada dos resultados alcançados na extração de cada metadado dos artigos, seguindo os pesos apresentados na \autoref{tab:metadata-weight}. Cada peso é atribuído ao resultado encontrado em cada ferramenta. 
 
-A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicado pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados extraídos, seguindo seus respectivos pesos. A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:confiability-index}.
+A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicada pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados extraídos, seguindo seus respectivos pesos. A descrição de cada variável no Índice de Confiabilidade poderá ser obtida de acordo com a \autoref{tab:confiability-index}.
 
 \begin{center}
     $ IC_{Ferramenta X}=(5*P_{título}+4*P_{autor}+1*P_{email}+3*P_{resumo}+4*P_{referências}) / 17 $
@@ -260,33 +276,19 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
     \label{tab:confiability-index}
 \end{table}
 
-\newpage
-
 Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificar cada uma com base nos seus resultados apresentados. Esta classificação será feita de maneira arbitrária, sem objetivo algum de denegrir alguma ferramenta em favorecimento de outra, mas sim classificar cada uma delas com base nos resultados obtidos e critérios adotados neste trabalho. Desta forma, podemos classificar cada ferramenta seguindo os tópicos abaixo:
 
 \begin{enumerate}
-    \item \textbf{Precisa (P):} Quando o Índice de Confiabilidade é maior ou igual a 90 ($IC\geq90$).
-    \item \textbf{Satisfatória (S):} Quando o Índice de Confiabilidade é maior ou igual a 80 e menor que 90 ($80 \leq IC < 90$).
-    \item \textbf{Insatisfatória (I):} Quando o Índice de Confiabilidade é menor que 80 ($IC < 80$).
+    \item \textbf{Precisa (P):} Quando o Índice de Confiabilidade é maior ou igual a 80 ($IC\geq90$).
+    \item \textbf{Satisfatória (S):} Quando o Índice de Confiabilidade é maior ou igual a 60 e menor que 80 ($60 \leq IC < 80$).
+    \item \textbf{Insatisfatória (I):} Quando o Índice de Confiabilidade é menor que 60 ($IC < 60$).
 \end{enumerate}
 
 \section{Ambiente Tecnológico}
 \label{sec:tech-environment}
 
-Algumas ferramentas exigem um conjunto de tecnologias muito diferente das demais, como é o caso do CiteSeer (\autoref{ssec:citeseer}). Sendo assim, neste caso em específico, será utilizado um servidor apenas para os testes desta ferramenta, juntamente com as tecnologias que ela exige para um correto funcionamento. 
+As ferramentas testadas, por utilizarem das mesmas linguagens de programação ou por terem seu conjunto tecnológico muito semelhante, serão instaladas em um único servidor, permitindo que recursos computacionais sejam compartilhados, simplificando o trabalho de configuração em função de suas necessidades parecidas.
 
-Outras ferramentas, por serem escritas em linguagens de programação iguais ou por terem seu conjunto tecnológico muito semelhante, serão instaladas em um único servidor, compartilhando recursos e simplificando o trabalho de configuração, visto que possuem necessidades parecidas.
-
-Estes servidores serão criados através de máquinas virtuais, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada técnica, permitindo que os testes possam ser feitos em sistemas operacionais distintos mas utilizando dos mesmos recursos computacionais.
-
-Deste modo, dentro de um mesmo servidor podemos criar diversos outros servidores ``virtuais'', com características diferentes e linguagens de programação diferentes, compartilhando dos mesmos recursos do servidor original, como memória RAM, espaço em disco, dentre outros recursos, como pode ser visto na \autoref{fig:virtual-server}.
-
-\begin{figure}
-    \centering
-    \caption{Utilização de Máquinas Virtuais como Ambiente de Testes}
-    \label{fig:virtual-server}
-    \includegraphics[width=0.5\linewidth]{./assets/images/virtual-server}
-    \center\footnotesize{Fonte: O próprio autor}
-\end{figure}
+Este servidor será criado através de máquina virtual, o que traz benefícios não somente de performance mas de flexibilidade quanto das tecnologias necessárias para o funcionamento de cada ferramenta, permitindo que os testes possam ser feitos em sistemas operacionais distintos mas utilizando dos mesmos recursos computacionais da máquina de origem.
 
 

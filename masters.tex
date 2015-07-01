@@ -52,6 +52,7 @@
 \usepackage{lmodern}            % Usa a fonte Latin Modern          
 \usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
+\usepackage{textcomp}
 \usepackage{lastpage}           % Usado pela Ficha catalográfica
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}              % Controle das cores
@@ -81,7 +82,7 @@
 \usepackage{nameref}				% Mostra nome de ref
 
 % Configurações para o Listing exibir os códigos na fonte Courier
-\lstset{basicstyle=\normalsize\ttfamily,breaklines=true}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
 %\lstset{framextopmargin=20pt,frame=bottomline}
 
 % Para a citação de um anexo sair correta
@@ -500,14 +501,14 @@
 % ---
 % Inicia os apendices
 % ---
-\begin{apendicesenv}
+% \begin{apendicesenv}
 
 % % Imprime uma pagina indicando o inicio dos apendices
-\partapendices
+% \partapendices
 
-\include{includes/papers}
+% \include{includes/papers}
 
-\end{apendicesenv}
+% \end{apendicesenv}
 % ---
 
 
