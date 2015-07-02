@@ -4,10 +4,49 @@
 \label{cha:conclusion}
 
 % Analisar os objetivos gerais e específicos e explicar como o desenvolvimento ajudou a chegar em cada um destes objetivos
+
+    % O objetivo da pesquisa é comparar ferramentas de extração de metadados em artigos científicos, identificando também suas melhores aplicações, com base em um conjunto de documentos pré-selecionados para testes, dos mais diversos padrões e de diversas áreas do conhecimento.
+
+    % Com efeito, esta identificação permite que resultados sejam comparados e confrontados, para decidir qual ferramenta é melhor utilizada para cada padrão visual, abrangendo um conjunto cada vez maior de dados e tendo resultados cada vez mais precisos.
+
+    % Com base na diferenciação dos \textit{layouts} de artigos científicos, este trabalho visa identificar também pontos em que as ferramentas de extração de metadados necessitam de adaptações por parte de seus usuários e desenvolvedores, garantindo assim, uma cobertura mais abrangente dos artigos científicos. Além disso, com base nos resultados coletados, pode-se identificar qual ferramenta é melhor aplicada para cada tipo distinto de metadado.
+
+    % Acredita-se que os padrões de extração existentes hoje são, de maneira geral, insuficientes para suprir todos os \emph{layouts} de artigos existentes, limitando a apenas uma pequena parcela destes, dentro de um padrão visual específico.
+
+Após todo o processo de pesquisa, de extração dos metadados pelas ferramentas analisadas e seus respectivos resultados, diversas conclusões podem ser feitas objetivando cumprir com os objetivos propostos no início do trabalho.
+
+Os resultados apresentados, de modo geral, foram inferiores às expectativas do próprio autor, uma vez que as extrações não foram tão precisas quanto se imaginava. A diversidade visual presente no Corpus escolhido realmente teve alto impacto nos resultados, principalmente no que se diz respeito à extração dos autores e das referências.
+
+% Falar dos resultados por ferramentas de maneira geral primeiro
+
+De modo geral, as ferramentas Cermine e CiteSeer obtiveram um resultado para a extração do metadado ``título'' positivo, ficando entre 83 e 89\% de precisão. Já a ferramenta CrossRef ficou bem abaixo do esperado, com 66.56\% de precisão apenas, porém acima da última colocada, a ferramenta ParsCit, que conseguiu extrair com sucesso apenas 15.17\% dos resultados dos ``títulos'', muito abaixo do esperado.
+
+Para o metadado ``autores'' a ferramenta com maior precisão foi a Cermine, que atingiu 76.34\%, resultado próximo da segunda colocada, a CiteSeer, com 71.93\%. Já as demais ferramentas não obtiveram êxito na extração dos nomes dos autores, ficando abaixo dos 20\% de acerto.
+
+Já para a extração dos e-mails dos autores o resultado obtido, de modo geral, foi pior. A ferramenta que obteve maior êxito na extração deste metadado foi a Cermine, que conseguiu obter apenas 46.62\% de sucesso. Os resultados para este metadado obtidos pela ferramenta CiteSeer foram bem inferiores às expectativas, pois somente 4.17\% dos endereços foram extraídos com sucesso, resultado inferior ainda à ferramenta ParsCit, que extraiu 12.16\%. Como informado no capítulo ``Resultados'' (\autoref{cha:results}) a ferramenta CrossRef não conseguiu realizar a extração de nomes de autores, endereços de e-mails e do resumo, sendo estes resultados desconsiderados nesta sessão.
+
+Em virtude da grande diferenciação visual, inclusive pela ausência de uma padronização para apresentação do metadado ``resumo'' \emph{abstract}, os resultados obtidos superaram as expectativas do autor, visto que, exceto pela ferramenta CrossRef, todas as demais obtiveram resultados acima de 60\%, chegando a 86.83\% da ferramenta Cermine. Estes resultados, embora ainda abaixo do considerado ``ideal'' foram positivos, principalmente em virtude de alguns artigos apresentarem este metadado de formas bem peculiares, com posicionamento bem diferente do habitual e, inclusive, sem indícios de que ali apresentava-se o resumo do artigo.
+
+Outro ponto onde as expectativas do autor não foram atingidas foi na extração das ``referências''. A ferramenta Cermine, mais uma vez, demonstrou-se mais precisa, conquistando 73.81\% de sucesso. A ferramenta CiteSeer, que utiliza da ParsCit para extração das referências, ao ser comparada com a própria ParsCit, produziu resultados ou pouco superiores, 54.75\% e 53.58\%, respectivamente. A diferença nos resultados se deve pelo fato da ferramenta ParsCit necessitar de arquivos \texttt{.txt} como entrada de dados. No caso das extrações realizadas pela própria ferramenta, os arquivos \texttt{.txt} foram gerados pelo programa \texttt{pdftotext}, conforme detalhado no capítulo de ``Resultados'' (\autoref{cha:results}), diferentemente da ferramenta CiteSeer, que transforma o arquivo \texttt{.pdf} em \texttt{.txt} de sua própria maneira, causando então uma pequena divergência nos resultados (1.17\%). 
+
+Já a ferramenta CrossRef obteve apenas 20.06\% de precisão na extração das referências, o que era esperado em função de sua extração com poucos detalhes, com apenas um único campo com todas as informações de cada referência. Embora os resultados da extração não tenham sido positivos, um detalhe interessante que merece uma atenção, é a forma como esta ferramenta trata as referências. A ferramenta permite que elas sejam comparadas com o banco de dados do \url{http://api.crossref.org}, permitindo identificar exatamente quais artigos já foram catalogadas pelo site, gerando um grande controle sobre o conteúdo. Para os artigos encontrados no site é possível obter, inclusive, a descrição em formato BibTeX, com todas as informações relevantes para uma correta citação. Para este trabalho, em virtude dos poucos resultados obtidos, esta funcionalidade não foi utilizada na extração.
+
+% Falar das melhores ferramentas para cada área do conhecimento
+
+Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 3 subáreas do conhecimento, porém para metadados diferentes. A ferramenta Cermine acertou todos os títulos das áreas de Arquitetura e Urbanismo e Fonoaudiologia, além de 100\% dos nomes dos autores da área de Geologia. Já a ferramenta CiteSeer conseguiu precisão total na extração dos títulos de Arquitetura e Urbanismo, Ciência da Computação e Fonoaudiologia. Já a ferramenta CrossRef obteve melhor resultado na extração dos títulos dos artigos da área de Geologia, obtendo 97.62\% de precisão, superando a ferramenta CiteSeer e ParsCit, que obtiveram 73.77\% e 14.29\% respectivamente.
+
+Para a extração dos títulos dos artigos, os piores resultados foram encontrados nas áreas de Música (CiteSeer, com 49.02\%), Zootecnia (Cermine, com 49.95\% e CrossRef, com 32.05\%) e as áreas Ciências Biológicas (Zoologia) e Arquitetura e Urbanismo (ParsCit, com nenhum acerto).
+
+A ferramenta Cermine se destacou na extração de títulos de 8 (oito) subáreas do conhecimento - Arquitetura e Urbanismo, Ciências Biológicas (Zoologia), Enfermagem, Engenharia Mecânica, Fonoaudiologia, Geologia, História e Música -, obtendo resultados superiores a 99\%, o que é considerado excelente. 
+
+Para os autores, seus maiores destaques foram nas áreas de Geologia, Letras, Medicina Veterinária e Música, com resultados acima de 90\%. Na extração dos e-mails dos autores a ferramente obteve resultados superiores a 85\% somente na área de Medicina Veterinária, seu melhor resultado para este metadado.
+
+Além disso, a ferramenta se destacou na extração dos resumos em 5 (cinco) áreas, com resultados acima dos 98\%, e na extração das referências de Ciências Biológicas (Genética), que obteve acima de 96\% de precisão.
+
 % Apresentar os pontos positivos e negativos do trabalho também
 % Lições aprendidas
 
-% "... o problema descrico na seção X foi resolvido como demonstrado nas sessões y a z, em que foi desenvolvido um algoritmo/método/abordagem etc para tratar as situações mencionadas.
+% "... o problema descrito na seção X foi resolvido como demonstrado nas sessões y a z, em que foi desenvolvido um algoritmo/método/abordagem etc para tratar as situações mencionadas.
 
 
 
