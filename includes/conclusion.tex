@@ -49,7 +49,7 @@ A ferramenta CrossRef se demonstrou positiva apenas para a extração de título
 
 Por fim, a ferramenta ParsCit obteve resultados abaixo dos 38\% para os títulos, em todas as subáreas. O acerto dos nomes dos autores também foi baixo, onde os melhores resultados ficaram entre 43\% e 59\%, para as subáreas de Ciência da Computação, Letras e Música. Para os e-mails dos autores o melhor resultado foi para Ciência da Computação, com 47.62\% de precisão. Já para o resumo dos artigos os resultados foram um pouco melhores, com resultados acima de 70\% para 5 (cinco) subáreas. Os resultados para as referências foram semelhantes aos obtidos pela ferramenta CiteSeer, por se utilizar da mesma ferramenta, onde os 2 (dois) melhores resultados foram para as subáreas de Ciência da Computação e Psicologia, com precisão de 69.72\% e 68.84\%, respectivamente.
 
-Visando uma melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, XX, XX, XX e XX apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separado por cada metadado. 
+Visando uma melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, \ref{tab:areas-authors-tools}, \ref{tab:areas-emails-tools}, \ref{tab:areas-abstract-tools} e \ref{tab:areas-references-tools} apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separado por cada metadado. 
 
 \begin{table}
     \caption{Melhores ferramentas para o metadado ``Título''}
@@ -68,107 +68,166 @@ Visando uma melhor visualização dos resultados, as Tabelas \ref{tab:areas-titl
             Engenharia Mecânica & Cermine & 99.45\% \\ \hline
             Fonoaudiologia & Cermine/CiteSeer & 100\% \\ \hline
             Geologia & Cermine & 99.54\% \\ \hline
-            História &  & \\ \hline
-            Letras &  & \\ \hline
-            Medicina Veterinária &  & \\ \hline
-            Música &  & \\ \hline
-            Psicologia &  & \\ \hline
-            Zootecnia &  & \\ \hline
+            História & CiteSeer & 99.53\% \\ \hline
+            Letras & CiteSeer & 99.57\% \\ \hline
+            Medicina Veterinária & Cermine/CiteSeer & 85.71\% \\ \hline
+            Música & Cermine & 99.03\% \\ \hline
+            Psicologia & CiteSeer & 94.93\% \\ \hline
+            Zootecnia & CiteSeer & 71.43\% \\ \hline
         \end{tabular}
     \end{center}
-    \center\footnotesize{Fonte: }
     \label{tab:areas-title-tools}
 \end{table}
 
-% \begin{table}
-%     \caption{Melhores ferramentas para cada subárea do conhecimento para o metadado ``Título''.}
-%     \begin{center}
-%         \begin{tabular}{|l|l|l|l|}
-%             \hline 
-%             \textbf{Subárea} & \textbf{Metadado} & \textbf{Ferramenta} & \textbf{Precisão} \\ \hline
-%             \multirow{5}{*}{Arquitetura e Urbanismo} & Título & Cermine/CiteSeer & 100\% \\
-%                 & Autores & CiteSeer & 96.89\% \\
-%                 & E-mails & Cermine & 16.67\% \\
-%                 & Resumo & Cermine & 99.01\% \\
-%                 & Referências & Cermine & 82.67\% \\ \hline
-%             \multirow{5}{*}{Ciência da Computação} & Título & CiteSeer & 100\% \\
-%                 & Autores & CiteSeer & 83.75\% \\
-%                 & E-mails & ParsCit & 47.62\% \\
-%                 & Resumo & CiteSeer & 99.81\% \\
-%                 & Referências & Cermine & 77.25\% \\ \hline
-%             \multirow{5}{*}{Ciência da Informação} & Título & CiteSeer & 84.44\% \\
-%                 & Autores & CiteSeer & 99.50\% \\
-%                 & E-mails & Cermine/ParsCit & 28.57\% \\
-%                 & Resumo & Cermine & 78.02\% \\
-%                 & Referências & CiteSeer & 55.56\% \\ \hline
-%             \multirow{5}{*}{Ciências Biológicas (Genética)} & Título & Cermine & 91.58\% \\
-%                 & Autores & CiteSeer & 83.15\% \\
-%                 & E-mails & Cermine & 50.00\% \\
-%                 & Resumo & Cermine & 84.72\% \\
-%                 & Referências & Cermine & 96.11\% \\ \hline
-%             \multirow{5}{*}{Ciências Biológicas (Zoologia)} & Título & Cermine & 99.78\% \\
-%                 & Autores & Cermine & 73.16\% \\
-%                 & E-mails & Cermine & 42.86\% \\
-%                 & Resumo & Cermine & 84.74\% \\
-%                 & Referências & Cermine & 72.28\% \\ \hline
-%             \multirow{5}{*}{Enfermagem} & Título & Cermine & 99.77\% \\
-%                 & Autores & CiteSeer & 52.82\% \\
-%                 & E-mails & Cermine & 16.67\% \\
-%                 & Resumo & Cermine & 98.09\% \\
-%                 & Referências & Cermine & 81.69\% \\ \hline
-%             \multirow{5}{*}{Engenharia Civil} & Título & CiteSeer & 97.81\% \\
-%                 & Autores & Cermine & 76.34\% \\
-%                 & E-mails & Cermine/ParsCit & 37.50\% \\
-%                 & Resumo & Cermine & 94.18\% \\
-%                 & Referências & Cermine & 56.23\% \\ \hline
-%             \multirow{5}{*}{Engenharia Mecânica} & Título & Cermine & 99.45\% \\
-%                 & Autores & Cermine & 75.97\% \\
-%                 & E-mails & Cermine & 58.33\% \\
-%                 & Resumo & Cermine & 77.97\% \\
-%                 & Referências & Cermine & 82.87\% \\ \hline
-%             \multirow{5}{*}{Fonoaudiologia} & Título & Cermine/CiteSeer & 100\% \\
-%                 & Autores & Cermine & 77.75\% \\
-%                 & E-mails & Cermine & 71.43\% \\
-%                 & Resumo & Cermine & 98.13\% \\
-%                 & Referências & Cermine & 80.05\% \\ \hline
-%             \multirow{5}{*}{Geologia} & Título & Cermine & 99.54\% \\
-%                 & Autores & Cermine & 100\% \\
-%                 & E-mails & Cermine & 66.67\% \\
-%                 & Resumo & ParsCit & 68.42\% \\
-%                 & Referências & Cermine & 64.03\% \\ \hline
-%             % História &  \\ \hline
-%             % Letras &  \\ \hline
-%             % Medicina Veterinária &  \\ \hline
-%             % Música &  \\ \hline
-%             % Psicologia &  \\ \hline
-%             % Zootecnia &  \\ \hline
-%         \end{tabular}
-%     \end{center}
-%     \label{tab:areas-tools-results}
-% \end{table}
+\begin{table}
+    \caption{Melhores ferramentas para o metadado ``Autores''}
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline 
+            \textbf{Subáreas do Conhecimento} & \textbf{Ferramentas} & \textbf{Precisão} \\ 
+            \hline 
+            Arquitetura e Urbanismo & CiteSeer & 96.89\% \\ \hline
+            Ciência da Computação & CiteSeer & 83.75\% \\ \hline
+            Ciência da Informação & CiteSeer & 99.50\% \\ \hline
+            Ciências Biológicas (Genética) & CiteSeer & 83.15\% \\ \hline
+            Ciências Biológicas (Zoologia) & Cermine & 73.16\% \\ \hline
+            Enfermagem & CiteSeer & 52.82\% \\ \hline
+            Engenharia Civil & Cermine & 76.34\% \\ \hline
+            Engenharia Mecânica & Cermine & 75.97\% \\ \hline
+            Fonoaudiologia & Cermine & 77.75\% \\ \hline
+            Geologia & Cermine & 100\% \\ \hline
+            História & Cermine & 89.29\% \\ \hline
+            Letras & Cermine & 99.50\% \\ \hline
+            Medicina Veterinária & Cermine & 91.11\% \\ \hline
+            Música & Cermine & 90.61\% \\ \hline
+            Psicologia & CiteSeer & 83.85\% \\ \hline
+            Zootecnia & CiteSeer & 82.41\% \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:areas-authors-tools}
+\end{table}
+
+\begin{table}
+    \caption{Melhores ferramentas para o metadado ``E-mails''}
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline 
+            \textbf{Subáreas do Conhecimento} & \textbf{Ferramentas} & \textbf{Precisão} \\ 
+            \hline 
+            Arquitetura e Urbanismo & Cermine & 16.67\% \\ \hline
+            Ciência da Computação & ParsCit & 47.62\% \\ \hline
+            Ciência da Informação & Cermine/ParsCit & 28.57\% \\ \hline
+            Ciências Biológicas (Genética) & Cermine & 50.00\% \\ \hline
+            Ciências Biológicas (Zoologia) & Cermine & 42.86\% \\ \hline
+            Enfermagem & Cermine & 16.67\% \\ \hline
+            Engenharia Civil & Cermine/ParsCit & 37.50\% \\ \hline
+            Engenharia Mecânica & Cermine & 58.33\% \\ \hline
+            Fonoaudiologia & Cermine & 71.43\% \\ \hline
+            Geologia & Cermine & 66.67\% \\ \hline
+            História & Cermine & 50.00\% \\ \hline
+            Letras & Cermine & 42.86\% \\ \hline
+            Medicina Veterinária & Cermine & 85.71\% \\ \hline
+            Música & Cermine & 66.67\% \\ \hline
+            Psicologia & Cermine & 47.62\% \\ \hline
+            Zootecnia & Cermine & 42.86\% \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:areas-emails-tools}
+\end{table}
+
+\begin{table}
+    \caption{Melhores ferramentas para o metadado ``Resumo''}
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline 
+            \textbf{Subáreas do Conhecimento} & \textbf{Ferramentas} & \textbf{Precisão} \\ 
+            \hline 
+            Arquitetura e Urbanismo & Cermine & 99.01\% \\ \hline
+            Ciência da Computação & CiteSeer & 99.81\% \\ \hline
+            Ciência da Informação & Cermine & 78.02\% \\ \hline
+            Ciências Biológicas (Genética) & Cermine & 84.72\% \\ \hline
+            Ciências Biológicas (Zoologia) & Cermine & 84.74\% \\ \hline
+            Enfermagem & Cermine & 98.09\% \\ \hline
+            Engenharia Civil & Cermine & 94.18\% \\ \hline
+            Engenharia Mecânica & Cermine & 77.97\% \\ \hline
+            Fonoaudiologia & Cermine & 98.13\% \\ \hline
+            Geologia & Cermine & 53.66\% \\ \hline
+            História & Cermine & 65.59\% \\ \hline
+            Letras & Cermine & 82.10\% \\ \hline
+            Medicina Veterinária & CiteSeer & 98.88\% \\ \hline
+            Música & Cermine & 95.47\% \\ \hline
+            Psicologia & Cermine & 92.53\% \\ \hline
+            Zootecnia & Cermine & 87.40\% \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:areas-abstract-tools}
+\end{table}
+
+\begin{table}
+    \caption{Melhores ferramentas para o metadado ``Referências''}
+    \begin{center}
+        \begin{tabular}{|l|c|c|}
+            \hline 
+            \textbf{Subáreas do Conhecimento} & \textbf{Ferramentas} & \textbf{Precisão} \\ 
+            \hline 
+            Arquitetura e Urbanismo & Cermine & 82.67\% \\ \hline
+            Ciência da Computação & Cermine & 77.25\% \\ \hline
+            Ciência da Informação & CiteSeer & 55.56\% \\ \hline
+            Ciências Biológicas (Genética) & Cermine & 96.11\% \\ \hline
+            Ciências Biológicas (Zoologia) & Cermine & 72.28\% \\ \hline
+            Enfermagem & Cermine & 81.69\% \\ \hline
+            Engenharia Civil & Cermine & 56.23\% \\ \hline
+            Engenharia Mecânica & Cermine & 82.87\% \\ \hline
+            Fonoaudiologia & Cermine & 80.05\% \\ \hline
+            Geologia & Cermine & 64.03\% \\ \hline
+            História & CiteSeer & 63.81\% \\ \hline
+            Letras & Cermine & 86.74\% \\ \hline
+            Medicina Veterinária & Cermine & 80.05\% \\ \hline
+            Música & Cermine & 68.50\% \\ \hline
+            Psicologia & ParsCit & 68.84\% \\ \hline
+            Zootecnia & Cermine & 81.99\% \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:areas-references-tools}
+\end{table}
+
+Assim, de modo geral, podemos concluir que para este Corpus escolhido, com base nos critérios adotados neste trabalho, para o metadado ``Título'' a ferramenta que obteve os melhores resultados de extração foi a Cermine, com 89.8\% de precisão, seguida da CiteSeer, com 83.55\%. O mesmo acontece para o metadado ``Autores'', onde a ferramenta Cermine obteve os melhores resultados (76.34\%) seguida da CiteSeer, com 71.93\%.
+
+Já para o metadado ``E-mails'' a ferramenta Cermine foi sem sombra de dúvidas a melhor, com 46.62\%, deixando uma larga diferença para a segunda colocada ParsCit, com apenas 12.66\%. Para o metadado ``Resumo'' a Cermine também se saiu melhor, com 86.83\%, tendo em segunda posição a CiteSeer com 75.81\%.
+
+Por fim, para a extração do metadado ``Referências'' novamente a ferramenta Cermine obteve o melhor resultado, com precisão de 73.81\% dos resultados, seguida da ferramenta CiteSeer com 54.75\%.
 
 % Apresentar os pontos positivos e negativos do trabalho também
 % Lições aprendidas
 
 % "... o problema descrito na seção X foi resolvido como demonstrado nas sessões y a z, em que foi desenvolvido um algoritmo/método/abordagem etc para tratar as situações mencionadas.
 
-
-
 \section{Contribuições}
 \label{sec:contributions}
+
+Os resultados coletados após estas comparações foram abaixo das expectativas do autor, exceto pelo metadado ``Título'', onde os números foram mais expressivos.
+
+Em virtude da grande diferenciação visual do Corpus escolhido os resultados foram muito variáveis, não sendo possível definir, com precisão, qual ferramenta se comporta melhor para uma determinada área ou subárea do conhecimento, embora os resultados demonstrem, numericamente, o comportamento diferenciado de cada uma.
+
+Estes resultados permitem aferir que as ferramentas de extração de metadados ainda precisam evoluir, sendo necessários ajustes e adaptações para que uma maior quantidade de dados seja extraída com sucesso. Além disso, algumas ferramentas tendem a ser melhores em algumas subáreas do conhecimento, mas sem generalização, possibilitando uma análise posterior mais detalhada e mais aprofundada.
 
 \section{Trabalhos Futuros}
 \label{sec:future-work}
 
-% Futuras contribuições ao conhecimento com mais ênfase do que futuras contribuições às ferramentas, protótipos, etc, que eventualmente possa, ser desenvolvidas
-
 % Falar sobre oportunidades de pesquisa nesta área, que o autor não conseguiu averiguar, mas serve de dicas para os próximos interessados
 
-% Exemplo, falar quais situações ainda não foram feitos os testes, que podem ser feitos no futuro para compreender alguma coisa por exemplo
+% Futuras contribuições ao conhecimento com mais ênfase do que futuras contribuições às ferramentas, protótipos, etc, que eventualmente possa, ser desenvolvidas
 
+Embora tenha-se abrangido 16 (dezesseis) subáreas do conhecimento, com um total de 112 (cento e doze) artigos científicos, a variedade de formados e layouts encontrada vai muito mais além desta análise, merecendo um trabalho mais detalhado para cada subárea do conhecimento.
 
+Um ponto interessante de análise seria um trabalho de comparação para artigos de uma área do conhecimento específica, como Engenharia, por exemplo, onde um maior número de artigos desta área seria testado, objetivando identificar o comportamento destas ferramentas para esta área em específico somente, com um Corpus bem maior e variado, porém mais direcionado.
 
-% 
+% Comparação por revista
+
+Um outro estudo interessante seria a comparação por revistas ou bases de dados. Embora a diferenciação visual para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual. Assim, um estudo sobre o comportamento de ferramentas de extração de metadados em artigos científicos, focado para estas bases, traria também um relativo ganho de conhecimento para a comunidade científica.
+
+Além disso, apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, aprofundando muito mais suas características e funcionalidades, permitindo conclusões mais direcionadas e inclusive críticas mais precisas quanto aos resultados por ela apresentados.
+
 
 \section{Considerações Finais}
 \label{sec:final-considerations}
