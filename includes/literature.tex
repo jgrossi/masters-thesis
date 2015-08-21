@@ -15,11 +15,11 @@ Como o objetivo do trabalho tem foco no resultado prático, geralmente as bases 
 
 A pesquisa deveria ser focada em técnicas e ferramentas para extração de metadados em artigos científicos, que permitissem testes com dados reais, fazendo assim com que os resultados obtidos pudessem ser comparados e confrontados para verificar então a eficácia deste processo de extração.
 
-Como a pesquisa necessita de um resultado prático e eficaz, os critérios que serão adotados para demonstrar a relevância de uma ferramenta serão seus resultados, sua participação de mercado e sua maturidade. Cada ferramenta deverá ser testada juntamente com um grupo de artigos previamente selecionado. Estes artigos já possuirão seus metadados extraídos manualmente, permitindo então comparar os resultados obtidos com os resultados de cada uma das ferramentas. Portanto, os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
+Como a pesquisa necessita de um resultado prático e eficaz, os critérios que serão adotados para demonstrar a relevância de uma ferramenta serão seus resultados, sua participação de mercado e sua maturidade. Cada ferramenta deverá ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus metadados extraídos manualmente, permitindo então comparar os resultados obtidos com os resultados de cada uma das ferramentas. Portanto, os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
 
 % Falar sobre os eventos encontrados na área
 
-Visando abranger grande parte da literatura sobre o assunto foram mapeados alguns eventos para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+Visando abranger grande parte da literatura sobre o assunto, foram mapeados alguns eventos para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval);
@@ -43,7 +43,7 @@ Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialm
     \textit{``[...] an element of metadata describes an information resource, or helps provide access to an information resource.''}
 \end{quote}
 
-Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele teremos. Com efeito, podemos simplificar ainda mais a definição de metadado com sendo ``um conjunto de dados sobre um determinado recurso''.
+Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele teremos. Com efeito, podemos simplificar ainda mais a definição de metadado como sendo ``um conjunto de dados sobre um determinado recurso''.
 
 Para exemplificar podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
 
@@ -52,7 +52,7 @@ Ante o exposto, podemos criar e identificar diversos conceitos do que podemos ch
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
 
-Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadado. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
+Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
 
 Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página na Internet, um texto ou até mesmo um documento em um determinado formato. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
@@ -113,7 +113,7 @@ Como exemplo, visando identificar somente os números existentes dentro da frase
     
     \item a representação de algarismos utilizando \texttt{[0-9]}, que significa qualquer dígitos de 0 a 9, permitindo que os números sejam identificados dentro do texto; 
     
-    \item a existência de números com mais de um dígito, como é o caso de \texttt{262}, necessitando complementar o padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}, que significa exatamente ``uma ou mais ocorrência''.
+    \item a existência de números com mais de um dígito, como é o caso de \texttt{262}, necessitando complementar o padrão para permitir um ou mais algarismos, o que é representado pelo caractere de repetição \texttt{+}, que significa exatamente ``uma ou mais ocorrências''.
 
 \end{itemize}
 
@@ -175,7 +175,7 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
 
 Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
 
-Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capaz de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
+Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
 
 A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas objetivando outras formas de representação.
 
@@ -189,7 +189,7 @@ A aplicação de expressão regular é bastante variada, existindo diversas form
 
     \item Assim como o \texttt{\textasciicircum} representa o início de um texto o \texttt{\$} indica o fim. A lógica é a mesma, se aplicando para todo o texto, e não apenas em ocorrências. Assim, para a expressão \texttt{/\textasciicircum{a.+z}\$/} exige-se que o texto comece com a letra \texttt{a} e termine com a letra \texttt{z}. Nada além disso é permitido.
 
-    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/} podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressão regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra coisa, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
+    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/} podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressões regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra coisa, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
 
 \end{itemize}
 
@@ -254,7 +254,7 @@ Várias ferramentas de extração se baseiam na utilização de SVM como técnic
 
 Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo, cada linha do cabeçalho do documento é classificada em uma ou mais classes, onde algumas fazem parte do padrão Dublin Core, detalhado na \autoref{ssec:metadata-patterns}.
 
-Seymore et al. \cite{Seymore-HMM-IE} definiu 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas 15 (quinze) \textit{tags} definidas, somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han na extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
+Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas 15 (quinze) \textit{tags} definidas, somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han na extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
 
 
 \begin{table}
@@ -385,7 +385,7 @@ Os resultados apontam como muito positiva a utilização de HMM para a extraçã
 
 Uma outra utilização de HMM na extração de informação é descrita por \cite{Zhang-HMM-IE}, onde é realizado um experimento de extração de informação utilizando um conjunto de dados semi-estruturados, em formato HTML, contendo informações sobre restaurantes da cidade de Los Angeles.
 
-Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \textit{Prefix}, \textit{Suffix} e \textit{Target}. O \textit{Target} é o estado responsável pela emissão do símbolo - chamado pelo autor de \textit{token} - para o ``campo-alvo''. O \textit{Preffix} e \textit{Suffix} são estados que emitem símbolos que aparecem respectivamente antes e depois deste campo-alvo. Todos os demais símbolos são emitidos no estado \textit{Background}. A relação entre os estados pode ser visualizada na \autoref{fig:zhang-hmm-ie}.
+Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \textit{Prefix}, \textit{Suffix} e \textit{Target}. O \textit{Target} é o estado responsável pela emissão do símbolo - chamado pelo autor de \textit{token} - para o ``campo-alvo''. O \textit{Prefix} e \textit{Suffix} são estados que emitem símbolos que aparecem respectivamente antes e depois deste campo-alvo. Todos os demais símbolos são emitidos no estado \textit{Background}. A relação entre os estados pode ser visualizada na \autoref{fig:zhang-hmm-ie}.
 
 \begin{figure}
     \centering
@@ -399,7 +399,7 @@ Os seguintes campos deveriam ser extraídos das informações dos restaurantes: 
 
 Como resultados esperados, os campos \textit{restaurant name} e \textit{telephone number} obtiveram muito êxito em sua extração, com resultados realmente consideráveis. Já os campos \textit{hours} e \textit{cousine} não tiveram resultados muito satisfatórios, o que pode ser facilmente explicado em função da característica dos HMMs de utilizar como modelo resultado de aprendizados anteriores, os \textit{training datasets} ou simplesmente \textit{training data}. Como nestes dois campos há uma grande possibilidade de representação diferente, os resultados não foram tão eficazes, o que poderia ser resolvido com uma alteração no modelo HMM que permitisse que as palavras identificadas como sendo do campo \textit{cousine} fossem capturadas de maneira mais proveitosa, que estão, neste modelo sugerido, isoladas no estado \textit{Background}.
 
-Em função dos resultados obtidos, pode-se considerar a performance de HMM na extração de informação muito positiva, visto as possibilidades de variação do modelo, que permite um resultado mais acurado e próximo dos objetivos reais \cite{Zhang-HMM-IE}. Além disso, a utilização de resultados passados garante um aprendizado muito importante para que o modelo seja estabelecido, o que garante ainda mais um ganho de eficiência na aplicação desta técnica.
+Em função dos resultados obtidos, pode-se considerar a performance de HMM na extração de informação muito positiva, visto as possibilidades de variação do modelo, que permite um resultado mais preciso e próximo dos objetivos reais \cite{Zhang-HMM-IE}. Além disso, a utilização de resultados passados garante um aprendizado muito importante para que o modelo seja estabelecido, o que garante ainda mais um ganho de eficiência na aplicação desta técnica.
 
 Além da utilização de HMM de forma natural, algumas variações de seu algoritmo são também citadas na literatura, como é o caso dos MEMMs (\textit{Maximum Entropy Markov Models}) \cite{maximum-entropy}. Nos MEMMs cada estado possui um modelo exponencial que utiliza as características de observação como entrada de dados (\textit{input}) \cite{Lafferty-CRF}. Estes modelos são baseados na técnica de HMM, se diferenciando na maneira como os estados se relacionam, bem como a relação entre suas transições, o que leva à citações de maneira independente por alguns autores, porém, com herança lógica dos conceitos de HMM.
 
@@ -412,9 +412,9 @@ Basicamente o conceito de \textit{clusters} compreende um conjunto de palavras f
 
 A utilização destes grupos de palavras demonstra uma relação entre textos semelhantes dentro de um determinado contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais natural, com resultados mais eficazes.
 
-Sendo assim, Han et al. apresentou uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos da área de Ciência da Computação, indo de maneira relativamente contrária às propostas tradicionais, que baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
+Sendo assim, Han et al. apresentaram uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos da área de Ciência da Computação, indo de maneira relativamente contrária às propostas tradicionais, que baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
 
-Han et al. agrupou bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, com base em um conhecimento prévio de classes específicas, como autor, título, etc. Deste modo, palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar, por grupos, características semelhantes de metadados. Para cada classe (metadado) cria-se um \textit{cluster}, com suas palavras e propriedades ortográficas específicas.
+Han et al. agruparam bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, com base em um conhecimento prévio de classes específicas, como autor, título, etc. Deste modo, palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar, por grupos, características semelhantes de metadados. Para cada classe (metadado) cria-se um \textit{cluster}, com suas palavras e propriedades ortográficas específicas.
 
 Como exemplo, a palavra ``Mary'' faz parte do contexto de ``nomes''. Portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ``autor'', por exemplo. Esta lógica é apresentada para outras classes, como ``e-mail'' por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere ``@'', o que levaria ao conceito de utilização de expressões regulares para encontrar padrões de ocorrências.
 
@@ -428,7 +428,7 @@ Como exemplo, a palavra ``Mary'' faz parte do contexto de ``nomes''. Portanto ex
 
 A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
 
-Han et al. ainda utiliza da técnica de SVM (\autoref{sssec:svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação quando da união destas duas técnicas em prol do mesmo objetivo.
+Han et al. ainda utilizam da técnica de SVM (\autoref{sssec:svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos, quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação quando da união destas duas técnicas em prol do mesmo objetivo.
 
 Basicamente o \textit{Word Clustering} se resume em 3 (três) etapas. A primeira etapa compreende a construção das bases de dados, como referenciado por Han \cite{Han-SVM}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} (nomes de estados americanos, países, cidades, nomes de dicionários, nomes de pessoas, códigos postais, etc), de maneira a unir, não somente estas bases externas, mas também bases construídas dentro de um domínio específico, como palavras que pertencem a uma classe específica.
 
@@ -458,7 +458,7 @@ Modelos baseados em HMM possuem uma fraqueza, que é o problema denominado \text
 
 Desta forma, devido ao \textit{bias problem}, em um caso extremo, um estado que tiver como opção de transição somente um outro estado, pode simplesmente ignorar a sequência de observação, o que traria efeitos contrários aos objetivos do processo inicial.
 
-Laffarty et al. realiza comparações funcionais e práticas entre CRFs, HMM e MEMM (\textit{Maximum Entropy Markov Models}), uma variação da técnica de HMM, detalhada na \autoref{sssec:hmm}. A diferença crítica entre CRFs e MEMMs é que MEMM utiliza como probabilidade de ocorrência de um próximo estado modelos exponenciais para cada um deles, enquanto a técnica de CRF possui um modelo exponencial único para toda a sequência de \textit{labels}, com base na sequência de observação. Segundo Laffarty et al. \cite{Lafferty-CRF} pode pensar na CRF como um modelo de estado finito sem normalização das probabilidades de transição.
+Laffarty et al. realizam comparações funcionais e práticas entre CRFs, HMM e MEMM (\textit{Maximum Entropy Markov Models}), uma variação da técnica de HMM, detalhada na \autoref{sssec:hmm}. A diferença crítica entre CRFs e MEMMs é que MEMM utiliza como probabilidade de ocorrência de um próximo estado modelos exponenciais para cada um deles, enquanto a técnica de CRF possui um modelo exponencial único para toda a sequência de \textit{labels}, com base na sequência de observação. Segundo Laffarty et al. \cite{Lafferty-CRF} pode-se pensar na CRF como um modelo de estado finito sem normalização das probabilidades de transição.
 
 Uma das vantagens de se utilizar CRFs sobre HMM é que ela absorve todas as qualidades deste último, mas com a particularidade de resolver o \textit{bias problem}. Outra grande vantagem ao ser comparada com HMMs e MEMMs é que a CRF possui resultados melhores quando a distribuição dos dados possui grande dependência do modelo, o que geralmente ocorre em casos mais práticos.
 
@@ -483,7 +483,7 @@ Uma outra vantagem da técnica de CRFs - assim como dos modelos \emph{maximum en
 
 Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair metadados em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
-Peng et al. apresenta resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM (\autoref{sssec:hmm}) e SVM (\autoref{sssec:svm}), mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando a junção entre as sequências e características dependentes, mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, significativas, ao se comparar com as demais técnicas de SVM e HMM.
+Peng et al. apresentam resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM (\autoref{sssec:hmm}) e SVM (\autoref{sssec:svm}), mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando a junção entre as sequências e características dependentes, mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, significativas, ao se comparar com as demais técnicas de SVM e HMM.
 
 Os autores definem quatro diferentes transições de estado para diferentes classes, em ordem diferente das técnicas derivadas de Markov (HMM):
 
@@ -494,7 +494,7 @@ Os autores definem quatro diferentes transições de estado para diferentes clas
     \item \emph{\textbf{Third-order:}} os dados de entrada são examinados no contexto do estado atual e de dois estados anteriores.
 \end{enumerate}
 
-Para a extração destes dados Peng et al. também considera como sendo o cabeçalho de um \emph{paper} como sendo a parte inicial do documento até o início da introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
+Para a extração destes dados Peng et al. também consideram como sendo o cabeçalho de um \emph{paper} como sendo a parte inicial do documento até o início da introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
 
 Do \emph{dataset} para extração dos metadados de cabeçalhos utilizado foram analisados 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
 
@@ -652,9 +652,9 @@ Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, a
 
 \begin{itemize}
     \item \textbf{Metadata:} É a região mais ao alto do documento, onde obtém os metadados, que seriam o resumo, \textit{bib\_info}, tipo, título, afiliação, autores, datas, editores e palavras-chaves.
-    \item \textbf{References:} Região responsável por identificas detalhes de referências que foram utilizadas no artigo, como título e autores, por exemplo.
+    \item \textbf{References:} Região responsável por identificar detalhes de referências que foram utilizadas no artigo, como título e autores, por exemplo.
     \item \textbf{Body:} O texto geral do artigo, incluindo equações, imagens e tabelas.
-    \item \textbf{Other:} Outros detalhes menos significantes semanticamente, como número das páginas, dentro outros dados.
+    \item \textbf{Other:} Outros detalhes menos significantes semanticamente, como número das páginas, dentre outros dados.
 \end{itemize}
 
 A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do artigo o \textit{parser} do CERMINE analisa o conteúdo linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do \textit{journal}, volume, \textit{issue}, páginas, \textit{publisher}, localização e o ano.
@@ -733,7 +733,7 @@ Como se pode ver, o CiteULike preserva a informação livre. Ele somente coleta 
 
 Outro detalhe importante é o fato do projeto ser ao mesmo tempo um serviço social. Além do armazenamento destes artigos em forma de links, ao adicionar um artigo em sua lista pessoal, o usuário também pode associar \emph{tags} àquele artigo. Isso permite uma categorização muito particular e ainda permite que artigos sejam procurados bem facilmente com bases nestas \emph{tags} fornecidas. De certa forma, outros pesquisadores podem se beneficiar destas informações, pois elas funcionam como uma folksonomia específica para aquele determinado domínio, que pode ser de interesse de outros pesquisadores também. Outro detalhe importante de destaque do ponto social da ferramenta é que ela permite um sistema de votação nos artigos. Cada artigo pode ser votado por usuários, criando-se um ranking dos artigos mais interessantes, tendo um local de destaque na página inicial da ferramenta.
 
-Um grande detalhe do CiteULike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadada extraction}. Como o CiteULike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset} posteriormente, visto suas informações semi-estruturadas já existentes. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do CiteULike para realizar suas análises \cite{citeulike}. Atualmente, no momento da realização deste trabalho, na base de dados do CiteULike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
+Um grande detalhe do CiteULike é que ele permite que suas informações sejam utilizadas para análise de dados futuros, permitindo assim uma evolução da área de \emph{machine learning} e \emph{metadata extraction}. Como o CiteULike cria uma rede de artigos, ao mesmo tempo ele possui um banco de dados muito rico, que pode se utilizado como um \emph{dataset} posteriormente, visto suas informações semi-estruturadas já existentes. Inclusive os autores citam o fato de já existirem diversos projetos independentes atualmente que utilizam o \emph{dataset} do CiteULike para realizar suas análises \cite{citeulike}. Atualmente, no momento da realização deste trabalho, na base de dados do CiteULike podemos encontrar mais de 7.900.000 (sete milhões e novecentos mil) artigos.
 
 Como o banco de dados do CiteULike é criado de forma estruturada a disseminação de conhecimento entre os pesquisadores é facilmente realizada. De posse do link para um determinado artigo a ferramenta consegue todos os detalhes deste documento, como título, autores, etc. Assim permite-se uma pesquisa muito rica em um conjunto de metadados previamente extraídos, criando então uma rede de distribuição de artigos, contribuindo para a comunicação entre pesquisadores de modo geral.
 
@@ -757,11 +757,11 @@ Um dos projetos mais específicos encontrados é o CiteSeer \cite{citeseer} e po
 
 Desta forma, com estas informações identificadas, ele consegue criar um \textit{ranking} dos documentos citados, incluindo seus autores e \textit{journals}, criando a partir de um documento fonte todo um conjunto de relações com outros documentos de uma maneira estatística bem eficaz.
 
-Os índices de citações (\textit{citation indexes}), que são utilizados no projeto, foram originalmente criados para a recuperação de informação, porém sua utilidade é tamanha que permite que citações sejam indexadas de maneira eficaz, permitindo inclusive que referências de documentos em idiomas diferentes sejam identificadas. Desta maneira, essa técnica pode ser utilizadas de diversas formas, não somente na identificação de citações, mas envolvendo também um conjunto de informações, como inclusive identificar a reputação de um determinado artigo científico no meio em que se encontra, simplesmente analisando onde é referência em relação ao número de vezes em que é citado.
+Os índices de citações (\textit{citation indexes}), que são utilizados no projeto, foram originalmente criados para a recuperação de informação, porém sua utilidade é tamanha que permite que citações sejam indexadas de maneira eficaz, permitindo inclusive que referências de documentos em idiomas diferentes sejam identificadas. Desta maneira, essa técnica pode ser utilizada de diversas formas, não somente na identificação de citações, mas envolvendo também um conjunto de informações, como inclusive identificar a reputação de um determinado artigo científico no meio em que se encontra, simplesmente analisando onde é referência em relação ao número de vezes em que é citado.
 
 Uma proposta interessante em que se baseia o CiteSeer é a de Cameron \cite{cameron}. Seu objetivo é de formar uma Base de Citações Universal, onde todos os artigos estariam ligados entre si, independente de qualquer fator externo, como idioma, por exemplo. A diferença entre esta proposta e o trabalho realizado com o CiteSeer é que este último permite que os documentos sejam analisados sem nenhum esforço extra, ou seja, sem a intervenção dos autores dos documentos, como é proposto por Cameron. Neste caso, os documentos seriam analisados de maneira automática, diminuindo o tempo necessário para o relacionamento de todos eles e aumentando a eficácia e eficiência do processo.
 
-O funcionamento do CiteSeer é relativamente simples, porém o trabalho realizado por detrás do processo envolve muito estudo e dedicação. Basicamente ele é capaz de fazer o \textit{download} de \textit{papers} utilizando a Internet (como um coletor de artigos), convertê-los em texto e realizar a análise de todas as suas citações e metadados. Este resultado é armazenado em um banco de dados para consultas e relacionamentos futuros. Um dos pontos interessantes desta análise é que, como ela é feita com base em referência textual, identificado origem e destino, ela pode ser facilmente aplicada tanto no sentido natural de leitura (um artigo cita outros) quanto no sentido inverso (um artigo é citado por outros). 
+O funcionamento do CiteSeer é relativamente simples, porém o trabalho realizado por detrás do processo envolve muito estudo e dedicação. Basicamente ele é capaz de fazer o \textit{download} de \textit{papers} utilizando a Internet (como um coletor de artigos), convertê-los em texto e realizar a análise de todas as suas citações e metadados. Este resultado é armazenado em um banco de dados para consultas e relacionamentos futuros. Um dos pontos interessantes desta análise é que, como ela é feita com base em referência textual, identificados origem e destino, ela pode ser facilmente aplicada tanto no sentido natural de leitura (um artigo cita outros) quanto no sentido inverso (um artigo é citado por outros). 
 
 O projeto também possui suas desvantagens, como por exemplo, a não cobertura de alguns \textit{journals} importantes, indexando todos seus documentos online e de maneira automática. Além disso o projeto original não é capaz de identificar mais de um autor nos documentos, sendo a identificação feita apenas pelo campo autor, tendo ele um ou mais pesquisadores envolvidos.
 
@@ -794,13 +794,13 @@ Um detalhe bastante interessante do projeto é a descrição de seu processament
 
 Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.} \cite{Councill-Giles-2008-ParsCit}.
 
-Desta forma a fase de pré-processamento se inicia com esta análise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências à artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
+Desta forma a fase de pré-processamento se inicia com esta análise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências a artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
 
 Com este modelo CRF definido algumas etapas são aplicadas a fim de normalizar os dados encontrados. Nomes de autores podem estar escritos de maneira diferente, com abreviações em nomes de maneira distinta, dependendo do modo como as referências foram escritas no artigo analisado.
 
 Esta análise posterior dos nomes dos autores é feita com base na inspeção de cada palavra individualmente, respeitando então um padrão de normalização definido, sempre com as iniciais dos nomes seguidas do sobrenome escrito normalmente.
 
-A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilitam os testes e a extração de dados. Os resultados obtidos desta análise é então exibido (ou gravado em arquivo) em formato XML, que permite utilização posterior em qualquer tecnologia. Como informado anteriormente os resultados também podem ser coletados em formato de \textit{Web Service}, mas para os fins desta pesquisa apenas sua execução em linha de comando é suficiente.
+A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilita os testes e a extração de dados. Os resultados obtidos desta análise é então exibido (ou gravado em arquivo) em formato XML, que permite utilização posterior em qualquer tecnologia. Como informado anteriormente os resultados também podem ser coletados em formato de \textit{Web Service}, mas para os fins desta pesquisa apenas sua execução em linha de comando é suficiente.
 
 Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia da ferramenta (detalhes na \autoref{tab:parscit-results}).
 
@@ -834,7 +834,7 @@ Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi 
     \label{tab:parscit-results}
 \end{table}
 
-Visando também analisar outras ferramentas a mesma comparação de resultados foi feita com o projeto CiteSeer (\autoref{ssec:citeseer}), onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como são no ParsCit.
+Visando também analisar outras ferramentas, a mesma comparação de resultados foi feita com o projeto CiteSeer (\autoref{ssec:citeseer}), onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como são no ParsCit.
 
 % Falar de cada trabalho encontrado com base nos eventos
 
@@ -849,7 +849,7 @@ Visando também analisar outras ferramentas a mesma comparação de resultados f
 
 CrossRef é uma associação independente mantida por diversas editoras científicas (\emph{publishers}). Além de ser uma organização sem fins lucrativos ela atua como um identificador de um recurso de pesquisa na Internet. Ela permite que referências cruzadas de citações sejam associadas com seus artigos originais, fazendo o link para o recurso no site de sua editora de origem \cite{Bergmark:2000:AER:867169}.
 
-Suas atividades foram iniciadas em 1999 como uma iniciativa a desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto a permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
+Suas atividades foram iniciadas em 1999 como uma iniciativa a desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
 
 Inicialmente a extração realizada pelo CrossRef levava em consideração apenas as referências citadas em um artigo, mas posteriormente verificou-se que demais partes de um documento eram necessárias, inclusive para que a referência cruzada fosse feita de maneira completa. Assim, um artigo foi dividido em três partes \cite{Bergmark:2000:AER:867169}:
 
@@ -865,7 +865,7 @@ Por outro lado existe um incentivo por parte do CrossRef para realização do li
 
 Esta ferramenta de extração de metadados fornecida pelo CrossRef Labs, chamada \texttt{pdfextract}, foi criada a fim de permitir que editoras de menor porte possam integrar sua bases de dados com as referências do CrossRef, aumentando ainda mais o número de documentos que fazem parte do projeto. A ferramenta é desenvolvida na linguagem de programação Ruby, estando em constante atualização, conforme pode ser visto em seu repositório oficial em \url{https://github.com/CrossRef/pdfextract}.
 
-A \texttt{pdfextract} utiliza de informações visuais para identificar cada parte de um artigo científico, pré-selecionando áreas onde cada metadado pode ser encontrado, realizando então um conjunto de identificações por padrões (expressões regulares) que espera-se encontrar (\autoref{fig:crossref}).
+A \texttt{pdfextract} utiliza de informações visuais para identificar cada parte de um artigo científico, pré-selecionando áreas onde cada metadado pode ser encontrado, realizando então um conjunto de identificações por padrões (expressões regulares) que se espera encontrar (\autoref{fig:crossref}).
 
 \begin{figure}
     \centering
