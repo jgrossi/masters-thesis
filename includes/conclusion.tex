@@ -3,39 +3,72 @@
 \chapter{Discussão / Trabalhos Futuros} % (fold)
 \label{cha:conclusion}
 
-Após todo o processo de pesquisa, de extração dos metadados pelas ferramentas analisadas e coleta de seus respectivos resultados, algumas considerações podem ser feitas, objetivando cumprir com os objetivos propostos no início do trabalho.
+Após todo o processo de pesquisa, de extração dos metadados pelas ferramentas analisadas e coleta de seus respectivos resultados, algumas considerações podem ser feitas, relativas aos objetivos propostos no início do trabalho.
 
-Os resultados apresentados, de modo geral, foram inferiores às expectativas do próprio autor, uma vez que as extrações não foram tão precisas quanto se imaginava. A grande diferença no layout dos elementos, presente no Corpus escolhido, realmente teve alto impacto nos resultados, principalmente no que diz respeito à extração dos autores e das referências.
+Os resultados apresentados, de modo geral, foram inferiores às expectativas iniciais da pesquisa.
+As extrações não foram tão precisas quanto se imaginava. 
+A grande diferença no layout dos elementos, presente no Corpus escolhido, realmente teve alto impacto nos resultados, principalmente no que diz respeito à extração dos autores e das referências.
 
-De modo geral, as ferramentas Cermine e CiteSeer obtiveram resultados para a extração do metadado ``título'' bem positivos, atingindo entre 83 e 89\% de precisão. Já a ferramenta CrossRef ficou bem abaixo do esperado, com 66.56\% de precisão apenas, porém acima da última colocada, a ferramenta ParsCit, que conseguiu extrair com sucesso apenas 15.17\% dos resultados dos ``títulos'', muito abaixo do esperado.
+Por outro lado, as ferramentas Cermine e CiteSeer obtiveram resultados para a extração do metadado ``título'' bem positivos, atingindo entre 83 e 89\% de precisão. 
+Já a ferramenta CrossRef ficou bem abaixo do esperado, com 66.56\% de precisão apenas, porém acima da última colocada, a ferramenta ParsCit, que conseguiu extrair com sucesso apenas 15.17\% dos resultados dos ``títulos'', muito abaixo do esperado.
 
-Para o metadado ``autores'' a ferramenta com maior precisão foi a Cermine, que atingiu 76.34\%, resultado próximo da segunda colocada, a CiteSeer, com 71.93\%. Já as demais ferramentas não obtiveram êxito na extração dos nomes dos autores, ficando abaixo dos 20\% de acerto.
+Para o metadado ``autores'' a ferramenta com maior precisão foi a Cermine, que atingiu 76.34\%, resultado próximo da segunda colocada, a CiteSeer, com 71.93\%. 
+Já as demais ferramentas não obtiveram êxito na extração dos nomes dos autores, ficando abaixo dos 20\% de acerto.
 
-Para a extração dos e-mails dos autores o resultado obtido, de modo geral, foi relativamente pior. A ferramenta que obteve maior êxito na extração deste metadado foi a Cermine, que conseguiu obter apenas 46.62\% de sucesso. Os resultados para este metadado obtidos pela ferramenta CiteSeer foram bem inferiores às expectativas, pois somente 4.17\% dos endereços foram extraídos com sucesso, resultado inferior ainda à ferramenta ParsCit, que extraiu 12.16\%. Como informado no capítulo ``Resultados'' (\autoref{cha:results}) a ferramenta CrossRef não conseguiu realizar a extração de nomes de autores, endereços de e-mails e do resumo, sendo estes resultados desconsiderados nesta sessão.
+Para a extração dos e-mails dos autores o resultado obtido, de modo geral, foi pior. 
+A ferramenta que obteve maior êxito na extração deste metadado foi a Cermine, que conseguiu obter apenas 46.62\% de sucesso. 
+Os resultados para este metadado obtidos pela ferramenta CiteSeer foram bem inferiores às expectativas, pois somente 4.17\% dos endereços foram extraídos com sucesso, resultado inferior ainda à ferramenta ParsCit, que extraiu 12.16\%. 
+Como informado no capítulo ``Resultados'' (\autoref{cha:results}) a ferramenta CrossRef não conseguiu realizar a extração de nomes de autores, endereços de e-mails e do resumo, sendo estes resultados desconsiderados nesta sessão.
 
-Em virtude da grande variação de layout do Corpus, inclusive pela ausência de uma padronização para apresentação do metadado ``resumo'' \emph{abstract}, os resultados obtidos para este metadado superaram as expectativas do autor, visto que, exceto pela ferramenta CrossRef, todas as demais obtiveram resultados acima de 60\%, chegando a 86.83\% da ferramenta Cermine, maior precisão dentre as ferramentas. Estes resultados, embora ainda abaixo do considerado ``ideal'' foram positivos, principalmente em virtude de alguns artigos apresentarem este metadado de maneira bem diferente, com posicionamento bem divergente do habitual e, inclusive, sem indícios de que ali se apresentava o resumo do artigo.
+Em virtude da variação de layout do Corpus e da ausência de padronização do metadado ``resumo'' \emph{abstract}, os resultados obtidos para este metadado superaram as expectativas.
+Exceto pela ferramenta CrossRef, todas as demais obtiveram resultados acima de 60\%, chegando a 86.83\% da ferramenta Cermine, a maior precisão. 
+Esses resultados podem ser considerados positivos, principalmente em virtude de alguns artigos apresentarem o metadado de maneira bem diferente, com posicionamento bem divergente do habitual.
+Inclusive, sem indícios de que ali se apresentava o resumo do artigo.
 
-Outro ponto onde as expectativas do autor não foram atingidas foi na extração das ``referências''. A ferramenta Cermine, mais uma vez, demonstrou-se mais precisa, conquistando 73.81\% de sucesso. A ferramenta CiteSeer, que utiliza da ParsCit para extração das referências, ao ser comparada com a própria ParsCit, produziu resultados ou pouco superiores, 54.75\% e 53.58\%, respectivamente. A diferença nos resultados se deve pelo fato da ferramenta ParsCit necessitar de arquivos \texttt{.txt} como entrada de dados. No caso das extrações realizadas pela própria ferramenta, os arquivos \texttt{.txt} foram gerados pelo programa \texttt{pdftotext}, conforme detalhado no capítulo de ``Resultados'' (\autoref{cha:results}), diferentemente da ferramenta CiteSeer, que transforma o arquivo \texttt{.pdf} em \texttt{.txt} de sua própria maneira, causando então uma pequena divergência nos resultados gerais (1.17\%). 
+Outro ponto onde as expectativas não foram atingidas foi na extração das ``referências''. 
+A ferramenta Cermine, mais uma vez, demonstrou-se mais precisa, alcançando 73.81\% de sucesso. 
+A ferramenta CiteSeer, que utiliza a ParsCit para extração das referências, ao ser comparada com a própria ParsCit, produziu resultados pouco superiores, 54.75\% e 53.58\%, respectivamente. 
+A diferença nos resultados se deve ao fato da ParsCit necessitar de arquivos \texttt{.txt} como entrada de dados. 
+No caso das extrações realizadas pela própria ferramenta, os arquivos \texttt{.txt} foram gerados pelo programa \texttt{pdftotext}, conforme detalhado no capítulo de ``Resultados'' (\autoref{cha:results}), diferentemente da ferramenta CiteSeer, que transforma o arquivo \texttt{.pdf} em \texttt{.txt} de sua própria maneira, causando então uma pequena divergência nos resultados gerais (1.17\%). 
 
-Já a ferramenta CrossRef obteve apenas 20.06\% de precisão na extração das referências, o que era esperado em função de sua extração com poucos detalhes, com apenas um único campo com todas as informações de cada referência. Embora os resultados da extração não tenham sido positivos, um detalhe interessante que merece uma atenção é a forma como esta ferramenta trata as referências. A ferramenta permite que elas sejam comparadas com o banco de dados existente no \url{http://api.crossref.org}, permitindo identificar exatamente quais artigos já foram catalogadas pelo site, gerando um grande controle sobre o conteúdo, inclusive relacionando-o. Para os artigos encontrados na base de dados do CrossRef é possível obter, inclusive, a descrição de cada um em formato BibTeX, com todas as informações relevantes para uma correta citação científica. Para este trabalho, em virtude dos poucos resultados obtidos, esta funcionalidade não foi utilizada na extração e na comparação.
+Já a ferramenta CrossRef obteve apenas 20.06\% de precisão na extração das referências, o que era esperado em função de sua extração com poucos detalhes, com apenas um único campo com todas as informações de cada referência. 
+Embora os resultados da extração não tenham sido positivos, um detalhe interessante que merece atenção é a forma como a ferramenta trata as referências. 
+A ferramenta permite que elas sejam comparadas com o banco de dados existente no \url{http://api.crossref.org}, possibilitando identificar exatamente quais artigos já foram catalogados pelo site, gerenciando o conteúdo, inclusive relacionando-o. 
+Para os artigos encontrados na base de dados do CrossRef é possível obter, inclusive, a descrição de cada um em formato BibTeX. 
+Para este trabalho, em virtude dos poucos resultados obtidos, esta funcionalidade não foi utilizada na extração e na comparação.
 
-Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 3 subáreas do conhecimento, porém para metadados diferentes. A ferramenta Cermine acertou todos os títulos das áreas de Arquitetura e Urbanismo e Fonoaudiologia, além de 100\% dos nomes dos autores da área de Geologia. Já a ferramenta CiteSeer conseguiu precisão total na extração dos títulos de Arquitetura e Urbanismo, Ciência da Computação e Fonoaudiologia. Já a ferramenta CrossRef obteve melhor resultado na extração dos títulos dos artigos da área de Geologia, obtendo 97.62\% de precisão, superando a ferramenta CiteSeer e ParsCit, que obtiveram 73.77\% e 14.29\% respectivamente.
+Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 3 subáreas do conhecimento, porém para metadados diferentes. 
+A ferramenta Cermine acertou todos os títulos das áreas de Arquitetura e Urbanismo e Fonoaudiologia, além de 100\% dos nomes dos autores da área de Geologia. 
+A ferramenta CiteSeer conseguiu precisão total na extração dos títulos de Arquitetura e Urbanismo, Ciência da Computação e Fonoaudiologia. 
+Já a ferramenta CrossRef obteve melhor resultado na extração dos títulos dos artigos da área de Geologia, obtendo 97.62\% de precisão, superando a ferramenta CiteSeer e ParsCit, que obtiveram 73.77\% e 14.29\% respectivamente.
 
 Para a extração dos títulos dos artigos, os piores resultados foram encontrados nas áreas de Música (CiteSeer, com 49.02\%), Zootecnia (Cermine, com 49.95\% e CrossRef, com 32.05\%) e as áreas Ciências Biológicas (Zoologia) e Arquitetura e Urbanismo (ParsCit, com nenhum acerto).
 
-A ferramenta Cermine se destacou na extração de títulos de 8 (oito) subáreas do conhecimento - Arquitetura e Urbanismo, Ciências Biológicas (Zoologia), Enfermagem, Engenharia Mecânica, Fonoaudiologia, Geologia, História e Música -, obtendo resultados superiores a 99\%, o que é considerado excelente. 
+A ferramenta Cermine se destacou na extração de títulos de 8 (oito) subáreas do conhecimento - Arquitetura e Urbanismo, Ciências Biológicas (Zoologia), Enfermagem, Engenharia Mecânica, Fonoaudiologia, Geologia, História e Música -, obtendo resultados superiores a 99\%, o que foi considerado excelente. 
 
-Para os autores, seus maiores destaques foram nas áreas de Geologia, Letras, Medicina Veterinária e Música, com resultados acima de 90\%. Na extração dos e-mails dos autores a ferramenta Cermine obteve resultados superiores a 85\% somente na área de Medicina Veterinária, seu melhor resultado para este metadado. Além disso, a ferramenta se destacou na extração dos resumos em 5 (cinco) áreas, com resultados acima dos 98\%, e na extração das referências de Ciências Biológicas (Genética), onde obteve resultados acima de 96\% de precisão.
+Para os autores, seus maiores destaques foram nas áreas de Geologia, Letras, Medicina Veterinária e Música, com resultados acima de 90\%. 
+Na extração dos e-mails dos autores a ferramenta Cermine obteve resultados superiores a 85\% somente na área de Medicina Veterinária, seu melhor resultado para este metadado. 
+Além disso, a ferramenta destacou-se na extração dos resumos em 5 (cinco) áreas, com resultados acima dos 98\%, e na extração das referências de Ciências Biológicas (Genética), onde obteve resultados acima de 96\% de precisão.
 
-Já a ferramenta CiteSeer demonstrou bem eficiente na extração dos títulos de 5 (cinco) subáreas: Arquitetura e Urbanismo, Ciência da Computação, Fonoaudiologia, História e Letras, com resultados superiores a 99\%. Para a extração dos nomes dos autores o resultado foi relevante em apenas 2 (duas) subáreas: Arquitetura e Urbanismo e Ciência da Informação, com precisão acima de 90\%. Já para os e-mails dos autores os resultados deixaram a desejar para 13 (treze) das 16 (dezesseis) subáreas, com 0\% de acerto, tendo resultados positivos apenas para as subáreas de Ciência da Computação, Ciências Biológicas (Genética) e Psicologia, porém com resultados abaixo dos 29\% de acerto.
+Já a ferramenta CiteSeer foi bem eficiente na extração dos títulos de 5 (cinco) subáreas: Arquitetura e Urbanismo, Ciência da Computação, Fonoaudiologia, História e Letras, com resultados superiores a 99\%. 
+Para a extração dos nomes dos autores o resultado foi relevante em apenas 2 (duas) subáreas: Arquitetura e Urbanismo e Ciência da Informação, com precisão acima de 90\%. 
+Já para os e-mails dos autores os resultados deixaram a desejar para 13 (treze) das 16 (dezesseis) subáreas, com 0\% de acerto, tendo resultados positivos apenas para as subáreas de Ciência da Computação, Ciências Biológicas (Genética) e Psicologia, porém com resultados abaixo de 29\% de acerto.
 
-Para a extração dos resumos dos artigos a ferramenta CiteSeer também se demonstrou bem eficiente, com resultados acima dos 90\% para 4 (quatro) subáreas: Arquitetura e Urbanismo, Ciência da Computação, Fonoaudiologia e Medicina Veterinária. Para as referências (onde o CiteSeer utiliza do ParsCit) os resultados deixaram a desejar, com resultados abaixo dos 72\%.
+Para a extração dos resumos a ferramenta CiteSeer também se monstrou bem eficiente, com resultados acima de 90\% para 4 (quatro) subáreas: Arquitetura e Urbanismo, Ciência da Computação, Fonoaudiologia e Medicina Veterinária. 
+Para as referências (utilizando o ParsCit) os resultados deixaram a desejar, com resultados abaixo de 72\%.
 
-A ferramenta CrossRef se demonstrou positiva apenas para a extração de títulos de artigos da subárea de Geologia, como já dito anteriormente, com 97.62\% de acerto, não tendo resultados considerados satisfatórios para as demais áreas. Já para a extração das referências os resultados também deixaram a desejar, com apenas 2 (duas) subáreas com precisão próxima de 30\%: Ciências Biológicas (Zoologia), com 32.72\% e Letras, com 32.58\%.
+A ferramenta CrossRef monstrou resultados positivos apenas para a extração de títulos de artigos da subárea de Geologia, como já dito anteriormente, com 97.62\% de acerto, não tendo resultados considerados satisfatórios para as demais áreas. 
+Para a extração das referências os resultados deixaram a desejar, com apenas 2 (duas) subáreas com precisão próxima de 30\%: Ciências Biológicas (Zoologia), com 32.72\% e Letras, com 32.58\%.
 
-Por fim, a ferramenta ParsCit obteve resultados abaixo dos 38\% para os títulos, em todas as subáreas analisadas. O acerto dos nomes dos autores também foi baixo, onde os melhores resultados ficaram entre 43\% e 59\%, para as subáreas de Ciência da Computação, Letras e Música. Para os e-mails dos autores o melhor resultado foi para os artigos da subárea de Ciência da Computação, com 47.62\% de precisão. Já para o resumo dos artigos os resultados foram um pouco melhores, com resultados acima de 70\% para 5 (cinco) subáreas do conhecimento. Os resultados para as referências foram semelhantes aos obtidos pela ferramenta CiteSeer, por se utilizar da mesma ferramenta, onde os 2 (dois) melhores resultados foram para as subáreas de Ciência da Computação e Psicologia, com precisão de 69.72\% e 68.84\%, respectivamente.
+Por fim, a ferramenta ParsCit obteve resultados abaixo dos 38\% para os títulos, em todas as subáreas analisadas. 
+O acerto dos nomes dos autores também foi baixo, onde os melhores resultados ficaram entre 43\% e 59\%, para as subáreas de Ciência da Computação, Letras e Música. 
+Para os e-mails dos autores o melhor resultado foi para os artigos da subárea de Ciência da Computação, com 47.62\% de precisão. 
+Já para o resumo dos artigos, os resultados foram um pouco melhores, acima de 70\% para 5 (cinco) subáreas do conhecimento. 
+Os resultados para as referências foram semelhantes aos obtidos pela ferramenta CiteSeer (utiliza a mesma ferramenta). 
+Os 2 (dois) melhores resultados foram para as subáreas de Ciência da Computação e Psicologia, com precisão de 69.72\% e 68.84\%, respectivamente.
 
-Visando uma melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, \ref{tab:areas-authors-tools}, \ref{tab:areas-emails-tools}, \ref{tab:areas-abstract-tools} e \ref{tab:areas-references-tools} apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separado por cada metadado. 
+Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, \ref{tab:areas-authors-tools}, \ref{tab:areas-emails-tools}, \ref{tab:areas-abstract-tools} e \ref{tab:areas-references-tools} 
+apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separados por metadado. 
 
 \begin{table}
     \caption{Melhores ferramentas para o metadado ``Título''}
@@ -177,44 +210,59 @@ Visando uma melhor visualização dos resultados, as Tabelas \ref{tab:areas-titl
     \label{tab:areas-references-tools}
 \end{table}
 
-Com base nos resultados podemos concluir que, para este Corpus escolhido, com base nos critérios adotados neste trabalho, para o metadado ``Título'' a ferramenta que obteve os melhores resultados de extração foi a Cermine, com 89.8\% de precisão, seguida da CiteSeer, com 83.55\%. O mesmo acontece para o metadado ``Autores'', onde a ferramenta Cermine obteve os melhores resultados (76.34\%) seguida da CiteSeer, com 71.93\%.
+Os resultados mostram que, no Corpus escolhido, para o metadado ``Título'' a ferramenta Cermine foi superior, com 89.8\% de precisão, seguida da CiteSeer, com 83.55\%. 
+O mesmo acontece para o metadado ``Autores'', onde a Cermine obteve os melhores resultados (76.34\%), seguida da CiteSeer, com 71.93\%.
 
-Já para o metadado ``E-mails'' a ferramenta Cermine foi sem sombra de dúvidas a melhor, com 46.62\% de acertos, deixando uma grande diferença para a segunda colocada ParsCit, com apenas 12.66\%. Para o metadado ``Resumo'' a Cermine também se saiu melhor, com 86.83\% de precisão, tendo em segunda posição a CiteSeer com 75.81\%.
+Já para o metadado ``E-mails'' a Cermine foi sem dúvida a melhor, com 46.62\% de acertos, deixando uma grande diferença da segunda colocada ParsCit, com apenas 12.66\%. 
+Para o metadado ``Resumo'' a Cermine também se saiu melhor, com 86.83\% de precisão, e em segunda posição a CiteSeer com 75.81\%.
 
-Por fim, para a extração do metadado ``Referências'' novamente a ferramenta Cermine obteve o melhor resultado, com precisão de 73.81\% dos resultados, seguida da ferramenta CiteSeer com 54.75\%.
+Por fim, para a extração do metadado ``Referências'' novamente a Cermine obteve o melhor resultado, com precisão de 73.81\% dos resultados, seguida da CiteSeer com 54.75\%.
 
 \section{Contribuições}
 \label{sec:contributions}
 
-Os resultados coletados após estas comparações foram abaixo das expectativas do autor, exceto pelo metadado ``Título'', onde os números foram um pouco mais expressivos.
+Como dito, os resultados coletados após as comparações ficaram abaixo das expectativas, exceto pelo metadado ``Título'', onde os números foram expressivos.
 
-Em virtude da grande diferença no posicionamento visual dos elementos dos artigos, que fizeram parte do Corpus escolhido, os resultados foram muito variáveis, não sendo possível definir, com precisão, qual ferramenta se comporta melhor para uma determinada área ou subárea do conhecimento, embora os resultados demonstrem, numericamente, o comportamento diferenciado de cada uma.
+Em virtude da grande diferença no posicionamento visual dos elementos dos artigos do Corpus, os resultados foram muito variáveis, não sendo possível definir, com precisão, que ferramenta se comporta melhor para uma determinada área ou subárea do conhecimento.
+Mesmo que os resultados demonstrem, numericamente, o comportamento diferenciado de cada uma.
 
-Estes resultados permitem aferir que as ferramentas de extração de metadados ainda precisam evoluir, sendo necessários ajustes e adaptações para que uma maior quantidade de dados seja extraída com sucesso. Além disso, algumas ferramentas tendem a ser melhores em algumas subáreas do conhecimento, mas sem generalização, possibilitando uma análise posterior mais detalhada e mais aprofundada.
+Estes resultados permitem aferir que as ferramentas de extração de metadados ainda tem espaço para evoluir, sendo necessários ajustes e adaptações para que uma maior quantidade de metadados seja extraída com sucesso. 
+Além disso, algumas ferramentas apresentam melhores resultados em algumas subáreas do conhecimento, mas sem generalização possível, o que demandaria uma análise mais aprofundada.
 
-Além disso, todo o código utilizado para comparação das ferramentas está disponível gratuitamente em \url{http://github.com/jgrossi/met}, podendo ser utilizado para futuros projetos e aplicações, visto a possibilidade de inclusão de novas ferramentas de uma maneira bem simplificada.
+Todo o código utilizado na comparação está disponível em \url{http://github.com/jgrossi/met}, podendo ser utilizado para futuras pesquisas. É possível incluir novas ferramentas de maneira simplificada.
 
-Ademais, todo o processo de comparação utilizado neste trabalho pode ser reutilizado, permitindo inclusive o cálculo do Índice de Confiabilidade segundo os critérios adotados pelo autor. Este índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}), se tornando eficiente para comparação dos resultados obtidos pelas ferramentas.
+Ademais, todo o processo de comparação elaborado neste trabalho pode ser reutilizado, permitindo inclusive o cálculo do índice de confiabilidade segundo os critérios adotados pelo autor. 
+O índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}).
 
-Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável, ficando uma grande parcela dos resultados sob responsabilidade de cada ferramenta, onde deve-se levar em consideração a maneira como os algoritmos são implementados bem como a maneira como os dados são tratados, tanto antes quanto depois da extração. Assim, com base nos resultados numéricos apresentados, não é possível determinar qual técnica é mais aplicada para a extração de cada metadado.
+Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável.
+Uma parcela dos resultados parece ser influenciado pelo modo de uso da técnica em cada ferramenta.
+Com efeito, deve-se levar em consideração a maneira como os algoritmos (das técnicas) são implementados bem como a maneira como os dados são tratados, tanto antes quanto depois da extração. 
+Assim, com base nos resultados numéricos apresentados, não é possível determinar qual técnica é mais aplicada para a extração de cada metadado.
 
 \section{Trabalhos Futuros}
 \label{sec:future-work}
 
-Embora este trabalho tenha abrangido 16 (dezesseis) subáreas do conhecimento, com um total de 112 (cento e doze) artigos científicos extraídos, a variedade de formatos e layouts vai muito além desta análise realizada, merecendo um trabalho mais detalhado para cada subárea do conhecimento, permitindo testar uma quantidade mais rica de artigos e padrões, de maneira a obter resultados mais próximos à realidade de cada subárea.
+Embora este trabalho tenha abrangido 16 (dezesseis) subáreas do conhecimento, com um total de 112 (cento e doze) artigos científicos, a variedade real de formatos e layouts vai muito além.
+Podería-se pensar em trabalhos mais detalhados para cada subárea do conhecimento, permitindo testar maior quantidade de artigos e padrões, de maneira a obter resultados mais próximos do real.
 
-Um ponto interessante de pesquisa seria um trabalho de comparação para artigos de uma área do conhecimento específica, como Engenharia, por exemplo, onde um maior número de artigos desta área seria testado, objetivando identificar o comportamento destas ferramentas para esta área em específico, com um Corpus bem maior e variado, porém mais direcionado.
+Um ponto interessante de pesquisa seria um trabalho de comparação para artigos de uma área do conhecimento específica, como Engenharia, por exemplo, onde um maior número de artigos desta área seria testado, 
+objetivando identificar o comportamento destas ferramentas para esta área em específico, com um Corpus bem maior e variado, porém mais direcionado.
 
-Um outro estudo interessante seria a comparação por revistas ou bases de dados. Embora a diferenciação de layout para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual. Assim, um estudo sobre o comportamento de ferramentas de extração de metadados em artigos científicos focado para estas bases traria também um relativo ganho de conhecimento para a comunidade científica.
+Um outro estudo possível seria a comparação por revistas ou bases de dados. 
+Embora a diferenciação de leiaute para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, 
+como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual. 
 
-Além disso, apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, aprofundando muito mais suas características e funcionalidades, permitindo conclusões mais direcionadas e inclusive críticas mais precisas quanto aos resultados por ela apresentados.
+Apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, 
+aprofundando muito mais suas características e funcionalidades, permitindo conclusões mais direcionadas e inclusive críticas mais precisas quanto aos resultados por ela apresentados.
 
-Outro tema bastante interessante que pode originar uma pesquisa bem aprofundada seria a variação de resultados na extração manual dos metadados. Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados, o que alteraria a precisão das ferramentas aqui calculada.
+Seria ainda interessante extender a pesquisa considerndo possíveis variações na extração manual dos metadados. 
+Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados.
 
 \section{Considerações Finais}
 \label{sec:final-considerations}
 
-Em virtude dos resultados apresentados e com base nas comparações realizadas pelo autor, sugere-se que as ferramentas ainda precisam evoluir para abranger um maior número de artigos e áreas do conhecimento. Algumas ferramentas se comportaram melhor para alguns padrões visuais, porém não sendo possível estabelecer uma regra ou afirmação com base nos resultados encontrados.
+Em virtude dos resultados apresentados e com base nas comparações realizadas, sugere-se que as ferramentas ainda tem espaço para evoluir para abranger um maior número de artigos e áreas do conhecimento. 
+Algumas ferramentas se comportaram melhor para alguns padrões visuais, porém não sendo possível estabelecer uma regra ou afirmação com base nos resultados encontrados.
 
-Dadas as fragilidades das ferramentas testadas, com base no Corpus utilizado, sugere-se o desenvolvimento de uma nova ferramenta para extração de metadados em artigos científicos, possibilitando uma análise mais aprofundada das necessidades de cada metadado com as variações visuais encontradas, permitindo então obter resultados mais precisos do que os resultados apresentados neste trabalho.
+As fragilidades das ferramentas testadas sugerem que o desenvolvimento de uma nova solução poderia ser de interesse.
 
