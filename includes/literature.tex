@@ -3,25 +3,9 @@
 \chapter{Referencial Teórico}
 \label{cha:literature}
 
-% Falar sobre RSL
+A pesquisa é focada em técnicas e ferramentas para extração de metadados em artigos científicos. Cada ferramenta é testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuem seus metadados extraídos manualmente, o que permite comparar os resultados com os resultados de cada uma das ferramentas. Os critérios utilizados serão de natureza explicitamente prática, numericamente representados.
 
-% Visando obter uma revisão de literatura eficaz foi feita uma Revisão Sistemática de Literatura, com base no relatório técnico de \cite{Kitchenham}. Diante disso, o projeto se torna mais abrangente do ponto de vista de pesquisa literária e ao mesmo tempo mais restritivo, realmente realizando o estudo dos objetos que são importantes para a pesquisa e seus resultados.
-
-
-
-% Bases pesquisadas
-
-Como o objetivo do trabalho tem foco no resultado prático, geralmente as bases relacionadas às áreas mais técnicas, como Ciência da Computação, devem ser bem focadas, como IEEE e ACM \emph{(Association for Computing Machinery)}, por exemplo. 
-Outras bases multidisciplinares também foram pesquisadas, através do site da CAPES, porém com caráter de apoio na fundamentação teórica.
-
-A pesquisa deveria ser focada em técnicas e ferramentas para extração de metadados em artigos científicos, que permitissem testes com dados reais, fazendo assim com que os resultados obtidos pudessem ser comparados e confrontados para verificar então a eficácia deste processo de extração.
-
-Os critérios que serão adotados para demonstrar a relevância de uma ferramenta serão seus resultados, sua participação de mercado e sua maturidade. 
-Cada ferramenta deverá ser testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuirão seus metadados extraídos manualmente, permitindo então comparar os resultados obtidos com os resultados de cada uma das ferramentas. Portanto, os critérios utilizados serão de natureza explicitamente prática, com foco em resultados concretos, numericamente representados.
-
-% Falar sobre os eventos encontrados na área
-
-Visando abranger grande parte da literatura sobre o assunto, foram mapeados alguns eventos para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Sendo assim, foram mapeados os seguintes eventos:
+Visando abranger grande parte da literatura sobre o assunto, alguns eventos importantes foram mapeados para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Foram mapeados os seguintes eventos:
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval);
@@ -31,7 +15,7 @@ Visando abranger grande parte da literatura sobre o assunto, foram mapeados algu
     \item ACM Conference on Digital Libraries.
 \end{itemize}
 
-Estes eventos foram analisados observando todas as citações e referências utilizadas em cada artigo publicado, objetivando encontrar também detalhes importantes para a pesquisa, sem perder o foco central do trabalho.
+Estes eventos foram analisados através da observação de todas as citações e referências utilizadas em cada artigo publicado, bem como outros detalhes importantes para a pesquisa.
 
 \section{Metadados}
 \label{sec:metadados}
@@ -39,28 +23,20 @@ Estes eventos foram analisados observando todas as citações e referências uti
 \subsection{Conceito de Metadado}
 \label{ssec:metadata-concept}
 
-Com base nas ideias apresentadas por \cite{meta-dados}, podemos definir inicialmente um metadado da seguinte maneira:
+Com base nas ideias apresentadas por \cite{meta-dados}, ``[...] um elemento de metadado descreve um recurso de informação, ou ajuda a fornecer acesso a um recurso de informação.''. Todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele se tem. Podemos simplificar ainda mais a definição de metadado como sendo ``um conjunto de dados sobre um determinado recurso''.
 
-\begin{quote}
-    \textit{``[...] an element of metadata describes an information resource, or helps provide access to an information resource.''}
-\end{quote}
-
-Sobre este aspecto conclui-se que todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Desta maneira, quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele teremos. Com efeito, podemos simplificar ainda mais a definição de metadado como sendo ``um conjunto de dados sobre um determinado recurso''.
-
-Para exemplificar podemos citar, por exemplo, a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, por exemplo, o que é considerado uma coleção de elementos de metadados, conforme pode ser confirmado em \cite{meta-dados}. Além disso, o mesmo autor cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
-
-Ante o exposto, podemos criar e identificar diversos conceitos do que podemos chamar de metadado, porém, em virtude de sua enorme aplicação e significância, alguns detalhes dentro do escopo deste trabalho devem ser direcionados, visando identificar e explicar melhor os conceitos que serão aplicados nos testes das técnicas e ferramentas que aqui serão apresentadas.
+Podemos citar a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, o que é considerado uma coleção de elementos de metadados \cite{meta-dados}. O mesmo autor também cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
 
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
 
-Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, independente da disciplina em questão, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
+Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
 
-Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico, seja ele uma página na Internet, um texto ou até mesmo um documento em um determinado formato. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
+Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
-Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados, juntamente com diversas especificações técnicas, que são mantidas pela \emph{Dublin Core Metadata Initiative} (DCMI), a agência responsável pela definição destes elementos.
+Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados. Suas especificações técnicas são mantidas pela \emph{Dublin Core Metadata Initiative} (DCMI), agência responsável pela definição destes elementos.
 
-Este padrão é utilizado nos dias atuais para se representar um recurso na Internet, por exemplo, podendo ser qualquer detalhe que possa ser identificado \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, que são apresentados pelos metadados. 
+Este padrão é utilizado nos dias atuais para se representar um recurso na Internet \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, apresentados pelos metadados. 
 
 Para cada elemento descrito pelo padrão temos informações como: 
 
@@ -75,31 +51,26 @@ Abaixo podemos ver um exemplo de código para utilização de metadados Dublin C
 
 \lstset{language=HTML}
 \begin{lstlisting}[escapechar=\#]
-<meta name="DC.Creator" content="Jose Albeto Grossi Junior" >
+<meta name="DC.Creator" content="Jose Alberto Grossi Junior" >
 <meta name="DC.Title" content="#\imprimirtitulo#" >
 <meta name="DC.Language" content="pt_BR" >
 \end{lstlisting}
 
-Desta forma, a indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\textit{DC.Title}) e idioma (\textit{DC.Language}), são feitos de maneira bem simplificada e direta. Para páginas da Internet, com as informações todas em formato HTML, a utilização destes metadados perderia o sentido, visto que essas informações poderiam ser facilmente encontradas de outras formas, como a análise do próprio código. Porém, para documentos binários - em formato PDF ou Word, por exemplo - a utilização destes metadados é de suma importância, visto que permite que essas informações básicas sejam capturadas sem a necessidade de análise do conteúdo destes arquivos, o que traria complexidade ao processo de indexação.
-
+A indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\textit{DC.Title}) e idioma (\textit{DC.Language}), são feitos de maneira bem simplificada e direta. Para páginas da Internet, com as informações todas em formato HTML, a utilização destes metadados perderia o sentido, visto que essas informações poderiam ser facilmente encontradas de outras formas, como a análise do próprio código. Para documentos binários - em formato PDF ou Word, por exemplo - a utilização destes metadados é de suma importância, visto que permite que essas informações básicas sejam capturadas sem a necessidade de análise do conteúdo destes arquivos.
 
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, de maneira a serem citadas em momentos onde exige-se uma precisão maior.
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, garantindo assertividade ao processo de extração.
 
-Estas técnicas se baseiam basicamente na classificação de dados com base nas suas representações escritas, tanto baseadas em padrões preestabelecidos ou até mesmo com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que agrega assertividade ao processo de extração.
+Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjunto de dados reais, composto por artigos científicos catalogados internamente, que utilizados como documentos de entrada para análise e desenvolvimento de novos projetos.
 
-% Explicar o conceito de dataset também, que algumas técnicas utilizam datasets já prontos para facilitar o processo de testes.
-
-Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Estes dados são fornecidos por diversas entidades/órgãos de certa forma estruturados para serem analisados, com alguma bagagem semântica já presente; são os chamados \emph{datasets}. Algumas bases de dados já consolidadas no mercado fornecem estes conjunto de dados reais, com base nos \emph{papers} que estão catalogados internamente, justamente para serem objetos de pesquisa posterior, a fim de facilitar o manuseio e seleção dos documentos de entrada para análise e desenvolvimento de novos projetos.
-
-Com a utilização destes \emph{datasets} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} sendo utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
+Com a utilização destes \emph{datasets}\footnote{Conjunto de dados estruturados semanticamente fornecidos por diversas entidades/órgãos para serem utilizados para fins de pesquisa.} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
 
 \subsubsection{Regular Expressions (RegEx)}
 \label{sssec:regular-expressions}
 
-\emph{Regular Expressions} ou Expressões Regulares é uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
+No caso específico de extração de metadados a utilização de \emph{Regular Expressions} (ou Expressões Regulares) é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, que possui um formato muito específico. É uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
 
 Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que as expressões regulares ficaram conhecidas, através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos.
 
@@ -123,7 +94,7 @@ Em diversas ocasiões é necessária a utilização de repetições, informando 
 
 \begin{itemize}
 
-    \item Como pôde ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrências''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
+    \item Como pode ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrências''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
     
     \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar ``nenhuma ou apenas uma ocorrência'', ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente no reconhecimento.
     
@@ -173,13 +144,11 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
     \label{tab:regex-repeticao}
 \end{table}
 
-% O padrão POSIX permite que dígitos sejam também representados sob a forma \texttt{\textbackslash{d}}, o que é exatamente equivalente ao \texttt{[0-9]}, que utilizamos nos exemplos acima. Assim, podemos reescrever nosso padrão para \texttt{/\textbackslash{d}+/} simplificando sua escrita e entendimento.
-
 Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
 
 Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
 
-A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas objetivando outras formas de representação.
+A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação.
 
 \begin{itemize}
 
@@ -231,24 +200,16 @@ Assim como vimos a utilização de \texttt{0-9} para representação de dígitos
 
 % Falar de flags também -> não incluído por ser específico de linguagens de programação
 
-% Expressão regular para email
-
-No caso específico de extração de metadados a utilização de expressão regular é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, que possui um formato muito específico. Deste modo, podemos escrever uma expressão regular para identificar e-mails dentro de um texto a título de exemplo:
-
-\begin{center}
-\texttt{/[A-Za-z0-9-\textbackslash.]\{2,\}@[A-Za-z0-9-]\{2,\}\textbackslash.([A-Za-z0-9]\{2,\})+/}
-\end{center}
-
-Assim, as aplicações de Expressões Regulares são infinitas, podendo ser capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras.
+As aplicações de Expressões Regulares são infinitas, podendo ser capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras.
 
 % Escrever sobre
 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
 
-Support Vector Machines (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados seja analisado, possibilitando que padrões sejam então identificados, criando uma espécie de memória \cite{Vapnik-SVM}. Seu objetivo inicial era ser uma técnica de classificação de dados, por ser focada em reconhecimento de padrões através de análises matemáticas.
+\emph{Support Vector Machines} (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados seja analisado, possibilitando que padrões sejam então identificados, criando uma espécie de memória \cite{Vapnik-SVM}. Seu objetivo inicial era ser uma técnica de classificação de dados, por ser focada em reconhecimento de padrões através de análises matemáticas.
 
-Esta técnica se baseia na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado por parte da distância entre ocorrências \cite{Vapnik-SVM}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação entre um resultado e outro, de forma numérica.
+Esta técnica é baseada na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado com base na distância entre ocorrências \cite{Vapnik-SVM}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação entre um resultado e outro, de forma numérica.
 
 De acordo com Chieu \cite{Chieu}, sugere-se que a tarefa de extrair informação pode ser considerada um problema de classificação. Partindo deste pensamento foi que Han \cite{Han-SVM} decidiu utilizar técnicas de SVM para extração de metadados, utilizando das qualidades matemáticas do processo no reconhecimento de padrões, o que permitiu que novas descobertas fossem feitas, expandindo o estudo da extração de dados para um patamar mais amplo e elevado.
 
@@ -308,19 +269,11 @@ Além desta análise são utilizadas comparações de palavras dentro de um cont
 
 Para cada uma das classes analisadas foram feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, fossem extraídos com base em expressões regulares utilizadas em linguagens de programação.
 
-Support Vector Machine é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na apresentação de um conjunto de opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, de modo a confrontar e comparar classes de metadados, a fim de identificá-los e então diferenciá-los.
+\emph{Support Vector Machine} é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na apresentação de um conjunto de opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, de modo a confrontar e comparar classes de metadados, a fim de identificá-los e então diferenciá-los.
 
 Han também encontrou alguns desafios na diferenciação de campos, como é o caso dos múltiplos autores. Em alguns casos a diferenciação de autores, que fazem parte do mesmo campo, poderia estar inclusive em linhas ou grupos diferentes. Para isso foram utilizados alguns elementos para representar a separação dos nomes (\textit{chunks}), como pontuações e a presença da palavra ``and''. Desta forma, os autores eram extraídos seguindo este padrão estipulado.
 
-O resultado obtido pela utilização de SVM como técnica de extração de metadados foi bem relevante. O autor realizou uma comparação com a aplicação da técnica de Hidden Markov Models (HMM) - detalhada na \autoref{sssec:hmm} - onde a SVM se mostrou mais eficaz na precisão da extração para algumas classes específicas, como é o caso dos títulos, autores e endereços, por exemplo. Para outras classes a utilização da técnica de HMM ainda demonstrou ser mais eficiente na extração de metadados.
-
-% Han também utiliza dicionários para facilitar na extração das informações
-
-%Para o caso de extração de metadados em artigos científicos utilizando \textit{Support Vector Machines} \cite{Han-SVM} as tags de Seymore et al. \cite{Seymore-HMM-IE} são utilizadas para representação destas classes.
-
-%Deste modo, com base nestas classes são definidas características de suas classes vizinhas, como por exemplo, elementos que ficam perto de outros elementos, que possuem uma sequência lógica geral de exibição. Com base nestas informações, que são feita classe por classe, estes padrões vão sendo encaixados a cada linha do cabeçalho analisado, permitindo que os metadados sejam extraídos com uma grande precisão.
-
-% Parei a revisão aqui em 17/03/2015 23:22
+O resultado obtido pela utilização de SVM como técnica de extração de metadados foi bem relevante. O autor realizou uma comparação com a aplicação da técnica de \emph{Hidden Markov Models} (HMM) - detalhada na \autoref{sssec:hmm} - onde a SVM se mostrou mais eficaz na precisão da extração para algumas classes específicas, como é o caso dos títulos, autores e endereços, por exemplo. Para outras classes a utilização da técnica de HMM ainda demonstrou ser mais eficiente na extração de metadados.
 
 \subsubsection{Hidden Markov Models (HMM)}
 \label{sssec:hmm}
@@ -379,7 +332,7 @@ Este modelo, segundo os autores, poderia ser usado como o ponto de partida de um
 
 Como o objetivo de Seymore et al. é extrair informações relevantes de cabeçalhos de artigos de Ciência da Computação, a área de análise nestes documentos se limita até o início da parte de introdução, ou ao final da primeira página, o que ocorrer primeiro.
 
-O resumo (\textit{abstract}) é extraído facilmente com a utilização de expressão regular. Algumas classes de palavras especiais são identificadas também através de expressão regular e então são transformadas em \textit{tags} ou \textit{tokens}, como \texttt{<EMAIL>} ou \texttt{<YEAR\_NUMBER>}, por exemplo. Em todos estes casos, todos os acentos e informações de novas linhas (\texttt{\\n}) são removidos do texto.
+O resumo (\textit{abstract}) é extraído facilmente com a utilização de expressão regular. Algumas classes de palavras especiais são identificadas também através de expressão regular e então são transformadas em \textit{tags} ou \textit{tokens}, como \texttt{<EMAIL>} ou \texttt{<YEAR\_NUMBER>}, por exemplo. Em todos estes casos, todos os acentos e informações de novas linhas (\texttt{\textbackslash{n}}) são removidos do texto.
 
 Os resultados apontam como muito positiva a utilização de HMM para a extração de dados em cabeçalhos de artigos científicos. A precisão encontrada no experimento foi de 92,9\% para todas as classes do cabeçalho e, mais especificamente, 97,2\% para a extração dos autores. Também como resultado pode-se afirmar que modelos HMM com mais de um estado por classe são mais eficientes do que os que utilizam apenas um estado para cada classe analisada \cite{Seymore-HMM-IE}.
 
@@ -571,27 +524,22 @@ Pode-se observar também que a utilização de modelos HMM para precisão de pal
 
 Com base nos resultados apresentados pode-se considerar que o trabalho de Peng \cite{Peng-CRF-IE} contribuiu para o estado da arte, melhorando a performance na extração de metadados em artigos científicos. Assim, a utilização de CRFs mostra-se muito eficaz por reduzir consideravelmente os erros encontrados, aumentando o sucesso da aplicação desta técnica neste contexto.
 
-\subsubsection{Outras Técnicas e Conceitos}
-\label{sssec:others-techniques}
-
-% Falar um pouco de KOSS, Tesauros, Glossários e Ontologias
-
-\section{Revisão de Estado da Arte na Extração de Metadados}
+\section{Trabalhos Correlatos}
 \label{sec:revision}
 
 % Falar aqui sobre os estudos de comparações de Granitizer
 
-Técnicas de \emph{machine learning} não são novas, porém suas aplicações são inúmeras. Estas técnicas eram então utilizadas apenas para classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
+Técnicas de \emph{machine learning} não são novas, porém suas aplicações são inúmeras. Estas técnicas inicialmente eram utilizadas apenas para classificação de palavras e processamento de linguagem natural foram sendo utilizadas em diversas outras áreas, resolvendo problemas distintos e inovando em soluções, como é o caso da extração de informação.
 
 O aperfeiçoamento da aplicação destas técnicas para a área de \emph{information extraction} acarretou em um resultado muito positivo, melhorando cada dia mais a precisão dos resultados obtidos. Assim, algoritmos foram/são alterados e otimizados visando obter maiores performances e resultados cada vez melhores.
 
 Pode-se perceber que cada técnica de classificação e/ou extração de informação possui suas particularidades e características diferentes. Assim, nota-se que cada uma possui uma melhor aplicação para extração de determinado campo, ou conjunto deles. Pequenas modificações são necessárias para que todo o contexto de um artigo científico seja mapeado com sucesso, sendo às vezes necessária a utilização de diversas técnicas em um único projeto.
 
-Para isso, diversas comparações destas técnicas foram feitas. Algumas, inclusive já mencionadas ao longo deste trabalho, foram feitas no surgimento de uma nova técnica, onde esta era comparada com técnicas anteriores, a fim de comprovar sua aplicabilidade e aumento de performance. Porém, este tipo de comparação torna-se tendenciosa, visto que os campos analisados, bem como os \emph{datasets} utilizados, tendenciam para resultados positivos da nova técnica apresentada. Além disso, geralmente os \emph{datasets} utilizados são focados em documentos da área de Ciência da Computação, e tende a seguir um padrão visual já estipulado pelos grandes eventos da área.
+Para isso, diversas comparações destas técnicas foram feitas. Algumas, inclusive já mencionadas ao longo deste trabalho, foram feitas no surgimento de uma nova técnica, onde esta era comparada com técnicas anteriores. Porém, este tipo de comparação torna-se tendenciosa, visto que os campos analisados, bem como os \emph{datasets} utilizados, tendenciam para resultados positivos da nova técnica apresentada. Além disso, geralmente os \emph{datasets} utilizados são focados em documentos da área de Ciência da Computação, e tende a seguir um padrão visual já estipulado pelos grandes eventos da área.
 
-Em função deste problema alguns autores realizam comparações de técnicas, isoladamente ou com utilização de ferramentas, para analisar um grupo de documentos reais, objetivando um resultado mais próximo da realidade e, consequentemente, mais passível de erros.
+Em função deste problema alguns autores realizam comparações de técnicas, isoladamente ou com utilização de ferramentas, para analisar um grupo de documentos reais, objetivando um resultado mais próximo da realidade e, consequentemente, mais passível de erros. Estas comparações são relevantes para o Estado da Arte deste trabalho.
 
-Granitzer et al. \cite{Granitzer-2012-LayoutBased} comparam o uso de Conditional Random Fields (\autoref{sssec:crf}) e Support Vector Machines (\autoref{sssec:svm}) na extração de metadados em artigos científicos, utilizando para tal \emph{datasets} multidisciplinares, como \emph{Mendeley} e \emph{e-Prints}, que fazem parte de um grupo social de \emph{datasets}, permitindo a contribuição global, unindo pesquisadores de diversas áreas do conhecimento, que constroem um repositório diversificado e recheado de novos desafios reais.
+Granitzer et al. \cite{Granitzer-2012-LayoutBased} comparam o uso de Conditional Random Fields (\autoref{sssec:crf}) e Support Vector Machines (\autoref{sssec:svm}) na extração de metadados em artigos científicos. Para tal são utilizados \emph{datasets} multidisciplinares, como \emph{Mendeley} e \emph{e-Prints}, que fazem parte de um grupo social de \emph{datasets}, permitindo uma contribuição global entre pesquisadores de diversas áreas do conhecimento.
 
 Em função da existências destes repositórios a informação fica cada vez mais descentralizada e, portanto, são necessários cada vez mais mecanismos inteligentes para garantir a alta qualidade dos metadados extraídos e armazenados de cada documento \cite{Granitzer-2012-LayoutBased}. A combinação destes mecanismos com pós-processamento inteligente contribui para o processo, elevando a qualidade do resultado final encontrado.
 
@@ -613,15 +561,10 @@ De acordo com Gratnizer et al., mesmo a técnica de CRF possuindo melhores model
 
 A ferramenta ParsCit de modo geral não teve resultados melhores do que o modelo do Mendeley Desktop. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas tiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
 
-% \section{Técnicas de Algoritmos}
-% \label{sec:algorithms-tecniques}
-
 \section{Ferramentas de Extração de Metadados}
 \label{sec:environments}
 
 Algumas ferramentas baseiam sua extração em padrões pré-definidos de maneira a identificar dados relevantes dentro de uma região específica dos artigos, facilitando a procura e consequentemente aumentando a velocidade no resultado.
-
-\comment{Citar trabalho do Prof. Renato Rocha}
 
 Estas ferramentas geralmente permitem uma variedade muito grande de leiautes, embora nem todos já estejam previamente definidos. Geralmente novos leiautes são inseridos em novas versões ou até mesmo por contribuições das mais diversas, como é o caso dos projetos de código livre, os chamados projetos \textit{open source}.
 
@@ -666,7 +609,7 @@ A extração das referências abrange também seus próprios metadados. Tanto no
 
 Outra ferramenta de destaque é o TeamBeam \cite{teambeam}, cuja base ideológica possui objetivos bem sociais, de contribuir com o compartilhamento de conhecimento. Basicamente o objetivo do projeto é extrair metadados de artigos científicos, porém focado apenas nestes, de maneira a extrair título, nome do \textit{journal}, resumo e informações sobre os autores, como nome, endereço de e-mail e afiliações.
 
-O projeto também é de código livre (\textit{open source}) e é baseado na extração de pequenos blocos de texto. A manipulação dos arquivos PDF é feita pela biblioteca PDFBox \footnote{Biblioteca de manipulação de arquivos PDF mantida pela Fundação Apache. Disponível em \url{https://pdfbox.apache.org/}}, que fornece meios eficazes de extrair textos com base nas regiões desejadas.
+O projeto também é de código livre (\textit{open source}) e é baseado na extração de pequenos blocos de texto. A manipulação dos arquivos PDF é feita pela biblioteca PDFBox\footnote{Biblioteca de manipulação de arquivos PDF mantida pela Fundação Apache. Disponível em \url{https://pdfbox.apache.org/}}, que fornece meios eficazes de extrair textos com base nas regiões desejadas.
 
 O TeamBeam utiliza o algoritmo de \textit{Maximum Entropy} \cite{maximum-entropy}, que utiliza basicamente de tarefas de classificação sequencial como ferramenta principal para obtenção de padrões. A base deste algoritmo está na utilização de CRFs (\autoref{sssec:crf}), principalmente no que diz respeito à extração dos metadados \cite{Peng-CRF-IE}.
 
@@ -884,17 +827,17 @@ Além das ferramentas apresentadas diversas outras apresentam características s
 
 \begin{itemize}
     \item \textbf{Zotero:} Seu objetivo é servir como um repositório centralizado onde os artigos ficam armazenados, permitindo que as referências sejam exportadas para diversos formatos. Disponível em \url{https://www.zotero.org}.
-    \item \textbf{Citavi:} Permite que você organize artigos científicos de maneira bem estruturada, permitindo inclusive contribuição através de formação de times de pesquisadores. Também permite exportação de suas referências para diversos outros formatos. Disponível em \url{http://www.citavi.com/}.
+    \item \textbf{Citavi:} Permite que você organize artigos científicos de maneira bem estruturada, permitindo inclusive contribuição através de formação de times de pesquisadores. Disponível em \url{http://www.citavi.com/}.
     \item \textbf{BibDesk:} Exclusivo para usuários Mac/Apple. É um \emph{software} final que permite que usuários organizem seus artigos, simplificando todo o processo de exportação dos formatos de referências. É focado para usuários \LaTeX. Disponível em \url{http://bibdesk.sourceforge.net}.
     \item \textbf{Docear:} Permite que usuários organizem suas bibliotecas digitais de artigos científicos, permitindo também compartilhar informações com outros usuários. Possui versões para Windows, Linux e Mac. Disponível em \url{https://www.docear.org/}.
     \item \textbf{Qiqqa:} Permite que além de organizar artigos seus usuários façam gestão das referências destes documentos, que ficam armazenados também em \emph{cloud computing}. Possui versões Windows e Android. Disponível em \url{http://www.qiqqa.com/}.
     \item \textbf{Papers:} Aplicativo disponível para Windows, Mac, iPhone e iPad que permite que usuários gerenciem e pesquisem artigos científicos. Possui um banco de dados próprio e é oferecido apenas em versão paga. Disponível em \url{http://www.papersapp.com/}.
     \item \textbf{JabRef:} Muito parecido com a ferramenta \emph{BibDesk}, visto que seu objetivo é organizar artigos e referências focados em usuários \LaTeX. Possui versões para Windows, Linux e Mac. Uma de suas vantagens é possuir uma interface muito simplificada, facilitando a utilização pelos usuários finais. Disponível em \url{http://jabref.sourceforge.net/}.
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo ser acessado também através da Web. Disponível em \url{http://endnote.com/}.
-    \item \textbf{Research Gate:} Além de possuir toda uma complexidade técnica por trás o projeto é apresentado na forma de um serviço, permitindo contatos e interligação entre pesquisadores. Atualmente é um dos projetos mais usados para compartilhamento de pesquisas, sendo bastante utilizado entre pesquisadores no âmbito social. Disponível em \url{http://researchgate.com/}
+    \item \textbf{Research Gate:} Além de possuir toda uma complexidade técnica por trás o projeto é apresentado na forma de um serviço, permitindo contatos e interligação entre pesquisadores. Atualmente é um dos projetos mais usados para compartilhamento de pesquisas. Disponível em \url{http://researchgate.com/}
 \end{itemize}
 
-Após a análise das ferramentas foi criado um quadro consolidando as principais informações sobre cada uma, permitindo que as ferramentas que farão parte dos testes deste trabalho possam ser selecionadas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas de extração de metadados empregadas e a possibilidade de execução de cada ferramenta utilizando a linha de comando, o que permite com facilidade a execução de testes com cada uma delas.
+Após a análise das ferramentas foi criado um quadro consolidando as principais informações sobre cada uma, permitindo que as ferramentas que farão parte dos testes deste trabalho possam ser selecionadas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas de extração de metadados empregadas e a possibilidade de execução de cada ferramenta utilizando a linha de comando.
 
 \begin{table}
     \caption{Características de cada ferramenta analisada}
@@ -914,7 +857,5 @@ Após a análise das ferramentas foi criado um quadro consolidando as principais
     \end{center}
     \label{tab:tools-consolidated}
 \end{table}
-
-\comment{Escrever sobre Posicionamento Espacial}
 
 
