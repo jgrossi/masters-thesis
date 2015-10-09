@@ -61,11 +61,11 @@ A indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, garantindo assertividade ao processo de extração.
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração.
 
-Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjunto de dados reais, composto por artigos científicos catalogados internamente, que utilizados como documentos de entrada para análise e desenvolvimento de novos projetos.
+Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjuntos de dados reais, compostos por artigos científicos catalogados internamente, que são utilizados como documentos de entrada para análise e desenvolvimento de novos projetos.
 
-Com a utilização destes \emph{datasets}\footnote{Conjunto de dados estruturados semanticamente fornecidos por diversas entidades/órgãos para serem utilizados para fins de pesquisa.} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
+Com a utilização destes \emph{datasets}\footnote{Conjuntos de dados estruturados semanticamente fornecidos por diversas entidades/órgãos para serem utilizados para fins de pesquisa.} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
 
 \subsubsection{Regular Expressions (RegEx)}
 \label{sssec:regular-expressions}
@@ -144,11 +144,11 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
     \label{tab:regex-repeticao}
 \end{table}
 
-Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, ou seja, quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
+Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, usado quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
 
 Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
 
-A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem certos caracteres chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação.
+A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem os chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação.
 
 \begin{itemize}
 
@@ -207,9 +207,9 @@ As aplicações de Expressões Regulares são infinitas, podendo ser capazes de 
 \subsubsection{Support Vector Machines (SVM)}
 \label{sssec:svm}
 
-\emph{Support Vector Machines} (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados seja analisado, possibilitando que padrões sejam então identificados, criando uma espécie de memória \cite{Vapnik-SVM}. Seu objetivo inicial era ser uma técnica de classificação de dados, por ser focada em reconhecimento de padrões através de análises matemáticas.
+\emph{Support Vector Machines} (SVM) é uma técnica de \textit{machine learning} que permite que um conjunto de dados seja analisado através do reconhecimento de padrões, formando uma memória \cite{Vapnik-SVM}. Seu objetivo inicial era ser uma técnica de classificação de dados, por ser focada em reconhecimento de padrões através de análises matemáticas.
 
-Esta técnica é baseada na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado com base na distância entre ocorrências \cite{Vapnik-SVM}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação entre um resultado e outro, de forma numérica.
+Esta técnica é baseada na redução de erros com base em um resultado de treinos consecutivos que permitem a criação de um padrão e estabelecem um aprendizado com base na distância entre ocorrências \cite{Vapnik-SVM}. Todas as análises realizadas são mapeadas, permitindo que um registro histórico em forma matemática seja realizado, levando o algoritmo à possibilidade de diferenciação numérica entre um resultado e outro.
 
 De acordo com Chieu \cite{Chieu}, sugere-se que a tarefa de extrair informação pode ser considerada um problema de classificação. Partindo deste pensamento foi que Han \cite{Han-SVM} decidiu utilizar técnicas de SVM para extração de metadados, utilizando das qualidades matemáticas do processo no reconhecimento de padrões, o que permitiu que novas descobertas fossem feitas, expandindo o estudo da extração de dados para um patamar mais amplo e elevado.
 
@@ -245,14 +245,14 @@ Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para es
     \label{tab:svm-classes}
 \end{table}
 
-A ocorrência dos campos é mapeada em uma representação bidimensional, permitindo identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ``support vectors'', que permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
+A ocorrência dos campos é mapeada em uma representação bidimensional, o que permite identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ``support vectors'', que permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
 
 \begin{figure}
-    \label{fig:svm-graph}
     \centering
     \caption{Distância representando a separação entre classes na técnica de SVM.}
     \includegraphics[width=0.6\linewidth]{./assets/images/svm-graph}
     \center\footnotesize{Fonte: \cite{Vapnik-SVM}}
+    \label{fig:svm-graph}
 \end{figure}
 
 Além desta análise são utilizadas comparações de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilita a identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
@@ -269,7 +269,7 @@ Além desta análise são utilizadas comparações de palavras dentro de um cont
 
 Para cada uma das classes analisadas foram feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, fossem extraídos com base em expressões regulares utilizadas em linguagens de programação.
 
-\emph{Support Vector Machine} é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na apresentação de um conjunto de opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, de modo a confrontar e comparar classes de metadados, a fim de identificá-los e então diferenciá-los.
+\emph{Support Vector Machine} é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na apresentação de um conjunto de opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, confrontando e comparando classes de metadados, a fim de identificá-los e então diferenciá-los.
 
 Han também encontrou alguns desafios na diferenciação de campos, como é o caso dos múltiplos autores. Em alguns casos a diferenciação de autores, que fazem parte do mesmo campo, poderia estar inclusive em linhas ou grupos diferentes. Para isso foram utilizados alguns elementos para representar a separação dos nomes (\textit{chunks}), como pontuações e a presença da palavra ``and''. Desta forma, os autores eram extraídos seguindo este padrão estipulado.
 
@@ -280,7 +280,7 @@ O resultado obtido pela utilização de SVM como técnica de extração de metad
 
 A teoria básica de Markov foi conhecida próximo dos anos 80 por engenheiros e matemáticos, com grande aplicação inicialmente em processamento da fala, mas com vasta amplitude em outras áreas onde a descoberta de padrões pode ser aplicada \cite{Rabiner-HMM}.
 
-O processo é baseado na identificação de modelos observáveis que representem e caracterizem a ocorrência de símbolos, ou seja, padrões, em determinados estados. Se um sinal foi observado ele pode ser utilizado para futuras referências, de acordo com o padrão. 
+O processo é baseado na identificação de modelos observáveis que representem e caracterizem a ocorrência de símbolos, ou seja, padrões. Se um sinal foi observado ele pode ser utilizado para futuras referências, de acordo com o padrão estipulado. 
 
 Um exemplo prático citado por Rabiner e Juang \cite{Rabiner-HMM} é o caso de uso do jogo ``Cara e Coroa''. Toma-se um observador em um quarto fechado com uma cortina totalmente isolada para outro cômodo qualquer. Este observador não consegue ver nada que acontece no outro cômodo, onde está presente uma outra pessoa jogando uma moeda pra cima, relatando sempre o resultado obtido (cara ou coroa). Neste caso o problema é construir um modelo Hidden Markov Model (HMM) para explicar ao observador a sequência dos resultados obtidos. 
 
@@ -290,7 +290,7 @@ Neste último exemplo o grande detalhe do modelo é que este é oculto (\textit{
 
 Por esta alteração de resultados e probabilidades, o fator decisivo na criação de cada modelo é a definição do número de estados que ele terá. Além disso, outro ponto que determina o sucesso do método é a utilização de um resultado anterior - \textit{training dataset} -, ou seja, uma memória, um conjunto de informações pré-identificadas que permite ainda à associação dos estados e ocorrência dos símbolos \cite{Rabiner-HMM}.
 
-Um HMM pode ser formado por um conjunto de elementos, que formarão toda a teoria e aplicação dos algoritmos dentro do processo:
+Um HMM pode ser formado por um conjunto de elementos, compondo toda a teoria e a aplicação dos algoritmos dentro do processo:
 
 \begin{enumerate}
     \item Um número \texttt{N} de estados, onde \texttt{N} é um inteiro finito;
@@ -298,7 +298,7 @@ Um HMM pode ser formado por um conjunto de elementos, que formarão toda a teori
     \item Após cada transição o observador registra um \texttt{símbolo} de acordo com a distribuição de probabilidade, que por sua vez depende do estado atual do modelo.
 \end{enumerate}
 
-A utilização dos resultados passados - \textit{training dataset} - é muito importante para uma boa definição de um HMM, visto que permite adaptar os parâmetros do modelo para aquele conjunto de dados passados, que por sua vez fazem parte de um padrão já identificado.
+A utilização dos resultados passados - \textit{training dataset} - é muito importante para uma boa definição de um HMM, visto que permite adaptar os parâmetros do modelo para aquele conjunto de dados passados, que por sua vez fazem parte de um padrão já identificado e treinado.
 
 Seguindo este padrão o HMM pode ser utilizado, por exemplo, para reconhecimento de palavras isoladas que, juntamente com a utilização de um vocabulário previamente selecionado permite a criação de modelos de reconhecimento. Cada palavra deste vocabulário seria um modelo HMM, permitindo que a palavra escolhida fosse a pertencente ao modelo com maior probabilidade encontrada.
 
