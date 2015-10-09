@@ -23,11 +23,9 @@ A diferença nos resultados se deve ao fato da ParsCit necessitar de arquivos \t
 
 Já a ferramenta CrossRef obteve apenas 20.06\% de precisão na extração das referências, o que era esperado em função de sua extração com poucos detalhes, com apenas um único campo com todas as informações de cada referência.
 
-Embora os resultados da extração não tenham sido positivos, um detalhe interessante que merece atenção é a forma como a ferramenta trata as referências. A ferramenta permite que elas sejam comparadas com o banco de dados existente no \url{http://api.crossref.org}, possibilitando identificar exatamente quais artigos já foram catalogados pelo site, gerenciando o conteúdo, inclusive relacionando-o. 
+Embora os resultados da extração não tenham sido positivos, um detalhe interessante que merece atenção é a forma como a ferramenta trata as referências. A ferramenta CrossRef permite que elas sejam comparadas com o banco de dados existente no \url{http://api.crossref.org}, possibilitando identificar exatamente quais artigos já foram catalogados pelo site, gerenciando o conteúdo, inclusive relacionando-o. 
 
-Para os artigos encontrados na base de dados do CrossRef é possível obter, inclusive, a descrição de cada um em formato BibTeX.
-
-Para este trabalho, em virtude dos poucos resultados obtidos, esta funcionalidade não foi utilizada na extração e na comparação.
+Para os artigos encontrados na base de dados do CrossRef é possível obter, inclusive, a descrição de cada um em formato BibTeX. Para este trabalho, em virtude dos poucos resultados obtidos, esta funcionalidade não foi utilizada na extração e na comparação.
 
 Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 3 subáreas do conhecimento, porém para metadados diferentes.
 
@@ -234,9 +232,9 @@ Além disso, algumas ferramentas apresentam melhores resultados em algumas subá
 
 Todo o código utilizado na comparação está disponível em \url{http://github.com/jgrossi/met}, podendo ser utilizado para futuras pesquisas. É possível incluir novas ferramentas de maneira simplificada.
 
-Ademais, todo o processo de comparação elaborado neste trabalho pode ser reutilizado, permitindo inclusive o cálculo do índice de confiabilidade segundo os critérios adotados pelo autor. O índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}).
+Ademais, todo o processo de comparação elaborado neste trabalho pode ser reutilizado, permitindo inclusive o cálculo do Índice de Confiabilidade segundo os critérios adotados pelo autor. O índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}).
 
-Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável. Uma parcela dos resultados parece ser influenciado pelo modo de uso da técnica em cada ferramenta.
+Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável. Uma parcela dos resultados parece ser influenciado pelo modo de uso de cada técnica em cada ferramenta.
 
 Com efeito, deve-se levar em consideração a maneira como os algoritmos (das técnicas) são implementados bem como a maneira como os dados são tratados, tanto antes quanto depois da extração. Assim, com base nos resultados numéricos apresentados, não é possível determinar qual técnica é mais aplicada para a extração de cada metadado.
 
