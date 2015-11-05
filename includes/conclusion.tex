@@ -45,11 +45,11 @@ Já a ferramenta CiteSeer foi bem eficiente na extração dos títulos de 5 (cin
 
 Para a extração dos nomes dos autores o resultado foi relevante em apenas 2 (duas) subáreas: Arquitetura e Urbanismo e Ciência da Informação, com precisão acima de 90\%. 
 
-Já para os e-mails dos autores os resultados deixaram a desejar para 13 (treze) das 16 (dezesseis) subáreas, com 0\% de acerto, tendo resultados positivos apenas para as subáreas de Ciência da Computação, Ciências Biológicas (Genética) e Psicologia, porém com resultados abaixo de 29\% de acerto.
+Já para os e-mails dos autores os resultados deixaram a desejar em 13 (treze) das 16 (dezesseis) subáreas, com 0\% de acerto, tendo resultados positivos apenas para as subáreas de Ciência da Computação, Ciências Biológicas (Genética) e Psicologia, porém com resultados abaixo de 29\% de acerto.
 
 Para a extração dos resumos a ferramenta CiteSeer também se mostrou bem eficiente, com resultados acima de 90\% para 4 (quatro) subáreas: Arquitetura e Urbanismo, Ciência da Computação, Fonoaudiologia e Medicina Veterinária. 
 
-Para as referências (utilizando o ParsCit) os resultados deixaram a desejar, com resultados abaixo de 72\%.
+Para as referências (utilizando o ParsCit) os resultados deixaram a desejar, com acertos abaixo de 72\%.
 
 A ferramenta CrossRef mostrou resultados positivos apenas para a extração de títulos de artigos da subárea de Geologia, como já dito anteriormente, com 97.62\% de acerto, não tendo resultados considerados satisfatórios para as demais áreas. 
 
@@ -63,9 +63,7 @@ Para os e-mails dos autores o melhor resultado foi para os artigos da subárea d
 
 Já para o resumo dos artigos, os resultados foram um pouco melhores, acima de 70\% para 5 (cinco) subáreas do conhecimento. 
 
-Os resultados para as referências foram semelhantes aos obtidos pela ferramenta CiteSeer (utiliza a mesma ferramenta). 
-
-Os 2 (dois) melhores resultados foram para as subáreas de Ciência da Computação e Psicologia, com precisão de 69.72\% e 68.84\%, respectivamente.
+Os resultados para as referências foram semelhantes aos obtidos pela ferramenta CiteSeer, que utiliza a mesma ferramenta. Os 2 (dois) melhores resultados foram para as subáreas de Ciência da Computação e Psicologia, com precisão de 69.72\% e 68.84\%, respectivamente.
 
 Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, \ref{tab:areas-authors-tools}, \ref{tab:areas-emails-tools}, \ref{tab:areas-abstract-tools} e \ref{tab:areas-references-tools} apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separados por metadado. 
 
@@ -209,56 +207,48 @@ Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools
     \label{tab:areas-references-tools}
 \end{table}
 
-Os resultados mostram que, no Corpus escolhido, para o metadado ``Título'', a ferramenta Cermine foi superior, com 89.8\% de precisão, seguida da CiteSeer, com 83.55\%.
+Os resultados mostram que, para o Corpus escolhido, para o metadado ``Título'', a ferramenta Cermine foi superior, com 89.8\% de precisão, seguida da CiteSeer, com 83.55\%. O mesmo acontece para o metadado ``Autores'', onde a Cermine obteve os melhores resultados (76.34\%), seguida da CiteSeer, com 71.93\%.
 
-O mesmo acontece para o metadado ``Autores'', onde a Cermine obteve os melhores resultados (76.34\%), seguida da CiteSeer, com 71.93\%.
+Já para o metadado ``E-mails'' a Cermine foi sem dúvida a melhor, com 46.62\% de acertos, deixando uma grande diferença para a segunda colocada ParsCit, com apenas 12.66\%. Para o metadado ``Resumo'' a Cermine também se saiu melhor, com 86.83\% de precisão, e em segunda posição a CiteSeer com 75.81\%.
 
-Já para o metadado ``E-mails'' a Cermine foi sem dúvida a melhor, com 46.62\% de acertos, deixando uma grande diferença da segunda colocada ParsCit, com apenas 12.66\%.
-
-Para o metadado ``Resumo'' a Cermine também se saiu melhor, com 86.83\% de precisão, e em segunda posição a CiteSeer com 75.81\%.
-
-Por fim, para a extração do metadado ``Referências'' novamente a Cermine obteve o melhor resultado, com precisão de 73.81\% dos resultados, seguida da CiteSeer com 54.75\%.
+Por fim, para a extração do metadado ``Referências'' novamente a Cermine obteve o melhor resultado, acertando 73.81\% das extrações, seguida pela CiteSeer com 54.75\%.
 
 \section{Contribuições}
 \label{sec:contributions}
 
-Como dito, os resultados coletados após as comparações ficaram abaixo das expectativas, exceto pelo metadado ``Título'', onde os números foram expressivos.
+Como dito, os resultados coletados após as comparações ficaram abaixo das expectativas, exceto pelo metadado ``Título'', onde os números foram bem expressivos.
 
-Em virtude da grande diferença no posicionamento visual dos elementos dos artigos do Corpus, os resultados foram muito variáveis, não sendo possível definir, com precisão, que ferramenta se comporta melhor para uma determinada área ou subárea do conhecimento, mesmo que os resultados demonstrem, numericamente, o comportamento diferenciado de cada uma.
+Em virtude da grande diferença no posicionamento visual dos elementos dos artigos do Corpus, os resultados foram muito variáveis, não sendo possível definir, com precisão, qual ferramenta se comporta melhor para uma determinada área ou subárea do conhecimento, mesmo que os resultados demonstrem, numericamente, o comportamento diferenciado de cada uma.
 
 Estes resultados permitem aferir que as ferramentas de extração de metadados ainda tem espaço para evoluir, sendo necessários ajustes e adaptações para que uma maior quantidade de metadados seja extraída com sucesso. 
 
-Além disso, algumas ferramentas apresentam melhores resultados em algumas subáreas do conhecimento, mas sem generalização possível, o que demandaria uma análise mais aprofundada.
+Além disso, algumas ferramentas apresentam melhores resultados em algumas subáreas do conhecimento, mas sem generalização possível, o que demandaria uma análise mais aprofundada dos resultados e uma seleção dos artigos mais específica.
 
-Todo o código utilizado na comparação está disponível em \url{http://github.com/jgrossi/met}, podendo ser utilizado para futuras pesquisas. É possível incluir novas ferramentas de maneira simplificada.
+Todo o código criado para a extração dos metadados e comparação das ferramentas está disponível em \url{http://github.com/jgrossi/met}, podendo ser utilizado para futuras pesquisas. É possível incluir novas ferramentas e metadados de maneira simplificada, reaproveitando todo o processo de comparação utilizado neste trabalho.
 
-Ademais, todo o processo de comparação elaborado neste trabalho pode ser reutilizado, permitindo inclusive o cálculo do Índice de Confiabilidade segundo os critérios adotados pelo autor. O índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}).
+Ademais, todo o processo de comparação elaborado neste trabalho pode ser também reutilizado, permitindo inclusive o cálculo do Índice de Confiabilidade segundo os critérios adotados pelo autor. O índice permite a classificação de uma ferramenta segundo pesos definidos para cada metadado (\autoref{ssec:confiability-index}).
 
-Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável. Uma parcela dos resultados parece ser influenciado pelo modo de uso de cada técnica em cada ferramenta.
-
-Com efeito, deve-se levar em consideração a maneira como os algoritmos (das técnicas) são implementados bem como a maneira como os dados são tratados, tanto antes quanto depois da extração. Assim, com base nos resultados numéricos apresentados, não é possível determinar qual técnica é mais aplicada para a extração de cada metadado.
+Por fim, pôde-se observar que o comportamento das técnicas de extração utilizadas pelas ferramentas é muito variável. Uma parcela dos resultados parece ser influenciada pelo modo de uso de cada técnica em cada ferramenta. Porém, deve-se levar em consideração a maneira como os algoritmos de cada técnica são implementados, bem como a maneira como os dados são tratados, tanto antes quanto depois da realização da extração. Assim, com base nos resultados numéricos apresentados, não é possível determinar qual técnica é mais aplicada para a extração de cada metadado.
 
 \section{Trabalhos Futuros}
 \label{sec:future-work}
 
-Embora este trabalho tenha abrangido 16 (dezesseis) subáreas do conhecimento, com um total de 112 (cento e doze) artigos científicos, a variedade real de formatos e leiautes vai muito além.
+Embora este trabalho tenha abrangido 16 (dezesseis) subáreas do conhecimento, com um total de 112 (cento e doze) artigos científicos analisados, a variedade real de formatos e leiautes vai muito além.
 
-Poderia-se pensar em trabalhos mais detalhados para cada subárea do conhecimento, permitindo testar uma maior quantidade de artigos e padrões, de maneira a obter resultados mais próximos do real.
+Poderia-se pensar em trabalhos mais detalhados para cada subárea do conhecimento, permitindo testar uma maior quantidade de artigos e padrões, de maneira a obter resultados mais próximos da realidade de cada área. Assim, seria possível identificar o comportamento destas ferramentas para cada área em específico, com um Corpus bem maior e variado, porém mais direcionado.
 
-Um ponto interessante de pesquisa seria um trabalho de comparação para artigos de uma área do conhecimento específica, como Engenharia, por exemplo, onde um maior número de artigos desta área seria testado, objetivando identificar o comportamento destas ferramentas para esta área em específico, com um Corpus bem maior e variado, porém mais direcionado.
+Um outro estudo possível seria a comparação por revistas ou bases de dados. Embora a diferenciação de leiaute para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual, permitindo adaptações mais precisas para as extrações destes documentos. 
 
-Um outro estudo possível seria a comparação por revistas ou bases de dados. Embora a diferenciação de leiaute para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual. 
+Apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, aprofundando muito mais suas características, funcionalidades e implementações, permitindo conclusões mais direcionadas e críticas mais precisas.
 
-Apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, aprofundando muito mais suas características e funcionalidades, permitindo conclusões mais direcionadas e inclusive críticas mais precisas quanto aos resultados por ela apresentados.
-
-Seria ainda interessante estender a pesquisa considerando possíveis variações na extração manual dos metadados. Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados.
+Seria ainda interessante estender a pesquisa considerando possíveis variações na extração manual dos metadados. Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados, o que poderia alterar os resultados apresentados.
 
 \section{Considerações Finais}
 \label{sec:final-considerations}
 
-Em virtude dos resultados apresentados e com base nas comparações realizadas, sugere-se que as ferramentas ainda tem espaço para evoluir para abranger um maior número de artigos e áreas do conhecimento.
+Em virtude dos resultados apresentados e com base nas comparações realizadas, sugere-se que as ferramentas ainda tem espaço para evoluir, a fim de abranger um maior número de artigos e áreas do conhecimento.
  
-Algumas ferramentas se comportaram melhor para alguns padrões visuais, porém não sendo possível estabelecer uma regra ou afirmação com base nos resultados encontrados.
+Embora algumas ferramentas tenham se comportado melhor para alguns padrões visuais, não é possível estabelecer uma regra ou afirmação com base nos resultados encontrados.
 
-As fragilidades das ferramentas testadas sugerem que o desenvolvimento de uma nova solução poderia ser de interesse.
+Além disso, dadas as fragilidades das ferramentas testadas, sugere-se que o desenvolvimento de uma nova solução poderia ser de interesse, possibilitando uma análise mais profunda das necessidades de cada metadado, bem como das técnicas mais adequadas em cada aplicação.
 
