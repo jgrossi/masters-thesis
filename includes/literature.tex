@@ -255,7 +255,7 @@ A ocorrência dos campos é mapeada em uma representação bidimensional, o que 
     \label{fig:svm-graph}
 \end{figure}
 
-Além desta análise também são utilizadas comparações de palavras dentro de um contexto, através do uso de \textit{clusters} de palavras, que facilita a identificação de classes nos cabeçalhos analisados. Han \cite{Han-SVM} utiliza em suas análises \textit{clusters} com palavras comuns, basicamente compostos de:
+Além desta análise também são utilizadas comparações de palavras dentro de um contexto, através do uso de \textit{clusters} de palavras, que facilita a identificação de classes nos cabeçalhos analisados. Han \cite{Han-SVM} utiliza em suas análises \textit{clusters} com palavras comuns, compostos por:
 
 \begin{itemize}
     \item Dicionário online padrão em sistemas Linux;
@@ -363,41 +363,41 @@ Além da utilização de HMM de forma natural, algumas variações de seu algori
 
 Técnicas de classificação de texto geralmente utilizam palavras extraídas como a principal fonte de recursos para a representação. Por outro lado, os \textit{clusters} de palavras tem sido uma proposta eficaz para a redução da dimensionalidade e da dispersão, melhorando assim a performance desta classificação \cite{Han-Giles-WC}.
 
-Basicamente o conceito de \textit{clusters} compreende um conjunto de palavras formando um banco de dados de domínio (\textit{domain database}), aliado a um conjunto de propriedades ortográficas de demais palavras dentro daquele contexto específico. A utilização destes \textit{clusters}, juntamente com outras técnicas, tem mostrado um ganho de 6,6\% na performance de classificação de elementos de um cabeçalho de artigo científico, e ainda 8,4\% de ganho de performance para a extração das referências destes documentos \cite{Han-Giles-WC}.
+O conceito de \textit{clusters} compreende um conjunto de palavras que formam um banco de dados de domínio (\textit{domain database}), que é aliado a um conjunto de propriedades ortográficas de palavras dentro do contexto específico. A utilização destes \textit{clusters}, juntamente com outras técnicas, tem mostrado um ganho de 6,6\% na performance de classificação de elementos de um cabeçalho de artigo científico, e ainda 8,4\% de ganho de performance para a extração das referências destes documentos \cite{Han-Giles-WC}.
 
-A utilização destes grupos de palavras demonstra uma relação entre textos semelhantes dentro de um determinado contexto, permitindo que a extração dos metadados possa ocorrer de maneira mais natural, com resultados mais eficazes.
+A utilização destes grupos de palavras demonstra uma relação entre textos semelhantes dentro de um determinado contexto, permitindo que a extração dos metadados ocorra de maneira natural, com resultados mais eficazes.
 
-Sendo assim, Han et al. apresentaram uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos da área de Ciência da Computação, indo de maneira relativamente contrária às propostas tradicionais, que baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
+Sendo assim, Han et al. apresentaram uma ideia de um \textit{cluster} de palavras para promover a extração de metadados de artigos científicos da área de Ciência da Computação, indo de maneira contrária às propostas mais tradicionais, que se baseiam, geralmente, apenas na ocorrência e estatísticas de palavras isoladas dentro do texto original.
 
 Han et al. agruparam bases de dados de domínios diversos incluindo também propriedades ortográficas de palavras, com base em um conhecimento prévio de classes específicas, como autor, título, etc. Deste modo, palavras encontradas nos documentos vão sendo comparadas com palavras deste \textit{cluster}, permitindo identificar, por grupos, características semelhantes de metadados. Para cada classe (metadado) cria-se um \textit{cluster}, com suas palavras e propriedades ortográficas específicas.
 
-Como exemplo, a palavra ``Mary'' faz parte do contexto de ``nomes''. Portanto existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ``autor'', por exemplo. Esta lógica é apresentada para outras classes, como ``e-mail'' por exemplo, que pode ser identificado, em sua grande maioria, com a presença do caractere ``@'', o que levaria ao conceito de utilização de expressões regulares para encontrar padrões de ocorrências.
+Como exemplo, a palavra ``Mary'' faz parte do \textit{cluster} de ``nomes''. Portanto, existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ``autor'', por exemplo. Esta lógica é apresentada também para outras classes, como ``e-mail'' por exemplo, que pode ser identificado com a presença do caractere ``@'', levando à utilização de expressões regulares para encontrar padrões de ocorrências (\autoref{sssec:regular-expressions}).
 
 \begin{figure}
     \centering
-    \caption{Workflow da extração de metadados usando \textit{cluster} de palavras.}
+    \caption{\emph{Workflow} da extração de metadados usando \textit{cluster} de palavras.}
     \label{fig:workflow-rule-based}
     \includegraphics[width=0.7\linewidth]{./assets/images/workflow-rule-based}
     \center\footnotesize{Fonte: \cite{Han-Giles-WC}}
 \end{figure}
 
-A utilização de \textit{word clustering} tem demonstrado um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
+A utilização de \textit{word clustering} possui um custo computacional muito baixo, o que pode ser considerado uma vantagem sobre demais técnicas computacionais \cite{Han-Giles-WC}.
 
-Han et al. ainda utilizam da técnica de SVM (\autoref{sssec:svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos, quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação quando da união destas duas técnicas em prol do mesmo objetivo.
+Han et al. ainda utilizam da técnica de SVM (\autoref{sssec:svm}) para classificação de linhas de um cabeçalho de um documento, tanto em função dos bons resultados obtidos, quanto também pela boa performance apresentada. Deste modo, cada linha obtida se transforma em um vetor de palavras, que é comparado com seu respectivo \textit{cluster}, melhorando os resultados de classificação, unindo as duas técnicas em prol do mesmo objetivo.
 
-Basicamente o \textit{Word Clustering} se resume em 3 (três) etapas. A primeira etapa compreende a construção das bases de dados, como referenciado por Han \cite{Han-SVM}, onde foram utilizadas também como bases externas os nomes apresentados em seu \textit{cluster} (nomes de estados americanos, países, cidades, nomes de dicionários, nomes de pessoas, códigos postais, etc), de maneira a unir, não somente estas bases externas, mas também bases construídas dentro de um domínio específico, como palavras que pertencem a uma classe específica.
+A técnica de \textit{Word Clustering} se resume em 3 (três) etapas. A primeira compreende a construção das bases de dados, como referenciado por Han \cite{Han-SVM}, onde foram utilizadas também bases externas - nomes de estados americanos, países, cidades, nomes de dicionários, nomes de pessoas, códigos postais, etc -, unindo também bases construídas dentro de um domínio específico, como palavras pertencentes a uma classe específica.
 
-A segunda etapa é chamada de \textit{Cluster Design}. Nesta etapa é onde os \textit{clusters} são arquitetados, contemplando também as propriedades ortográficas das palavras, como se funcionassem, de maneira geral, como uma expressão regular de palavras, formando então este dicionário com base nas características apresentadas.
+A segunda etapa é chamada de \textit{Cluster Design}. Nesta etapa os \textit{clusters} são arquitetados, contemplando também propriedades ortográficas das palavras, formando então o dicionário com base nas características apresentadas.
 
-Já a terceira etapa é chamada de \textit{Rule Design}, que resume-se basicamente na combinação de palavras em diferentes domínios, nas suas verificações ortográficas e na classificação delas no seu \textit{cluster} correto. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como pertencentes ao \textit{cluster} ``nomes''.
+Já a terceira etapa é chamada de \textit{Rule Design}, que consiste na combinação de palavras em diferentes domínios, nas suas verificações ortográficas e na classificação delas em seu \textit{cluster} correto. Por exemplo, nomes devem começar com a primeira letra maiúscula para então serem classificadas como pertencentes ao \textit{cluster} ``nomes''.
 
 Além disso, foi observada também a presença de certas palavras que faziam parte de diversos \textit{clusters} ao mesmo tempo, o que permitiu que elas fossem classificadas em seu próprio grupo de palavras, tornando-se então independentes.
 
-A representação através de \textit{clusters}, utilizada por Han et al. \cite{Han-Giles-WC}, conseguiu reduzir um texto original de 11.223 palavras em um \textit{cluster} de 588 elementos, permitindo ainda que ele fosse distribuído entre as classes distintas, o que tornou o processo muito menos trabalhoso mas, ao mesmo tempo, eficaz.
+A representação através de \textit{clusters}, utilizada por Han et al. \cite{Han-Giles-WC}, conseguiu reduzir um texto original de 11.223 palavras em um \textit{cluster} de 588 elementos, permitindo ainda que ele fosse distribuído entre classes distintas, o que tornou o processo muito menos trabalhoso, porém mais eficaz.
 
-Como resultado, a utilização desta técnica de clusterização permitiu um ganho considerável de performance, além de contribuir para uma precisão maior dos resultados, visto que eles são apresentados nestas bases focadas em um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos.
+Como resultado, a utilização desta técnica de clusterização permitiu um ganho considerável de performance, além de contribuir para uma precisão maior dos resultados, visto que são apresentados dentro de um domínio específico, perfazendo um contexto mais definido e com resultados mais garantidos.
 
-Por outro lado a utilização desta técnica possui uma falha na semântica dos dados. No momento da classificação das classes, na separação e criação dos \textit{clusters}, um dígito ou conjunto deles é substituído pela identificação \texttt{:number:}. Isso faz com que ele se torne apenas um número qualquer, sem um contexto específico, ou seja, pode ser tanto uma referência a alguma página do documento ou até mesmo um mês de um ano, por exemplo.
+Por outro lado a utilização desta técnica possui uma falha na semântica dos dados. No momento da classificação de classes, na separação e criação dos \textit{clusters}, por exemplo, um dígito ou conjunto deles é substituído pela identificação \texttt{:number:}. Isso faz com que ele se torne apenas um número qualquer, sem uma semântica específica, ou seja, pode ser tanto uma referência a alguma página do documento ou até mesmo um mês ou ano, por exemplo.
 
 
 \subsubsection{Conditional Random Fields (CRFs)}
