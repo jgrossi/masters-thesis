@@ -3,9 +3,9 @@
 \chapter{Referencial Teórico}
 \label{cha:literature}
 
-A pesquisa é focada em técnicas e ferramentas para extração de metadados em artigos científicos. Cada ferramenta é testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuem seus metadados extraídos manualmente, o que permite comparar os resultados com os resultados de cada uma das ferramentas. Os critérios utilizados serão de natureza explicitamente prática, numericamente representados.
+A pesquisa é focada em técnicas e ferramentas para extração de metadados em artigos científicos. Cada ferramenta é testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuem seus metadados extraídos manualmente, o que permite comparar os resultados com os resultados obtidos por cada uma das ferramentas. Os critérios utilizados serão de natureza explicitamente prática, numericamente representados.
 
-Visando abranger grande parte da literatura sobre o assunto, alguns eventos importantes foram mapeados para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Foram mapeados os seguintes eventos:
+Visando abranger grande parte da literatura sobre o assunto, alguns eventos e bases de dados importantes foram mapeados para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Foram mapeados:
 
 \begin{itemize}
     \item KDIR (International Conference of Knowledge Discovery and Information Retrieval);
@@ -25,18 +25,18 @@ Estes eventos foram analisados através da observação de todas as citações e
 
 Com base nas ideias apresentadas por \cite{meta-dados}, ``[...] um elemento de metadado descreve um recurso de informação, ou ajuda a fornecer acesso a um recurso de informação.''. Todo dado que agregue nova informação a um recurso pode ser considerado um metadado. Quanto mais metadados um recurso tiver, mais detalhado ele é, ou seja, mais dados sobre ele se tem. Podemos simplificar ainda mais a definição de metadado como sendo ``um conjunto de dados sobre um determinado recurso''.
 
-Podemos citar a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, o que é considerado uma coleção de elementos de metadados \cite{meta-dados}. O mesmo autor também cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que as páginas da Internet são indexadas e então armazenadas.
+Podemos citar como exemplo a utilização de pequenos pedaços de dados sobre um conjunto de livros, dentro de um ambiente de biblioteca, o que é considerado uma coleção de elementos de metadados \cite{meta-dados}. O mesmo autor também cita como exemplos de metadados os dados coletados por mecanismos de busca no momento em que páginas da Internet são indexadas e então armazenadas.
 
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
 
-Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos de metadados para descreverem um recurso informacional, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
+Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos para descreverem um recurso informacional, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
 
-Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
+Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``Core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
 Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados. Suas especificações técnicas são mantidas pela \emph{Dublin Core Metadata Initiative} (DCMI), agência responsável pela definição destes elementos.
 
-Este padrão é utilizado nos dias atuais para se representar um recurso na Internet \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, apresentados pelos metadados. 
+Este padrão é utilizado nos dias atuais para se representar um recurso na Internet \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, apresentados em forma de metadados. 
 
 Para cada elemento descrito pelo padrão temos informações como: 
 
@@ -51,7 +51,7 @@ Abaixo podemos ver um exemplo de código para utilização de metadados Dublin C
 
 \lstset{language=HTML}
 \begin{lstlisting}[escapechar=\#]
-<meta name="DC.Creator" content="Jose Alberto Grossi Junior" >
+<meta name="DC.Creator" content="#\imprimirautor#" >
 <meta name="DC.Title" content="#\imprimirtitulo#" >
 <meta name="DC.Language" content="pt_BR" >
 \end{lstlisting}
@@ -61,22 +61,22 @@ A indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em um dicionário de palavras capaz de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração.
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em dicionários de palavras capazes de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração.
 
-Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjuntos de dados reais, compostos por artigos científicos catalogados internamente, que são utilizados como documentos de entrada para análise e desenvolvimento de novos projetos.
+Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjuntos de dados reais, compostos por artigos científicos catalogados internamente, que são utilizados como documentos de entrada para a análise e desenvolvimento de novas pesquisas.
 
-Com a utilização destes \emph{datasets}\footnote{Conjuntos de dados estruturados semanticamente fornecidos por diversas entidades/órgãos para serem utilizados para fins de pesquisa.} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenhos ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
+Com a utilização destes \emph{datasets}\footnote{Conjuntos de dados estruturados semanticamente fornecidos por diversas entidades/órgãos para serem utilizados para fins de pesquisa.} o processo de teste fica muito mais fácil. Existem algumas técnicas que possuem melhor desempenho ao se utilizar dos chamados \emph{training sets}, que são por definição estes \emph{datasets} utilizados para treinar um determinado modelo, promovendo um padrão de extração com base em dados previamente informados.
 
 \subsubsection{Regular Expressions (RegEx)}
 \label{sssec:regular-expressions}
 
-No caso específico de extração de metadados a utilização de \emph{Regular Expressions} (ou Expressões Regulares) é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, que possui um formato muito específico. É uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
+No caso específico de extração de metadados a utilização de \emph{Regular Expressions} (ou Expressões Regulares) é muito eficaz no reconhecimento de padrões, como é o caso do metadado e-mail, por exemplo, que possui um formato muito específico. É uma técnica muito utilizada na computação para reconhecimento de padrões dentro de um conjunto de caracteres, encontrando combinações seguindo uma sequência definida.
 
-Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que as expressões regulares ficaram conhecidas, através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo que padrões fossem encontrados dentro de arquivos.
+Sua origem data-se de 1956 \cite{kleene-1956}, sendo fundamentada pelo matemático Stephen Kleene, que deu origem à Teoria da Computação. Somente em 1968 que as expressões regulares ficaram conhecidas, através de Ken Thompson \cite{thompson-1968}, que incluiu a pesquisa de Kleen como funcionalidade dentro de um editor de textos, permitindo então que padrões fossem encontrados dentro de arquivos.
 
-Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos, que determina a forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja reconhecer dentro do texto.
+Para a utilização de Expressões Regulares é necessário o fornecimento de um padrão, que será a base de busca em todo o conjunto de caracteres existente. Este padrão é representado por um conjunto de símbolos, que determina a forma desejada de reconhecimento. Assim, além de utilizar-se de caracteres específicos pode-se também informar números, letras, dentre outros tipos de representação, correspondendo ao que se deseja reconhecer dentro do texto.
 
-Existem variações de formas de representação de uma Expressão Regular, porém a maioria das linguagens de programação atualmente seguem o padrão POSIX - sob responsabilidade do IEEE e do Open Group \url{http://opengroup.org/} -, que determina algumas regras para utilização desta técnica \cite{posix-2013}.
+Existem variações de formas de representação de uma Expressão Regular, porém, a maioria das linguagens de programação atualmente seguem o padrão POSIX (\emph{Portable Operating System Interface}) - sob responsabilidade do IEEE e do Open Group \url{http://opengroup.org/} -, que determina algumas regras para utilização desta técnica \cite{posix-2013}.
 
 Como exemplo, visando identificar somente os números existentes dentro da frase ``Foram encontrados 4 passageiros dentro do veículo parado na BR262.'', devemos escrever uma expressão regular para que estes números sejam identificados. Desta forma podemos representar o que desejamos buscar da seguinte forma: \texttt{/[0-9]+/}, onde identificamos:
 
@@ -96,7 +96,7 @@ Em diversas ocasiões é necessária a utilização de repetições, informando 
 
     \item Como pode ser observado no exemplo acima, utilizamos o caractere \texttt{+} para representar ``uma ou mais ocorrências''. No exemplo \texttt{[0-9]+} representamos qualquer número que possua um ou mais dígitos de 0 a 9.
     
-    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar ``nenhuma ou apenas uma ocorrência'', ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente no reconhecimento.
+    \item Já o caractere \texttt{?} (interrogação) pode ser utilizado para representar ``nenhuma ou apenas uma ocorrência'', ou seja, aquele padrão pode ou não existir, é opcional. Na expressão regular \texttt{[0-9]?} estamos informando que o dígito é opcional, ou seja, ele pode ou não estar presente no texto.
     
     \item Podemos utilizar o caractere \texttt{*} (asterisco) para representar ``nenhum ou mais'', ou seja, podemos ter nenhuma ou várias ocorrências daquele conjunto, indo do zero ao infinito.
 
@@ -144,27 +144,27 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
     \label{tab:regex-repeticao}
 \end{table}
 
-Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, usado quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana Maria se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana Maria|Paulo/}, que quer dizer ``Ana Maria \underline{ou} Paulo''.
+Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, usado quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana|Paulo/}, que quer dizer ``Ana \underline{ou} Paulo''.
 
 Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
 
-A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem os chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação.
+A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem os chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação e objetivos.
 
 \begin{itemize}
 
     \item O ponto (\texttt{.}) possui um significado muito importante, sendo considerado ``qualquer coisa''. Assim, a expressão regular \texttt{/abaca../} permite que \texttt{abacaxi} e \texttt{abacate} também sejam identificados. Ela representa ``qualquer coisa que comece com \texttt{abaca} e possui mais 2 caracteres quaisquer depois''. Ou seja, além de identificar \texttt{abacate} e \texttt{abacaxi} ela permite identificar \texttt{abaca17} ou até mesmo \texttt{abaca s}, visto que espaço também é um caracteres e faz parte do reconhecimento de \texttt{.}.
 
-    \item Os colchetes - já visto anteriormente - representam um conjunto de caracteres únicos dentro de várias possibilidades. Isso quer dizer que em \texttt{/[abc]/} conseguimos identificar qualquer um dos caracteres \texttt{a}, \texttt{b} ou \texttt{c}. Assim, dentro da palavra \texttt{casa} conseguimos identificar a letra \texttt{c} e as letras \texttt{a}.
+    \item Os colchetes - já vistos anteriormente - representam um conjunto de caracteres únicos dentro de várias possibilidades. Isso quer dizer que em \texttt{/[abc]/} desejamos identificar qualquer um dos caracteres \texttt{a}, \texttt{b} ou \texttt{c}. Assim, dentro da palavra \texttt{casa} conseguimos identificar a letra \texttt{c} e a letra \texttt{a}.
 
     \item O acento circunflexo (\texttt{\textasciicircum}) possui significado de negação quando presente dentro de colchetes. Com base no exemplo acima (\texttt{/[abc]/}), caso ele seja escrito como \texttt{/[\textasciicircum{abc}]/}, seu significado é exatamente o oposto, representando quaisquer caracteres exceto \texttt{a}, \texttt{b} e \texttt{c}. Além deste significado, ele é utilizado para representar o início de algum padrão no seu texto de origem. Na expressão regular \texttt{/\textasciicircum{a.+}/} temos o seguinte significado: ``um texto que comece com a letra \texttt{a} seguido de qualquer caractere em qualquer quantidade''. Desta forma, com esta expressão, conseguimos identificar \texttt{abcd}, \texttt{ab}, \texttt{abcdefghijk} e até mesmo \texttt{a9715263}. A única exigência, neste caso, é começar com a letra \texttt{a}, de maneira que no texto ``as mulheres marcaram presença'' seremos capaz de identificar toda a frase, mas já em ``todas as mulheres marcaram presença'' ela não identificará nada, visto que o texto começa com a letra \texttt{t}.
 
-    \item Assim como o \texttt{\textasciicircum} representa o início de um texto o \texttt{\$} indica o fim. A lógica é a mesma, se aplicando para todo o texto, e não apenas em ocorrências. Assim, para a expressão \texttt{/\textasciicircum{a.+z}\$/} exige-se que o texto comece com a letra \texttt{a} e termine com a letra \texttt{z}. Nada além disso é permitido.
+    \item Assim como o \texttt{\textasciicircum} representa o início de uma Expressão Regular o \texttt{\$} indica o fim. A lógica é a mesma, se aplicando para todo o texto, e não apenas em ocorrências isoladas. Assim, para a expressão \texttt{/\textasciicircum{a.+z}\$/} exige-se que o texto comece com a letra \texttt{a} e termine com a letra \texttt{z}.
 
-    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/} podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressões regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra coisa, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
+    \item Já os parênteses - \texttt{(} e \texttt{)} - representam grupos. Estes grupos, além de serem utilizados como no exemplo \texttt{/abaca(te|xi)/}, podem ser utilizados para substituição de ocorrências, aumentando ainda mais a aplicação de expressões regulares. Como exemplo, dentro do texto ``os estudantes adoram comer abacaxi depois do almoço'', podemos substituir toda ocorrência de \texttt{abacaxi} por qualquer outra palavra, como \texttt{melão}. Para isso temos que formar um grupo com a palavra \texttt{abacaxi}, escrevendo a expressão regular da seguinte maneira: \texttt{/(abacaxi)/}. Assim, será reconhecida a palavra completa e esta poderá ser substituída por \texttt{melão}, ficando a frase ``os estudantes adoram comer melão depois do almoço''.
 
 \end{itemize}
 
-Em virtude da existência dos metacaracteres, caso seja necessária a representação de algum destes caracteres em sua forma pura, utiliza-se do caractere de escape \texttt{\textbackslash{}} (barra invertida) antes do caractere desejado. Por exemplo, para escrever o símbolo \texttt{+}, literalmente, deve-se representá-lo por \texttt{\textbackslash{+}}. Desta forma a expressão será interpretada como um ``mais'' e não como um caractere de repetição.
+Em virtude da existência dos ``metacaracteres'' - os caracteres especiais que possuem significados específicos nas Expressões Regulares -, caso seja necessária a representação de algum em sua forma pura, utiliza-se do caractere de escape \texttt{\textbackslash{}} (barra invertida) antes do caractere desejado. Por exemplo, para escrever o símbolo \texttt{+}, literalmente, deve-se representá-lo por \texttt{\textbackslash{+}}. Desta forma a expressão será interpretada como um ``mais'' e não como um caractere de repetição.
 
 Assim como vimos a utilização de \texttt{0-9} para representação de dígitos, temos outras representações, tanto para indicar letras maiúsculas quanto minúsculas, utilizando de \texttt{A-Z} e \texttt{a-z}, respectivamente. Sendo assim, podemos identificar dígitos, letras minúsculas e maiúsculas com a expressão regular \texttt{/[A-Za-z0-9]+/}. Além disso, no padrão POSIX podemos representar conjuntos de letras e números de outras formas chamadas ``classes'', como pode ser verificado na \autoref{tab:posix-classes}.
 
@@ -200,7 +200,7 @@ Assim como vimos a utilização de \texttt{0-9} para representação de dígitos
 
 % Falar de flags também -> não incluído por ser específico de linguagens de programação
 
-As aplicações de Expressões Regulares são infinitas, podendo ser capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras.
+As aplicações de Expressões Regulares são infinitas, sendo capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras, o que facilita muito o reconhecimento de padrões, inclusive para a área de extração de dados.
 
 % Escrever sobre
 
