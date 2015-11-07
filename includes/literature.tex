@@ -213,11 +213,11 @@ Esta técnica é baseada na redução de erros com base em um resultado de trein
 
 De acordo com Chieu \cite{Chieu}, sugere-se que a tarefa de extrair informação pode ser considerada um problema de classificação. Partindo deste pensamento foi que Han \cite{Han-SVM} decidiu utilizar técnicas de SVM para extração de metadados, utilizando das qualidades matemáticas do processo no reconhecimento de padrões, o que permitiu que novas descobertas fossem feitas, expandindo o estudo da extração de dados para um patamar mais amplo e elevado.
 
-Várias ferramentas de extração se baseiam na utilização de SVM como técnica principal, visto sua eficiência no reconhecimento de padrões. Como descrito por \cite{Han-SVM} a utilização desta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, do qual se deseja obter os metadados, por exemplo.
+Várias ferramentas de extração se baseiam na utilização de SVM como técnica principal, visto sua eficiência no reconhecimento de padrões. Como descrito por \cite{Han-SVM} a utilização desta técnica é baseada na identificação de campos previamente selecionados no cabeçalho de um documento, por exemplo.
 
-Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada classe uma característica que a permite ser identificada. Deste modo, cada linha do cabeçalho do documento é classificada em uma ou mais classes, onde algumas fazem parte do padrão Dublin Core, detalhado na \autoref{ssec:metadata-patterns}.
+Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada uma características que permitem que ela seja identificada. Deste modo, cada linha do cabeçalho do documento é classificada em uma ou mais classes. Algumas dessas classes fazem parte do padrão Dublin Core, conforme detalhado na \autoref{ssec:metadata-patterns}.
 
-Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas 15 (quinze) \textit{tags} definidas, somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han na extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
+Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han na extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
 
 
 \begin{table}
@@ -232,10 +232,10 @@ Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para es
             \hline Note & & Frases de reconhecimentos, \textit{copyright}\\
             \hline Email & & Endereço de e-mail do autor\\
             \hline Date & & Data da publicação\\
-            \hline Abstract Introdution & Description & A introdução do artigo\\
+            \hline Abstract Introdution & Description & A introdução ou resumo do artigo\\
             \hline Phone & & Telefone do autor\\
-            \hline Keyword & Subject & As palavras-chaves do documento\\
-            \hline Web & & Endereço na Internet do autor\\
+            \hline Keyword & Subject & As palavras-chave do documento\\
+            \hline Web & & Endereço na Web do autor\\
             \hline Degree & & Associação com o grau acadêmico\\
             \hline Pubnum & & Número da publicação do documento\\
             \hline Page & & O final da página\\
@@ -245,7 +245,7 @@ Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para es
     \label{tab:svm-classes}
 \end{table}
 
-A ocorrência dos campos é mapeada em uma representação bidimensional, o que permite identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ``support vectors'', que permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
+A ocorrência dos campos é mapeada em uma representação bidimensional, o que permite identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ``support vectors'', e permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
 
 \begin{figure}
     \centering
@@ -255,25 +255,25 @@ A ocorrência dos campos é mapeada em uma representação bidimensional, o que 
     \label{fig:svm-graph}
 \end{figure}
 
-Além desta análise são utilizadas comparações de palavras dentro de um contexto previamente selecionado. Assim foi criado um \textit{cluster} de palavras comuns que facilita a identificação destas classes nos cabeçalhos analisados. Este \textit{cluster} basicamente é composto de:
+Além desta análise também são utilizadas comparações de palavras dentro de um contexto, através do uso de \textit{clusters} de palavras, que facilita a identificação de classes nos cabeçalhos analisados. Han \cite{Han-SVM} utiliza em suas análises \textit{clusters} com palavras comuns, basicamente compostos de:
 
 \begin{itemize}
     \item Dicionário online padrão em sistemas Linux;
     \item 8.441 nomes e 19.613 sobrenomes;
     \item Sobrenomes chineses;
-    \item Nome dos estados do Estados Unidos e das províncias canadenses;
+    \item Nomes dos estados dos Estados Unidos e das províncias canadenses;
     \item Nomes das cidades dos Estados Unidos;
     \item Nome dos países do mundo, de acordo com World Fact Book\footnote{Disponível em \url{https://www.cia.gov/library/publications/the-world-factbook/index.html}};
     \item Nome dos meses e suas respectivas abreviações.
 \end{itemize}
 
-Para cada uma das classes analisadas foram feitas correlações com o tipo de dado esperado, de maneira a permitir que endereços de e-mail, por exemplo, fossem extraídos com base em expressões regulares utilizadas em linguagens de programação.
+Para cada uma das classes analisadas são feitas correlações com o tipo de dado esperado, que permite extrair, por exemplo, endereços de e-mail com base em expressões regulares utilizadas em linguagens de programação.
 
-\emph{Support Vector Machine} é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na apresentação de um conjunto de opções, e a que mais se assemelha com a análise realizada é então classificada. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito de comparação para ser então aplicado na extração de dados, confrontando e comparando classes de metadados, a fim de identificá-los e então diferenciá-los.
+\emph{Support Vector Machines} é uma técnica conhecida principalmente por sua boa performance e habilidade para com grandes quantidades de dados, sendo por isso considerada uma boa solução para problemas de classificação. Por essa característica, sua principal funcionalidade é baseada na comparação entre um conjunto de opções, identificando as semelhanças e permitindo classificações. Por isso, Han \cite{Han-SVM} decidiu utilizar este mesmo conceito na extração de dados, confrontando e comparando classes de metadados, para posterior identificação e diferenciação.
 
-Han também encontrou alguns desafios na diferenciação de campos, como é o caso dos múltiplos autores. Em alguns casos a diferenciação de autores, que fazem parte do mesmo campo, poderia estar inclusive em linhas ou grupos diferentes. Para isso foram utilizados alguns elementos para representar a separação dos nomes (\textit{chunks}), como pontuações e a presença da palavra ``and''. Desta forma, os autores eram extraídos seguindo este padrão estipulado.
+Han também encontrou alguns desafios na diferenciação de campos, como é o caso dos múltiplos autores. Em alguns casos a diferenciação de autores, que fazem parte do mesmo campo, poderia estar em linhas ou grupos diferentes. Para isso foram utilizados alguns elementos para representar a separação dos nomes (\textit{chunks}), como pontuações e a presença da palavra ``and''. Desta forma, os autores eram extraídos seguindo este padrão estipulado.
 
-O resultado obtido pela utilização de SVM como técnica de extração de metadados foi bem relevante. O autor realizou uma comparação com a aplicação da técnica de \emph{Hidden Markov Models} (HMM) - detalhada na \autoref{sssec:hmm} - onde a SVM se mostrou mais eficaz na precisão da extração para algumas classes específicas, como é o caso dos títulos, autores e endereços, por exemplo. Para outras classes a utilização da técnica de HMM ainda demonstrou ser mais eficiente na extração de metadados.
+O resultado obtido pela utilização de SVM como técnica de extração de metadados foi bem relevante. O autor realizou uma comparação com a aplicação da técnica de \emph{Hidden Markov Models} (HMM) - detalhada na \autoref{sssec:hmm} - onde a SVM se mostrou mais eficaz na extração para algumas classes específicas, como é o caso dos títulos, autores e endereços, por exemplo. Para outras classes a utilização da técnica de HMM ainda demonstrou ser mais eficiente na extração de metadados.
 
 \subsubsection{Hidden Markov Models (HMM)}
 \label{sssec:hmm}
