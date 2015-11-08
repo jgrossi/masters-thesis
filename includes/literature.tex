@@ -579,34 +579,39 @@ Abaixo segue uma relação das principais ferramentas relacionados à área de e
 
 % CERMINE
 
-Uma destas ferramentas é o recente CERMINE \cite{cermine}, uma biblioteca \textit{open source} desenvolvida na linguagem de programação Java que permite que sejam extraídos os metadados de artigos científicos em formato digital PDF, oferecendo ainda a possibilidade de cruzamento de dados por meio de referências e títulos, permitindo assim identificar citações bem como a relevância de um determinado documento.
+Uma destas ferramentas é o recente Cermine \cite{cermine}, uma biblioteca \textit{open source} desenvolvida na linguagem de programação Java que permite que sejam extraídos os metadados de artigos científicos em formato digital PDF, oferecendo ainda a possibilidade de cruzamento de dados por meio de referências e títulos, permitindo assim identificar citações bem como a relevância de um determinado documento.
 
-O CERMINE ainda possui um mecanismo de aprendizagem da própria máquina, permitindo que, na medida que dados forem sendo alterados, ele consiga absorver os detalhes e permitir assim uma mudança de sua maneira de extrair os dados. Deste modo ele permite que seja adaptado para novos padrões de leiautes, o que permite de maneira geral que uma grande gama de modelos seja então abrangida. 
+O Cermine ainda possui um mecanismo de aprendizagem próprio que permite que, na medida que dados forem sendo alterados, ele consiga absorver os detalhes passados e realizar mudanças em sua forma de realizar a extração. Deste modo ele permite adaptações para novos padrões de leiautes, o que permite de maneira geral que uma grande gama de modelos seja então abrangida. 
 
-Seu grande diferencial em comparação com as demais ferramentas é que ele não somente extrai os metadados de um artigo, mas sim analisa todo o seu conteúdo, incluindo citações a outros documentos, que podem ser facilmente cruzados por meio de informações como título e autor(es).
+Seu grande diferencial em comparação com as demais ferramentas é que ele não somente extrai os metadados de um artigo, mas também analisa todo o seu conteúdo, incluindo citações a outros documentos, que podem ser facilmente cruzados por meio de informações como título e autor(es).
 
-Seu mecanismo considera somente arquivos PDF com texto gerado de maneira pura, sem a utilização de imagens. Basicamente ele considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{Han-SVM}. Com base nisso ele condensa um leiaute onde as informações geralmente estão dispostas, permitindo assim que em um determinado local do arquivo esteja, provavelmente, o título e o nome dos autores. 
+Seu mecanismo considera arquivos PDF em forma textual, sem a utilização de imagens. A ferramenta considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{Han-SVM} (detalhado na \autoref{sssec:svm}). Dessa forma seu mecanismo condensa um leiaute onde as informações geralmente estão dispostas, permitindo aferir que em um determinado local do arquivo estejam o título e o nome dos autores, por exemplo. 
 
-Com estas regiões definidas o CERMINE extrai as informações com base em padrões preestabelecidos, de maneira a gerar então sua saída para os metadados e referências encontradas. A saída trabalhada pelo projeto é no formato XML, permitindo assim que possa ser compartilhado com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de programação. A \autoref{fig:cermine-workflow} demonstra como o processo de extração do CERMINE funciona.
+Com estas regiões definidas o Cermine extrai as informações com base em padrões preestabelecidos, gerando resultados para os metadados e referências encontradas. O formato de saída dos resultados é no formato XML, permitindo que possam ser compartilhados com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de programação. A \autoref{fig:cermine-workflow} demonstra como o processo de extração do Cermine funciona.
 
 \begin{figure}
     \centering
-    \caption{CERMINE Extraction Workflow}
+    \caption{Cermine Extraction Workflow}
     \label{fig:cermine-workflow}
     \includegraphics[width=0.7\linewidth]{./assets/images/cermine}
     \center\footnotesize{Fonte: \cite{cermine}}
 \end{figure}
 
-Com o mapeamento definido ele identifica regiões de acordo com seu conteúdo, as quais ele chama de \textit{zones}. Esta regiões são determinadas a fim de extrair as informações relevantes para cada uma, de maneira a separar, por exemplo, a área destinada aos metadados do arquivo. O CERMINE divide estas \textit{zones} da seguinte maneira:
+Após o mapeamento definido a ferramenta identifica regiões de acordo com seu conteúdo de entrada, as quais ele chama de \textit{zones}. Estas regiões são determinadas a fim de extrair suas informações mais relevantes, separando, por exemplo, a área destinada aos metadados do arquivo. O Cermine divide estas \textit{zones} da seguinte maneira:
 
 \begin{itemize}
+
     \item \textbf{Metadata:} É a região mais ao alto do documento, onde obtém os metadados, que seriam o resumo, \textit{bib\_info}, tipo, título, afiliação, autores, datas, editores e palavras-chaves.
+
     \item \textbf{References:} Região responsável por identificar detalhes de referências que foram utilizadas no artigo, como título e autores, por exemplo.
+
     \item \textbf{Body:} O texto geral do artigo, incluindo equações, imagens e tabelas.
+
     \item \textbf{Other:} Outros detalhes menos significantes semanticamente, como número das páginas, dentre outros dados.
+
 \end{itemize}
 
-A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do artigo o \textit{parser} do CERMINE analisa o conteúdo linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do \textit{journal}, volume, \textit{issue}, páginas, \textit{publisher}, localização e o ano.
+A extração das referências abrange também seus próprios metadados. Tanto no texto corrido (\textit{Body}) quanto na lista de referências do documento o \textit{parser} do Cermine analisa o conteúdo linha a linha, permitindo uma extração de dados mais eficaz. Das referências são extraídos os seguintes dados: autor, título, nome do \textit{journal}, volume, \textit{issue}, páginas, \textit{publisher}, localização e ano.
 
 \subsection{TeamBeam}
 \label{ssec:teambeam}
