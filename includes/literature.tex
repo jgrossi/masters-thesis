@@ -405,40 +405,40 @@ Por outro lado a utilização desta técnica possui uma falha na semântica dos 
 
 % Falar sobre CRFs 
 
-CRFs é um framework proposto por Lafferty et al. \cite{Lafferty-CRF} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquinas (\textit{machine learning}).
+CRFs é um framework proposto por Lafferty et al. \cite{Lafferty-CRF} criado para construir modelos probabilísticos e dados marcados em sequência (\textit{label sequence data}), geralmente utilizados no reconhecimento de padrões e aprendizado de máquina (\textit{machine learning}).
 
-Esta técnica oferece algumas vantagens ao se comparar com técnicas mais tradicionais, como HMM (\autoref{sssec:hmm}), se destacando a habilidade de diminuir pressupostos independentes feitos nestes modelos \cite{Lafferty-CRF}.
+Esta técnica oferece algumas vantagens se comparada com técnicas mais tradicionais, como HMM (\autoref{sssec:hmm}), se destacando a habilidade de diminuir pressupostos independentes feitos nestes modelos \cite{Lafferty-CRF}.
 
-Modelos baseados em HMM possuem uma fraqueza, que é o problema denominado \textit{bias problem}. As transições de um dado estado somente competem entre elas, e não com todas as transições presentes no modelo. Elas são feitas com base probabilística de acordo com o estado inicial e a sequência de observação (\textit{observation sequence}).
+Modelos baseados em HMM possuem uma fraqueza, que é o problema denominado \textit{bias problem}. As transições de um estado somente competem entre elas, e não com todas as transições presentes no modelo. Elas são feitas com base probabilística de acordo com o estado inicial e a sequência de observação (\textit{observation sequence}).
 
 Desta forma, devido ao \textit{bias problem}, em um caso extremo, um estado que tiver como opção de transição somente um outro estado, pode simplesmente ignorar a sequência de observação, o que traria efeitos contrários aos objetivos do processo inicial.
 
-Laffarty et al. realizam comparações funcionais e práticas entre CRFs, HMM e MEMM (\textit{Maximum Entropy Markov Models}), uma variação da técnica de HMM, detalhada na \autoref{sssec:hmm}. A diferença crítica entre CRFs e MEMMs é que MEMM utiliza como probabilidade de ocorrência de um próximo estado modelos exponenciais para cada um deles, enquanto a técnica de CRF possui um modelo exponencial único para toda a sequência de \textit{labels}, com base na sequência de observação. Segundo Laffarty et al. \cite{Lafferty-CRF} pode-se pensar na CRF como um modelo de estado finito sem normalização das probabilidades de transição.
+Lafferty et al. realizam comparações funcionais e práticas entre CRFs, HMM e MEMM (\textit{Maximum Entropy Markov Models}), uma variação da técnica de HMM, detalhada na \autoref{sssec:hmm}. A importante diferença entre CRFs e MEMMs é que MEMM utiliza modelos exponenciais como probabilidade de ocorrência de um próximo estado, enquanto a técnica de CRF possui um modelo exponencial único para toda a sequência de \textit{labels}, com base na sequência de observação. Segundo Lafferty et al. \cite{Lafferty-CRF} pode-se pensar na CRF como um modelo de estado finito sem normalização das probabilidades de transição.
 
-Uma das vantagens de se utilizar CRFs sobre HMM é que ela absorve todas as qualidades deste último, mas com a particularidade de resolver o \textit{bias problem}. Outra grande vantagem ao ser comparada com HMMs e MEMMs é que a CRF possui resultados melhores quando a distribuição dos dados possui grande dependência do modelo, o que geralmente ocorre em casos mais práticos.
+Uma das vantagens de se utilizar CRFs sobre HMM é que ela absorve boa parte de suas qualidades, mas com a particularidade de resolver o \textit{bias problem}. Outra grande vantagem sobre HMMs e MEMMs é que a CRF possui resultados melhores quando a distribuição dos dados possui grande dependência do modelo, o que geralmente ocorre em casos mais práticos.
 
-Um exemplo para entender o \textit{bias problem} foi apresentado por Lafferty et al. \cite{Lafferty-CRF}. Ele propõe um modelo cujo objetivo é distinguir duas palavras: \texttt{rib} e \texttt{rob}, tendo como sequência de observação as letras \texttt{r i b}. O problema é identificado quando uma das duas palavras é mais comum no \textit{training set}, o que acarreta nas transições do estado inicial preferirem suas transições correspondentes, o que acaba sempre na vitória da palavra relacionada aquele estado.
+Um exemplo para entender o \textit{bias problem} foi também apresentado por Lafferty et al. \cite{Lafferty-CRF}. Ele propõe um modelo cujo objetivo é distinguir duas palavras: \texttt{rib} e \texttt{rob}, tendo como sequência de observação as letras \texttt{r i b}. O problema é identificado quando uma das duas palavras é mais comum no \textit{training set}, o que acarreta nas transições do estado inicial preferirem suas transições correspondentes, o que acaba sempre na vitória da palavra relacionada àquele estado.
 
-Visando a comprovação e reconhecimento da eficiência da técnica de CRF na extração de informação, foram aplicados dois tipos de experimentos:
+Visando a comprovação e reconhecimento da eficiência da técnica de CRF na extração de informação foram aplicados dois tipos de experimentos:
 
 \begin{enumerate}
     \item Verificação direta do \textit{bias problem};
     \item Geração de dados utilizando HMM aleatórios.
 \end{enumerate}
 
-Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a CRF a melhor técnica a ser empregada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
+Os resultados apontam que HMMs superam MEMMs em virtude do \textit{bias problem}. Por sua vez os CRFs superam os HMMs, sendo então considerada a melhor técnica para ser empregada com base no \textit{training set} utilizado \cite{Lafferty-CRF}. Outro ganho apresentado pode ser verificado ao agregar algumas características ortográficas à utilização de CRFs, aumentando o poder destes modelos condicionais.
 
-De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativamente melhores. Por corresponder a uma ``máquina'' de estado finito, a técnica é muito aplicável para a função de classificação sequencial, o que permite que ainda seja treinada para se obter os melhores resultados probabilísticos \cite{Peng-CRF-IE}. Nas CRFs as transições de estado são também representadas como \emph{features} por alguns autores.
+De modo geral as CRFs utilizam a mesma lógica que modelos baseados em Markov (HMMs e MEMMs), se diferenciando nos aspectos probabilísticos para com as transições entre os estados, acarretando em resultados comparativamente melhores. Por corresponder a uma ``máquina'' de estado finito, a técnica é muito aplicável para funções de classificação sequencial, o que permite que seja treinada para se obter os melhores resultados probabilísticos \cite{Peng-CRF-IE}. Nas CRFs as transições de estado são também representadas como \emph{features} por alguns autores.
 
 %Esta técnica é comparada e quase sempre utilizada juntamente com a HMM (Hidden Markov Models), de maneira a possuir algumas vantagens sobre esta última, como a habilidade de relacionar pressupostos independentes nos modelos, ou seja, relacionar observações e/ou interpretações.
 
-Uma outra vantagem da técnica de CRFs - assim como dos modelos \emph{maximum entropy} - é que eles facilmente proporcionam o uso de características arbitrárias dos dados de entrada. As CRFs são utilizadas também em marcação e classificação de dados sequenciais, com uma ordem determinada, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
+Uma outra vantagem da técnica de CRFs - assim como dos modelos \emph{maximum entropy} - é que eles permitem o uso de características arbitrárias nos dados de entrada. As CRFs são utilizadas também em marcação e classificação de dados sequenciais, como linguagem natural, sequências biológicas (como os genes) ou estados computacionais.
 
 % Falar sobre o uso de CRFs na extração de informação
 
 Sua aplicação na extração de metadados foi apresentada por Peng et al. \cite{Peng-CRF-IE}, como uma maneira eficaz de extrair metadados em cabeçalhos e referências de artigos científicos. Deste modo, através da identificação destes padrões sequenciais pode-se determinar os tipos de dados existentes e então identificá-los, seguindo uma lógica/ordem pré-determinada.
 
-Peng et al. apresentam resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM (\autoref{sssec:hmm}) e SVM (\autoref{sssec:svm}), mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando a junção entre as sequências e características dependentes, mas ao mesmo tempo arbitrárias. Ainda assim, a utilização de CRFs para a tarefa de extração de metadados possui melhoras, segundo os autores, significativas, ao se comparar com as demais técnicas de SVM e HMM.
+Peng et al. apresentam resultados desta extração utilizando Conditional Random Fields (CRF) e aponta também algumas questões acerca da utilização testa técnica para este tipo de atividade. Os autores comparam as CRFs com técnicas de HMM (\autoref{sssec:hmm}) e SVM (\autoref{sssec:svm}), mencionando que a forma de trabalhar com CRF aponta parte das vantagens destas duas técnicas, destacando a junção entre as sequências e características dependentes, mas ao mesmo tempo arbitrárias. Ainda assim, segundo os autores, a utilização de CRFs para a tarefa de extração de metadados - ao se comparar com as demais técnicas de SVM e HMM - possui melhoras significativas.
 
 Os autores definem quatro diferentes transições de estado para diferentes classes, em ordem diferente das técnicas derivadas de Markov (HMM):
 
@@ -449,16 +449,20 @@ Os autores definem quatro diferentes transições de estado para diferentes clas
     \item \emph{\textbf{Third-order:}} os dados de entrada são examinados no contexto do estado atual e de dois estados anteriores.
 \end{enumerate}
 
-Para a extração destes dados Peng et al. também consideram como sendo o cabeçalho de um \emph{paper} como sendo a parte inicial do documento até o início da introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
+Para a extração destes dados Peng et al. também consideram como sendo o cabeçalho de um artigo como sendo a parte inicial do documento até a introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
 
-Do \emph{dataset} para extração dos metadados de cabeçalhos utilizado foram analisados 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
+Para extração dos metadados dos cabeçalhos foi utilizado um \emph{dataset} com 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para o \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
 
 Para fins de resultados comparativos foram utilizadas três métricas:
 
 \begin{enumerate}
-    \item \emph{\textbf{Overall word accuracy:}} é uma métrica que utiliza a porcentagem de palavras das quais os nomes (\emph{labels}) previstos são exatamente seus valores reais. Esta métrica favorece aqueles campos que possuem muitas palavras, como por exemplo a introdução (\emph{abstract});
-    \item \emph{\textbf{Average F-measure (F1):}} esta métrica se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta métrica favorece campos com poucas palavras, visto sua característica mais importante focar na exatidão dos resultados.
+
+    \item \emph{\textbf{Overall word accuracy:}} é uma métrica que utiliza a porcentagem de palavras das quais os nomes (\emph{labels}) previstos são exatamente seus valores reais. Esta métrica favorece aqueles campos que possuem muitas palavras, como, por exemplo, a introdução (\emph{abstract});
+
+    \item \emph{\textbf{Average F-measure (F1):}} esta métrica se baseia na exatidão das ocorrências, considerando tanto a precisão quanto a memória de todos os campos (\emph{fields}). Esta métrica favorece campos com poucas palavras, visto sua característica mais importante, de focar na exatidão dos resultados.
+    
     \item \emph{\textbf{Whole instance accuracy:}} nesta métrica uma ``instância'' é considerada como sendo todo um cabeçalho ou referência, de maneira integral. Desta forma esta métrica utiliza-se da porcentagem de instâncias das quais cada palavra é corretamente associada.
+
 \end{enumerate}
 
 Conforme pode-se observar na \autoref{tab:crf-results-headers} e \autoref{tab:crf-results-references} a utilização de CRFs para extração de metadados - tanto de cabeçalhos como de referências - teve resultados melhores do que a utilização de HMM (\autoref{sssec:hmm}), aumentando a performance em praticamente todos os campos, chegando a uma precisão de 98,3\% (\emph{overall accuracy}).
