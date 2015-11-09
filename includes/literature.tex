@@ -740,23 +740,23 @@ O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) an
 \subsection{ParsCit}
 \label{ssec:parscit}
 
-Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citação de documentos. Porém eles utiliza um modelo de CRF \textit{(Conditional Random Fields)} para identificar sequências nas referências bibliográficas, utilizando uma implementação desta técnica chamada CRF++ \cite{Councill-Giles-2008-ParsCit}.
+Assim como o CiteSeer o ParsCit é um projeto baseado na identificação de citações em documentos. Porém ele utiliza um modelo de CRF (\autoref{sssec:crf}) para identificar sequências nas referências bibliográficas, utilizando uma implementação desta técnica chamada CRF++ \cite{Councill-Giles-2008-ParsCit}.
 
-O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao longo do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem suas informações e as obtém de maneira simplicada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro de um servidor.
+O projeto encontra-se ainda ativo e possui atuais contribuições de desenvolvedores ao redor do mundo. Desenvolvido na linguagem de programação \textit{Perl}, o projeto pode ser executado tanto na forma de um \textit{web service\footnote{É a disponibilização de algum serviço na Internet permitindo que outros projetos consultem seus dados e os obtém de maneira simplificada.}} quanto de maneira \textit{standalone}, com execução do código direto quando necessário, dentro de um servidor.
 
-Um detalhe bastante interessante do projeto é a descrição de seu processamento antes e depois da análise do artigo, que os autores chamam de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
+Um detalhe bastante interessante do projeto é a forma como ele processa os dados antes e depois da análise do artigo, o que os autores chamam de \textit{Pre-Processing Steps} e \textit{Post-Processing Steps}.
 
-Inicialmente o processamento inicia buscando certos \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que englobam os formatos mais utilizados no mundo, com acentuação e caracteres especiais.} \cite{Councill-Giles-2008-ParsCit}.
+Inicialmente o processamento busca \textit{tokens} que podem estar ligados a alguma referência, seja em formato numérico, seja na citação dos nomes dos autores, nos mais diversos formatos. Com essa referência coletada o próximo passo é buscar dentro do artigo o local onde ela está localizada, com base em um conjunto de heurísticas previamente definidas. Para isso é necessária a conversão total do conteúdo do artigo para o formato texto, que deve estar codificado em UTF-8\footnote{Formato de exibição de caracteres que engloba os formatos mais utilizados no mundo, com acentuação e caracteres especiais.} \cite{Councill-Giles-2008-ParsCit}.
 
-Desta forma a fase de pré-processamento se inicia com esta análise puramente textual, em busca de padrões comuns que podem ter sido utilizados para representações de referências a artigos científicos. Com os resultados coletados um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
+Desta forma a fase de pré-processamento realiza uma análise puramente textual, buscando por padrões comuns que podem ter sido utilizados para representações de referências a artigos científicos. Com os resultados coletados, um modelo CRF é então aplicado aos dados encontrados para processamento futuro.
 
-Com este modelo CRF definido algumas etapas são aplicadas a fim de normalizar os dados encontrados. Nomes de autores podem estar escritos de maneira diferente, com abreviações em nomes de maneira distinta, dependendo do modo como as referências foram escritas no artigo analisado.
+Com este modelo CRF definido algumas etapas são aplicadas visando normalizar os dados encontrados. Nomes de autores podem estar escritos de maneiras diferentes, com abreviações diversas, dependendo do modo como as referências foram escritas no artigo analisado.
 
-Esta análise posterior dos nomes dos autores é feita com base na inspeção de cada palavra individualmente, respeitando então um padrão de normalização definido, sempre com as iniciais dos nomes seguidas do sobrenome escrito normalmente.
+Esta análise posterior é feita com base na inspeção de cada palavra respeitando um padrão de normalização definido, sempre com as iniciais dos nomes seguidas do sobrenome em sua forma literal.
 
-A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilita os testes e a extração de dados. Os resultados obtidos desta análise é então exibido (ou gravado em arquivo) em formato XML, que permite utilização posterior em qualquer tecnologia. Como informado anteriormente os resultados também podem ser coletados em formato de \textit{Web Service}, mas para os fins desta pesquisa apenas sua execução em linha de comando é suficiente.
+A utilização deste projeto é feita de maneira muito simples, podendo ser executado por linha de comando, o que facilita os testes e a extração de dados objetivada neste trabalho. Os resultados obtidos desta análise possuem saídas em formato XML, o que permite utilização posterior com qualquer tecnologia.
 
-Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizam comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, onde de maneira geral obteve uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia da ferramenta (detalhes na \autoref{tab:parscit-results}).
+Visando contrapor os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizaram comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, alcançando uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia da ferramenta (detalhes na \autoref{tab:parscit-results}).
 
 \begin{table}
     \caption{Resultados comparativos entre ParsCit e Peng \cite{Peng-CRF-IE}}
@@ -788,7 +788,7 @@ Visando comparar os resultados obtidos com alguns projetos em que o ParsCit foi 
     \label{tab:parscit-results}
 \end{table}
 
-Visando também analisar outras ferramentas, a mesma comparação de resultados foi feita com o projeto CiteSeer (\autoref{ssec:citeseer}), onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como são no ParsCit.
+% Visando também analisar outras ferramentas, a mesma comparação de resultados foi feita com o projeto CiteSeer (\autoref{ssec:citeseer}), onde o aumento da qualidade dos dados extraídos foi de aproximadamente 19\% levando em consideração algumas limitações do CiteSeer que não são compreendidas como são no ParsCit.
 
 % Falar de cada trabalho encontrado com base nos eventos
 
