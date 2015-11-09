@@ -801,23 +801,23 @@ Visando contrapor os resultados obtidos com alguns projetos em que o ParsCit foi
 \subsection{CrossRef}
 \label{ssec:crossref}
 
-CrossRef é uma associação independente mantida por diversas editoras científicas (\emph{publishers}). Além de ser uma organização sem fins lucrativos ela atua como um identificador de um recurso de pesquisa na Internet. Ela permite que referências cruzadas de citações sejam associadas com seus artigos originais, fazendo o link para o recurso no site de sua editora de origem \cite{Bergmark:2000:AER:867169}.
+CrossRef é uma associação independente mantida por diversas editoras científicas (\emph{publishers}). Além de ser uma organização sem fins lucrativos ela atua como um identificador de recursos na Internet. Ela permite que referências cruzadas de citações sejam associadas com seus artigos originais, fazendo uma referência ao recurso no site de sua editora de origem \cite{Bergmark:2000:AER:867169}.
 
-Suas atividades foram iniciadas em 1999 como uma iniciativa a desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
+Suas atividades foram iniciadas em 1999 como uma iniciativa para desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
 
 Inicialmente a extração realizada pelo CrossRef levava em consideração apenas as referências citadas em um artigo, mas posteriormente verificou-se que demais partes de um documento eram necessárias, inclusive para que a referência cruzada fosse feita de maneira completa. Assim, um artigo foi dividido em três partes \cite{Bergmark:2000:AER:867169}:
 
 \begin{itemize}
-    \item \emph{Header Material}: Dados gerais do cabeçalho do artigo, como título, autores, ano de publicação, etc;
-    \item \emph{The Body}: O corpo do documento, onde citações podem ser analisadas de maneira quantitativa, com base na coleta de referências existente do final do documento;
-    \item \emph{The Reference Section}: Parte em que as referências completas são citadas, permitindo que ligações possam ser feitas entre as ligações encontradas no corpo do documento.
+    \item \emph{Header Material}: Dados gerais do cabeçalho do artigo, como título, ano de publicação, etc;
+    \item \emph{The Body}: O corpo do documento, onde citações podem ser analisadas de maneira quantitativa, com base na coleta de referências existentes ao final do documento;
+    \item \emph{The Reference Section}: Parte em que as referências completas são citadas, permitindo que ligações possam ser feitas com as citações encontradas no corpo do documento.
 \end{itemize}
 
 O CrossRef não possui uma base de dados de artigos definida com seus próprios documentos, como acontece nos outros projetos e ferramentas. Ele apenas une informações sobre os artigos e faz a referência cruzada destes documentos na Internet, permitindo que citações sejam transformadas em links para os artigos originais, em sua editora de origem.
 
-Por outro lado existe um incentivo por parte do CrossRef para realização do link direto entre documentos PDF e suas referências cruzadas. O projeto CrossRef Labs (\url{http://labs.crossref.org/}) fornece uma série de ferramentas de código aberto que permitem diversas ações no que tange a área científica, como por exemplo, extração de metadados em artigos científicos.
+Por outro lado existe um incentivo por parte do CrossRef para realização do link direto entre documentos PDF e suas referências cruzadas. O projeto CrossRef Labs (\url{http://labs.crossref.org/}) fornece uma série de ferramentas de código aberto que permitem diversas ações na área científica, como por exemplo, extração de metadados em artigos científicos.
 
-Esta ferramenta de extração de metadados fornecida pelo CrossRef Labs, chamada \texttt{pdfextract}, foi criada a fim de permitir que editoras de menor porte possam integrar sua bases de dados com as referências do CrossRef, aumentando ainda mais o número de documentos que fazem parte do projeto. A ferramenta é desenvolvida na linguagem de programação Ruby, estando em constante atualização, conforme pode ser visto em seu repositório oficial em \url{https://github.com/CrossRef/pdfextract}.
+Esta ferramenta de extração de metadados fornecida pelo CrossRef Labs, chamada \texttt{pdfextract}, foi criada para permitir que editoras de menor porte pudessem integrar sua bases de dados com as referências do CrossRef, aumentando ainda mais o volume de documentos indexados e extraídos. A ferramenta é desenvolvida na linguagem de programação Ruby \url{https://www.ruby-lang.org} e está em constante atualização, conforme pode ser visto em seu repositório oficial em \url{https://github.com/CrossRef/pdfextract}.
 
 A \texttt{pdfextract} utiliza de informações visuais para identificar cada parte de um artigo científico, pré-selecionando áreas onde cada metadado pode ser encontrado, realizando então um conjunto de identificações por padrões (expressões regulares) que se espera encontrar (\autoref{fig:crossref}).
 
