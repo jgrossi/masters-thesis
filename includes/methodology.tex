@@ -11,7 +11,7 @@ Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realm
 
 % Explicar de modo geral como será o processo
 
-De modo geral o procedimento de testes deste trabalho será realizado através da instalação e execução de cada ferramenta selecionada, permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados como dados de entrada em cada uma destas ferramentas e seus resultados de extração analisados, centralizados e consolidados. O fluxo de passos necessários para a realização destes testes pode ser melhor visualizado na \autoref{fig:metodology}.
+O procedimento de testes deste trabalho será realizado através da instalação e execução de cada ferramenta selecionada, permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados como dados de entrada em cada uma destas ferramentas, e seus resultados de extração coletados, comparados e analisados. Os passos necessários para a realização destes testes podem ser melhor visualizados na \autoref{fig:metodology}.
 
 \begin{figure}
     \centering
@@ -27,11 +27,11 @@ De modo geral o procedimento de testes deste trabalho será realizado através d
 
 % Falar da seleção de artigos de várias áreas
 
-Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados exatos da extração de metadados, para que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
+Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados precisos da extração de metadados, para que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
 
 % Porque selecionar artigos de diferentes áreas
 
-Em virtude da necessidade de realizar testes com as ferramentas selecionadas em um ambiente real e representativo, foi realizada uma pesquisa no site do CNPq \url{http://www.cnpq.br/} a fim de obter a relação das áreas e subáreas do conhecimento reconhecidas oficialmente. Deste modo foi constatada a existência de 9 (nove) áreas do conhecimento, totalizando 1.288 (mil duzentas e oitenta e oito) subáreas, conforme pode ser verificado na \autoref{tab:areas-cnpq}.
+Em virtude da necessidade de realizar testes em um ambiente real e representativo, foi realizada uma pesquisa no site do CNPq \url{http://www.cnpq.br/} para obter a relação das áreas e subáreas do conhecimento reconhecidas nacionalmente. Deste modo foi constatada a existência de 9 (nove) áreas do conhecimento, totalizando 1.288 (mil duzentas e oitenta e oito) subáreas, conforme pode ser verificado na \autoref{tab:areas-cnpq}.
 
 \begin{table}
     \caption{Áreas do Conhecimento (CNPq)}
@@ -47,7 +47,7 @@ Em virtude da necessidade de realizar testes com as ferramentas selecionadas em 
             Ciências Humanas & 163 \\
             Ciências Sociais Aplicadas & 185 \\
             Engenharias & 305 \\
-            Lingüística, Letras e Artes & 53 \\
+            Linguística, Letras e Artes & 53 \\
             Outros & 4 \\
             \hline
             \textbf{Total} & \textbf{1290} \\
@@ -58,9 +58,9 @@ Em virtude da necessidade de realizar testes com as ferramentas selecionadas em 
     \label{tab:areas-cnpq}
 \end{table}
 
-Em virtude no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas será limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
+Em virtude no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas foi limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
 
-Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
+Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{Corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
 
 \begin{table}
     \caption{Professores entrevistados para cada subárea do conhecimento.}
@@ -114,7 +114,9 @@ Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou
     \label{tab:subareas-professores}
 \end{table}
 
-Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete) artigos científicos. Em virtude da diversidade de quantidade de bases de dados informadas pelos professores de cada subárea do conhecimento (\autoref{tab:databases}), a pesquisa foi limitada a 2 (duas) bases, na ordem apresentada pelos próprios pesquisadores, contemplando 4 (quatro) artigos para a primeira base e 3 (três) para a segunda. Para a subárea ``Ciências Biológicas (Genética)'' somente uma base de dados foi utilizada, portanto dela foram retirados os 7 artigos necessários. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 subáreas do conhecimento e 32 bases de dados, formando então o \emph{corpus} utilizado como base desta pesquisa.
+Para cada uma destas subáreas do conhecimento foram coletados 7 (sete) artigos científicos. Em virtude da diversidade de bases de dados informadas pelos professores (\autoref{tab:databases}), a pesquisa foi limitada a 2 (duas) bases, na ordem apresentada pelos próprios pesquisadores, contemplando 4 (quatro) artigos para a primeira base e 3 (três) para a segunda. 
+
+Para a subárea ``Ciências Biológicas (Genética)'' somente uma base de dados foi utilizada, portanto dela foram retirados todos os 7 artigos necessários. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 (dezesseis) subáreas do conhecimento e 32 (trinta e duas) bases de dados, formando então o \emph{Corpus} utilizado nesta pesquisa.
 
 \begin{table}
     \caption{Bases de Dados informadas pelos professores entrevistados, por subárea do conhecimento.}
@@ -160,19 +162,18 @@ Para cada uma das subáreas do conhecimento selecionadas foram coletados 7 (sete
     \label{tab:databases}
 \end{table}
 
-A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, levando em consideração diferenças de leiautes e posicionamento dos elementos, permitindo que uma maior variedade de documentos seja analisada.
+A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, levando em consideração diferenças de leiautes e posicionamento dos elementos, permitindo que uma maior variedade de documentos fosse analisada.
 
 % Artigos em Inglês, somente
 
-Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de, além de ser a língua inglesa a universal para disseminação de conhecimento, ela é a mais utilizada no meio acadêmico, possuindo um universo muito maior e mais rico de artigos escritos no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizadas nos testes utilizam de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos.
+Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de ser a língua mais utilizada no meio acadêmico, possuindo um universo muito mais abrangente e rico de artigos escritos no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizam formas de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos de entrada.
 
-Em virtude dessas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversificação de culturas e símbolos, fazendo com que línguas orientais, como o mandarim ou japonês por exemplo, tenham análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas a fim de obter os resultados esperados.
+Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversidade de culturas e símbolos, fazendo com que línguas orientais - como o mandarim ou japonês, por exemplo - tivessem análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas para obter os resultados esperados.
 
-No que tange a escolha das ferramentas para testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando (\emph{command line}). Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização de apenas este recurso. Assim, foram selecionadas para testes apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individual, independente da linguagem de programação ou tecnologia apresentada. 
+Sobre a escolha das ferramentas para a realização dos testes foi utilizado apenas um ponto na seleção: a sua utilização por linha de comando (\emph{command line}). Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização somente deste recurso. Assim, foram selecionadas para testes apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individualizada, independente da linguagem de programação ou tecnologia apresentada. 
 
-Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \autoref{tab:tools-consolidated}, as ferramentas selecionadas para teste foram: Cermine, CiteSeer, CrossRef e ParsCit.
+Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \autoref{tab:tools-consolidated}, as ferramentas selecionadas para os testes foram: Cermine, CiteSeer, CrossRef e ParsCit.
     
-
 \section{Desenho do Experimento}
 \label{sec:experiment-design}
 
