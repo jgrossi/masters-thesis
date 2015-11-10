@@ -179,22 +179,26 @@ Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \aut
 
 Tendo selecionadas as ferramentas e os artigos que serão utilizados para os testes, parte-se para a instalação adequada de cada ferramenta, juntamente com as tecnologias necessárias e as linguagens de programação utilizadas pelos seus desenvolvedores. 
 
-Cada ferramenta foi testada em separado, observando suas características particulares. Assim, cada artigo selecionado foi testado para cada ferramenta, com os respectivos resultados de cada extração. Estes resultados foram separados por metadados, o que permitiu calcular qual a porcentagem de acerto que cada ferramenta teve na extração de cada metadado analisado.
+Cada ferramenta foi testada em separado, observando suas características particulares. Assim, cada artigo selecionado foi testado para cada uma das ferramentas, com os respectivos resultados de cada extração. Estes resultados foram separados por metadados, o que permitiu calcular qual a porcentagem de acerto que cada ferramenta obteve na extração de cada metadado analisado.
 
-Assim, o processo foi repetido para cada ferramenta e o resultado registrado, permitindo calcular sua porcentagem total de acertos de maneira simplificada. Para isso foi criado um ``Quadro Comparativo'', no qual serão inseridos os resultados dos testes de cada ferramenta. 
+Assim, o processo foi repetido para cada ferramenta e o resultado registrado, permitindo calcular sua porcentagem total de acertos de maneira simplificada. Para isso foi criado um ``Quadro Comparativo'', no qual foram inseridos os resultados dos testes de cada ferramenta. 
+
+No total foram analisados 112 (cento e doze) artigos científicos, para um total de 4 (quatro) ferramentas, totalizando 448 (quatrocentas e quarenta e oito) extrações de metadados através da linha de comando.
+
+Todas as extrações foram feitas de forma automatizada, levando em consideração as necessidades de chamada de cada ferramenta, bem como os resultados de cada processamento para comparação. Todo o código criado pelo autor para este processo encontra-se disponível em \url{http://github.com/jgrossi/met}.
 
 \subsection{Metadados, Pesos e Resultados}
 \label{ssec:metadata-results}
 
 % Importância de se ter pesos em função dos metadados
 
-Em se tratando de pesquisa por artigos científicos, pequenos detalhes podem fazer diferença. Dessa forma, uma extração de metadados não muito eficaz pode prejudicar direta ou indiretamente os resultados da busca. Por outro lado, alguns metadados tendem a ser mais utilizados na pesquisa que outros, o que implica em uma responsabilidade maior na eficiência de sua extração. 
+Em se tratando de pesquisa por artigos científicos, pequenos detalhes podem fazer diferença. Dessa forma, uma extração de metadados não muito eficaz pode prejudicar direta ou indiretamente os resultados da busca. Por outro lado, alguns metadados tendem a ser mais utilizados em pesquisas que outros, o que implica em uma responsabilidade maior na eficiência de sua extração. 
 
 % Quais metadados são mais importantes para uma pesquisa de artigos
 
-Geralmente quando vamos buscar artigos, procuramos primeiro pelo título (quando procuramos por um documento específico) ou então pelo nome do autor (quanto procuramos por artigos de um determinado pesquisador). Assim foram atribuídos pesos para cada um dos metadados, de maneira a valorizar essas informações que influenciam diretamente os resultados de busca.
+Geralmente quando vamos buscar artigos, procuramos primeiro pelo título - quando procuramos por um documento específico - ou então pelo nome do autor - quanto procuramos por artigos de um determinado pesquisador. Assim foram atribuídos pesos para cada um dos metadados, de maneira a valorizar essas informações que influenciam diretamente os resultados de busca.
 
-A \autoref{tab:metadata-weight} mostra como cada metadado foi interpretado e qual o peso que lhe foi atribuído, sendo utilizado o inteiro 1 (um) para o peso mais baixo e o 5 (cinco) para o peso mais alto, sendo consequentemente o(s) metadado(s) mais importante(s). Os pesos utilizados, assim como a ordem de importância escolhida se fundamentam apenas na experiência do autor.
+A \autoref{tab:metadata-weight} mostra como cada metadado foi interpretado e qual o peso que lhe foi atribuído, sendo utilizado o inteiro 1 (um) para o peso mais baixo e o 5 (cinco) para o peso mais alto, sendo consequentemente o(s) metadado(s) mais importante(s) para uma pesquisa eficaz. Os pesos utilizados, assim como a ordem de importância escolhida se fundamentam apenas na experiência do autor.
 
 % Tabela de metadados e pesos
 
@@ -206,7 +210,7 @@ A \autoref{tab:metadata-weight} mostra como cada metadado foi interpretado e qua
             \hline Título & Um dos termos mais buscados quando se pesquisa um artigo & 5 \\
             \hline Autor(es) & Outro termo muito utilizado na busca por artigos & 4 \\
             \hline E-mail(s) & Pouco relevante no quesito pesquisa de artigos & 1 \\
-            \hline Resumo & Importante por conter palavras chaves e o resumo propriamente dito & 3 \\
+            \hline Resumo & Importante por conter palavras chaves, além do resumo propriamente dito & 3 \\
             \hline Referências & Muito importante e necessário, pois será utilizada na referência inversa de autores & 4 \\
             \hline 
         \end{tabular} 
@@ -214,27 +218,27 @@ A \autoref{tab:metadata-weight} mostra como cada metadado foi interpretado e qua
     \label{tab:metadata-weight}
 \end{table}
 
-Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, foi calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo foi feito com o uso da função \texttt{similar\_text} da linguagem de programação PHP \url{http://php.net/similar_text}, que calcula a porcentagem de similaridade entre dois textos de acordo com o algoritmo proposto por Oliver \cite{oliver-1993}. Assim, serão comparados:
+Como a extração de um metadado nem sempre ocorre de maneira 100\% eficaz, visando uma avaliação mais detalhada de cada ferramenta, foi calculada a precisão do resultado da extração de cada metadado, feita com base na porcentagem de sucesso obtida para aquele conjunto de caracteres. Este cálculo foi feito com o uso da função \texttt{similar\_text} da linguagem de programação PHP \url{http://php.net/similar_text}, que calcula a porcentagem de similaridade entre dois textos de acordo com o algoritmo proposto por Oliver \cite{oliver-1993}. Assim, foram comparados:
 
 \begin{enumerate}
-    \item O dado correto, retirado manualmente dos artigos;
+    \item O dado correto, retirado manualmente dos artigos, pelo próprio autor;
     \item O dado extraído, obtido por cada ferramenta.
 \end{enumerate}
 
-Esta taxa de acerto é referenciada posteriormente, como por exemplo, por $P_{título}$ (porcentagem de acerto para o metadado título). Segundo a documentação da função \texttt{similar\_text} temos:
+Esta taxa de acerto é referenciada posteriormente como, por exemplo, $P_{título}$ (porcentagem de acertos para o metadado título). Segundo a documentação da função \texttt{similar\_text} temos:
 
 \begin{quote}
     \emph{``This calculates the similarity between two strings as described in Programming Classics: Implementing the World's Best Algorithms by Oliver (ISBN 0-131-00413-1). Note that this implementation does not use a stack as in Oliver's pseudo code, but recursive calls which may or may not speed up the whole process. Note also that the complexity of this algorithm is O(N**3) where N is the length of the longest string.''}
 \end{quote}
 
-Esta função recebe três parâmetros: o primeiro texto, o segundo texto e uma variável onde será armazenada a porcentagem de acerto. Como retorno tem-se um inteiro representando o número de caracteres em comum entre os dois textos comparados. Sua estrutura de utilização é a seguinte:
+Esta função recebe três parâmetros: o primeiro texto, o segundo texto e uma variável onde será armazenada a porcentagem de acerto. Como retorno tem-se um inteiro representando o número de caracteres comuns entre os dois textos comparados. Sua estrutura de utilização é a seguinte:
 
 \lstset{language=PHP}
 \begin{lstlisting}[escapechar=\#]
 int similar_text ( string $first , string $second [, float &$percent ] )
 \end{lstlisting}
 
-Como cada ferramenta é testada em separado, os resultados da extração de cada artigo são registrados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' são analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, é somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' da Ferramenta ``A'' ($P_{título}$):
+Como cada ferramenta é testada em separado, os resultados da extração de cada artigo são gravados, tendo o total da precisão calculado de acordo com a média aritmética dos resultados obtidos para aquele metadado. Por exemplo, para a Ferramenta ``A'' foram analisados 100 (cem) artigos. A precisão na extração do título de cada artigo ($P_{título1}$, $P_{título2}$, ..., $P_{títuloN}$), por exemplo, é somada e o resultado dividido pelo número de artigos - no caso 100. Assim tem-se a precisão geral para o metadado ``Título'' para a Ferramenta ``A'' ($P_{título}$):
 
 \begin{center}
     \begin{math}
@@ -243,20 +247,20 @@ Como cada ferramenta é testada em separado, os resultados da extração de cada
     \end{math}
 \end{center}
 
-De posse dos resultados para cada metadado extraído podemos comparar as ferramentas a fim de conhecer a mais adequada para cada tipo de metadado. Podemos inferir, portanto, que a ferramenta ``X'' apresenta melhores resultados do que ``Y'' na extração do nome dos autores, por exemplo.
+De posse dos acertos de cada metadado extraído podemos comparar os resultados de cada ferramenta, permitindo conclusões sobre o comportamento de cada uma perante cada metadado. Espera-se poder inferir, portanto, que a ferramenta ``X'' apresenta melhores resultados do que ``Y'' na extração do nome dos autores, por exemplo.
 
 \subsection{Índice de Confiabilidade}
 \label{ssec:confiability-index}
 
 % Fórmula final para a nota final de cada técnica
 
-Considerando que cada metadado possui um peso diferente necessitamos calcular o índice de acertos a ser utilizado em cada resultado coletado para cada ferramenta testada. Assim chegamos a uma fórmula matemática à qual chamamos ``Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada metadado, para cada ferramenta. Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos por ela para o conjunto de artigos testado neste trabalho.
+Considerando que cada metadado possui um peso diferente (vide \autoref{tab:metadata-weight}) é necessário calcular o índice de acertos com base nos resultados obtidos por cada ferramenta, para cada metadado. Assim chegou-se a uma fórmula matemática nomeada ``Índice de Confiabilidade'', que calcula o resultado obtido através dos pesos que foram atribuídos a cada metadado, para cada ferramenta. 
 
-Este índice utiliza os pesos anteriormente definidos e a precisão dos resultados obtida, de maneira a permitir chegar a uma única nota final para cada ferramenta testada.
+Este índice é a nota final de cada ferramenta, levando em consideração todos os resultados obtidos por ela para os artigos utilizados neste trabalho. Nele são empregados os pesos anteriormente definidos e a precisão dos resultados, permitindo chegar a uma única nota para cada ferramenta testada.
 
 Esta fórmula é a média ponderada dos resultados alcançados na extração de cada metadado dos artigos, seguindo os pesos apresentados na \autoref{tab:metadata-weight}. Cada peso é atribuído ao resultado encontrado em cada ferramenta. 
 
-A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos os artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicada pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados extraídos, seguindo seus respectivos pesos. A descrição de cada variável no Índice de Confiabilidade é apresentada na \autoref{tab:confiability-index}.
+A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu extrair 87\% dos títulos de todos os artigos com sucesso, sua precisão com relação ao título será 87 ($P_{título}=87$), que será multiplicada pelo peso correspondente, neste caso, o inteiro 5. Isso ocorre para todos os metadados extraídos, seguindo seus respectivos pesos. A descrição de cada variável do Índice de Confiabilidade é apresentada na \autoref{tab:confiability-index}.
 
 \begin{center}
     $ IC_{Ferramenta X}=(5*P_{título}+4*P_{autor}+1*P_{email}+3*P_{resumo}+4*P_{referências}) / 17 $
@@ -278,7 +282,7 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
     \label{tab:confiability-index}
 \end{table}
 
-Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificar cada uma com base nos seus resultados. Obviamente, esta classificação não tem por objetivo qualquer favorecimento de ferramentas, mas sim classificar cada uma delas com base nos resultados obtidos e critérios adotados neste trabalho. Desta forma, cada ferramenta foi classificada seguindo as categorias abaixo:
+Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classificá-las com base em seus resultados. Esta classificação não tem por objetivo qualquer favorecimento de ferramentas, mas sim classificar cada uma delas com base nos resultados obtidos e critérios adotados neste trabalho. Desta forma, cada ferramenta foi classificada seguindo os valores abaixo:
 
 \begin{enumerate}
     \item \textbf{Precisa (P):} Quando o Índice de Confiabilidade é maior ou igual a 80 ($IC\geq80$).
@@ -289,8 +293,8 @@ Assim, de posse do Índice de Confiabilidade de cada ferramenta podemos classifi
 \section{Ambiente Tecnológico}
 \label{sec:tech-environment}
 
-As ferramentas testadas, por utilizarem das mesmas linguagens de programação ou por terem seu conjunto tecnológico muito semelhante, foram instaladas em um único servidor, permitindo que recursos computacionais sejam compartilhados, simplificando o trabalho de configuração em função de suas necessidades parecidas.
+As ferramentas testadas - por utilizarem das mesmas linguagens de programação ou por terem seus conjuntos tecnológicos semelhantes - foram instaladas em um único servidor, permitindo também que recursos computacionais fossem compartilhados, simplificando o trabalho de configuração em função de necessidades parecidas.
 
-Este servidor foi criado através de máquina virtual, o que traz benefícios não somente de performance mas de flexibilidade quanto às tecnologias necessárias para o funcionamento de cada ferramenta, permitindo que os testes possam ser feitos em sistemas operacionais distintos mas utilizando dos mesmos recursos computacionais da máquina de origem.
+Este servidor foi criado através de máquina virtual, o que traz benefícios não somente de performance mas de flexibilidade quanto às tecnologias necessárias para o correto funcionamento de cada ferramenta. Este fato permitiu que os testes fossem feitos em sistemas operacionais distintos porém utilizando os mesmos recursos computacionais da máquina de origem.
 
 
