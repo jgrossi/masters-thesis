@@ -7,51 +7,51 @@
 
 % Falar sobre o corpus e as ferramentas (FEITO)
 
-Com o Corpus totalmente definido e as ferramentas devidamente instaladas no ambiente de testes foram realizados diversos experimentos para que os resultados pudessem ser analisados e apresentados numericamente.
+Com o Corpus totalmente definido e as ferramentas devidamente instaladas no ambiente de testes foram realizados diversos experimentos para que os resultados pudessem ser analisados e comparados numericamente.
 
 % Falar das dificuldades encontradas na extração (FEITO)
 
 Durante a extração dos metadados algumas observações puderam ser feitas tanto pela análise manual de cada resultado individual como também dos resultados em conjunto, tendo em vista os números apresentados pelas ferramentas utilizadas.
 
-A ferramenta Cermine demonstrou-se de bem simples execução. Por se tratar de um arquivo em formato \texttt{.jar} (Java) em forma de executável, a extração ocorreu sem problemas, tendo os dados de saída da ferramenta gravados em arquivos isolados para posterior análise. Além disso, os resultados apresentados são os mais completos, com utilização de diversas tags XML que permitem que os dados sejam manipulados facilmente, da maneira que desejar e com uma grande riqueza de detalhes. O processo de extração dos metadados para cada artigo científico foi o mais lento das 4 (quatro) ferramentas testadas, demorando entre 15 e 20 segundos para uma completa análise de cada artigo.
+A ferramenta Cermine demonstrou-se de bem simples execução. Por se tratar de um arquivo em formato \texttt{.jar} (Java) em forma executável, a extração ocorreu de maneira fluida, com os dados de saída da ferramenta gravados em arquivos isolados para posterior comparação. Além disso, os resultados apresentados foram os mais completos, com utilização de diversas \emph{tags} XML que permitiram uma fácil manipulação dos dados, com uma grande riqueza de detalhes. O processo de extração dos metadados para a ferramenta Cermine foi o mais lento das 4 (quatro) ferramentas testadas, demorando entre 15 (quinze) e 20 (vinte) segundos para uma completa análise de cada artigo.
 
-Já a ferramenta CiteSeer foi a que mais exigiu conhecimentos técnicos específicos para que pudesse ser testada. Sua execução dependeu da instalação de diversos outros componentes e serviços de terceiros, o que contribuiu para o aumento da complexidade de seu uso. Um fato interessante é que a ferramenta utiliza de outras ferramentas para alguns processos específicos de extração, como é o caso da sessão de referências, onde também utiliza a ferramenta ParsCit para realização do processo, porém com uma forma de entrada de dados um pouco diferenciada do que quando utilizada da sua maneira original e pura.
+Já a ferramenta CiteSeer foi a que mais exigiu conhecimentos técnicos para que pudesse ser testada. Sua execução dependeu da instalação de diversos outros componentes e serviços de terceiros, o que contribuiu para um aumento da complexidade de seu uso. Um fato interessante é que a ferramenta utiliza de outras ferramentas para alguns processos específicos de extração, como é o caso da sessão de referências, onde utiliza a ferramenta ParsCit. Embora a ferramenta utilizada seja a mesma a forma de entrada de dados é diferenciada, implicando em resultados numericamente diferentes.
 
-No caso da ferramenta CrossRef algumas particularidades devem ser mencionadas. Seus resultados de extração são apresentados de maneira muito básica, com campos muito genéricos e resultados pouco precisos, dificultando um pós-processamento dos dados, visando melhores resultados. Os metadados ``autores'', ``e-mails'' e ``resumo'' não puderam ser extraídos. A versão atual de desenvolvimento da ferramenta não permite uma separação de dados muito específica, agrupando diversas informações em tags chamadas ``sections''. Estas tags possuem informações textuais de modo geral, não sendo possível serem filtradas com a utilização da própria ferramenta. Portanto, para a ferramenta CrossRef somente os metadados ``título'' e ``referências'' foram extraídos. Os resultados para a extração das referências também merecem considerações, por serem apresentados de maneira muito genérica, em uma única tag XML, sendo impossível separar título e autor dentro do texto.
+No caso da ferramenta CrossRef algumas particularidades devem ser mencionadas. Seus resultados de extração são apresentados de maneira muito básica, com campos muito genéricos e resultados pouco precisos, dificultando um pós-processamento dos dados. Os metadados ``autores'', ``e-mails'' e ``resumo'' não puderam ser extraídos. A versão atual de desenvolvimento da ferramenta não permite uma separação de dados muito específica, agrupando diversas informações em tags chamadas ``sections''. Estas tags possuem informações textuais gerais, não sendo possível serem filtradas com a utilização da própria ferramenta. Portanto, para a ferramenta CrossRef somente os metadados ``título'' e ``referências'' foram extraídos e considerados. Os resultados para a extração das referências também merecem considerações, por serem apresentados de maneira muito genérica, em uma única tag XML, sendo impossível separar título e autor dentro do conteúdo retornado.
 
-A ferramenta ParsCit também foi utilizada sem maiores dificuldades. Em virtude de sua particularidade de processar apenas arquivos de entrada em formato texto ou XML, conforme sugerido pelos desenvolvedores, foi utilizada a ferramenta de linha de comando \texttt{pdftotext} (disponível em ambiente Linux) para conversão dos arquivos \texttt{.pdf} em arquivos \texttt{.txt}, permitindo que a ferramenta fosse utilizada conforme recomendações. Esta conversão foi feita em tempo de execução e os resultados coletados e gravados com sucesso.
+A ferramenta ParsCit também foi utilizada sem maiores dificuldades. Em virtude de sua particularidade de processar apenas dados de entrada em formato texto ou XML, conforme sugerido pelos desenvolvedores, foi utilizada a ferramenta de linha de comando \texttt{pdftotext} (disponível em ambiente Linux) para conversão dos artigos em \texttt{.pdf} em arquivos \texttt{.txt}, permitindo que a ferramenta fosse utilizada conforme recomendações. Esta conversão foi feita em tempo de execução e os resultados coletados e gravados com sucesso.
 
-De modo geral, exceto pela ferramente CrossRef as demais ferramentas tiveram um processo de extração bem eficaz visualmente e dentro do esperado, em virtude da grande diferenciação visual testada com o Corpus selecionado. 
+De modo geral, exceto pela ferramenta CrossRef as demais ferramentas tiveram um processo de extração bem eficaz visualmente e dentro do esperado, em virtude da grande diferenciação visual testada com o Corpus selecionado. 
 
 % Falar das particularidades nos algoritmos de comparação (FEITO)
 
-No que diz respeito à comparação dos resultados foi necessária uma padronização dos dados para que as quatro ferramentas pudessem ser testadas de maneira uniforme. Em virtude da apresentação dos resultados bastante detalhados, a ferramenta Cermine permitiu que os autores das referências fossem retornados seguindo a forma ``primeiro nome'' e em seguida ``sobrenome''. Já as demais ferramentas não apresentaram os resultados com tantos detalhes, variando em alguns momentos a ordem e disposição do nome dos autores. Assim, foi necessário um pré-processamento computacional a fim de manter, quando possível, o primeiro nome do autor antes do sobrenome, tornando a comparação a mais padronizada possível. Este pré-processamento foi realizado para todas as ferramentas testadas.
+No que diz respeito à comparação dos resultados foi necessária uma padronização dos dados para que as quatro ferramentas pudessem ser testadas de maneira uniforme. Em virtude de apresentar resultados bastante detalhados, a ferramenta Cermine permitiu que os autores das referências fossem retornados seguindo a forma ``primeiro nome'' e em seguida ``sobrenome''. Já as demais ferramentas não apresentaram os resultados com tanta flexibilidade, variando em alguns momentos a ordem e disposição do nome dos autores. Assim, foi necessário um pré-processamento computacional a fim de manter, quando possível, o primeiro nome antes do sobrenome, tornando as comparações mais padronizadas e justas. Este pré-processamento foi realizado para todas as ferramentas testadas.
 
-Já para a extração do metadado ``e-mails'', algumas ferramentas extraíram mais informações em conjunto, como foi o caso de algumas poucas extrações realizadas pela ferramenta Cermine. Em um destes casos a ferramenta retornou como e-mail o seguinte conteúdo: \texttt{Email: mvpein@yahoo.com}. Assim, sempre visando a comparação justa entre as ferramentas foi realizada uma análise em todas as comparações deste metadado para que somente pudessem ser comparados endereços de e-mails, o que tornou o processo bem simplificado e justo. Os endereços de e-mail foram filtrados destas extrações com a utilização de expressão regular (\autoref{sssec:regular-expressions}) de maneira a conseguir um conjunto homogêneo de dados comparados.
+Já para a extração do metadado ``e-mails'', algumas ferramentas extraíram mais informações em conjunto, como foi o caso de algumas poucas extrações realizadas pela ferramenta Cermine. Em um destes casos a ferramenta retornou como e-mail o seguinte conteúdo: \texttt{Email: mvpein@yahoo.com}. Assim, sempre visando uma justa comparação entre as ferramentas foi realizada uma análise em todos os resultados deste metadado para que somente pudessem ser comparados endereços de e-mails, o que tornou o processo bem simplificado e correto. Os endereços de e-mail foram filtrados com a utilização de expressão regular (\autoref{sssec:regular-expressions}) alcançando um conjunto homogêneo de dados comparados.
 
-Os demais metadados foram comparados sem problemas. O metadado ``título'' foi comparado sem sua pontuação final, retirando, antes da comparação, qualquer caractere passível de erros como: asteriscos, pontos finais e espaços em branco. O resultado das extrações dos título foi feito seguindo a lógica anteriormente apresentada, comparando a similaridade entre os dois conteúdos através da função \texttt{similar\_text} da linguagem de programação PHP, que apresenta como resultado um valor numérico representando o percentual de similaridade. Esta mesma lógica descrita foi aplicada para o metadado ``resumo''.
+Os demais metadados foram comparados sem problemas. O metadado ``título'' foi utilizado sem sua pontuação final, retirando antes da comparação qualquer caractere passível de erros como: asteriscos, pontos finais e espaços em branco. O resultado das extrações dos título foi feito seguindo a lógica anteriormente apresentada, comparando a similaridade entre os dois textos através do uso da função \texttt{similar\_text} da linguagem de programação PHP, que apresenta como resultado um valor numérico representando o percentual de similaridade. Esta mesma lógica descrita foi aplicada para o metadado ``resumo''.
 
-Os nomes dos autores foram comparados seguindo a mesma lógica do metadado ``título'', porém levando em consideração a ordem de apresentação e extração dos mesmos. Sendo assim, além de verificar a similaridade entre os nomes os testes foi levada em consideração a ordem de apresentação dada pelas ferramentas, requisito necessário para uma extração de sucesso.
+Os nomes dos autores foram comparados seguindo a mesma lógica do metadado ``título'', porém levando em consideração a ordem de apresentação e extração dos mesmos. Sendo assim, além de verificar a similaridade entre os nomes os testes levaram em consideração a ordem de apresentação dos resultados de cada ferramenta.
 
 % Falar também da questão dos nomes dos autores com acentos, no caso de autores russos, croatas e latinos. Algumas ferramentas retornaram os resultados sem acento o que implica em uma comparação menos precisa. (FEITO)
 
-Dentro do corpus escolhido diversos nomes de autores continham acentos e caracteres característicos de seu idioma de origem, como é o caso da autora polonesa ``Anna Białk-Bielińska''. Em virtude desta questão, as ferramentas se comportaram de maneiras bem distintas. Algumas conseguiram extrair os nomes de acordo com o artigo original, porém, outras substituíram caracteres como ``ń'' por apenas ``n'', ou ainda ``n´'', ainda que algumas ferramentas simplesmente desprezaram estes caracteres.
+Dentro do Corpus escolhido diversos nomes de autores continham acentos e caracteres característicos de seu idioma de origem, como é o caso da autora polonesa ``Anna Białk-Bielińska''. Em virtude desta questão, as ferramentas se comportaram de maneiras distintas. Algumas conseguiram extrair os nomes como no artigo original, porém, outras substituíram caracteres como ``ń'' por apenas ``n'', ou ainda ``n´''. Algumas ferramentas simplesmente desprezaram estes caracteres.
 
-No caso específico do metadado ``e-mail'' a comparação foi realizada com base na identificação correta ou não do endereço eletrônico. Neste caso não foi considerada a porcentagem de similaridade entre os resultados, ou seja, ou o endereço foi corretamente identificado ou não. Para estes resultados foram utilizados os inteiros 0 (zero) para a extração ineficiente e 100 (cem) para a extração eficiente.
+No caso específico do metadado ``e-mail'' a comparação foi realizada com base na identificação correta ou não do endereço eletrônico. Neste caso não foi considerada a porcentagem de similaridade entre resultados, ou seja, o endereço foi corretamente identificado ou não. Para estes resultados foram utilizados os inteiros 0 (zero) para a extração ineficiente e 100 (cem) para a extração eficiente.
 
 % Falar que considerei apenas os artigos que possuem email. Os que não tinha o cálculo da média desconsidera os resultados, marcando-os como -1. (FEITO)
 
-Uma grande parte dos artigos utilizados no Corpus deste trabalho não possuía informações de e-mail dos autores. Desta forma, as extrações destes documentos foram desconsideradas, permitindo que as ferramentas tivessem seus resultados avaliados apenas para as extrações realmente computadas, valorizando ainda mais o trabalho de cada uma.
+Uma grande parte dos artigos utilizados no Corpus deste trabalho não continha informações de e-mail dos autores. Desta forma, as extrações destes documentos foram desconsideradas, permitindo que as ferramentas tivessem seus resultados avaliados apenas para as extrações realmente computadas, valorizando ainda mais o trabalho de cada uma.
 
 % Sobre a comparação dos Títulos (FEITO)
 
-Já para a comparação das referências foram utilizadas duas informações: o título e o nome dos autores. Para o caso do título, a lógica utilizada foi a mesma utilizada no metadado ``título'', utilizando-se de um valor percentual para representação da similaridade entre os dados comparados. Já para o nome dos autores, a lógica seguiu a mesma do metadado ``autores'', onde é levado em consideração tanto a similaridade textual como também a ordem de apresentação. Deste modo, a extração de cada referência levou em consideração um peso de 60\% do resultado para o título e 40\% para os nomes dos autores, chegando em um numero final que representa o resultado da extração de cada referência identificada.
+Já para a comparação das referências foram utilizadas duas informações: o título e o nome dos autores. Para o caso do título das referências, a lógica utilizada foi a mesma para o metadado ``título'', utilizando-se de um valor percentual representando a similaridade entre os dados comparados. Já para o nome dos autores, a lógica seguiu a mesma do metadado ``autores'', onde foram consideradas tanto a similaridade textual como também a ordem de apresentação. Deste modo, a extração de cada referência considerou um peso de 60\% do resultado para o título e 40\% para os nomes dos autores, chegando em um numero final que representasse o resultado da extração de cada referência comparada.
 
 % Resultados das comparações (FEITO)
 
-Com os dados de cada extração armazenados a comparação foi feita de maneira automática levando em consideração todos os pontos apresentados acima. Para cada subárea do conhecimento foi realizada uma comparação, registrando o resultado consolidado para cada artigo extraído, bem como a média aritmética dos resultados daquela subárea em específico. Portanto, para cada ferramenta e para cada subárea foi registrado um valor médio dos resultados.
+Com os dados de cada extração armazenados a comparação foi feita de maneira automática levando em consideração todos os pontos apresentados acima. Para cada subárea do conhecimento foi realizada uma comparação, registrando o resultado consolidado para cada artigo extraído, bem como a média aritmética dos resultados daquela subárea em específico. Portanto, para cada ferramenta e subárea, foi registrado um valor médio dos resultados.
 
-Posteriormente foi feita a coleta destes dados separados por subáreas, porém consolidando-os para cada ferramenta. Assim foi calculada a média aritmética dos resultados de cada ferramenta para todas as subáreas analisadas, chegando então a uma nota final para cada ferramenta em cada metadado extraído, possibilitando então o cálculo do ``Índice de Confiabilidade'' (\autoref{ssec:confiability-index}).
+Posteriormente foi feita a coleta destes dados separados por subáreas, porém consolidando-os para cada ferramenta. Assim, foi calculada a média aritmética dos resultados de cada ferramenta para todas as subáreas analisadas, chegando então a uma nota final em cada metadado extraído, possibilitando então o cálculo do ``Índice de Confiabilidade'' (\autoref{ssec:confiability-index}) para cada ferramenta.
 
 % Trabalhar as evidências de que sua hipótese é verdadeira
 
@@ -60,12 +60,12 @@ Posteriormente foi feita a coleta destes dados separados por subáreas, porém c
 
 % Apresentar dados, testes, provas, estudos de caso, etc
 
-Conforme esperado os resultados foram coletados de maneira individualizada, para cada artigo, e consolidados de maneira geral para cada ferramenta e para cada metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separadas por cada uma das ferramentas. 
+Conforme esperado os resultados foram coletados de maneira individualizada - para cada artigo - e consolidados de maneira geral para cada ferramenta e metadado. Os resultados apresentados por área do conhecimento estão presentes em 4 (quatro) tabelas, separadas por cada uma das ferramentas. 
 
 Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cermine}. Os resultados da CiteSeer estão na \autoref{tab:results-citeseer}. Os resultado da ferramenta CrossRef na \autoref{tab:results-crossref} e da ParsCit na \autoref{tab:results-parscit}. Todas as tabelas mostram o percentual de acerto separados por subárea do conhecimento e por metadados, representados pelas colunas Tit. (Título),  Aut. (Autores), Ema. (E-mails), Res. (Resumo) e Ref. (Referências).
 
 \begin{table}
-    \caption{Resultados da Cermine por subárea do conhecimento.}
+    \caption{Resultados da ferramenta Cermine por subárea do conhecimento.}
     \begin{center}
         \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
             \hline 
@@ -77,7 +77,7 @@ Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cer
 \end{table}
 
 \begin{table}
-    \caption{Resultados da CiteSeer por subárea do conhecimento.}
+    \caption{Resultados da ferramenta CiteSeer por subárea do conhecimento.}
     \begin{center}
         \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
             \hline 
@@ -89,7 +89,7 @@ Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cer
 \end{table}
 
 \begin{table}
-    \caption{Resultados da CrossRef por subárea do conhecimento.}
+    \caption{Resultados da ferramenta CrossRef por subárea do conhecimento.}
     \begin{center}
         \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
             \hline 
@@ -101,7 +101,7 @@ Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cer
 \end{table}
 
 \begin{table}
-    \caption{Resultados da ParsCit por subárea do conhecimento.}
+    \caption{Resultados da ferramenta ParsCit por subárea do conhecimento.}
     \begin{center}
         \begin{tabular}{|p{6cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|C{1.2cm}|}
             \hline 
@@ -114,7 +114,7 @@ Os resultados da ferramenta Cermine estão presentes na \autoref{tab:results-cer
 
 % Conceitos criados pelo autor (FEITO)
 
-Para que os resultados pudessem ser melhores interpretados foi calculado o ``Índice de Confiabilidade'' de cada ferramenta, detalhado no capítulo de Metodologia (\autoref{ssec:confiability-index}). Para calcular este índice foram utilizadas as médias dos resultados de extração de todas as subáreas, tomando os devidos pesos para cada metadado, obtendo-se então uma nota geral para cada ferramenta. Os resultados calculados para este índice estão presentes na \autoref{tab:conf-index-results}.
+Para que os resultados pudessem ser melhores interpretados foi calculado o ``Índice de Confiabilidade'' de cada ferramenta, detalhado no capítulo de Metodologia (\autoref{ssec:confiability-index}). Para calcular este índice foram utilizadas as médias dos resultados de extração de todas as subáreas, com os devidos pesos para cada metadado, obtendo-se então uma nota geral para cada ferramenta. Os resultados calculados para este índice estão presentes na \autoref{tab:conf-index-results}.
 
 \begin{table}
     \caption{Índice de Confiabilidade de cada ferramenta}
@@ -128,7 +128,7 @@ Para que os resultados pudessem ser melhores interpretados foi calculado o ``Ín
     \label{tab:conf-index-results}
 \end{table}
 
-De posse do ``Índice de Confiabilidade'' de cada ferramenta, conforme previsto na \autoref{ssec:confiability-index}, cada ferramenta foi classificada, de acordo com seus resultados de extração. Estes resultados e suas respectivas classificações estão presentes na \autoref{tab:tool-classification}.
+De posse do ``Índice de Confiabilidade'' de cada ferramenta, conforme previsto na \autoref{ssec:confiability-index}, cada uma foi classificada de acordo com seus resultados de extração. Estes resultados e suas respectivas classificações estão presentes na \autoref{tab:tool-classification}.
 
 \begin{table}
     \caption{Classificação de cada ferramenta.}
