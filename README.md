@@ -21,3 +21,5 @@ This LaTeX project includes all files used in my Masters' thesis, including some
 ## Licence
 
 You can use this project to create your own Masters' thesis in LaTeX, including the main configuration file and file structure, if you want to.
+
+[MIT License](http://mit-license.org/) © Junior Grossi
