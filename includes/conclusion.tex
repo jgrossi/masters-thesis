@@ -27,7 +27,7 @@ Embora estes resultados da extração da ferramenta CrossRef não tenham sido po
 
 Para os artigos encontrados na base de dados do CrossRef é possível obter, inclusive, a descrição de cada um em formato BibTeX. Para este trabalho, em virtude dos poucos resultados obtidos, e por se tratar de um Corpus específico, esta funcionalidade não foi utilizada na extração ou na comparação dos resultados para esta ferramenta.
 
-Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 3 subáreas do conhecimento, porém para metadados diferentes.
+Em se tratando da separação dos resultados por área do conhecimento as ferramentas Cermine e CiteSeer obtiveram destaque, conseguindo 100\% de acertos em 4 (quatro) subáreas do conhecimento - Arquitetura e Urbanismo, Geologia, Fonoaudiologia, e Ciência da Computação -, porém para metadados diferentes.
 
 A ferramenta Cermine acertou todos os títulos das áreas de Arquitetura e Urbanismo e Fonoaudiologia, além de 100\% dos nomes dos autores da área de Geologia. A ferramenta CiteSeer conseguiu precisão total na extração dos títulos de Arquitetura e Urbanismo, Ciência da Computação e Fonoaudiologia. 
 
@@ -67,7 +67,7 @@ Os resultados para as referências foram semelhantes aos obtidos pela ferramenta
 
 Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools}, \ref{tab:areas-authors-tools}, \ref{tab:areas-emails-tools}, \ref{tab:areas-abstract-tools} e \ref{tab:areas-references-tools} apresentam as ferramentas que obtiveram os melhores resultados para cada subárea do conhecimento, separados por metadado. 
 
-\begin{table}
+\begin{table}[h!]
     \caption{Melhores ferramentas para o metadado ``Título''}
     \begin{center}
         \begin{tabular}{|l|c|c|}
@@ -95,7 +95,7 @@ Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools
     \label{tab:areas-title-tools}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Melhores ferramentas para o metadado ``Autores''}
     \begin{center}
         \begin{tabular}{|l|c|c|}
@@ -123,7 +123,7 @@ Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools
     \label{tab:areas-authors-tools}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Melhores ferramentas para o metadado ``E-mails''}
     \begin{center}
         \begin{tabular}{|l|c|c|}
@@ -151,7 +151,7 @@ Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools
     \label{tab:areas-emails-tools}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Melhores ferramentas para o metadado ``Resumo''}
     \begin{center}
         \begin{tabular}{|l|c|c|}
@@ -179,7 +179,7 @@ Para melhor visualização dos resultados, as Tabelas \ref{tab:areas-title-tools
     \label{tab:areas-abstract-tools}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Melhores ferramentas para o metadado ``Referências''}
     \begin{center}
         \begin{tabular}{|l|c|c|}
@@ -237,11 +237,11 @@ Embora este trabalho tenha abrangido 16 (dezesseis) subáreas do conhecimento, c
 
 Poderia-se pensar em trabalhos mais detalhados para cada subárea do conhecimento, permitindo testar uma maior quantidade de artigos e padrões, de maneira a obter resultados mais próximos da realidade de cada área. Assim, seria possível identificar o comportamento destas ferramentas para cada área em específico, com um Corpus bem maior e variado, porém mais direcionado.
 
-Um outro estudo possível seria a comparação por revistas ou bases de dados. Embora a diferenciação de leiaute para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual, permitindo adaptações mais precisas para as extrações destes documentos. 
+Um outro estudo possível seria a comparação por periódicos (revistas) ou bases de dados. Embora a diferenciação de leiaute para uma área do conhecimento seja muito ampla, geralmente existe uma padronização visual para uma determinada base, como é o caso da Elsevier \url{http://www.elsevier.com}, onde, independente da área do conhecimento, os artigos passam por uma padronização visual, permitindo adaptações mais precisas para as extrações destes documentos. 
 
 Apesar de selecionadas as quatro ferramentas aqui comparadas, existem muitas outras ferramentas que merecem atenção, possibilitando um estudo de caso focado para uma determinada ferramenta, aprofundando muito mais suas características, funcionalidades e implementações, permitindo conclusões mais direcionadas e críticas mais precisas.
 
-Seria ainda interessante estender a pesquisa considerando possíveis variações na extração manual dos metadados. Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados, o que poderia alterar os resultados apresentados.
+Seria ainda interessante estender a pesquisa considerando possíveis variações na extração manual dos metadados. Embora os dados tenham sido extraídos de maneira bem cautelosa é possível que as mesmas extrações, realizadas por pessoas diferentes, produzam resultados variados, o que poderia alterar em pequena proporção os resultados apresentados.
 
 \section{Considerações Finais}
 \label{sec:final-considerations}

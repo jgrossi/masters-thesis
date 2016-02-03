@@ -36,7 +36,7 @@ Este padrão se originou após uma série de encontros feitos desde 1995, unindo
 
 Os quinze elementos que fazem parte do padrão Dublin Core compartilham de um vasto conjunto de vocabulários de metadados. Suas especificações técnicas são mantidas pela \emph{Dublin Core Metadata Initiative} (DCMI), agência responsável pela definição destes elementos.
 
-Este padrão é utilizado nos dias atuais para se representar um recurso na Internet \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, apresentados em forma de metadados. 
+Este padrão é utilizado para se representar um recurso na Internet \cite{dublin-core-1-1}. Com base em suas características, mecanismos de buscas podem indexar um recurso de maneira mais rápida e precisa, pois este é acompanhado de pequenas sinalizações sobre seu conteúdo, apresentados em forma de metadados. 
 
 Para cada elemento descrito pelo padrão temos informações como: 
 
@@ -118,7 +118,7 @@ Além das repetições, em alguns momentos necessitamos identificar um número e
 
 Desta forma podemos consolidar as formas de repetição em Expressões Regulares com base na \autoref{tab:regex-repeticao}.
 
-\begin{table}
+\begin{table}[h!]
     \caption{Formas de representação de repetições em Expressões Regulares.}
     \begin{center}
         \begin{tabular}{|c|l|}
@@ -146,7 +146,7 @@ Desta forma podemos consolidar as formas de repetição em Expressões Regulares
 
 Além dos dígitos podemos representar também caracteres puros, utilizando-se também do operador \texttt{|} (chamado \emph{pipe} em inglês), que representa alternância, usado quando temos mais de uma opção. Tomemos a frase ``O amor da vida de Ana se chama Paulo''. Para identificar o reconhecimento dos nomes próprios nesta frase podemos utilizar o padrão \texttt{/Ana|Paulo/}, que quer dizer ``Ana \underline{ou} Paulo''.
 
-Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - iríamos ser capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
+Utilizando-se do caractere de alternância \texttt{|} ainda podemos utilizá-lo em conjunto com outros caracteres. Na expressão regular \texttt{/abaca(te|xi)/}, podemos identificar as palavras ``abacate'' ou ``abacaxi'', preservando os caracteres \texttt{abaca} e alternando entre as opções \texttt{te} ou \texttt{xi}. Neste caso utilizamos parênteses para representar grupos de caracteres. Caso utilizássemos o padrão sem os parênteses - \texttt{abacate|xi} - somos capazes de identificar apenas as palavras ``abacate'' ou a palavra ``xi''.
 
 A aplicação de expressão regular é bastante variada, existindo diversas formas de representação de qualquer padrão necessário. Além dos detalhes já explicados acima, existem os chamados ``metacaracteres'', que possuem significados definidos em uma expressão regular, assim como \texttt{+} e \texttt{?}, mas com outras formas de representação e objetivos.
 
@@ -168,7 +168,7 @@ Em virtude da existência dos ``metacaracteres'' - os caracteres especiais que p
 
 Assim como vimos a utilização de \texttt{0-9} para representação de dígitos, temos outras representações, tanto para indicar letras maiúsculas quanto minúsculas, utilizando de \texttt{A-Z} e \texttt{a-z}, respectivamente. Sendo assim, podemos identificar dígitos, letras minúsculas e maiúsculas com a expressão regular \texttt{/[A-Za-z0-9]+/}. Além disso, no padrão POSIX podemos representar conjuntos de letras e números de outras formas chamadas ``classes'', como pode ser verificado na \autoref{tab:posix-classes}.
 
-\begin{table}
+\begin{table}[h!]
     \caption{Classes do padrão POSIX.}
     \begin{center}
         \begin{tabular}{|l|p{6cm}|l|}
@@ -200,7 +200,7 @@ Assim como vimos a utilização de \texttt{0-9} para representação de dígitos
 
 % Falar de flags também -> não incluído por ser específico de linguagens de programação
 
-As aplicações de Expressões Regulares são infinitas, sendo capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras, o que facilita muito o reconhecimento de padrões, inclusive para a área de extração de dados.
+As aplicações de Expressões Regulares são muito amplas, sendo capazes de identificar qualquer sequência que possa ser representada em forma de texto, como telefones, endereços, dentre outras, o que facilita muito o reconhecimento de padrões, inclusive para a área de extração de dados.
 
 % Escrever sobre
 
@@ -220,7 +220,7 @@ Esta técnica analisa diversos campos chamando-os de classes, e atribui a cada u
 Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para esta definição do cabeçalho de um documento. Porém, destas somente 4 (quatro) correspondem ao padrão da Dublin Core e estão ilustradas na \autoref{tab:svm-classes}. Estas também foram as \textit{tags} utilizadas por Han na extração de metadados dos cabeçalhos de artigos científicos \cite{Han-SVM}.
 
 
-\begin{table}
+\begin{table}[h!]
     \caption{Relação de classes utilizadas e comparação com o padrão Dublin Core.}
     \begin{center}
         \begin{tabular}{|C{3cm}|C{3cm}|p{7cm}|}
@@ -247,7 +247,7 @@ Seymore et al. \cite{Seymore-HMM-IE} definiram 15 (quinze) \textit{tags} para es
 
 A ocorrência dos campos é mapeada em uma representação bidimensional, o que permite identificar visualmente os padrões encontrados na análise de cada classe. Desta forma, com a visualização do posicionamento de cada ocorrência é possível obter uma distância clara entre os pontos de reconhecimento, chamada pelo autor de \textit{hyperplanes} \cite{Vapnik-SVM}. Por sua vez, estes pontos são marcados como sendo os ``support vectors'', e permitem que o \textit{hyperplane} entre eles determine a divisão entre as classes de forma clara e eficaz, como pode ser visto na \autoref{fig:svm-graph}. Esta divisão permite então a distinção entre os metadados, diferenciando os elementos analisados pelo algoritmo.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Distância representando a separação entre classes na técnica de SVM.}
     \includegraphics[width=0.6\linewidth]{./assets/images/svm-graph}
@@ -304,7 +304,7 @@ Seguindo este padrão o HMM pode ser utilizado, por exemplo, para reconhecimento
 
 Já no âmbito da extração da informação, o HMM pode ser aplicado conforme é apresentado por Seymore et al. \cite{Seymore-HMM-IE}, onde um modelo construído manualmente contendo múltiplos estados por campos (título, autor, etc), pode ser mais eficiente do que um modelo com somente um estado por campo. 
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Exemplo de modelo HMM, onde ``X'' são os estados, ``Y'' as observações possíveis, ``A'' as probabilidades de mudança de estado e ``B'' as saídas destas probabilidades.}
     \label{fig:hmm-states}
@@ -312,7 +312,7 @@ Já no âmbito da extração da informação, o HMM pode ser aplicado conforme �
     \center\footnotesize{Fonte: Wikipedia / Hidden Markov Model \url{http://goo.gl/pI3XUU}}
 \end{figure}
 
-Um dos pontos positivos deste modelo é que por ser baseado em estatística ele é muito bem empregado em problemas de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem desta técnica podemos citar o fato de, por ser baseada em estatística matemática, uma grande quantidade prévia de dados deve ser utilizada - a título de treino - para se obter padrões significativos para então ser aplicados de maneira final na criação dos modelos.
+Um dos pontos positivos deste modelo é que, por ser baseado em estatística, ele é muito bem empregado em problemas de linguagem natural, aliando os resultados positivos à excelente performance computacional. Como desvantagem desta técnica podemos citar o fato de, por ser baseada em estatística matemática, uma grande quantidade prévia de dados deve ser utilizada - a título de treino - para se obter padrões significativos para então ser aplicados de maneira final na criação dos modelos.
 
 Deste modo, para extração dos metadados, o HMM pode ser utilizado aplicando-se um marcador (\textit{label}) em cada palavra do cabeçalho de um documento (artigo científico), relacionando cada palavra a uma classe, como título, autor, etc. Assim, pode-se criar um modelo com \texttt{N} estados, onde cada estado corresponde a uma classe que se deseja extrair - por exemplo, o título do documento. Porém, no caso da existência de sequências ocultas (\textit{hidden sequences}) - o que alteraria a seleção do estado seguinte - a utilização de vários estados para cada classe traria resultados melhores \cite{Seymore-HMM-IE}.
 
@@ -342,7 +342,7 @@ Uma outra utilização de HMM na extração de informação é descrita por \cit
 
 Neste caso são estipulados quatro estados para o modelo: \textit{Background}, \textit{Prefix}, \textit{Suffix} e \textit{Target}. O \textit{Target} é o estado responsável pela emissão do símbolo - chamado pelo autor de \textit{token} - para o ``campo-alvo''. O \textit{Prefix} e \textit{Suffix} são estados que emitem símbolos que aparecem respectivamente antes e depois desse campo-alvo. Todos os demais símbolos são emitidos no estado \textit{Background}. A relação entre os estados pode ser visualizada na \autoref{fig:zhang-hmm-ie}.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Estados utilizados por \cite{Zhang-HMM-IE} em seu modelo HMM.}
     \label{fig:zhang-hmm-ie}
@@ -373,7 +373,7 @@ Han et al. agruparam bases de dados de domínios diversos incluindo também prop
 
 Como exemplo, a palavra ``Mary'' faz parte do \textit{cluster} de ``nomes''. Portanto, existe uma probabilidade maior de ela, juntamente com seu grupo de palavras ao redor, fazer parte da classe ``autor'', por exemplo. Esta lógica é apresentada também para outras classes, como ``e-mail'' por exemplo, que pode ser identificado com a presença do caractere ``@'', levando à utilização de expressões regulares para encontrar padrões de ocorrências (\autoref{sssec:regular-expressions}).
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{\emph{Workflow} da extração de metadados usando \textit{cluster} de palavras.}
     \label{fig:workflow-rule-based}
@@ -409,7 +409,7 @@ CRFs é um framework proposto por Lafferty et al. \cite{Lafferty-CRF} criado par
 
 Esta técnica oferece algumas vantagens se comparada com técnicas mais tradicionais, como HMM (\autoref{sssec:hmm}), se destacando a habilidade de diminuir pressupostos independentes feitos nestes modelos \cite{Lafferty-CRF}.
 
-Modelos baseados em HMM possuem uma fraqueza, que é o problema denominado \textit{bias problem}. As transições de um estado somente competem entre elas, e não com todas as transições presentes no modelo. Elas são feitas com base probabilística de acordo com o estado inicial e a sequência de observação (\textit{observation sequence}).
+Modelos baseados em HMM possuem uma fraqueza, que é o problema denominado \textit{bias problem}. As transições de um estado somente competem entre elas, e não com todas as transições presentes no modelo. Elas são feitas com base probabilística de acordo com o estado inicial e a sequência de observação (\textit{observation sequence}) \cite{Lafferty-CRF}.
 
 Desta forma, devido ao \textit{bias problem}, em um caso extremo, um estado que tiver como opção de transição somente um outro estado, pode simplesmente ignorar a sequência de observação, o que traria efeitos contrários aos objetivos do processo inicial.
 
@@ -449,7 +449,7 @@ Os autores definem quatro diferentes transições de estado para diferentes clas
     \item \emph{\textbf{Third-order:}} os dados de entrada são examinados no contexto do estado atual e de dois estados anteriores.
 \end{enumerate}
 
-Para a extração destes dados Peng et al. também consideram como sendo o cabeçalho de um artigo como sendo a parte inicial do documento até a introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
+Para a extração destes dados Peng et al. \cite{Peng-CRF-IE} também consideram como sendo o cabeçalho de um artigo como sendo a parte inicial do documento até a introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
 
 Para extração dos metadados dos cabeçalhos foi utilizado um \emph{dataset} com 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para o \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
 
@@ -469,7 +469,7 @@ Conforme pode-se observar na \autoref{tab:crf-results-headers} e \autoref{tab:cr
 
 Pode-se observar também que a utilização de modelos HMM para precisão de palavras (campos com poucas palavras, onde a precisão é muito mais importante) é, de modo geral, pior do que quando utiliza-se de SVMs (coluna F1 da \autoref{tab:crf-results-headers}). Por outro lado, no campo \emph{abstract} HHM possui performance bem melhor que quando utilizado SVM (98\% contra 93,8\%).
 
-\begin{table}
+\begin{table}[h!]
     \caption{Resultados de extração para CRFs após análise do \emph{dataset} com cabeçalhos \cite{Peng-CRF-IE}.}
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|c|} \hline             
@@ -497,7 +497,7 @@ Pode-se observar também que a utilização de modelos HMM para precisão de pal
     \label{tab:crf-results-headers}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Resultados de extração para CRFs após análise do \emph{dataset} com referências \cite{Peng-CRF-IE}.}
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|} \hline             
@@ -553,17 +553,17 @@ Visando um reconhecimento maior dos resultados obtidos, Granitzer et al. realiza
 
 Este trabalho \cite{Granitzer-2012-LayoutBased} é uma continuação do trabalho anteriormente realizado \cite{Granitzer-2012-Crowdsourced}, onde as ferramentas Mendeley Desktop (\autoref{ssec:mendeley}) e ParsCit (\autoref{ssec:parscit}) foram comparadas, utilizando, porém, um \emph{dataset} menor. Desta vez foi incluída a técnica de Conditional Random Fields (CRF) na comparação que, de acordo com a literatura mencionada neste trabalho, possui resultados melhores do que a utilização de Hidden Markov Models (HMMs - \autoref{sssec:hmm}).
 
-Foram analisadas 20.672 publicações do \emph{dataset} Mendeley, abrangendo diversas áreas do conhecimento como Ciência de modo geral, Ciência da Computação, Biomedicina e Física. Já no \emph{dataset} e-Prints foram analisadas 2.452 publicações de áreas como Física, Medicina e diversas outras pertencentes ao IEEE, ligadas geralmente à área de computação.
+Foram analisadas 20.672 publicações do \emph{dataset} Mendeley \cite{Granitzer-2012-LayoutBased}, abrangendo diversas áreas do conhecimento como Ciência de modo geral, Ciência da Computação, Biomedicina e Física. Já no \emph{dataset} e-Prints foram analisadas 2.452 publicações de áreas como Física, Medicina e diversas outras pertencentes ao IEEE, ligadas geralmente à área de computação.
 
 Foi relatado que uma das etapas principais para um bom processamento e uma boa precisão é o ``pós-processamento''. A aplicação de diversas análises (inclusive matemáticas) nos resultados extraídos garante um conjunto de dados de saída muito melhor e mais acurado. Segundo Granitzer et al. \cite{Granitzer-2012-LayoutBased} estas tarefas são de responsabilidade do setor de engenharia, onde diversos detalhes devem ser observados e diversos algoritmos aplicados.
 
-De modo geral, os resultados obtidos pelas ferramentas Mendeley e ParsCit foram considerados ruins para os grupos pertencentes à área médica \cite{Granitzer-2012-LayoutBased}. Porém, estes resultados poderiam ser melhorados com um novo treino dos dados (\emph{training set}), com aplicações específicas para aquela área do conhecimento, no caso, a medicina. Outro ponto interessante observado foi o fato de a extração dos títulos ter ocorrido mais facilmente do que a extração dos autores, variando a performance dos resultados em função da técnica utilizada.
+De modo geral, os resultados obtidos pelas ferramentas Mendeley e ParsCit foram considerados ruins para os grupos pertencentes à área médica \cite{Granitzer-2012-LayoutBased}. Porém, estes resultados poderiam ser melhorados com um novo treino dos dados (\emph{training set}), com aplicações específicas para aquela área do conhecimento, no caso, a medicina. Outro ponto interessante observado \cite{Granitzer-2012-LayoutBased} foi o fato de a extração dos títulos ter ocorrido mais facilmente do que a extração dos autores, variando a performance dos resultados em função da técnica utilizada.
 
 Para os outros grupos os resultados foram bem positivos, observando uma pequena diferença entre os números obtidos com as ferramentas Mendeley e ParsCit, que foram muito superiores aos resultados da implementação CRF dos autores. Isso se deve ao fato das duas ferramentas anteriores utilizarem de pós-processamento dos dados, o que garantiu aos resultados obtidos uma precisão muito maior \cite{Granitzer-2012-LayoutBased}.
 
 De acordo com Granitzer et al., mesmo a técnica de CRF possuindo melhores modelos de extração de informação, foi-se observado que a técnica de SVM utilizada pelo Mendeley Desktop supera a CRF no que tange extração de metadados \cite{Granitzer-2012-LayoutBased}.
 
-A ferramenta ParsCit de modo geral não teve resultados melhores que o Mendeley Desktop. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas obtiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
+A ferramenta ParsCit de modo geral não teve resultados melhores que o Mendeley Desktop \cite{Granitzer-2012-LayoutBased}. Para a área de Ciência da Computação, mais especificamente na base de dados do IEEE, ambas as ferramentas obtiveram excelentes resultados. Já na base de dados da ACM o Mendeley obteve melhores resultados do que o ParsCit \cite{Granitzer-2012-LayoutBased}.
 
 \section{Ferramentas de Extração de Metadados}
 \label{sec:environments}
@@ -589,7 +589,7 @@ Seu mecanismo considera arquivos PDF em forma textual, sem a utilização de ima
 
 Com estas regiões definidas o Cermine extrai as informações com base em padrões preestabelecidos, gerando resultados para os metadados e referências encontradas. O formato de saída dos resultados é no formato XML, permitindo que possam ser compartilhados com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de programação. A \autoref{fig:cermine-workflow} demonstra como o processo de extração do Cermine funciona.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Cermine Extraction Workflow}
     \label{fig:cermine-workflow}
@@ -637,7 +637,7 @@ Assim, eles chegam à conclusão que, em virtude das diferentes formas de proces
 \subsection{Mendeley}
 \label{ssec:mendeley}
 
-Mendeley é um dos projetos mais complexos e completos da atualidade. Além de uma poderosa ferramenta na extração de metadados o projeto se transformou em uma plataforma completa para pesquisadores. Sua pesquisa se iniciou em novembro de 2007 por três estudantes alemães de doutorado, tendo sua primeira versão lançada em agosto de 2008. Em 2013 o projeto foi vendido para uma empresa privada, que passou a liderar o processo de criação e desenvolvimento. Atualmente o Mendeley é um projeto amplo, porém estritamente comercial, que possui uma plataforma de pesquisa e gestão de documentos como seu principal produto ofertado.
+Além de uma ferramenta de extração de metadados o Mendeley se transformou em uma plataforma para pesquisadores. Sua pesquisa se iniciou em novembro de 2007 por três estudantes alemães de doutorado, tendo sua primeira versão lançada em agosto de 2008. Em 2013 o projeto foi vendido para uma empresa privada, que passou a liderar o processo de criação e desenvolvimento. Atualmente o Mendeley é um projeto amplo, porém estritamente comercial, que possui uma plataforma de pesquisa e gestão de documentos como seu principal produto ofertado.
 
 Os serviços oferecidos possuem modalidades grátis e paga, de acordo com a necessidade de cada usuário. Assim como o CiteULike (\autoref{ssec:citeulike}) o projeto se tornou referência no meio acadêmico, sendo utilizado e comentado por diversos pesquisadores. Em virtude de seu objetivo comercial a ferramenta não possui código aberto atualmente, o que não permite seu uso sem ser através do serviço oferecido pela empresa.
 
@@ -733,7 +733,7 @@ O projeto analisa o documento em partes:
 
 Um dos detalhes importantes do projeto é a identificação das \textit{tags} de citações, que são as representações visuais quando um outro documento é referenciado, como por exemplo: [4], [Giles997] ou ``Marr 1982''. Estes pequenos pedaços de texto permitem ao CiteSeer identificar a relação entre documentos, permitindo assim que suas análises sejam realizadas de maneira objetiva.
 
-Uma das dificuldades relatadas durante o desenvolvimento do projeto é a identificação de artigos iguais com formas de escrita e informações diferentes. Alguns artigos podem vir com autores com sobrenomes utilizando abreviação, ou até mesmo em ordem diferente. A fim de aumentar esta identificação alguns passos a mais são realizados, como a conversão para caixa baixa de todas as letras, remoção de hifens e das próprias \textit{tags} de citação, expansão de abreviaturas e remoção de algumas palavras externas como ``\textit{volume}'', ``\textit{pages}'' e ``\textit{number}'', por exemplo.
+Uma das dificuldades relatadas durante o desenvolvimento do projeto é a identificação de artigos iguais com formas de escrita e informações diferentes. Essa problemática é muito discutida na área de Ciência da Informação, que busca soluções eficazes para a desambiguação e identificação de homônimos. Alguns artigos podem vir com autores com sobrenomes utilizando abreviação, ou até mesmo em ordem diferente. A fim de aumentar esta identificação alguns passos a mais são realizados, como a conversão para caixa baixa de todas as letras, remoção de hifens e das próprias \textit{tags} de citação, expansão de abreviaturas e remoção de algumas palavras externas como ``\textit{volume}'', ``\textit{pages}'' e ``\textit{number}'', por exemplo.
 
 O CiteSeer é um projeto bem maduro e abrangente. Após cerca de 18 (dezoito) anos desde sua criação ele ainda se encontra ativo e em desenvolvimento, abrangendo cada vez mais documentos e aprimorando cada vez mais suas técnicas de identificação e extração de metadados.
 
@@ -758,7 +758,7 @@ A utilização deste projeto é feita de maneira muito simples, podendo ser exec
 
 Visando contrapor os resultados obtidos com alguns projetos em que o ParsCit foi baseado, os autores realizaram comparações com os resultados obtidos pelo processo descrito por Peng \cite{Peng-CRF-IE}, alcançando uma melhora na extração e comparação das referências em torno de 5\% (precisão de 0.91 passou para 0.95), demonstrando a eficácia da ferramenta (detalhes na \autoref{tab:parscit-results}).
 
-\begin{table}
+\begin{table}[h!]
     \caption{Resultados comparativos entre ParsCit e Peng \cite{Peng-CRF-IE}}
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|}
@@ -803,7 +803,7 @@ Visando contrapor os resultados obtidos com alguns projetos em que o ParsCit foi
 
 CrossRef é uma associação independente mantida por diversas editoras científicas (\emph{publishers}). Além de ser uma organização sem fins lucrativos ela atua como um identificador de recursos na Internet. Ela permite que referências cruzadas de citações sejam associadas com seus artigos originais, fazendo uma referência ao recurso no site de sua editora de origem \cite{Bergmark:2000:AER:867169}.
 
-Suas atividades foram iniciadas em 1999 como uma iniciativa para desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, visto permitir uma série de inferências sobre artigos e suas referências cruzadas, permitindo que análises quantificativas fossem realizadas.
+Suas atividades foram iniciadas em 1999 como uma iniciativa para desenvolver um serviço de links de referências bibliográficas utilizando um identificador único, o \emph{Digital Object Identifier (DOI)}. O lançamento do CrossRef trouxe benefícios para pesquisadores, editores e bibliotecários, permitindo uma série de inferências sobre artigos, suas referências cruzadas e análises quantificativas.
 
 Inicialmente a extração realizada pelo CrossRef levava em consideração apenas as referências citadas em um artigo, mas posteriormente verificou-se que demais partes de um documento eram necessárias, inclusive para que a referência cruzada fosse feita de maneira completa. Assim, um artigo foi dividido em três partes \cite{Bergmark:2000:AER:867169}:
 
@@ -821,7 +821,7 @@ Esta ferramenta de extração de metadados fornecida pelo CrossRef Labs, chamada
 
 A \texttt{pdfextract} utiliza de informações visuais para identificar cada parte de um artigo científico, pré-selecionando áreas onde cada metadado pode ser encontrado, realizando então um conjunto de identificações por padrões (expressões regulares) que se espera encontrar (\autoref{fig:crossref}).
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Extração de Metadados com base na suposta localização de cada metadado dos artigos.}
     \label{fig:crossref}
@@ -858,7 +858,7 @@ Além das ferramentas apresentadas diversas outras apresentam características s
 
 Após a análise e pesquisa das ferramentas foi criado um quadro consolidando as principais informações sobre cada uma, permitindo que as ferramentas utilizadas neste trabalho pudessem ser escolhidas. A \autoref{tab:tools-consolidated} contém dados como linguagem de programação utilizada, técnicas empregadas e a possibilidade de execução de cada ferramenta utilizando linha de comando.
 
-\begin{table}
+\begin{table}[h!]
     \caption{Características de cada ferramenta analisada}
     \begin{center}
         \begin{tabular}{|C{3cm}|C{3cm}|C{3cm}|C{4cm}|}

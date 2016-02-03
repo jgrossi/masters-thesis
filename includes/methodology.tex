@@ -13,7 +13,7 @@ Primeiramente, são filtradas as ferramentas encontradas a fim de analisar realm
 
 O procedimento de testes deste trabalho será realizado através da instalação e execução de cada ferramenta selecionada, permitindo que cada uma tenha seu conjunto necessário de tecnologias para seu correto funcionamento. Assim, os artigos selecionados para testes serão utilizados como dados de entrada em cada uma destas ferramentas, e seus resultados de extração coletados, comparados e analisados. Os passos necessários para a realização destes testes podem ser melhor visualizados na \autoref{fig:metodology}.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \caption{Esquema visual da arquitetura do experimento}
     \label{fig:metodology}
@@ -27,13 +27,13 @@ O procedimento de testes deste trabalho será realizado através da instalação
 
 % Falar da seleção de artigos de várias áreas
 
-Visando provar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados precisos da extração de metadados, para que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
+Visando verificar a eficiência das ferramentas - juntamente com a implementação das técnicas por elas utilizadas -, desejamos ter resultados precisos da extração de metadados, para que possam ser comparados e verificados com os metadados manualmente extraídos. Deste modo, foi selecionada uma série de artigos científicos das mais diversas áreas de pesquisa, com padrões visuais distintos.
 
 % Porque selecionar artigos de diferentes áreas
 
-Em virtude da necessidade de realizar testes em um ambiente real e representativo, foi realizada uma pesquisa no site do CNPq \url{http://www.cnpq.br/} para obter a relação das áreas e subáreas do conhecimento reconhecidas nacionalmente. Deste modo foi constatada a existência de 9 (nove) áreas do conhecimento, totalizando 1.288 (mil duzentas e oitenta e oito) subáreas, conforme pode ser verificado na \autoref{tab:areas-cnpq}.
+Em virtude da necessidade de realizar testes em um ambiente real e representativo, foi realizada uma pesquisa no site do CNPq \url{http://www.cnpq.br/} para obter a relação das áreas e subáreas do conhecimento reconhecidas nacionalmente. Deste modo foi constatada a existência de 9 (nove) áreas do conhecimento, totalizando 1.290 (mil duzentas e noventa) subáreas, conforme pode ser verificado na \autoref{tab:areas-cnpq}.
 
-\begin{table}
+\begin{table}[h!]
     \caption{Áreas do Conhecimento (CNPq)}
     \begin{center}
         \begin{tabular}{|l|c|}
@@ -58,67 +58,15 @@ Em virtude da necessidade de realizar testes em um ambiente real e representativ
     \label{tab:areas-cnpq}
 \end{table}
 
-Em virtude no grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas foi limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
+Por causa do grande número de subdivisões de cada área do conhecimento (vide \autoref{tab:areas-cnpq}), a seleção das subáreas foi limitada a 2 (duas), sendo a escolha feita com base na existência de curso de graduação e/ou departamento na Universidade Federal de Minas Gerais (UFMG), o que facilitaria o contato com professores e coordenadores dos respectivos cursos. Desta forma, excluindo-se a área ``Outros'', seriam analisadas 16 (dezesseis) subáreas, sendo 2 (duas) para cada uma das 8 (oito) áreas do conhecimento.
 
-Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{Corpus} realmente significativo. A relação dos professores entrevistados e as subáreas do conhecimento selecionadas pode ser vista na \autoref{tab:subareas-professores}.
-
-\begin{table}
-    \caption{Professores entrevistados para cada subárea do conhecimento.}
-    \begin{center}
-        \begin{tabular}{|p{6cm}|p{8cm}|}
-            \hline 
-            \textbf{Subárea do Conhecimento} & \textbf{Professor(a)}\\ 
-            \hline 
-            Arquitetura e Urbanismo & Eleonora Sad de Assis \\
-            \hline
-            Ciência da Computação & Adriano Alonso Veloso \par 
-                                    Alberto Henrique Frade Laender \par 
-                                    Arnaldo de Albuquerque Araújo \\
-            \hline
-            Ciência da Informação & Beatriz Valadares Cendón \\
-            \hline
-            Ciências Biológicas (Genética) & Mônica Bucciarelli Rodriguez \\
-            \hline
-            Ciências Biológicas (Zoologia) & Alfredo Hannemann Wieloch \\
-            \hline
-            Enfermagem & Eline Lima Borges \par
-                         Tania Couto Machado Chianca \par
-                         Daclé Vilma Carvalho \\
-            \hline
-            Engenharia Civil & Antônio Neves de Carvalho Júnior \\
-            \hline
-            Engenharia Mecânica & Antônio Eustáquio de Melo Pertence \par
-                                  Alexandre Mendes Abrao \\
-            \hline
-            Fonoaudiologia & Sirley Alves da Silva Carvalho \\
-            \hline
-            Geologia & Adolf Heinrich Horn \\
-            \hline
-            História & Adriana Romeiro \\
-            \hline
-            Letras & Adriana Silvina Pagano \\
-            \hline
-            Medicina Veterinária & João Paulo Amaral Haddad \par
-                                   Jenner Karlisson Pimenta dos Reis \\
-            \hline
-            Música & João Pedro Paiva de Oliveira \\
-
-            \hline
-            Psicologia & Carmen Elvira Flores-Mendoza Prado \par
-                         Livia de Oliveira Borges \\
-            \hline
-            Zootecnia & Ângela Maria Quintão Lana \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \label{tab:subareas-professores}
-\end{table}
+Com as subáreas selecionadas, foi realizada uma entrevista com professores e/ou coordenadores de cada curso ou departamento correspondente na UFMG, obtendo então as bases de dados e/ou revistas mais utilizadas e relevantes para cada subárea do conhecimento, construindo um \emph{Corpus} realmente significativo.
 
 Para cada uma destas subáreas do conhecimento foram coletados 7 (sete) artigos científicos. Em virtude da diversidade de bases de dados informadas pelos professores (\autoref{tab:databases}), a pesquisa foi limitada a 2 (duas) bases, na ordem apresentada pelos próprios pesquisadores, contemplando 4 (quatro) artigos para a primeira base e 3 (três) para a segunda. 
 
 Para a subárea ``Ciências Biológicas (Genética)'' somente uma base de dados foi utilizada, portanto dela foram retirados todos os 7 artigos necessários. No total foram selecionados 112 (cento e doze) artigos, contemplando 16 (dezesseis) subáreas do conhecimento e 32 (trinta e duas) bases de dados, formando então o \emph{Corpus} utilizado nesta pesquisa.
 
-\begin{table}
+\begin{table}[h!]
     \caption{Bases de Dados informadas pelos professores entrevistados, por subárea do conhecimento.}
     \begin{center}
         \begin{tabular}{|p{6cm}|p{8cm}|}
@@ -166,7 +114,7 @@ A seleção dos artigos em cada base de dados foi feita de maneira arbitrária, 
 
 % Artigos em Inglês, somente
 
-Todos os artigos selecionados foram escritos na língua inglesa. Esta decisão foi tomada em virtude de ser a língua mais utilizada no meio acadêmico, possuindo um universo muito mais abrangente e rico de artigos escritos no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizam formas de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos de entrada.
+Todos os artigos selecionados foram escritos na língua inglesa. Embora existam trabalhos locais relevantes para a área de extração de informação, esta decisão foi tomada por ser a língua mais utilizada no meio acadêmico, possuindo um universo muito maior de artigos escritos no idioma. Além disso, algumas das ferramentas e respectivas técnicas utilizam formas de ``processamento de linguagem natural'' para extração dos metadados, tendo por padrão a utilização do inglês na análise dos textos dos documentos de entrada.
 
 Em virtude destas colocações a abrangência de outros idiomas entraria em um aspecto que não é objetivo deste trabalho abordar, visto a diversidade de culturas e símbolos, fazendo com que línguas orientais - como o mandarim ou japonês, por exemplo - tivessem análises diferenciadas em função de suas diferenças nas formas de representação e leitura, necessitando de outras técnicas e/ou ferramentas mais direcionadas para obter os resultados esperados.
 
@@ -202,7 +150,7 @@ A \autoref{tab:metadata-weight} mostra como cada metadado foi interpretado e qua
 
 % Tabela de metadados e pesos
 
-\begin{table}
+\begin{table}[h!]
     \caption{Os metadados e seus pesos atribuídos}
     \begin{center}
         \begin{tabular}{|p{3cm}|p{8cm}|C{1cm}|}
@@ -266,7 +214,7 @@ A título de exemplo, após o teste de uma ferramenta, supondo que ela conseguiu
     $ IC_{Ferramenta X}=(5*P_{título}+4*P_{autor}+1*P_{email}+3*P_{resumo}+4*P_{referências}) / 17 $
 \end{center}
 
-\begin{table}
+\begin{table}[h!]
     \caption{Descrição de cada variável no Índice de Confiabilidade}
     \begin{center}
         \begin{tabular}{|p{3cm}|p{8cm}|}

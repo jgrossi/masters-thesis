@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 function clean_files {
-	rm -rf *.aux *.log *.bbl *.blg *.brf *.bdb_* *.idx *.ilg *.ind *.log *.synctex* *.toc *.lof *.fdb_* *.lot *.dvi
+	rm -rf *.aux *.log *.bbl *.blg *.brf *.bdb_* *.idx *.ilg *.ind *.log *.synctex* *.toc *.lof *.fdb_* *.lot *.dvi *.fls
 }
 
 # Clean root folder
