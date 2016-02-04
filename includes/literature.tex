@@ -3,6 +3,8 @@
 \chapter{Referencial Teórico}
 \label{cha:literature}
 
+O campo de extração de informação vem sendo bastante pesquisado e difundido. Por sua vasta aplicação, vários estudos foram e são desenvolvidos, abrangendo diversos métodos e modelos de extração, que utilizam também de PNL (Processamento Natural de Linguagem) \cite{Sarawagi:2008:IE:1498844.1498845}. 
+
 Visando abranger grande parte da literatura sobre o assunto, alguns eventos e bases de dados importantes foram mapeados para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Foram mapeados:
 
 \begin{itemize}
@@ -59,7 +61,9 @@ A indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em dicionários de palavras capazes de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração.
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em dicionários de palavras capazes de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração. 
+
+Alguns trabalhos, inclusive, utilizam segmentação de texto (\texttt{text segmentation}) para a extração de informação em campos específicos, agrupando e armazenando os resultados de forma estruturada em banco de dados ou arquivos XML, permitindo que possam ser pesquisados e analisados \cite{Cortez:2010:USI:1811136.1811145}.
 
 Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjuntos de dados reais, compostos por artigos científicos catalogados internamente, que são utilizados como documentos de entrada para a análise e desenvolvimento de novas pesquisas.
 
@@ -851,6 +855,8 @@ Além das ferramentas apresentadas diversas outras apresentam características s
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo também ser acessado pela Web. Disponível em \url{http://endnote.com/}.
 
     \item \textbf{Research Gate:} Além de possuir toda uma complexidade técnica por trás o projeto é apresentado em forma de serviço, permitindo contatos e interligação entre pesquisadores. Atualmente é um dos projetos mais usados para compartilhamento de pesquisas e publicações. Disponível em \url{http://researchgate.com/}
+
+    \item \textbf{FLUX-CiM:} Focado em extração de citações em artigos científicos. Uma de suas grandes vantagens é não necessitar de uma fase de treino dos dados de entrada, o que garante um alto grau de automação e flexibilidade \cite{Cortez:2007:FFU:1255175.1255219}.
 
 \end{itemize}
 
