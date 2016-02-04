@@ -7,23 +7,7 @@ Este trabalho tem como metodologia uma pesquisa de caráter experimental e quant
 
 % Explicar o passo a passo que será utilizado
 
-Primeiramente, foram selecionadas as ferramentas encontradas a fim de analisar realmente as que possuem viabilidade técnica de testes dentro do objetivo da pesquisa. Assim, de acordo com os critérios adotados, as ferramentas selecionadas foram: Cermine, CiteSeer, CrossRef e ParsCit, como pode ser visto na \autoref{tab:selected-tools}.
-
-\begin{table}[h!]
-    \caption{Ferramentas selecionadas para o experimento.}
-    \begin{center}
-        \begin{tabular}{|C{3cm}|C{4cm}|C{6cm}|}
-            \hline 
-            \textbf{Ferramenta} & \textbf{Linguagens de Programação} & \textbf{Técnicas Utilizadas} \\ 
-            \hline 
-            Cermine & Java & SVM, CRF, Word Clustering \\ \hline
-            CiteSeer & Python, Perl, Java & SVM, CRF (ParsCit), Word Clustering \\ \hline
-            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento Espacial \\ \hline
-            ParsCit & Perl, Ruby & CRF \\ \hline
-        \end{tabular}
-    \end{center}
-    \label{tab:selected-tools}
-\end{table}
+Primeiramente, são selecionadas as ferramentas encontradas a fim de analisar realmente as que possuem viabilidade técnica de testes dentro do objetivo da pesquisa. 
 
 % Explicar de modo geral como será o processo
 
@@ -136,7 +120,23 @@ Em virtude destas colocações a abrangência de outros idiomas entraria em um a
 
 Sobre a escolha das ferramentas para a realização dos testes foi utilizado apenas um critério na seleção: a sua utilização por linha de comando (\emph{command line}). Embora algumas ferramentas possuem código aberto a extração de metadados faz parte de um contexto específico da aplicação, dificultando a utilização somente deste recurso. Assim, foram selecionadas para testes apenas as ferramentas que permitem o uso de sua funcionalidade de extração de metadados de maneira individualizada, independente da linguagem de programação ou tecnologia apresentada. 
 
-Deste modo, dentre as ferramentas apresentadas neste trabalho, presentes na \autoref{tab:tools-consolidated}, as ferramentas selecionadas para os testes foram: Cermine, CiteSeer, CrossRef e ParsCit.
+Assim, de acordo com os critérios adotados, as ferramentas selecionadas foram: Cermine, CiteSeer, CrossRef e ParsCit, como pode ser visto na \autoref{tab:selected-tools}.
+
+\begin{table}[h!]
+    \caption{Ferramentas selecionadas para o experimento.}
+    \begin{center}
+        \begin{tabular}{|C{3cm}|C{4cm}|C{6cm}|}
+            \hline 
+            \textbf{Ferramenta} & \textbf{Linguagens de Programação} & \textbf{Técnicas Utilizadas} \\ 
+            \hline 
+            Cermine & Java & SVM, CRF, Word Clustering \\ \hline
+            CiteSeer & Python, Perl, Java & SVM, CRF (ParsCit), Word Clustering \\ \hline
+            CrossRef & Ruby, Python & Expressões Regulares, Posicionamento Espacial \\ \hline
+            ParsCit & Perl, Ruby & CRF \\ \hline
+        \end{tabular}
+    \end{center}
+    \label{tab:selected-tools}
+\end{table}
     
 \section{Desenho do Experimento}
 \label{sec:experiment-design}
