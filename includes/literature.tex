@@ -3,7 +3,7 @@
 \chapter{Referencial Teórico}
 \label{cha:literature}
 
-A pesquisa é focada em técnicas e ferramentas para extração de metadados em artigos científicos. Cada ferramenta é testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuem seus metadados extraídos manualmente, o que permite comparar os resultados com os resultados obtidos por cada uma das ferramentas. Os critérios utilizados serão de natureza explicitamente prática, numericamente representados.
+O campo de extração de informação vem sendo bastante pesquisado e difundido. Por sua vasta aplicação, vários estudos foram e são desenvolvidos, abrangendo diversos métodos e modelos de extração, que utilizam também de PNL (Processamento Natural de Linguagem) \cite{Sarawagi:2008:IE:1498844.1498845}. 
 
 Visando abranger grande parte da literatura sobre o assunto, alguns eventos e bases de dados importantes foram mapeados para a pesquisa, a fim de encontrar trabalhos relevantes para a área. Foram mapeados:
 
@@ -30,7 +30,7 @@ Podemos citar como exemplo a utilização de pequenos pedaços de dados sobre um
 \subsection{Padrões de Metadados}
 \label{ssec:metadata-patterns}
 
-Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Por isso, foram definidos 15 (quinze) elementos para descreverem um recurso informacional, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
+Diante da infinidade de dados que podem estar atrelados a um determinado recurso, temos uma amplitude muito grande de características que podem ser definidas como sendo metadados. Assim, foram definidos 15 (quinze) elementos para descreverem um recurso informacional, estabelecendo então um padrão adotado em todo o mundo, o padrão ``Dublin Core'' \cite{dublin-core}.
 
 Este padrão se originou após uma série de encontros feitos desde 1995, unindo bibliotecários e pesquisadores digitais e de conteúdo, visando identificar padrões para se representar um recurso eletrônico. O nome ``Dublin'' foi dado em virtude da primeira reunião do grupo, que foi realizada na cidade de Dublin, Ohio. Já o nome ``Core'' se deu em virtude dos elementos serem amplos e genéricos, sendo então utilizados para descrever uma grande variedade de recursos.
 
@@ -61,7 +61,9 @@ A indexação do autor (\textit{DC.Creator}) da página, bem como seu título (\
 \subsection{Técnicas de Extração de Metadados}
 \label{ssec:metadata-techniques}
 
-Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em dicionários de palavras capazes de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração.
+Algumas técnicas e algoritmos de extração de metadados são utilizadas em diversos projetos, variando de acordo com sua aplicação. Estas técnicas são baseadas na classificação de dados com base nas suas representações escritas, desde padrões preestabelecidos até com base em dicionários de palavras capazes de reconhecer ocorrências em diversas partes de um documento, o que garante assertividade ao processo de extração. 
+
+Alguns trabalhos, inclusive, utilizam segmentação de texto (\texttt{text segmentation}) para a extração de informação em campos específicos, agrupando e armazenando os resultados de forma estruturada em banco de dados ou arquivos XML, permitindo que possam ser pesquisados e analisados \cite{Cortez:2010:USI:1811136.1811145}.
 
 Técnicas de \emph{machine learning}, extração e classificação de dados utilizam, em sua grande maioria, dados de entrada previamente selecionados em forma semi-estruturada. Algumas bases de dados já consolidadas no mercado fornecem estes conjuntos de dados reais, compostos por artigos científicos catalogados internamente, que são utilizados como documentos de entrada para a análise e desenvolvimento de novas pesquisas.
 
@@ -451,7 +453,7 @@ Os autores definem quatro diferentes transições de estado para diferentes clas
 
 Para a extração destes dados Peng et al. \cite{Peng-CRF-IE} também consideram como sendo o cabeçalho de um artigo como sendo a parte inicial do documento até a introdução, ou somente a primeira página, o que ocorrer primeiro. Além disso, os autores consideram como os campos a serem analisados os mesmos 15 (quinze) que foram definidos anteriormente por Seymore et al. \cite{Seymore-HMM-IE}.
 
-Para extração dos metadados dos cabeçalhos foi utilizado um \emph{dataset} com 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para o \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
+Para extração dos metadados dos cabeçalhos foi utilizado um \emph{dataset} \cite{Peng-CRF-IE} com 935 (novecentos e trinta e cinco) documentos. Destes, 500 (quinhentos) foram utilizados para compor o \emph{training set} e os outros 435 (quatrocentos e trinta e cinco) para fins de teste, unicamente. Já do \emph{dataset} utilizado para extração das referências foram analisados 500 (quinhentos) documentos, dos quais 350 (trezentos e cinquenta) foram utilizados para o \emph{training set} e os demais 150 (cento e cinquenta) também para testes.
 
 Para fins de resultados comparativos foram utilizadas três métricas:
 
@@ -585,7 +587,7 @@ O Cermine ainda possui um mecanismo de aprendizagem próprio que permite que, na
 
 Seu grande diferencial em comparação com as demais ferramentas é que ele não somente extrai os metadados de um artigo, mas também analisa todo o seu conteúdo, incluindo citações a outros documentos, que podem ser facilmente cruzados por meio de informações como título e autor(es).
 
-Seu mecanismo considera arquivos PDF em forma textual, sem a utilização de imagens. A ferramenta considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{Han-SVM} (detalhado na \autoref{sssec:svm}). Dessa forma seu mecanismo condensa um leiaute onde as informações geralmente estão dispostas, permitindo aferir que em um determinado local do arquivo estejam o título e o nome dos autores, por exemplo. 
+Seu mecanismo considera arquivos PDF em forma textual, sem a utilização de imagens, ou seja, não abrange documentos gerados a partir de artigos escaneados. A ferramenta considera regiões, linhas e páginas como pontos estratégicos para a extração de informações. As bases destas regiões possuem padrões que são utilizados juntamente com técnicas de SVM \cite{Han-SVM} (detalhado na \autoref{sssec:svm}). Dessa forma seu mecanismo condensa um leiaute onde as informações geralmente estão dispostas, permitindo aferir que em um determinado local do arquivo estejam o título e o nome dos autores, por exemplo. 
 
 Com estas regiões definidas o Cermine extrai as informações com base em padrões preestabelecidos, gerando resultados para os metadados e referências encontradas. O formato de saída dos resultados é no formato XML, permitindo que possam ser compartilhados com outros sistemas por possuir uma leitura semântica e ao mesmo tempo fácil de ser interpretada pelas linguagens de programação. A \autoref{fig:cermine-workflow} demonstra como o processo de extração do Cermine funciona.
 
@@ -853,6 +855,8 @@ Além das ferramentas apresentadas diversas outras apresentam características s
     \item \textbf{EndNote:} Além de permitir a organização muito bem estruturada de artigos científicos ele é também uma ferramenta de pesquisa, permitindo também exportar seu catálogo de referências para os mais diversos formatos. Possui versões para Windows e Mac, podendo também ser acessado pela Web. Disponível em \url{http://endnote.com/}.
 
     \item \textbf{Research Gate:} Além de possuir toda uma complexidade técnica por trás o projeto é apresentado em forma de serviço, permitindo contatos e interligação entre pesquisadores. Atualmente é um dos projetos mais usados para compartilhamento de pesquisas e publicações. Disponível em \url{http://researchgate.com/}
+
+    \item \textbf{FLUX-CiM:} Focado em extração de citações em artigos científicos. Uma de suas grandes vantagens é não necessitar de uma fase de treino dos dados de entrada, o que garante um alto grau de automação e flexibilidade \cite{Cortez:2007:FFU:1255175.1255219}.
 
 \end{itemize}
 

@@ -3,29 +3,33 @@
 \chapter{Introdução}
 \label{cha:introduction}
 
-
-\begin{figure}
-    \centering
-    \caption{Processo de Extração de Metadados}
-    \label{fig:introduction}
-    \includegraphics[width=0.9\linewidth]{./assets/images/introduction}
-    \center\footnotesize{Fonte: O próprio autor}
-\end{figure}
-
-% \section{Contexto}
-% \label{sec:context}
-
 Em virtude da grande produção científica existente nos dias atuais, ferramentas automatizadas de extração de metadados em artigos científicos são cada vez mais úteis. Elas contribuem para uma melhor organização dos documentos e facilitam os processos de busca, tornando-os mais rápidos e eficientes.
 
 A pesquisa aqui realizada situa-se no campo da extração de metadados segundo a abordagem \textit{machine learning}. O trabalho considera as ferramentas de código aberto mais populares atualmente. Diversas ferramentas e técnicas para extração de metadados em artigos podem ser encontradas na literatura científica da área de Ciência da Informação. 
 
 Algumas ferramentas são propriedades de universidades ou instituições privadas, o que dificulta a análise. Outras não permitem que testes automatizados sejam feitos, visto que não há acesso ao código fonte ou não podem ser utilizadas via linha de comando.
 
-De modo geral, as ferramentas de extração são focadas em leiautes pré-definidos, geralmente seguindo modelos (ou \textit{templates}) de revistas e encontros científicos, que possuem um padrão visual já estabelecido. Esse é o caso do IEEE (\textit{Institute of Electrical and Electronics Engineers}), por exemplo, que serve de referência para diversos outros eventos da área da Ciência da Computação. 
+De modo geral, as ferramentas de extração são focadas em leiautes pré-definidos, geralmente seguindo modelos (ou \textit{templates}) de revistas e encontros científicos, que possuem um padrão visual já estabelecido (\autoref{fig:papers-cs}). Esse é o caso do IEEE (\textit{Institute of Electrical and Electronics Engineers}), por exemplo, que serve de referência para diversos outros eventos da área da Ciência da Computação.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Exemplos de artigos da área de Ciência da Computação}
+    \label{fig:papers-cs}
+    \includegraphics[width=0.7\linewidth]{./assets/images/papers-cs}
+    \center\footnotesize{Fonte: O próprio autor}
+\end{figure}
 
 Porém, existem diversos outros eventos e revistas que empregam \textit{templates} específicos. A extração nesses artigos exige adaptações das ferramentas para que o processo seja satisfatório.
 
-Algumas ferramentas são aparentemente muito eficazes para um certo grupo de artigos, já seguindo um padrão visual pré-determinado. Porém, para alguns \textit{templates} pouco comuns, de áreas de conhecimento diversas, elas não são tão eficazes. A eficácia varia de acordo com a tecnologia utilizada e, principalmente, de acordo com o princípio teórico utilizado.
+Algumas ferramentas são aparentemente muito eficazes para um certo grupo de artigos, já seguindo um padrão visual pré-determinado. Porém, para alguns \textit{templates} pouco comuns, de áreas de conhecimento diversas, elas não são tão eficazes (\autoref{fig:papers-areas}). A eficácia varia de acordo com a tecnologia utilizada e, principalmente, de acordo com o princípio teórico utilizado.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Exemplos de artigos com padrões visuais diferentes, de diversas áreas do conhecimento}
+    \label{fig:papers-areas}
+    \includegraphics[width=0.7\linewidth]{./assets/images/papers-areas}
+    \center\footnotesize{Fonte: O próprio autor}
+\end{figure}
 
 Como definido por \cite{foundations-machine-learning}, \textit{machine learning} permite uma forma de aprendizado com base em experiências passadas, através da utilização de dados coletados, que são analisados posteriormente seguindo padrões definidos.
 
@@ -36,6 +40,16 @@ Claro que as técnicas de extração existentes hoje são, de maneira geral, ins
 Com base na diferenciação dos leiautes de artigos científicos, o objetivo da pesquisa é comparar o desempenho de ferramentas na tarefa de extração de metadados. Isso será feito com um conjunto de documentos pré-selecionados para testes, dos mais diversos padrões e de diversas áreas do conhecimento.
 
 Espera-se com isso poder identificar o desempenho de tais ferramentas, suas limitações e melhores aplicações: quais ferramentas apresentam melhores resultados para cada padrão visual? Que ferramenta é melhor aplicada para determinado tipo distinto de metadado?
+
+A pesquisa é focada em técnicas e ferramentas para extração de metadados em artigos científicos. Cada ferramenta é testada juntamente com um grupo de artigos previamente selecionados. Estes artigos já possuem seus metadados extraídos manualmente, o que permite comparar os resultados com os resultados obtidos por cada uma das ferramentas. Os critérios utilizados serão de natureza explicitamente prática, numericamente representados.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Processo de Extração de Metadados}
+    \label{fig:introduction}
+    \includegraphics[width=0.8\linewidth]{./assets/images/introduction}
+    \center\footnotesize{Fonte: O próprio autor}
+\end{figure}
 
 O documento é estruturado iniciando com essa breve introdução e motivação sobre o tema. O segundo capítulo traz o referencial teórico, onde são apresentados alguns conceitos básicos, além das técnicas mais utilizadas e as ferramentas mais comuns encontradas atualmente. O terceiro capítulo apresenta a metodologia usada no trabalho, citando as ferramentas que serão testadas e principalmente o método usado nesta pesquisa para a realização dos testes. Posteriormente, no capítulo quarto, faz-se a análise e apresentação dos resultados, explicando como os testes foram realizados, os ambientes de teste criados e os resultados coletados. No quinto capítulo temos a discussão final e a exposição de algumas conclusões mais relevantes, além dos trabalhos futuros e considerações finais sobre o trabalho apresentado.
 
